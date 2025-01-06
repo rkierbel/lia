@@ -1,4 +1,3 @@
-# TITRE Ier. - DISPOSITIONS GENERALES
 #### Art. 1. 
 La présente ordonnance, dénommée ci-après " Code bruxellois du Logement ", règle une matière visée à l'article 39 de la Constitution.
 #### Art. 2.
@@ -72,11 +71,10 @@ Point 6 le logement acquisitif moyen, à savoir :
 Ces règles sont d'application lors de chaque nouvelle attribution de logement.
 Pour les logements repris aux Point 1, Point 2, Point 3 et Point 4, le Gouvernement fixe dans un arrêté les conditions de revenus et loyers 22.
 Paragraphe 3. Tout opérateur immobilier public, les tiers avec lesquels la SDRB contracte conformément à l'article 21 de l'ordonnance du 20 mai 1999 relative à la Société de Développement de la Région de Bruxelles-Capitale dans le cadre de sa mission de rénovation urbaine, ainsi que les agences immobilières sociales, qui gèrent, mettent en location ou financent du logement, agissent dans le cadre de la politique sociale du logement développée par la Région et, pour les biens visés au Paragraphe 2, pour autant qu'ils respectent les conditions de revenus, de loyer et de prix de vente maximum fixées par le Gouvernement.
-# TITRE II. - DU DROIT AU LOGEMENT
-#### Art. 3. Chacun a droit à un logement décent. Il convient à cette fin de favoriser la mise à disposition d'un logement conforme aux règles de qualité (sécurité, salubrité et équipement), abordable financièrement, procurant une sécurité d'occupation, adapté au handicap, jouissant d'un climat intérieur sain, pourvu d'une bonne performance énergétique, connecté à des équipements collectifs et autres services d'intérêt général (notamment, écoles, crèches, centres culturels, commerces et loisirs). Il appartient aux pouvoirs publics, entre autres, de créer les conditions nécessaires à la réalisation de ce droit fondamental.
-# TITRE III. - DES INSTRUMENTS DE LA POLITIQUE DU LOGEMENT
-## CHAPITRE Ier. - Des exigences de sécurité, de salubrité et d'équipement des logements
-#### Art. 4.Paragraphe 1.  Les logements doivent respecter les exigences suivantes :
+#### Art. 3. 
+Chacun a droit à un logement décent. Il convient à cette fin de favoriser la mise à disposition d'un logement conforme aux règles de qualité (sécurité, salubrité et équipement), abordable financièrement, procurant une sécurité d'occupation, adapté au handicap, jouissant d'un climat intérieur sain, pourvu d'une bonne performance énergétique, connecté à des équipements collectifs et autres services d'intérêt général (notamment, écoles, crèches, centres culturels, commerces et loisirs). Il appartient aux pouvoirs publics, entre autres, de créer les conditions nécessaires à la réalisation de ce droit fondamental.
+#### Art. 4.
+Paragraphe 1.  Les logements doivent respecter les exigences suivantes :
 Point 1 l'exigence de sécurité élémentaire, qui comprend des normes minimales relatives à la stabilité du bâtiment, l'électricité, le gaz et le chauffage;
 Point 2 l'exigence de salubrité élémentaire, qui comprend des normes minimales relatives à l'humidité, à la toxicité des matériaux, aux parasites, à l'éclairage, à la ventilation, aux égouts, ainsi qu'à la configuration du logement, quant à sa surface minimale, la hauteur de ses pièces et l'accès du logement;
 Point 3 l'exigence d'équipement élémentaire, qui comprend des normes minimales relatives à l'eau froide, l'eau chaude, les installations sanitaires, l'installation électrique, le chauffage, ainsi que le pré-équipement requis permettant l'installation d'équipements de cuisson des aliments.
@@ -85,8 +83,10 @@ Paragraphe 2. Le Gouvernement peut arrêter des exigences complémentaires ou sp
 Paragraphe 3. Dans l'année qui suit le renouvellement intégral du Parlement, le Gouvernement remet au Parlement un rapport relatif à l'évaluation des exigences qu'il a arrêtées et de l'application des articles 4 à 14.
 Paragraphe 4. Le présent article s'entend sans préjudice de toute autre législation applicable à un logement ou à un immeuble, tels que notamment le Règlement Régional d'Urbanisme arrêté en exécution des articles 88 et suivants du Code bruxellois de l'aménagement du territoire, les normes de protection incendie et les normes acoustiques, sans toutefois que ces réglementations fassent partie des normes minimales visées au paragraphe 1.
 #### Art. 5.
-#### Art. 6.Le service d'inspection régionale  du Service public régional de Bruxelles a pour mission de contrôler le respect des critères de sécurité, de salubrité et d'équipement des logements visés à l'article 4 et de délivrer les attestations de contrôle de conformité visées à l'article 9.
-#### Art. 7. Paragraphe 1. Sans préjudice de l'article 135 de la nouvelle loi communale, les agents-inspecteurs du Service d'inspection régionale peuvent visiter le logement entre 8 et 20 heures pour constater ou contrôler la conformité des lieux aux exigences de sécurité, de salubrité et d'équipement visées à l'article 4.
+#### Art. 6.
+Le service d'inspection régionale  du Service public régional de Bruxelles a pour mission de contrôler le respect des critères de sécurité, de salubrité et d'équipement des logements visés à l'article 4 et de délivrer les attestations de contrôle de conformité visées à l'article 9.
+#### Art. 7. 
+Paragraphe 1. Sans préjudice de l'article 135 de la nouvelle loi communale, les agents-inspecteurs du Service d'inspection régionale peuvent visiter le logement entre 8 et 20 heures pour constater ou contrôler la conformité des lieux aux exigences de sécurité, de salubrité et d'équipement visées à l'article 4.
 Cette visite ne peut se faire qu'après avertissement préalable du locataire et du bailleur par lettre recommandée au moins une semaine avant la date effective de la visite sur les lieux.
 Il est dressé procès-verbal de l'enquête, lequel est joint au dossier.
 Au cas où la visite du logement n'a pas pu se réaliser à défaut pour le locataire d'y donner son consentement, les agents-inspecteurs du Service d'inspection régionale ne pourront pénétrer dans le logement qu'avec l'autorisation préalable du tribunal de police, après dépôt des pièces justificatives et motivations adéquates.
@@ -113,16 +113,19 @@ Le locataire peut également introduire auprès du Gouvernement ou du fonctionna
 Paragraphe 5. Si les infractions constatées quant au non-respect des exigences de sécurité, de salubrité et d'équipement visées à l'article 4 s'avèrent susceptibles de mettre en péril la sécurité ou la santé des occupants, le Service d'inspection régionale peut immédiatement notifier au bailleur l'interdiction prévue à l'article 8.
 Le bailleur peut introduire un recours contre la décision d'interdiction immédiate auprès du Gouvernement ou de son Fonctionnaire délégué. La procédure de recours se déroule conformément aux dispositions prévues au Paragraphe 4.
 Paragraphe 6. A défaut pour le bailleur d'observer l'obligation de régularisation et, après épuisement des voies de recours indiquées par le présent article, le droit de gestion publique, tel qu'il est prévu par les articles 15 et suivants du Code, peut être mis en oeuvre.
-#### Art. 8. Paragraphe 1. L'interdiction de continuer de proposer à la location, mettre en location, ou faire occuper le logement, qui est infligée dans les cas visés à l'article 7, Paragraphe 1, alinéa 5 et Paragraphe 3, alinéa 7 et Paragraphe 5 est notifiée au plaignant, au bailleur, au locataire éventuel, ainsi qu'au C.P.A.S. et au bourgmestre de la commune où le logement se situe.
+#### Art. 8. 
+Paragraphe 1. L'interdiction de continuer de proposer à la location, mettre en location, ou faire occuper le logement, qui est infligée dans les cas visés à l'article 7, Paragraphe 1, alinéa 5 et Paragraphe 3, alinéa 7 et Paragraphe 5 est notifiée au plaignant, au bailleur, au locataire éventuel, ainsi qu'au C.P.A.S. et au bourgmestre de la commune où le logement se situe.
 Le bourgmestre veille à l'exécution de l'interdiction. Il veille également à empêcher toute nouvelle occupation du bien visé, notamment par l'apposition de scellés.
 Un logement frappé par l'interdiction prévue à l'alinéa 1 et dont les motifs sont liés à l'état du logement ou des parties communes de l'immeuble où il se trouve, ne peut être remis en location ou reloué qu'après que le bailleur aura obtenu une attestation de contrôle de conformité. En ce cas, le Service d'Inspection régionale en informe le bourgmestre, lequel est alors invité, le cas échéant, à lever les scellés.
 Dans la publicité relative à la vente ou à la location pour plus de neuf ans d'un bien immobilier ou relative à la constitution d'un droit d'emphytéose ou de superficie, le notaire ou tout autre personne qui, pour son compte ou à titre d'intermédiaire met en vente, offre en location, en emphytéose ou en superficie un bien immobilier, doit indiquer sans équivoque l'éventuelle interdiction à la location.
 Paragraphe 2. L'arrêté d'inhabitabilité d'un logement fondé sur les articles 133 et 135 de la Nouvelle loi communale est communiqué sans délai au C.P.A.S. du lieu où se situe le logement.
-#### Art. 9. Paragraphe 1. L'attestation de contrôle de conformité est délivrée selon les formes déterminées par le Gouvernement.
+#### Art. 9. 
+Paragraphe 1. L'attestation de contrôle de conformité est délivrée selon les formes déterminées par le Gouvernement.
 Paragraphe 2. Après avoir accusé réception de la demande, le Service d'inspection régionale effectue une enquête destinée à établir que le logement concerné répond aux exigences de sécurité, de salubrité et d'équipement visées à l'article 4.
 Au terme de cette enquête, le Service d'inspection régionale se prononce dans un délai déterminé par le Gouvernement et délivre ou refuse de délivrer l'attestation de contrôle de conformité demandée. En cas de refus, la décision est dûment motivée.
 Paragraphe 3. En cas de refus, le demandeur dispose d'un recours devant le Gouvernement de la Région de Bruxelles-Capitale, ou devant le fonctionnaire délégué à cette fin, dans les formes et délais fixés par le Gouvernement. Le Gouvernement, ou le fonctionnaire délégué à cette fin, se prononce dans les trente jours à dater de la réception du recours. Il peut ordonner une nouvelle enquête. Dans ce cas, ce délai est prolongé de trente jours. Cette enquête est effectuée par un autre agent-inspecteur du Service d'inspection régionale. Le résultat de l'enquête est communiqué par le Service d'inspection régionale au fonctionnaire délégué, ainsi qu'au demandeur. A défaut de décision dans les délais visés au Paragraphe 2, la décision de refus est infirmée.
-#### Art. 10. Paragraphe 1. Sans préjudice des dispositions relatives à la gestion publique énoncées aux articles 15 et suivants, le fonctionnaire dirigeant du Service d'inspection régionale peut imposer une amende administrative :
+#### Art. 10. 
+Paragraphe 1. Sans préjudice des dispositions relatives à la gestion publique énoncées aux articles 15 et suivants, le fonctionnaire dirigeant du Service d'inspection régionale peut imposer une amende administrative :
 - au bailleur qui a mis un logement en location en violation des dispositions de l'article 5, dûment constatée conformément aux dispositions de l'article 7, Paragraphe 2;
 - au bailleur qui continue à louer, à proposer à la location ou à faire occuper un logement en location, en violation des dispositions de l'article 8.
 Par dérogation à l'alinéa précédent, l'amende est obligatoire lorsque le manquement constaté porte sur un des critères déterminés conformément à l'article 7, Paragraphe 3, alinéa 7, deuxième tiret .
@@ -134,7 +137,8 @@ Le Gouvernement ou le fonctionnaire délégué à cette fin se prononce dans les
 Paragraphe 4. L'amende revêt un caractère exécutoire à dater, soit de la réception d'un courrier du Service d'inspection régionale constatant qu'aucun recours tel que prévu au Paragraphe 3 n'a été introduit auprès du Gouvernement ou du fonctionnaire délégué à cette fin, soit de la notification de la décision du Gouvernement ou du fonctionnaire délégué, révisant l'amende après examen du recours.
 Ces courriers reprennent notamment le montant de l'amende, le numéro de compte bancaire sur lequel celui-ci doit être versé, ainsi que le délai de paiement, qui ne peut excéder trois mois, sauf en cas d'accord du Service d'inspection régionale sur un plan d'apurement par versements mensuels, introduit avant l'expiration du délai initialement fixé et dont la durée totale ne peut pas dépasser cinq ans.
 En cas d'absence de versement de la totalité de l'amende dans le délai initialement fixé, de non-introduction d'un plan d'apurement respectant les conditions fixées à l'alinéa précédent ou d'interruption des versements dans le cadre du plan d'apurement convenu, les sommes restant dues sont immédiatement exigibles, augmentées des intérêts légaux à la date de l'échéance. Ces dossiers sont transmis par le Fonctionnaire dirigeant du Service d'inspection régionale au fonctionnaire chargé par le gouvernement du recouvrement de ces montants. Ce fonctionnaire peut décerner une contrainte. La contrainte décernée est visée et rendue exécutoire par le fonctionnaire susmentionné.
-#### Art. 11. Paragraphe 1. Il est créé un Fonds budgétaire régional de solidarité, géré par Bruxelles Logement.
+#### Art. 11. 
+Paragraphe 1. Il est créé un Fonds budgétaire régional de solidarité, géré par Bruxelles Logement.
 Paragraphe 2. Sont affectés à ce fonds :
 - le produit des amendes perçues en vertu de l'article 10 du Code ;
 - le produit des amendes perçues en vertu de l'article 214 quinquies du Code ;
@@ -146,14 +150,16 @@ Paragraphe 3. Les moyens du fonds sont affectés :
 - à la prise en charge des frais exposés dans le cadre du relogement temporaire des locataires dont le logement a été interdit à la location ;
 - à la prise en charge, partielle ou totale, des indemnités d'occupation dues pendant la trêve hivernale visée à l'article 233duodecies du Code et restées en défaut de paiement.
 Le Gouvernement détermine les conditions dans lesquelles les personnes qui quittent un logement suite à l'application des dispositions de l'article 8, bénéficient d'une intervention dans le montant du nouveau loyer, ainsi que dans les frais de déménagement ou d'installation.
-#### Art. 12. Sauf lorsque la survenance des manquements aux exigences de sécurité, de salubrité et d'équipement visées à l'article 4 est déclarée par le fonctionnaire dirigeant, après audition du locataire, lui être manifestement imputable, le locataire obligé de quitter un logement qui ne respecte pas ou plus ces exigences a un droit d'accès prioritaire aux logements gérés par les pouvoirs publics. Le Gouvernement en arrête les modalités.
+#### Art. 12. 
+Sauf lorsque la survenance des manquements aux exigences de sécurité, de salubrité et d'équipement visées à l'article 4 est déclarée par le fonctionnaire dirigeant, après audition du locataire, lui être manifestement imputable, le locataire obligé de quitter un logement qui ne respecte pas ou plus ces exigences a un droit d'accès prioritaire aux logements gérés par les pouvoirs publics. Le Gouvernement en arrête les modalités.
 Au locataire dont le bien a fait l'objet d'une interdiction à la location mise en exécution par le bourgmestre, une proposition de relogement doit être adressée au plus tard au moment de l'expulsion, dans la mesure des disponibilités et suivant la procédure suivante. D'abord, le bourgmestre vérifie si, sur le territoire de sa commune, un logement est disponible parmi les logements locatifs des différents opérateurs immobiliers publics. A défaut de disponibilité, la Société du logement de la Région de Bruxelles-Capitale procède au même exercice, mais à l'échelle de la Région.
 Dans le cas visé à l'article 7, Paragraphe 5, la proposition visée à l'alinéa précédent doit être formulée dans le mois de l'expulsion.
-#### Art. 13. Dans le respect de la loi du 8 décembre 1992 relative à la protection de la vie privée à l'égard des traitements de données à caractère personnel, le Gouvernement ou le fonctionnaire délégué à cette fin transmet chaque année au Conseil consultatif du logement et à tout autre organisme désigné par le Gouvernement un rapport d'activité détaillé.
-#### Art. 14. Le Gouvernement fixe les montants maxima des frais administratifs pouvant être demandés pour la délivrance de l'attestation de contrôle de conformité.
-Le Gouvernement fixe également les montants maxima et les personnes redevables des frais administratifs consécutifs au dépôt d'une plainte introduite conformément à l'article 7.## CHAPITRE II.  - De la lutte contre l'inoccupation des logements
-### Section 1.  Dispositifs régionaux
-#### Art. 14/1.  Paragraphe 1. Au sein du Service public régional de Bruxelles, le Service régional des logements inoccupés a pour mission de :
+#### Art. 13. 
+Dans le respect de la loi du 8 décembre 1992 relative à la protection de la vie privée à l'égard des traitements de données à caractère personnel, le Gouvernement ou le fonctionnaire délégué à cette fin transmet chaque année au Conseil consultatif du logement et à tout autre organisme désigné par le Gouvernement un rapport d'activité détaillé.
+#### Art. 14. 
+Le Gouvernement fixe les montants maxima des frais administratifs pouvant être demandés pour la délivrance de l'attestation de contrôle de conformité.
+#### Art. 14/1. 
+Paragraphe 1. Au sein du Service public régional de Bruxelles, le Service régional des logements inoccupés a pour mission de :
 Point 1 centraliser l'identification des logements présumés inoccupés via une base de données en vue de les contrôler et de mettre en place un inventaire régional des logements inoccupés ;
 Point 2 veiller au respect des règles fixées par ou en vertu du présent chapitre et à la mise en oeuvre des dispositions du présent chapitre, en ce compris le droit de gestion publique et l'action en cessation ;
 Point 3 soutenir les opérateurs de gestion publique dans leurs actions de lutte contre les logements inoccupés, dont notamment le droit de gestion publique, le droit d'expropriation et l'action en cessation.
@@ -162,13 +168,14 @@ Point 1 les adresses des biens immobiliers cadastrés comme logement et déclar�
 Point 2 les noms, prénoms et numéros de registre national des titulaires d'un droit réel sur ces logements.
 L'inventaire peut être alimenté par le signalement des communes ou des associations agréées.
 Le Service régional des logements inoccupés permet aux communes d'accéder à la liste des logements inoccupés situés sur leur territoire respectif, repris dans l'inventaire, pour lesquels une action de lutte contre l'inoccupation pourrait être enclenchée.
-### Section 2.  Le droit de gestion publique des logements
-#### Art. 15. Champ d'application
+#### Art. 15. 
+Champ d'application
 Tout opérateur de gestion publique dispose d'un droit de gestion publique des logements suivants :
 Point 1 les logements inoccupés, tels que définis à l'article 19/2 ;
 Point 2 les logements frappés de l'interdiction de location visée à l'article 8 ;
 Point 3 les logements déclarés inhabitables, conformément à l'article 135 de la Nouvelle loi communale.
-#### Art. 16. Proposition de prise en gestion
+#### Art. 16. 
+Proposition de prise en gestion
 Paragraphe 1. Visite du logement
 L'opérateur de gestion publique qui envisage de prendre en gestion publique un logement tel que visé à l'article 15, peut demander au titulaire d'un droit réel sur le logement, par envoi recommandé, de le visiter dans le mois, entre 8 h et 20 h.
 Afin de déterminer les travaux éventuellement nécessaires, cette visite s'effectue en présence d'agents du Service public régional de Bruxelles compétents en matière de logement.
@@ -179,14 +186,16 @@ Cette proposition reprend le contrat-type déterminé par le Gouvernement.
 Le titulaire d'un droit réel dispose de deux mois à compter de cet envoi pour notifier sa réponse par envoi recommandé.
 Paragraphe 3. Conclusion d'un contrat de gestion
 Si la réponse est positive, l'opérateur de gestion publique conclut avec le titulaire d'un droit réel un contrat de gestion dont les modalités sont déterminées par le Gouvernement
-#### Art. 17. Refus de la proposition de prise en gestion
+#### Art. 17. 
+Refus de la proposition de prise en gestion
 Paragraphe 1. Mise en demeure
 En cas de refus sans motif légitime du titulaire d'un droit réel sur le logement concerné, ou à défaut de réponse de sa part dans le délai prévu à l'article 16, Paragraphe 2, l'opérateur de gestion publique le met en demeure, par envoi recommandé, de louer le logement après avoir, le cas échéant, réalisé les travaux.
 La mise en demeure indique expressément l'intention de l'opérateur de gestion publique d'exercer son droit de gestion publique à l'expiration du délai qu'il fixe, de minimum deux mois.
 Les dispositions de la présente section sont intégralement reproduites dans la mise en demeure.
 Paragraphe 2. Notification
 A l'expiration du délai fixé dans la mise en demeure, l'opérateur de gestion publique notifie au titulaire d'un droit réel, par envoi recommandé, la mise en oeuvre du droit de gestion publique. Il en informe également le Service régional des logements inoccupés.
-#### Art. 18. Mise en oeuvre du droit de gestion publique
+#### Art. 18. 
+Mise en oeuvre du droit de gestion publique
 Paragraphe 1. Effets du droit de gestion publique
 A dater de la notification de la mise en oeuvre du droit de gestion publique, l'opérateur de gestion publique dispose de la compétence de gérer provisoirement le logement, en ce compris la faculté d'effectuer les travaux nécessaires à sa mise en location et de louer le bien pendant neuf ans, aux conditions d'accès au logement social fixées par le Gouvernement en application du Titre VI du présent Code.
 Le paiement du précompte immobilier est à la charge du titulaire d'un droit réel sur le logement imposable au 1 janvier de l'exercice d'imposition concerné.
@@ -199,7 +208,8 @@ Paragraphe 2. Perception des loyers
 Le titulaire d'un droit réel perçoit, à dater de la mise en location du logement, le loyer calculé selon des critères arrêtés par le Gouvernement, après déduction de tous les frais de prise en gestion et liés à la gestion publique.
 Paragraphe 3. Information du titulaire d'un droit réel
 Au cours de la gestion publique, l'opérateur de gestion publique informe le titulaire d'un droit réel des actes essentiels de cette gestion. Le Gouvernement détermine le mode, le contenu et la fréquence minimum de cette information.
-#### Art. 19. Fin de la gestion publique
+#### Art. 19. 
+Fin de la gestion publique
 Paragraphe 1. Reprise de la gestion du logement par le titulaire d'un droit réel
 Le titulaire d'un droit réel peut demander de reprendre la gestion de son logement dès que celui-ci a fait l'objet d'une première occupation à la suite de la conclusion d'un contrat de bail.
 Cette demande est adressée à l'opérateur de gestion publique, par envoi recommandé.
@@ -216,14 +226,15 @@ Les cotitulaires d'un droit réel sur le logement sont tenus solidairement au pa
 L'amende est recouvrée et poursuivie conformément aux dispositions de l'ordonnance organique du 23 février 2006 portant les dispositions applicables au budget, à la comptabilité et au contrôle et de l'arrêté du Gouvernement de la Région de Bruxelles-Capitale du 19 février 2006 portant sur les acteurs financiers.
 En cas de non-paiement de l'amende dans les délais, une contrainte est décernée par le fonctionnaire désigné par le Gouvernement. La contrainte est visée et rendue exécutoire par le fonctionnaire susmentionné.
 Le produit des amendes est versé dans le " Fonds droit de gestion publique " visé à l'article 22, Paragraphe 2.
-## CHAPITRE III.
-### Section 3.  Infraction en cas de logement inoccupé
-#### Art. 19/1.  Infraction administrative
+#### Art. 19/1. 
+Infraction administrative
 Constitue une infraction administrative passible d'une amende le fait, pour le titulaire d'un droit réel, de maintenir un logement inoccupé au sens de l'article 19/2 sans justifier l'inoccupation par des raisons légitimes, par un cas de force majeure ou par la programmation ou la réalisation de travaux.
 Lorsque l'immeuble a fait l'objet d'un droit de gestion publique, comme il est prévu aux articles 15 et suivants, la même infraction peut être le fait de l'opérateur de gestion publique.
-#### Art. 19/2.  Définition d'un logement inoccupé
+#### Art. 19/2. 
+Définition d'un logement inoccupé
 Est un logement inoccupé : l'immeuble ou la partie d'immeuble qui n'est pas occupé(e) conformément à sa destination en logement depuis plus de douze mois consécutifs.
-#### Art. 19/3.  Critères de présomption d'inoccupation
+#### Art. 19/3. 
+Critères de présomption d'inoccupation
 Sont présumés inoccupés, jusqu'à preuve contraire, notamment les logements :
 Point 1 à l'adresse desquels personne n'est inscrit à titre de résidence principale aux registres de la population ;
 Point 2 à l'adresse desquels aucun bail d'habitation n'est enregistré ;
@@ -232,7 +243,8 @@ Point 4 pour lesquels la consommation d'eau est inférieure à cinq mètres cube
 Point 5 frappés de l'interdiction de location visée à l'article 8 depuis plus de douze mois ;
 Point 6 déclarés inhabitables conformément à l'article 135 de la Nouvelle loi communale depuis plus de douze mois ;
 Point 7 pour lesquels un procès-verbal d'infraction urbanistique a été dressé pour modification illicite de la destination.
-#### Art. 20. Procédure administrative
+#### Art. 20. 
+Procédure administrative
 Paragraphe 1. Constat de présomption d'infraction
 Sans préjudice de l'article 135 de la Nouvelle loi communale, les agents-inspecteurs du Service régional des logements inoccupés ont qualité pour rechercher et constater les infractions présumées visées à l'article 19/1 par procès-verbal faisant foi jusqu'à preuve du contraire, soit d'initiative, soit sur plainte d'une association visée à l'article 134 du présent Code ou d'une commune selon les modalités décrites au paragraphe 2.
 Les agents-inspecteurs du Service régional des logements inoccupés peuvent visiter les logements entre 8 et 20 heures après qu'un avertissement préalable des auteurs présumés a été envoyé par envoi recommandé au moins une semaine avant la date effective de la visite sur les lieux.
@@ -275,10 +287,12 @@ f) le contrôle effectué par le Service régional des logements inoccupés jusq
 g) le risque de vente publique du logement en cas de non-paiement des amendes infligées.
 Paragraphe 6. Contrôle
 Le Service régional des logements inoccupés contrôle la situation du logement jusqu'à son occupation.
-#### Art. 21. Recours administratif
+#### Art. 21. 
+Recours administratif
 Le contrevenant dispose d'un délai de trente jours à dater de la notification de la décision lui infligeant une amende administrative pour introduire, par envoi recommandé, un recours suspensif devant le Gouvernement ou le fonctionnaire délégué à cette fin.
 Le Gouvernement ou le fonctionnaire délégué à cette fin se prononce dans les trente jours à dater de la réception du recours. A défaut de décision dans ce délai, l'imposition de l'amende est infirmée.
-#### Art. 22. Recouvrement et produit des amendes
+#### Art. 22. 
+Recouvrement et produit des amendes
 Paragraphe 1. Recouvrement de l'amende
 Les cotitulaires d'un droit réel sur le logement sont tenus solidairement au paiement de l'amende.
 L'amende est recouvrée et poursuivie conformément aux dispositions de l'ordonnance organique du 23 février 2006 portant les dispositions applicables au budget, à la comptabilité et au contrôle et de l'arrêté du Gouvernement de la Région de Bruxelles-Capitale du 19 février 2006 portant sur les acteurs financiers.
@@ -290,11 +304,11 @@ Nonante-cinq pour cent du produit total des amendes sont versés dans le " Fonds
 Cinq pour cent du produit total des amendes sont affectés aux moyens généraux du Budget des Voies et Moyens.
 Des nonante-cinq pour cent susmentionnés, un montant qui correspond à vingt-cinq pour cent du produit total des amendes est ristourné à la commune sur le territoire de laquelle se situe le bien inoccupé, pour autant qu'elle ait expressément exclu les logements inoccupés du champ d'application de son règlement-taxe relatif aux immeubles abandonnés, inoccupés ou inachevés. Elle les affecte au développement de sa politique en matière de logement.
 Des nonante-cinq pour cent susmentionnés, un montant, qui correspond à septante pour cent du produit total des amendes, reste dans le Fonds susmentionné, pour être affecté, le cas échéant, aux dépenses prévues pour le Fonds.
-### Section 4.  L'action en cessation
-#### Art. 23. Action judiciaire
+#### Art. 23. 
+Action judiciaire
 Le président du tribunal de première instance statuant comme en référé peut ordonner, à la demande des autorités administratives ou d'une association visée à l'article 134 du présent Code, que le titulaire d'un droit réel sur le logement, ou, dans l'hypothèse d'un logement qui a fait l'objet d'un droit de gestion publique au sens des articles 15 et suivants du présent Code, l'opérateur de gestion publique concerné, prenne toute mesure utile afin d'en assurer l'occupation dans un délai raisonnable.
-### Section 5.  Traitement des données et communications
-#### Art. 23/1.  Traitement des données à caractère personnel
+#### Art. 23/1. 
+Traitement des données à caractère personnel
 Paragraphe 1. Responsabilité, finalités et licéité des traitements
 Le Service public régional de Bruxelles est, en application de l'article 4, 7) du RGPD, le responsable des traitements de données à caractère personnel effectués pour :
 Point 1 l'identification des logements présumés inoccupés en vue de :
@@ -340,7 +354,8 @@ Point 1 l'administration Bruxelles Economie et Emploi du Service public régiona
 Point 2 le service administratif Bruxelles Urbanisme & Patrimoine dans la mesure où ces données sont nécessaires à l'application de la réglementation relative à l'aménagement du territoire et de l'urbanisme ;
 Point 3 aux communes dans la mesure où ces données sont nécessaires à leur mission de remise sur le marché de logements inoccupés et à l'exercice de leurs compétences fiscales.
 Les données collectées pour les autres finalités visées au paragraphe 1 du présent article peuvent être communiquées aux opérateurs de gestion publique concernés si, et dans la mesure où, ces données sont nécessaires à l'exécution de leurs missions d'intérêt public relatives à la politique du logement.
-#### Art. 23/2.  Rapport des communes
+#### Art. 23/2. 
+Rapport des communes
 Avant le 1 juillet de chaque année, les communes publient un rapport de leur politique de lutte contre les logements inoccupés, ainsi que celle de leur C.P.A.S. Le rapport inclut en tout cas un inventaire des logements situés sur leur territoire dont l'inoccupation est avérée, une évaluation chiffrée des effets du recours au droit de gestion publique, à l'action en cessation prévue à l'article 23, et à la plainte de la commune dont question à l'article 20, paragraphes 1 et 2.
 Ce rapport est transmis au Service régional des logements inoccupés, et reprend :
 Point 1 un inventaire des biens affectés au logement et qui s'avèrent inoccupés, mentionnant :
@@ -353,46 +368,57 @@ Point 1 un inventaire des biens affectés au logement et qui s'avèrent inoccup�
 - si le bien a fait l'objet d'un arrêté d'inhabitabilité ;
 - le cas échéant, les logements pour lesquels une taxe a été infligée par la commune pour abandon ou inoccupation lors du dernier exercice d'imposition ;
 Point 2 une évaluation chiffrée des effets du recours au droit de gestion publique, à l'action en cessation et à la plainte développée à l'article 20, Paragraphe 1 et Paragraphe 2, ainsi qu'un monitoring des politiques menées par la commune sur cette matière et l'utilisation des soutiens financiers régionaux qui y sont liés.
-#### Art. 23/3.  Evaluation
+#### Art. 23/3. 
+Evaluation
 Une évaluation de l'exercice du droit de gestion publique est réalisée tous les cinq ans par l'Administration en charge de la politique du logement et ce pour la première fois en janvier 2027. Cette évaluation est communiquée au Gouvernement.
-#### Art. 23/4.  Equivalents aux envois recommandés
+#### Art. 23/4. 
+Equivalents aux envois recommandés
 Dans les dispositions du présent chapitre, tout envoi recommandé peut également être valablement effectué par tout moyen conférant date certaine à l'envoi.
-## CHAPITRE IV. - Des règles applicables aux logements mis en location par des opérateurs immobiliers publics
-#### Art. 24.Les dispositions du présent chapitre s'appliquent aux opérateurs immobiliers publics et à leurs logements (à l'exception des SISP), y compris lorsque la gestion et la mise en location sont confiées à un tiers (autre qu'une agence immobilière sociale).
+#### Art. 24.
+Les dispositions du présent chapitre s'appliquent aux opérateurs immobiliers publics et à leurs logements (à l'exception des SISP), y compris lorsque la gestion et la mise en location sont confiées à un tiers (autre qu'une agence immobilière sociale).
 Les dispositions du présent chapitre s'appliquent également aux personnes morales, quelles que soient leur forme et leur nature, dont l'objet social prévoit la gestion et la mise en location d'un ou plusieurs logements et sur lesquelles un ou plusieurs opérateurs immobiliers publics et/ou la Région de Bruxelles-Capitale exercent directement ou indirectement une influence dominante du fait de la propriété, de la participation financière ou des règles qui régissent la personne morale concernée.
 L'influence dominante est présumée lorsqu'un ou plusieurs opérateurs immobiliers publics et/ou la Région de Bruxelles-Capitale remplissent directement ou indirectement, à l'égard de la personne morale, une ou plusieurs des conditions suivantes :
 Point 1 détenir la majorité du capital social;
 Point 2 disposer de la majorité des voix attachées aux parts émises par la personne morale;
 Point 3 pouvoir désigner plus de la moitié des membres de l'organe d'administration, de direction ou de surveillance de la personne morale.
 Le présent chapitre ne s'applique pas aux logements mis en location au sein de maisons de repos et des lieux d'hébergement agréés.
-#### Art. 25. Avant le 1 juillet de chaque année, tout opérateur immobilier public communique au Gouvernement l'inventaire, arrêté au 31 décembre de l'année précédente, de tous les logements dont il est titulaire d'un droit réel principal et ou qui sont mis en location, ainsi que leur localisation, leur type, leur surface habitable, le nombre de chambres qu'ils comptent, le montant de leur loyer et le nom du locataire.
-#### Art. 26. Tout opérateur immobilier public qui offre des logements en location à titre de titulaire d'un droit réel principal doit prendre un règlement d'attribution, ci-après appelé " le Règlement d'attribution ", déterminant les critères et la procédure de leur attribution, ainsi que les modalités du recours prévu à l'article 32, Paragraphe 2, en ce compris la compétence de réformation de l'instance de recours.
+#### Art. 25. 
+Avant le 1 juillet de chaque année, tout opérateur immobilier public communique au Gouvernement l'inventaire, arrêté au 31 décembre de l'année précédente, de tous les logements dont il est titulaire d'un droit réel principal et ou qui sont mis en location, ainsi que leur localisation, leur type, leur surface habitable, le nombre de chambres qu'ils comptent, le montant de leur loyer et le nom du locataire.
+#### Art. 26. 
+Tout opérateur immobilier public qui offre des logements en location à titre de titulaire d'un droit réel principal doit prendre un règlement d'attribution, ci-après appelé " le Règlement d'attribution ", déterminant les critères et la procédure de leur attribution, ainsi que les modalités du recours prévu à l'article 32, Paragraphe 2, en ce compris la compétence de réformation de l'instance de recours.
 Ce règlement doit intégrer les obligations figurant aux articles 27 à 32. Il s'applique à tous les types de logement, à l'exception des logements de transit.
 Le règlement doit être aisément accessible au public et communiqué sans délai au Gouvernement, ainsi que ses modifications subséquentes.
-#### Art. 27. Paragraphe 1. Tout opérateur immobilier public qui offre des logements en location doit tenir un registre - ci-après appelé " le Registre " - reprenant, dans l'ordre chronologique de l'introduction des demandes, la liste anonymisée des demandeurs pour l'attribution d'un de ces logements.
+#### Art. 27. 
+Paragraphe 1. Tout opérateur immobilier public qui offre des logements en location doit tenir un registre - ci-après appelé " le Registre " - reprenant, dans l'ordre chronologique de l'introduction des demandes, la liste anonymisée des demandeurs pour l'attribution d'un de ces logements.
 L'opérateur mentionne dans le Registre, en marge du demandeur à qui un logement a été attribué, l'adresse de ce logement ainsi que la date de la décision d'attribution.
 La demande d'inscription dans le registre ne peut être refusée pour des motifs liés à la localisation de la résidence du candidat ou au montant minimal de ses revenus.
 Paragraphe 2. Le Registre est accessible pour consultation à tout le moins aux demandeurs, aux conseillers communaux, aux conseillers des centres publics d'action sociale et aux membres du Parlement et du Gouvernement de la Région de Bruxelles-Capitale.
-#### Art. 28. Sans préjudice de l'article 31 relatif aux dérogations, le preneur doit être au nombre des demandeurs figurant au Registre.
-#### Art. 28bis. Le logement appartenant aux communes est attribué sur avis conforme d'une Commission indépendante. Le conseil communal en détermine la composition et le mode de fonctionnement.
+#### Art. 28. 
+Sans préjudice de l'article 31 relatif aux dérogations, le preneur doit être au nombre des demandeurs figurant au Registre.
+#### Art. 28bis.
+Le logement appartenant aux communes est attribué sur avis conforme d'une Commission indépendante. Le conseil communal en détermine la composition et le mode de fonctionnement.
 Le logement appartenant aux centres publics d'action sociale est attribué sur avis conforme d'une Commission indépendante. Le conseil de l'action sociale en détermine la composition et le mode de fonctionnement.
 Une Commission par commune et une Commission par CPAS est créée. Par dérogation, avec l'accord du conseil communal et du conseil de l'action sociale, une Commission unique peut être créée pour rendre un avis conforme pour l'attribution à la fois des logements appartenant à une commune et des logements appartenant à un CPAS.
 (NOTE : par son arrêt numéro 16/2015 du 12-02-2015 (2015-02-12/07, M.B. 24-03-2015, p. 18722), la Cour constitutionnelle a annulé le présent article, dans la mesure indiquée en B.62.4 par larrêt)
-#### Art. 29. La décision d'attribution des logements suit l'ordre chronologique des demandes du Registre qui sont en adéquation avec le nombre de chambres du logement mis en location, conformément à la réglementation relative à l'aide visée à l'article 165 du présent Code.
+#### Art. 29. 
+La décision d'attribution des logements suit l'ordre chronologique des demandes du Registre qui sont en adéquation avec le nombre de chambres du logement mis en location, conformément à la réglementation relative à l'aide visée à l'article 165 du présent Code.
 Toutefois, d'autres critères inscrits dans le Règlement d'attribution peuvent être pris en compte pour pondérer l'ordre chronologique, pour autant qu'ils soient conformes aux dispositions du Titre X du présent Code.
 Ces critères doivent être objectifs et mesurables, et ne peuvent concerner la localisation de la résidence du candidat ou le montant minimal de ses revenus. Leur poids dans le mécanisme d'attribution doit être décrit dans le Règlement d'attribution. L'ordre chronologique départage les ménages dont la demande a obtenu le même nombre de points.
 Le Règlement doit également mentionner l'éligibilité à l'allocation-loyer des logements concernés.
 Lors de l'attribution du logement, l'opérateur tient compte, pour l'application de l'alinéa 1, du ou des enfants bénéficiant de modalités d'hébergement chez l'un ou l'autre des membres du ménage, telles qu'actées dans une décision judiciaire.
 Le Gouvernement arrête un règlement-type, par catégorie d'opérateur, comprenant les exigences précitées.
-#### Art. 30. Paragraphe 1. Chaque fois qu'il doit attribuer en location un de ses logements, l'opérateur immobilier public contacte, par courrier recommandé ou par tout autre moyen permettant d'établir la preuve de la réception du courrier, les demandeurs figurant au Registre, dont la demande est en adéquation avec le logement disponible et qui sont les mieux classés en vertu de l'article 29.
+#### Art. 30. 
+Paragraphe 1. Chaque fois qu'il doit attribuer en location un de ses logements, l'opérateur immobilier public contacte, par courrier recommandé ou par tout autre moyen permettant d'établir la preuve de la réception du courrier, les demandeurs figurant au Registre, dont la demande est en adéquation avec le logement disponible et qui sont les mieux classés en vertu de l'article 29.
 Par ce courrier, il les informe de la disponibilité du logement et précise à tout le moins le loyer qui en sera demandé, le montant des éventuelles charges locatives fixes, les modalités de visite du bien ainsi que celles, en ce compris le délai, suivant lesquelles les demandeurs peuvent manifester leur accord pour la prise en location du logement.
 Les modalités de visite et de communication d'un accord doivent être identiques pour tous les demandeurs et conçues de manière à ne pas disqualifier sans motif admissible certaines catégories de demandeurs normalement diligents.
 Ce courrier précise en outre les règles et critères d'attribution du logement, et reproduit intégralement le Règlement d'attribution.
 Paragraphe 2. Parmi les différentes réponses positives de demandeurs, est retenu pour l'attribution du logement le demandeur satisfaisant à toutes les conditions et le mieux classé en vertu de l'article 29.
 Paragraphe 3. Toute décision d'attribution d'un logement prise dans le cadre du présent chapitre est formellement motivée et répond aux prescriptions de la loi du 20 février 1991 modifiant et complétant les dispositions du Code civil relatives aux baux à loyer.
-#### Art. 31.L'opérateur immobilier public ne peut déroger au Règlement d'attribution qu'en faveur d'un demandeur en situation d'urgence extrême. Cette dérogation doit être formellement motivée et mentionnée en marge du Registre. En aucun cas la part des logements attribués sur base du présent article ne peut excéder 40 % du total des attributions effectuées pendant l'année précédente.
+#### Art. 31.
+L'opérateur immobilier public ne peut déroger au Règlement d'attribution qu'en faveur d'un demandeur en situation d'urgence extrême. Cette dérogation doit être formellement motivée et mentionnée en marge du Registre. En aucun cas la part des logements attribués sur base du présent article ne peut excéder 40 % du total des attributions effectuées pendant l'année précédente.
 (NOTE : par son arrêt numéro 16/2015 du 12-02-2015 (2015-02-12/07, M.B. 24-03-2015, p. 18722), la Cour constitutionnelle a annulé la troisième phrase en italique du présent article)
-#### Art. 32. Paragraphe 1. - Le bail ne prend effet qu'à l'expiration du délai de recours visé au Paragraphe 2.
+#### Art. 32. 
+Paragraphe 1. - Le bail ne prend effet qu'à l'expiration du délai de recours visé au Paragraphe 2.
 Paragraphe 2. Tout candidat qui s'estime lésé par une décision d'attribution d'un logement par une commune ou un C.P.A.S. peut, dans le mois de la notification de la décision d'attribution, saisir d'un recours contre cette décision, soit le Collège des bourgmestres et échevins, lorsque l'opérateur immobilier public dépend de la commune, soit le Bureau permanent, lorsqu'il s'agit du centre public d'action sociale.
 Tout candidat qui s'estime lésé par une décision d'attribution d'un logement par un autre opérateur immobilier peut, dans le mois de la notification de la décision d'attribution, saisir d'un recours contre cette décision, le Gouvernement ou le fonctionnaire délégué à cette fin.
 Le recours, de même que le délai pour son introduction, sont suspensifs de la décision attaquée.
@@ -400,24 +426,26 @@ Il doit être statué sur le recours dans le mois.
 Le candidat locataire qui a obtenu gain de cause suite au recours qu'il a introduit contre une décision d'attribution d'un logement dispose d'un droit absolu à l'attribution du premier logement adapté devenu vacant.
 L'usage de cette voie de recours n'empêche pas l'introduction d'un recours selon les voies ordinaires.
 Paragraphe 3. L'opérateur immobilier public fait rapport annuellement de ses décisions d'attribution à l'organe qui a édicté le Règlement d'attribution prévu à l'article 27. Ce rapport mentionne les noms des demandeurs retenus en application de l'article 30, Paragraphe 1, pour chaque logement attribué, le calcul qui a permis de départager les demandeurs ou, le cas échéant, les motivations qui ont justifié le recours à l'article 31, le demandeur finalement retenu et les caractéristiques de son ménage et du logement.
-#### Art. 33. L'opérateur immobilier public, sauf accord du Gouvernement, ne peut diminuer le nombre de mètres carrés habitables de son parc de logements locatifs tel qu'établi au 1 juillet de l'année précédente.
-# TITRE IV. - DES ORGANISMES COMPETENTS EN MATIERE DE LOGEMENT
-## CHAPITRE Ier. - La Société du Logement de la Région de Bruxelles-Capitale (SLRB)
-### Section 1. - Statut et forme
-#### Art. 34.Paragraphe 1. La SLRB est une personne morale de droit public, soumise aux dispositions de la loi du 16 mars 1954 relative au contrôle de certains organismes d'intérêt public.
+#### Art. 33. 
+L'opérateur immobilier public, sauf accord du Gouvernement, ne peut diminuer le nombre de mètres carrés habitables de son parc de logements locatifs tel qu'établi au 1 juillet de l'année précédente.
+#### Art. 34.
+Paragraphe 1. La SLRB est une personne morale de droit public, soumise aux dispositions de la loi du 16 mars 1954 relative au contrôle de certains organismes d'intérêt public.
 Paragraphe 2. La SLRB est constituée sous la forme d'une société anonyme et est soumise au  Code des sociétés et associations, sous réserve des dispositions régies par le présent Code.
 Paragraphe 3. Le capital minimal de la SLRB est fixé par le Gouvernement. Le capital souscrit par la Région s'élève à un minimum de 75 %. Les droits attachés aux actions détenues par la Région sont exercés par le Gouvernement.
 Paragraphe 4. Le siège de la SLRB est établi dans une commune de la Région de Bruxelles-Capitale.
 Paragraphe 5. Les statuts de la SLRB sont soumis à l'approbation du Gouvernement.
-### Section 2. - Fonctionnement
-#### Art. 35. L'assemblée générale se compose des actionnaires, des administrateurs, du président, du vice-président-administrateur délégué et des commissaires. Seuls les actionnaires prennent part au vote.
-#### Art. 36. Paragraphe 1. La SLRB est administrée par un conseil composé de quinze membres.
+#### Art. 35. 
+L'assemblée générale se compose des actionnaires, des administrateurs, du président, du vice-président-administrateur délégué et des commissaires. Seuls les actionnaires prennent part au vote.
+#### Art. 36. 
+Paragraphe 1. La SLRB est administrée par un conseil composé de quinze membres.
 Ils sont élus par l'assemblée générale sur proposition de leurs groupes linguistiques respectifs. Dix membres sont proposés par le groupe linguistique le plus nombreux, et les cinq autres par l'autre groupe linguistique.
 Paragraphe 2. L'appartenance des membres aux groupes linguistiques doit être confirmée par le Gouvernement de la Région de Bruxelles-Capitale.
 Paragraphe 3. Le Gouvernement propose au conseil un président et un vice-président-administrateur délégué qu'il élit en son sein. Ceux-ci appartiennent à des groupes linguistiques différents. Il en est de même du directeur général et du directeur général adjoint. En tout cas, le président et le directeur général appartiennent à des rôles linguistiques différents.
 Paragraphe 4. Toutes les décisions des organes de gestion et de direction, tant internes qu'externes, doivent être actées et exigent la signature d'un responsable de chaque groupe linguistique.
-#### Art. 37. Les mandats des administrateurs sont renouvelables. Ils sont révocables à tout moment.
-#### Art. 38.Le mandat d'administrateur est incompatible avec les qualités suivantes :
+#### Art. 37. 
+Les mandats des administrateurs sont renouvelables. Ils sont révocables à tout moment.
+#### Art. 38.
+Le mandat d'administrateur est incompatible avec les qualités suivantes :
 Point 1 membre du Gouvernement de la Région de Bruxelles-Capitale ou Secrétaire d'Etat à l'un de ses membres;
 Point 2 administrateur, dirigeant ou membre du personnel d'une entreprise de travaux publics ou d'une société de promotion et de construction immobilière, ainsi que toute personne qui exerce ces activités en nom propre;
 Point 3  délégué social, commissaire ou commissaire spécial auprès d'une SISP;
@@ -425,10 +453,12 @@ Point 4 membre du Parlement de la Région de Bruxelles-Capitale;
 Point 5 administrateur ou membre du personnel d'une SISP;
 Point 6 membre du personnel de la SLRB;
 Point 7 administrateur ou membre du personnel d'une asbl subsidiée par la SLRB, qui n'a pas été créée par la Région aux fins d'exercer exclusivement tout ou partie des missions de la SLRB.
-#### Art. 39. Le Gouvernement nomme, par arrêté, deux commissaires de groupe linguistique différent. Leur mission sera exercée conformément aux articles 9 et 10 de la loi du 16 mars 1954 relative au contrôle de certains organismes d'intérêt public.
-#### Art. 40. Le Gouvernement fixe le statut administratif et pécuniaire du personnel de la SLRB.
-### Section 3. - Missions
-#### Art. 41.Dans le cadre de son rôle de tutelle, la SLRB est chargée des missions suivantes :
+#### Art. 39. 
+Le Gouvernement nomme, par arrêté, deux commissaires de groupe linguistique différent. Leur mission sera exercée conformément aux articles 9 et 10 de la loi du 16 mars 1954 relative au contrôle de certains organismes d'intérêt public.
+#### Art. 40. 
+Le Gouvernement fixe le statut administratif et pécuniaire du personnel de la SLRB.
+#### Art. 41.
+Dans le cadre de son rôle de tutelle, la SLRB est chargée des missions suivantes :
 Point 1 promouvoir le logement social dans chacune des dix-neuf communes de la Région de Bruxelles-Capitale et assister les SISP;
 Point 2 agréer, selon les conditions fixées à l'article 54, conseiller et contrôler les SISP;
 Point 3 établir à l'égard des SISP les directives techniques en vue de l'organisation de ses missions de contrôle;
@@ -449,7 +479,8 @@ Point 15 organiser la concertation avec les SISP au sein d'un comité restreint 
 Point 16 autoriser et encadrer les mises à disposition précaires de logements dont la rénovation est programmée et dont les occupants font alors l'objet d'un accompagnement social assuré par un intervenant extérieur à la SISP;
 Point 17 établir ou contrôler la validité des données statistiques récoltées dans le cadastre technique et énergétique du patrimoine, suivant les modalités arrêtées par le contrat de gestion, ainsi qu'en assurer la communication au Gouvernement.
 Point 18 encadrer les Projets de Cohésion Sociale sis en Région de Bruxelles-Capitale qui sont subsidiés par la Région de Bruxelles-Capitale dans la limite des montants inscrits au Budget général des Dépenses de la Région de Bruxelles-Capitale. Ces PCS sont le résultat d'un partenariat entre des SISP, des ASBL et le cas échéant des communes de la Région de Bruxelles-Capitale en vue de développer sur les sites de logements gérés par les SISP des actions en vue notamment de favoriser des dynamiques participatives et la cohésion sociale entre locataires de ces logements et entre les habitants des quartiers dans les périmètres d'actions des PCS, ainsi qu'entre les locataires et la SISP.
-#### Art. 42.Dans le cadre de sa participation à la politique du logement, la SLRB est chargée des missions suivantes :
+#### Art. 42.
+Dans le cadre de sa participation à la politique du logement, la SLRB est chargée des missions suivantes :
 Point 1 dans la mesure où les SISP n'exécutent pas leur programme, réaliser la construction ou la rénovation, d'habitations sociales et d'immeubles ou parties d'immeubles à caractère artisanal, commercial, communautaires ou de services qui seraient nécessaires au sein d'un ensemble d'habitations sociales. La SLRB confie ou cède la gestion de ces habitations ou de ces immeubles ou parties d'immeubles à des SISP. Elle peut toutefois en assumer elle-même la gestion aussi longtemps que l'acte du mandat ou de cession aux dites SISP n'est pas établi;
 Point 2 acquérir des biens immeubles, y construire, les aménager, les rénover, en assurer la gestion, les vendre, céder des droits réels démembrés, les donner en location et imposer des servitudes et des charges. La SLRB doit veiller à dégager des critères architecturaux ou d'aménagement du territoire aptes à garantir une vie harmonieuse dans et autour des habitations. Les programmes d'acquisition, de construction et de rénovation sont soumis à l'approbation du Gouvernement;
 Point 3 consentir des interventions pour l'équipement mobilier indispensable des immeubles construits par elle ou les SISP;
@@ -464,11 +495,13 @@ Point 11 agir en qualité de maître d'ouvrage, dans le cadre de projets de cons
 Point 12 développer une stratégie foncière de la Société, pour permettre au Gouvernement de mener sa politique régionale du logement;
 Point 13 dans les limites des crédits budgétaires, mettre à disposition des communes et des CPAS les moyens financiers nécessaires à l'acquisition de biens immobiliers. Le Gouvernement détermine les conditions d'octroi et les règles de procédure ;
 Point 14 réaliser les missions qui lui sont déléguées par ordonnance ou par arrêté du Gouvernement, en vue de contribuer à la politique du logement de la Région de Bruxelles-Capitale, notamment l'acquisition de biens immobiliers sur le marché concurrentiel pour son compte propre ou pour le compte des SISP ou l'acquisition de participations au sein de sociétés immobilières.
-#### Art. 42/1.  Lorsqu'il met en oeuvre des missions déléguées visées à l'article 42, Point 14, le conseil d'administration de la SLRB exécute strictement et fidèlement les missions confiées par ordonnance ou par arrêté du Gouvernement, conformément aux modalités définies par le Gouvernement. Les opérations effectuées par la SLRB dans le cadre de ces missions sont présentées de façon distincte dans ses comptes.
-### Section 4. - Contrat de gestion
-#### Art. 43. La SLRB exerce ses missions selon les priorités et les orientations définies dans le contrat de gestion conclu entre elle et le Gouvernement. Le contrat de gestion est conclu pour une durée de cinq ans et est renouvelable pour des périodes successives de cinq ans. En cours d'exécution, il peut être adapté de commun accord. Au terme de la troisième année, il est procédé à une évaluation commune pouvant donner lieu à des adaptations.
+#### Art. 42/1. 
+Lorsqu'il met en oeuvre des missions déléguées visées à l'article 42, Point 14, le conseil d'administration de la SLRB exécute strictement et fidèlement les missions confiées par ordonnance ou par arrêté du Gouvernement, conformément aux modalités définies par le Gouvernement. Les opérations effectuées par la SLRB dans le cadre de ces missions sont présentées de façon distincte dans ses comptes.
+#### Art. 43. 
+La SLRB exerce ses missions selon les priorités et les orientations définies dans le contrat de gestion conclu entre elle et le Gouvernement. Le contrat de gestion est conclu pour une durée de cinq ans et est renouvelable pour des périodes successives de cinq ans. En cours d'exécution, il peut être adapté de commun accord. Au terme de la troisième année, il est procédé à une évaluation commune pouvant donner lieu à des adaptations.
 Le contrat de gestion est communiqué pour information au Parlement de la Région de Bruxelles-Capitale dès sa conclusion par les parties. Il est publié au Moniteur belge.
-#### Art. 44. Le contrat de gestion règle :
+#### Art. 44. 
+Le contrat de gestion règle :
 Point 1 les objectifs assignés aux parties : ces objectifs traduisent le cadre économique, urbanistique, social et financier du secteur du logement social, la politique de la mobilisation patrimoniale, les arbitrages budgétaires entre l'amortissement et la dette du passé, la perte subie par certaines SISP en raison de la faiblesse ou de l'absence de revenus de leurs locataires, les investissements nouveaux et les modalités de la politique financière de la SLRB;
 Point 2 les critères d'évaluation des politiques du logement social auxquelles la SLRB participe;
 Point 3 les prestations qui doivent être assurées à l'égard des SISP;
@@ -477,11 +510,13 @@ Point 5 les sanctions en cas de défaut ou de mauvaise exécution par une partie
 Point 6 les conditions de révision du contrat;
 Point 7 les moyens spécifiques mis à la disposition de la SLRB par le Gouvernement, afin de lui permettre d'exercer ses activités;
 Point 8 les objectifs d'accessibilité et d'adaptabilité des bâtiments et logements aux personnes handicapées.
-#### Art. 45.Un rapport annuel d'évaluation de l'exécution du contrat de gestion est établi par la SLRB et soumis au Gouvernement par le Ministre de tutelle, après avis du/des commissaire(s) de Gouvernement visé(s) à l'article  39 du présent code.
+#### Art. 45.
+Un rapport annuel d'évaluation de l'exécution du contrat de gestion est établi par la SLRB et soumis au Gouvernement par le Ministre de tutelle, après avis du/des commissaire(s) de Gouvernement visé(s) à l'article  39 du présent code.
 Le rapport annuel est présenté au Gouvernement au plus tard le 31 août de l'année qui suit l'exercice auquel il se rapporte et est transmis dans le mois suivant au Parlement de la Région de Bruxelles-Capitale.
-#### Art. 46. Le Gouvernement peut fixer, pour la durée d'un exercice budgétaire, une politique de gestion ainsi que les moyens d'exécution qui s'imposent à la SLRB, si le contrat ne peut être conclu en raison de la carence de cette dernière. Le Gouvernement peut user de ce pouvoir, deux mois après avoir mis en demeure la SLRB qui resterait en défaut de réagir.
-### Section 5. - Contrat de gestion et règlement applicable aux SISP
-#### Art. 47.Paragraphe 1. La SLRB peut conclure un contrat de gestion avec les SISP qui a pour objet de traduire les objectifs et les modalités du contrat de gestion souscrit par la SLRB avec la Région.  Ce contrat de gestion  sera pris en application des ordonnances et arrêtés existants, ainsi que du contrat de gestion liant la SLRB à la Région. Il règle les matières suivantes :
+#### Art. 46. 
+Le Gouvernement peut fixer, pour la durée d'un exercice budgétaire, une politique de gestion ainsi que les moyens d'exécution qui s'imposent à la SLRB, si le contrat ne peut être conclu en raison de la carence de cette dernière. Le Gouvernement peut user de ce pouvoir, deux mois après avoir mis en demeure la SLRB qui resterait en défaut de réagir.
+#### Art. 47.
+Paragraphe 1. La SLRB peut conclure un contrat de gestion avec les SISP qui a pour objet de traduire les objectifs et les modalités du contrat de gestion souscrit par la SLRB avec la Région.  Ce contrat de gestion  sera pris en application des ordonnances et arrêtés existants, ainsi que du contrat de gestion liant la SLRB à la Région. Il règle les matières suivantes :
 Point 1 l'autonomie de la SISP dans ses investissements;
 Point 2 la fixation des loyers dans les habitations sociales;
 Point 3 les règles de conduite vis-à-vis des usagers des prestations de service public;
@@ -496,7 +531,8 @@ Point 11 les sanctions en cas de défaut ou de mauvaise exécution des engagemen
 Point 12 les conditions de révision du contrat;
 Point 13 les règles encadrant les rémunérations et avantages des directeurs, gérants d'une SISP.
 Paragraphe 2. Le contrat de gestion est conclu pour une durée de cinq ans et est renouvelable pour la même période. Il prévoit les périodes d'évaluation de son exécution.
-#### Art. 48.La SLRB élabore un règlement qui est d'application pour les SISP qui n'ont pas conclu de contrat de gestion avec la SLRB. Ce règlement sera pris en application des ordonnances et arrêtés existants, ainsi que du contrat de gestion liant la SLRB à la Région. Il régit les matières suivantes :
+#### Art. 48.
+La SLRB élabore un règlement qui est d'application pour les SISP qui n'ont pas conclu de contrat de gestion avec la SLRB. Ce règlement sera pris en application des ordonnances et arrêtés existants, ainsi que du contrat de gestion liant la SLRB à la Région. Il régit les matières suivantes :
 Point 1 l'autonomie de la SISP dans ses investissements;
 Point 2 la fixation des loyers dans les habitations sociales;
 Point 3 les règles de conduite vis-à-vis des usagers des prestations de service public;
@@ -508,16 +544,17 @@ Point 8 les critères d'évaluation de l'exécution des obligations de la SISP;
 Point 9 les conditions de l'accord d'une SISP avec d'autres personnes morales conclu pour valoriser ses prestations de service public à l'égard des usagers;
 Point 10 les sanctions en cas de défaut ou de mauvaise exécution dudit règlement;
 Point 11 les règles encadrant les rémunérations et avantages des directeurs, gérants d'une SISP.
-### Section 6. - Moyens d'action
-#### Art. 49. La SLRB peut être autorisée, par arrêté du Gouvernement, à exproprier, en vue de la réalisation de son objet, pour cause d'utilité publique, même par zones, des immeubles bâtis ou non bâtis.
-#### Art. 50. La SLRB est autorisée à contribuer à l'élaboration de projets, à devenir associée et à participer au capital de sociétés en vue de réaliser leurs réserves foncières dans le cadre d'opérations immobilières destinées à être affectées à une part significative de logements sociaux. Dans ce cas, le produit de la mobilisation du foncier doit être intégralement affecté à la politique d'investissement du secteur du logement social. L'autorisation est conférée par le Gouvernement ou en vertu du contrat de gestion.
-### Section 7. - Modalités de financement
-#### Art. 51. La SLRB peut uniquement contracter des emprunts après avoir reçu l'autorisation du Gouvernement. La SLRB tient le Gouvernement informé de la conclusion de l'émission, ainsi que de l'exécution des clauses de ses emprunts.
-#### Art. 52. Le Gouvernement est autorisé à garantir les tiers, aux conditions qu'il détermine et dans les limites fixées par le budget, du remboursement en principal, intérêts et frais des emprunts contractés par la SLRB.
-#### Art. 53.Paragraphe 1. Le Gouvernement alloue à la SLRB les sommes nécessaires à la réalisation de son objet social et à l'accomplissement de ses missions.  Le Gouvernement détermine les conditions d'octroi et les règles de procédure.
+#### Art. 49. 
+La SLRB peut être autorisée, par arrêté du Gouvernement, à exproprier, en vue de la réalisation de son objet, pour cause d'utilité publique, même par zones, des immeubles bâtis ou non bâtis.
+#### Art. 50. 
+La SLRB est autorisée à contribuer à l'élaboration de projets, à devenir associée et à participer au capital de sociétés en vue de réaliser leurs réserves foncières dans le cadre d'opérations immobilières destinées à être affectées à une part significative de logements sociaux. Dans ce cas, le produit de la mobilisation du foncier doit être intégralement affecté à la politique d'investissement du secteur du logement social. L'autorisation est conférée par le Gouvernement ou en vertu du contrat de gestion.
+#### Art. 51. 
+La SLRB peut uniquement contracter des emprunts après avoir reçu l'autorisation du Gouvernement. La SLRB tient le Gouvernement informé de la conclusion de l'émission, ainsi que de l'exécution des clauses de ses emprunts.
+#### Art. 52. 
+Le Gouvernement est autorisé à garantir les tiers, aux conditions qu'il détermine et dans les limites fixées par le budget, du remboursement en principal, intérêts et frais des emprunts contractés par la SLRB.
+#### Art. 53.
+Paragraphe 1. Le Gouvernement alloue à la SLRB les sommes nécessaires à la réalisation de son objet social et à l'accomplissement de ses missions.  Le Gouvernement détermine les conditions d'octroi et les règles de procédure.
 Paragraphe 2. Le Gouvernement peut autoriser la SLRB à recourir à d'autres modes de financement, afin de réaliser son objet social et d'accomplir ses missions.
-## CHAPITRE II. - Les sociétés immobilières de service public (SISP)
-### Section 1. - Statut et forme
 #### Art. 54.
 Paragraphe 1.  Les SISP, dont la Région de Bruxelles-Capitale est actionnaire, ont essentiellement pour objet la réalisation et la mise à disposition d'habitations sociales.. Elles prennent la forme de sociétés anonymes ou coopératives. Elles sont régies par  le Code des sociétés et associations, sous réserve des dispositions prévues par le présent Code.
 Elles sont agréées par la SLRB. Sans préjudice du Paragraphe 2bis, le Gouvernement fixe la procédure et les critères d'agrément.
@@ -577,53 +614,63 @@ Pendant la durée du préavis, la SISP reste soumise aux dispositions relatives 
 Paragraphe 7. La décision de renonciation ne peut être valablement prise que par l'organe de la SISP compétent pour la modification de son objet social et prend une forme de modification statutaire par laquelle il est renoncé aux missions décrites à l'article 57.
 Paragraphe 8. La Région et la SLRB disposent en cas de vente patrimoniale, durant la période de préavis, d'un droit de préemption qu'elles peuvent exercer selon les modalités arrêtées par le Gouvernement.
 Paragraphe 9. A la demande d'une SISP, la Région est autorisée à souscrire tout ou partie du capital de celle-ci.
-#### Art. 55.Sur avis de la SLRB  ou sur proposition de plusieurs SISP, après avis de la SLRB, le Gouvernement peut proposer la fusion de plusieurs SISP en une nouvelle, ou l'absorption d'une SISP par une autre ou la fusion de services de plusieurs SISP accomplissant des missions de même nature.
+#### Art. 55.
+Sur avis de la SLRB  ou sur proposition de plusieurs SISP, après avis de la SLRB, le Gouvernement peut proposer la fusion de plusieurs SISP en une nouvelle, ou l'absorption d'une SISP par une autre ou la fusion de services de plusieurs SISP accomplissant des missions de même nature.
 A l'exception de la fusion d'office visée à l'article 78, Paragraphe 2, la fusion ou l'absorption ne peut être opérée que si l'assemblée générale de chaque SISP intéressée a émis un avis favorable à la majorité requise par ses statuts.
 La fusion de services ne peut être opérée que si le conseil d'administration de chaque SISP intéressée a émis un avis favorable à la majorité requise par ses statuts.
 Les parts ou les actions détenues par les associés qui, dans les trois mois de la fusion ou de l'absorption, auront fait connaître leur opposition à y participer, leur seront remboursées à la valeur qui aurait été déterminée en cas de dissolution, par application des statuts.
-#### Art. 56.Lorsque la majorité du capital social d'une SISP est souscrite par la Région, les communes ou les centres publics d'action sociale, la majorité du conseil d'administration doit appartenir aux délégués de cette catégorie de participants.
+#### Art. 56.
+Lorsque la majorité du capital social d'une SISP est souscrite par la Région, les communes ou les centres publics d'action sociale, la majorité du conseil d'administration doit appartenir aux délégués de cette catégorie de participants.
 Lorsque les parts sociales souscrites par des communes et leurs centres publics d'action sociale leur accordent ensemble la majorité au conseil d'administration d'une SISP, et que, pour une des communes concernées au moins, le conseil d'administration ne comporte pas d'administrateur appartenant aux groupes du conseil communal non représentés aux collèges des bourgmestre et échevins, ces groupes sont, toutes communes concernées confondues, représentés au sein du conseil d'administration par deux membres avec voix consultative. Ceux-ci ne disposent pas d'une voix délibérative mais bien de tous les autres droits et obligations des administrateurs.
 Si une seule des communes concernées se trouve dans la situation visée au deuxième alinéa, les membres du conseil d'administration avec voix consultative sont choisis par l'assemblée générale sur une liste de quatre candidats arrêtée par le conseil communal sur proposition des groupes visés au deuxième alinéa.
 Si deux des communes concernées se trouvent dans la situation visée au deuxième alinéa, les membres du conseil d'administration avec voix consultative sont choisis par l'assemblée générale, sur des listes de deux candidats arrêtées par les deux conseils communaux concernés sur proposition des groupes visés au deuxième alinéa.
 Si plus de deux des communes concernées se trouvent dans la situation visée au deuxième alinéa, le quatrième alinéa s'applique aux listes de deux candidats présentées par les deux communes qui parmi elles, au jour des dernières élections communales, avaient, avec leur centre public d'action sociale, le cas échéant, souscrit le plus de parts sociales.
 Lors de la désignation, en application du présent article, des membres du conseil d'administration avec voix consultative, la priorité est donnée aux groupes visés à l'alinéa 2 qui ne sont représentés dans aucun des collèges des bourgmestre et échevins des communes concernées, à l'exception des groupes visés à l'article 15ter, Paragraphe 1, alinéa 1, de la loi du 4 juillet 1989 relative à la limitation et au contrôle des dépenses électorales engagées pour l'élection de la Chambre des représentants, ainsi qu'au financement et à la comptabilité ouverte des partis politiques.
 Le Gouvernement peut désigner un représentant avec voix consultative au sein des conseils d'administration des SISP.
-### Section 2. - Fonctionnement des SISP
-#### Art. 57.Chaque associé dispose à l'assemblée générale d'un droit de vote déterminé par le nombre de parts qu'il détient, sans préjudice de modalités spécifiques d'exercice du droit de vote prévues par les statuts de la SISP en application  du Code des sociétés et associations.
+#### Art. 57.
+Chaque associé dispose à l'assemblée générale d'un droit de vote déterminé par le nombre de parts qu'il détient, sans préjudice de modalités spécifiques d'exercice du droit de vote prévues par les statuts de la SISP en application  du Code des sociétés et associations.
 Les droits attachés aux actions ou parts détenues par la Région sont exercés par le Gouvernement.
-#### Art. 58. Chaque SISP doit disposer d'un système de contrôle interne.
+#### Art. 58. 
+Chaque SISP doit disposer d'un système de contrôle interne.
 Il s'agit d'un système d'organisation et de procédure pour la protection du patrimoine, la fiabilité des données comptables et sociales, l'amélioration des performances et de l'efficacité sociale et le respect des directives.
 Sur proposition de la SLRB, le Gouvernement peut déterminer les conditions auxquelles ce contrôle interne doit répondre.
-#### Art. 59.Chaque SISP désigne un  commissaire parmi les réviseurs d'entreprise membres de l'Institut des réviseurs d'entreprises qui accomplit auprès de la SISP sa mission telle qu'elle est définie par le  Code des sociétés et associations et les statuts sociaux. En outre, chaque  commissaire est tenu de faire rapport de ses missions à la SLRB au moins deux fois l'an. Le coût du rapport est supporté par la SLRB, celle-ci est tenue de mettre à disposition du  commissaire toute information utile à l'accomplissement de sa tâche.
+#### Art. 59.
+Chaque SISP désigne un  commissaire parmi les réviseurs d'entreprise membres de l'Institut des réviseurs d'entreprises qui accomplit auprès de la SISP sa mission telle qu'elle est définie par le  Code des sociétés et associations et les statuts sociaux. En outre, chaque  commissaire est tenu de faire rapport de ses missions à la SLRB au moins deux fois l'an. Le coût du rapport est supporté par la SLRB, celle-ci est tenue de mettre à disposition du  commissaire toute information utile à l'accomplissement de sa tâche.
 Le Gouvernement, la SLRB ou les SISP peuvent charger le  commissaire de missions supplémentaires. Dans ce cas, le coût des missions supplémentaires est supporté par l'organe qui en fait la demande et ce dernier en informe la SISP.
-### Section 3. - Le délégué social
-#### Art. 60. La SLRB désigne et rémunère un délégué social auprès de chacune des SISP. Le délégué social ne peut exercer sa mission auprès de la même SISP pour une durée de plus de trois ans consécutifs.
-#### Art. 61. Le délégué social est choisi sur une liste publique de candidats délégués sociaux établie par la SLRB. Pourront seuls figurer sur cette liste les candidats qui répondent à des critères de compétence que fixe la SLRB.
-#### Art. 62. Ne peuvent remplir la fonction de délégué social :
+#### Art. 60. 
+La SLRB désigne et rémunère un délégué social auprès de chacune des SISP. Le délégué social ne peut exercer sa mission auprès de la même SISP pour une durée de plus de trois ans consécutifs.
+#### Art. 61. 
+Le délégué social est choisi sur une liste publique de candidats délégués sociaux établie par la SLRB. Pourront seuls figurer sur cette liste les candidats qui répondent à des critères de compétence que fixe la SLRB.
+#### Art. 62. 
+Ne peuvent remplir la fonction de délégué social :
 Point 1 les personnes qui disposent d'un mandat électif, par élection directe ou indirecte;
 Point 2 les personnes ayant la qualité d'administrateur ou de dirigeant d'une entreprise de travaux publics ou d'une société de promotion et de construction immobilière ainsi que toutes les personnes qui exercent l'une de ces activités en leur nom propre;
 Point 3 toute personne locataire ou candidat-locataire d'une SISP;
 Point 4 les administrateurs et membres du personnel d'une SISP.
-#### Art. 63.Le délégué social a pour mission de veiller au respect des dispositions réglementaires et contractuelles par chaque SISP auprès de laquelle il est désigné, et notamment des conditions d'inscription des candidats locataires, des modalités de définition des valeurs locatives normales, du contrat type de bail, du contrat type de bail à réhabilitation, des priorités spéciales au bénéfice de certains candidats à revenus modestes, du régime locatif du secteur, des taux et des conditions d'octroi des remises de loyer, ainsi que du fonctionnement des conseils consultatifs des locataires.
+#### Art. 63.
+Le délégué social a pour mission de veiller au respect des dispositions réglementaires et contractuelles par chaque SISP auprès de laquelle il est désigné, et notamment des conditions d'inscription des candidats locataires, des modalités de définition des valeurs locatives normales, du contrat type de bail, du contrat type de bail à réhabilitation, des priorités spéciales au bénéfice de certains candidats à revenus modestes, du régime locatif du secteur, des taux et des conditions d'octroi des remises de loyer, ainsi que du fonctionnement des conseils consultatifs des locataires.
 Sans préjudice des autres missions dont la SLRB peut le charger, le délégué social veille au respect par les SISP, des règles administratives et de gestion  sociale qui régissent leur fonctionnement, la fixation des rémunérations et avantages des directeurs gérants et directeurs de département et leurs activités.
 Le délégué social veille à la bonne exécution du contrat de gestion ou du règlement par la SISP et saisit la SLRB en cas de non-respect de ce contrat de gestion ou du règlement par la SISP. La SLRB peut prendre à ce sujet toutes décisions de nature à garantir le respect de la légalité et de l'intérêt général.
 Le délégué social peut requérir pour l'accomplissement de sa mission l'assistance du  commissaire après en avoir avisé la SISP.
-#### Art. 64.Le délégué social remet au Gouvernement, à la SLRB ainsi qu'à la SISP concernée :
+#### Art. 64.
+Le délégué social remet au Gouvernement, à la SLRB ainsi qu'à la SISP concernée :
 Point 1 un rapport semestriel détaillé de ses activités notamment les  plainte  dont il a été saisi et la suite qu'il leur a réservée. Il joint à ce rapport les données relatives aux attributions de logement : la date d'inscription de la demande, son numéro d'inscription sur le registre des candidatures, son nombre de points en priorité et, le cas échéant, la date de l'attribution du logement ou de la radiation des listes de demandes. Ce rapport, réalisé conformément au modèle établi par la SLRB, contient également un volet statistique portant sur la gestion des attributions, notamment le volume et la composition de la demande en attente, le revenu moyen des candidats-locataires et le taux de recours à la faculté d'inscription multiple, le revenu moyen des ménages ayant obtenu un logement en application du principe général d'attribution ou des dispositions dérogatoires;
 Point 2 un rapport annuel synthétisant ses remarques sur le respect, par le SISP auprès de laquelle il est désigné, des règles administratives et de gestion sociale du secteur.
-#### Art. 65. Le délégué social assiste aux réunions des organes d'administration et de gestion de la SISP auprès de laquelle il est désigné. Il peut contraindre les membres de ces organes à traiter des problèmes en rapport avec ses missions.
+#### Art. 65. 
+Le délégué social assiste aux réunions des organes d'administration et de gestion de la SISP auprès de laquelle il est désigné. Il peut contraindre les membres de ces organes à traiter des problèmes en rapport avec ses missions.
 Si les membres de ces organes refusent de se prononcer ou adoptent une décision contraire aux missions de la SISP ou à l'intérêt général, le délégué social, dès qu'il en est informé, dispose d'un délai de quatre jours ouvrables pour introduire un recours auprès de la SLRB et lui proposer une décision motivée. Le recours est suspensif. Les parties doivent être entendues. La SLRB a vingt jours ouvrables pour prendre une décision.
 En cas de silence de la SLRB au terme de ce délai, la décision incriminée de la SISP est confirmée.
 Lorsque l'organe de la SISP a refusé de se prononcer à la demande du délégué social, et en cas de silence de la SLRB au terme du délai de vingt jours ouvrables précité, la décision proposée par le délégué social est exécutoire.
 Le délégué social informe la SLRB de l'exécution de ces décisions.
-#### Art. 66. En cas d'inexécution totale ou partielle de l'une de ses missions, la SLRB peut infliger au délégué social, selon la gravité des faits qui lui sont imputés :
+#### Art. 66. 
+En cas d'inexécution totale ou partielle de l'une de ses missions, la SLRB peut infliger au délégué social, selon la gravité des faits qui lui sont imputés :
 Point 1 un rappel à l'ordre;
 Point 2 un blâme;
 Point 3 une suspension de fonction;
 Point 4 une révocation.
 La SLRB établit le règlement disciplinaire qui prévoit une possibilité de recours auprès du Gouvernement.
-### Section 4. - Missions
-#### Art. 67.Les SISP poursuivent des missions de service public et notamment :
+#### Art. 67.
+Les SISP poursuivent des missions de service public et notamment :
 Point 1 fournir aux personnes répondant aux conditions d'admission au logement social un logement destiné à la résidence principale dans les conditions fixées par le présent Code et par le Gouvernement;
 Point 2 acheter, transformer, assainir, rénover et entretenir des immeubles en vue de les donner en location aux personnes répondant aux conditions d'admission au logement social, notamment en veillant à ce que les espaces communs et les abords des logements sociaux soient agencés et aménagés dans un souci d'amélioration du bien-être des locataires, notamment par l'intégration d'innovations architecturales de type culturel;
 Point 3 favoriser la prise en compte des difficultés sociales rencontrées par les locataires, notamment dans le cadre de partenariats, et assurer une gestion locative qui tienne compte des besoins des locataires;
@@ -637,18 +684,20 @@ Le nombre de ces logements modérés et moyens ne peut dépasser un double seuil
 Dans la proportion ainsi autorisée, la SISP peut dédier au logement moyen ou modéré des habitations situées ailleurs qu'au sein du nouvel ensemble.
 Des conditions supplémentaires pourront être établies par le Gouvernement, liées à la taille du parc immobilier de la SISP ou au taux de logements sociaux déjà présents au sein de la commune;
 Point 10 développer une stratégie foncière de la Société.
-### Section 5. - Moyens d'action
-#### Art. 68. Moyennant l'avis favorable de la SLRB, les SISP peuvent être autorisées par le Gouvernement à poursuivre, en vue de la réalisation de leur objet, l'expropriation pour cause d'utilité publique, même par zones, d'immeubles bâtis ou non bâtis.
-#### Art. 69. Les SISP sont autorisées à contribuer à l'élaboration de projets, à devenir associées et à participer au capital de sociétés en vue de réaliser leurs réserves foncières dans le cadre d'opérations immobilières destinées à être affectées à une part significative de logements sociaux.
+#### Art. 68. 
+Moyennant l'avis favorable de la SLRB, les SISP peuvent être autorisées par le Gouvernement à poursuivre, en vue de la réalisation de leur objet, l'expropriation pour cause d'utilité publique, même par zones, d'immeubles bâtis ou non bâtis.
+#### Art. 69. 
+Les SISP sont autorisées à contribuer à l'élaboration de projets, à devenir associées et à participer au capital de sociétés en vue de réaliser leurs réserves foncières dans le cadre d'opérations immobilières destinées à être affectées à une part significative de logements sociaux.
 Dans ce cas, le produit de la mobilisation du foncier doit être intégralement affecté à la politique d'investissement du secteur du logement social. L'autorisation est conférée par le Gouvernement ou en vertu du contrat de gestion.
 Les mesures de publicité visées à l'article 4 de l'ordonnance relative à l'aliénation d'immeubles domaniaux s'appliquent à ces opérations.
-### Section 6. - Modalités de financement
-#### Art. 70. Sans l'autorisation de la SLRB, les SISP ne peuvent emprunter auprès de tiers, hypothéquer des biens immobiliers ou céder les garanties hypothécaires qu'elles possèdent à des tiers ou contracter toute opération de nature à obérer leur situation financière.
+#### Art. 70. 
+Sans l'autorisation de la SLRB, les SISP ne peuvent emprunter auprès de tiers, hypothéquer des biens immobiliers ou céder les garanties hypothécaires qu'elles possèdent à des tiers ou contracter toute opération de nature à obérer leur situation financière.
 La SLRB statue dans les nonante jours de la réception de la demande. Passé ce délai, son silence vaut refus.
 Un recours peut être introduit auprès du Gouvernement dans les dix jours ouvrables de l'écoulement du délai ou de la notification du refus.
 Le Gouvernement statue dans les trente jours.
 Passé ce délai, la décision prononcée par la SLRB est confirmée. En cas de double silence, de la SLRB et du Gouvernement, l'autorisation est refusée.
-#### Art. 71.L'octroi d'un crédit d'investissement ou d'une subvention à une SISP peut être subordonné par la SLRB à l'engagement d'en affecter une partie à :
+#### Art. 71.
+L'octroi d'un crédit d'investissement ou d'une subvention à une SISP peut être subordonné par la SLRB à l'engagement d'en affecter une partie à :
 Point 1 l'achat de terrains;
 Point 2 l'achat d'immeubles construits;
 Point 3 la construction d'immeubles;
@@ -658,18 +707,22 @@ Point 6 l'installation d'infrastructures de type communautaire;
 Point 7
 Point 8 l'amélioration, le renforcement de l'organisation et/ou des services de gestion interne des SISP en vue de répondre plus efficacement aux missions qui leur sont confiées;
 Point 9 la mobilisation des ressources internes en respectant l'équilibre financier à long terme des SISP.
-#### Art. 72. Les SISP peuvent recevoir des dons et legs et acquérir les biens, même immobiliers, nécessaires à leur administration.
-#### Art. 73. Les SISP peuvent, avec l'approbation et l'aide financière éventuelle de la SLRB, acquérir des immeubles résidentiels ou non, ou devenir titulaires d'autres droits réels immobiliers principaux, en vue de les démolir, de les assainir, de les améliorer ou de les adapter.
-#### Art. 74. Moyennant l'autorisation préalable de la SLRB, les SISP peuvent aliéner leurs biens immeubles et tous droits réels principaux constitués sur eux, dans le respect des objectifs du secteur et de la politique foncière définie par le Gouvernement.
+#### Art. 72. 
+Les SISP peuvent recevoir des dons et legs et acquérir les biens, même immobiliers, nécessaires à leur administration.
+#### Art. 73. 
+Les SISP peuvent, avec l'approbation et l'aide financière éventuelle de la SLRB, acquérir des immeubles résidentiels ou non, ou devenir titulaires d'autres droits réels immobiliers principaux, en vue de les démolir, de les assainir, de les améliorer ou de les adapter.
+#### Art. 74. 
+Moyennant l'autorisation préalable de la SLRB, les SISP peuvent aliéner leurs biens immeubles et tous droits réels principaux constitués sur eux, dans le respect des objectifs du secteur et de la politique foncière définie par le Gouvernement.
 Une SISP ne peut cependant aliéner un élément de son patrimoine immobilier à un prix inférieur à la valeur vénale et que si une des conditions suivantes est remplie :
 Point 1 si cet élément de patrimoine ne lui permet pas de réaliser sa mission de service public;
 Point 2 si l'aliénation de cet élément de patrimoine lui permet d'exécuter les obligations qui lui incombent en fonction du règlement ou du contrat de gestion;
 Point 3 si cet élément de patrimoine dans le cas d'un échange est remplacé par un élément de patrimoine dont la valeur, la superficie ou la situation permet la réalisation d'un des objectifs déterminés par le règlement ou le contrat de gestion.
 Le produit de l'aliénation doit être intégralement affecté à sa politique d'investissement dans le respect des objectifs du secteur du logement social et de la politique budgétaire arrêtée dans le contrat de gestion.
 Les mesures de publicité visées à l'article 4 de l'ordonnance du 12 novembre 1992 relative à l'aliénation d'immeubles domaniaux s'appliquent à ces opérations.
-#### Art. 75. En vue d'assainir, d'améliorer ou d'adapter des immeubles résidentiels, les SISP peuvent, avec l'approbation et l'aide financière de la SLRB, donner en location, conformément au contrat-type de bail à réhabilitation, des habitations pour plus de neuf ans, ou acquérir sur elles des droits autres que la propriété.
-### Section 7. - Recours et sanctions administratifs
-#### Art. 76.Paragraphe 1. Toute personne intéressée peut introduire auprès d'une SISP une plainte en rapport avec ses missions. Sous peine de nullité, la plainte est envoyée par lettre recommandée à la poste ou déposée moyennant accusé de réception au siège social ou administratif de la société. La SISP transmet la plainte au délégué social dans les huit jours de sa réception.
+#### Art. 75. 
+En vue d'assainir, d'améliorer ou d'adapter des immeubles résidentiels, les SISP peuvent, avec l'approbation et l'aide financière de la SLRB, donner en location, conformément au contrat-type de bail à réhabilitation, des habitations pour plus de neuf ans, ou acquérir sur elles des droits autres que la propriété.
+#### Art. 76.
+Paragraphe 1. Toute personne intéressée peut introduire auprès d'une SISP une plainte en rapport avec ses missions. Sous peine de nullité, la plainte est envoyée par lettre recommandée à la poste ou déposée moyennant accusé de réception au siège social ou administratif de la société. La SISP transmet la plainte au délégué social dans les huit jours de sa réception.
 Le délégué social entend préalablement à toute décision les parties en litige. Le plaignant peut, s'il le désire, être accompagné par un mandataire d'une asbl oeuvrant à l'insertion par le logement qui est agréée conformément à l'article 187, ou de tout autre mandataire de son choix. Le cas échéant, la SISP doit être préalablement informée de l'intervention d'un mandataire.
 La SISP informe le plaignant de la recevabilité de sa plainte dans les trente jours de sa réception. A défaut d'une réponse dans ce délai, la plainte est considérée comme étant recevable.
 Lorsque la plainte est déclarée recevable, le conseil d'administration de la SISP statue dans les nonante jours à dater de la réception. Il informe le plaignant de sa décision au terme de ce délai. Si la décision consiste en la mise en place d'une médiation volontaire, ce délai est suspendu jusqu'au terme de ce processus, sans que cette suspension ne puisse excéder 6 mois. Si le conseil d'administration de la SISP ne se prononce pas dans le délai, la plainte est considérée comme  étant fondée.
@@ -681,8 +734,10 @@ La SLRB informe la SISP de l'introduction d'un recours dans les huit jours à co
 La SLRB informe le requérant de sa décision dans les soixante jours de la réception du recours. En cas de silence au terme de ce délai, le recours est réputé fondé.
 La SISP est chargée de l'exécution de la décision de la SLRB qui lui est notifiée par celle-ci.
 Si la contestation porte sur la fin du bail à durée déterminée, les délais prévus au Paragraphe 1, alinéas 1, 3 et 4, s'élèvent respectivement à quatre, quinze et quarante-cinq, ceux prévus au Paragraphe 2, alinéas 1 et 3, à quinze et trente jours, tandis que les délais prévus au Paragraphe 2, alinéa 2, s'élèvent respectivement à quatre, quinze et trois jours.
-#### Art. 77. En vue du rétablissement de la situation financière d'une SISP dont la situation en matière de solvabilité ou de liquidité est considérée comme insuffisante par la SLRB, celle-ci peut exiger que la SISP lui communique un plan de redressement, dont le contenu et les modalités de communication sont fixées par le Gouvernement.
-#### Art. 78.Paragraphe 1. Lorsque la SLRB constate qu'une SISP n'agit pas suivant ses objectifs statutaires ou ne respecte pas les obligations imposées par le présent Code ou ses arrêtés d'exécution ainsi que le  Code des sociétés et associations, elle ordonne sur décision motivée à ladite SISP de régulariser la situation dans un délai fixé par la SLRB.
+#### Art. 77. 
+En vue du rétablissement de la situation financière d'une SISP dont la situation en matière de solvabilité ou de liquidité est considérée comme insuffisante par la SLRB, celle-ci peut exiger que la SISP lui communique un plan de redressement, dont le contenu et les modalités de communication sont fixées par le Gouvernement.
+#### Art. 78.
+Paragraphe 1. Lorsque la SLRB constate qu'une SISP n'agit pas suivant ses objectifs statutaires ou ne respecte pas les obligations imposées par le présent Code ou ses arrêtés d'exécution ainsi que le  Code des sociétés et associations, elle ordonne sur décision motivée à ladite SISP de régulariser la situation dans un délai fixé par la SLRB.
 Ce délai prend cours à partir de la notification de la décision.
 Paragraphe 2. Lorsque, à l'issue de ce délai, la SISP n'a pas effectué la régularisation imposée, la SLRB, en fonction de la gravité et de la nature de l'infraction :
 Point 1 soit propose au Gouvernement la nomination d'un commissaire spécial;
@@ -691,18 +746,21 @@ Point 3 soit décide de suspendre l'exercice des compétences des  organes d'adm
 Paragraphe 3. - La SISP concernée peut interjeter appel auprès du Gouvernement contre les décisions arrêtées conformément au Paragraphe 2, Point 3, de cet article, dans les quinze jours qui suivent la notification de la décision de la SLRB.
 L'appel n'est pas suspensif.
 Le Gouvernement prend une décision dans les trente jours qui suivent l'introduction de la procédure d'appel. En cas de silence au terme de ce délai, la décision de la SLRB est réputée confirmée.
-#### Art. 79. Le Gouvernement définit les modalités de nomination du commissaire spécial, ses compétences et ses pouvoirs.
+#### Art. 79. 
+Le Gouvernement définit les modalités de nomination du commissaire spécial, ses compétences et ses pouvoirs.
 Le commissaire spécial est tenu de donner une autorisation écrite, générale ou spéciale, pour tous les actes décisions de tous les organes de la SISP, ainsi que pour tous les actes et décisions des préposés qui ont le droit de prendre des décisions qui engagent la SISP. La SLRB peut toutefois limiter le champ des opérations qui sont soumises à autorisation.
 Le commissaire spécial peut soumettre toute proposition qu'il juge opportune aux délibérations de tous les organes de la SISP.
 La rémunération du commissaire spécial est fixée par le Gouvernement et supportée par la SISP.
-### Section 8. - Sanction pénales
-#### Art. 80.Sont punis, en fonction de la gravité des faits, des peines de réclusion de cinq ans à dix ans les administrateurs, mandataires et préposés d'une SISP qui ont fait sciemment une déclaration fausse ou incomplète afin d'obtenir ou de conserver une subvention de la Région.
+#### Art. 80.
+Sont punis, en fonction de la gravité des faits, des peines de réclusion de cinq ans à dix ans les administrateurs, mandataires et préposés d'une SISP qui ont fait sciemment une déclaration fausse ou incomplète afin d'obtenir ou de conserver une subvention de la Région.
 Sans préjudice de l'application de peines plus sévères prévues dans le Code pénal, sont punis d'une peine d'emprisonnement d'un mois à un an et d'une amende de mille à dix mille euros ou d'une de ces deux peines seulement, les administrateurs, mandataires et préposés d'une SISP et le délégué social qui enfreignent sciemment les dispositions administratives, financières et comptables de la présente ordonnance ou de ses arrêtés d'exécution.
 Sont punis des mêmes peines, les administrateurs, mandataires et préposés d'une SISP qui font des fausses déclaration à la SLRB,  au commissaire, ou au commissaire spécial désigné par le Gouvernement au délégué social désigné par la SLRB, ou qui refusent de donner les renseignements demandés en exécution du présent Code ou de ses arrêtés d'exécution.
-### Section 9. - Les conseils consultatifs des locataires
-#### Art. 81. Au sens de la présente section, il faut entendre par " locataire " le preneur de bail et les personnes de plus de 16 ans qui vivent officiellement sous son toit.
-#### Art. 82. Il est institué auprès de chaque SISP un Conseil consultatif des locataires.
-#### Art. 83.Chaque Conseil consultatif des locataires comprendra entre 5 et 15 représentants des locataires. Il est composé de membres effectifs et de suppléants élus par les locataires tous les quatre ans, selon une procédure fixée par le Gouvernement.
+#### Art. 81. 
+Au sens de la présente section, il faut entendre par " locataire " le preneur de bail et les personnes de plus de 16 ans qui vivent officiellement sous son toit.
+#### Art. 82. 
+Il est institué auprès de chaque SISP un Conseil consultatif des locataires.
+#### Art. 83.
+Chaque Conseil consultatif des locataires comprendra entre 5 et 15 représentants des locataires. Il est composé de membres effectifs et de suppléants élus par les locataires tous les quatre ans, selon une procédure fixée par le Gouvernement.
 Le Gouvernement peut déroger à ce délai de quatre ans dans des circonstances exceptionnelles.
 La date des élections est fixée par le Gouvernement. Si pour des raisons exceptionnelles, le Conseil ne compte plus le minimum de membres requis, le Gouvernement peut autoriser le maintien de celui-ci, après avis de ce même Conseil, de la SISP et de la SLRB. Le nombre de membres ne peut cependant jamais être inférieur à trois.
 La composition et le fonctionnement des Conseils consultatifs des locataires sont déterminés par le Gouvernement après avis de la SLRB. La composition tient compte du nombre de logements, du nombre et du type d'implantations et du nombre de locataires. Pour être éligibles, les candidats doivent être locataires de la SISP depuis au moins douze mois à la date de l'élection.
@@ -711,13 +769,15 @@ L'élection n'est validée que si cinq pour cent au moins des locataires partici
 Au cas où il n'existe toujours pas de Conseil consultatif à cause d'une participation insuffisante ou faute de candidats, une élection est organisée si dix pour cent des locataires le demandent, dans les six mois qui suivent l'élection précédente.
 Une commission de recours est instaurée par le Gouvernement, qui en nomme le président et les membres et, après avis de la SLRB, en détermine le fonctionnement. Elle a son siège à la SLRB, qui lui procure les moyens de fonctionnement.
 La commission statue sur les recours en matière de contentieux électoral.
-#### Art. 84.La SISP transmet au Conseil consultatif des locataires les informations nécessaires à l'exercice de ses compétences. Le cas échéant, le Conseil consultatif peut inviter un représentant du conseil d'administration désigné en son sein.
+#### Art. 84.
+La SISP transmet au Conseil consultatif des locataires les informations nécessaires à l'exercice de ses compétences. Le cas échéant, le Conseil consultatif peut inviter un représentant du conseil d'administration désigné en son sein.
 Deux représentants du Conseil consultatif des locataires, âgés de 18 ans au moins, choisis en son sein, sont membres du conseil d'administration de la SISP et participent aux réunions, à l'exception de la discussion des points concernant le personnel de la société, de l'attribution des logements et tous autres dossiers concernant des personnes.
 Pour la partie du conseil d'administration à laquelle ils assistent, chaque représentant dispose des mêmes droits et obligations que les administrateurs, notamment une voix délibérative. La SISP met à la disposition du Conseil consultatif des locataires les locaux nécessaires à ses réunions.
 Le Conseil consultatif des locataires organise au moins quatre fois par an une réunion à laquelle sont invités tous les locataires. Au cours de cette réunion, le Conseil consultatif des locataires fait rapport de ses activités, de la situation et des projets de la SISP. Il communique toutes informations nécessaires, y compris écrites, tout en observant la discrétion requise par les devoirs liés à la fonction de ses membres. En fonction du nombre de logements et de leur répartition spatiale, ces réunions peuvent être organisées par ensemble de logements.
 Tout locataire peut assister aux réunions du Conseil consultatif et interpeller ses membres dans le cadre des compétences du Conseil.
 Lorsque le Conseil consultatif n'est pas institué, la SISP a l'obligation d'inviter deux  fois par an tous les locataires à une réunion, au cours de laquelle seront abordés les projets de travaux de rénovation et d'entretien, le programme des activités et d'animation au sien des sites de logements sociaux, les modifications de législation ayant un impact sur les locataires, les modifications du règlement d'ordre intérieur, ainsi que tous points que cinq pour cent des locataires demandent à inscrire. En fonction du nombre de logements et de leur répartition spatiale, ces réunions peuvent être organisées par ensemble de logements.
-#### Art. 85.Paragraphe 1. Le Conseil consultatif des  locatives  émet, d'initiative ou à la demande de la SISP, des avis sur toute question autre qu'à caractère individuel, relative aux compétences de ce dernier.
+#### Art. 85.
+Paragraphe 1. Le Conseil consultatif des  locatives  émet, d'initiative ou à la demande de la SISP, des avis sur toute question autre qu'à caractère individuel, relative aux compétences de ce dernier.
 Paragraphe 2. Sauf dans les cas d'urgence justifiés par des circonstances exceptionnelles ou imprévisibles, l'avis préalable du Conseil consultatif des locataires est requis pour :
 Point 1 les programmes d'entretien, de rénovation et d'aménagement des immeubles, de leurs abords et de leur environnement, non encore approuvés définitivement, quel que soit le mode de financement de la SISP, dont le montant dépasse 62.000 euros hors T.V.A., indexé annuellement en fonction de l'indice des prix à la consommation;
 Point 2 la ou les méthodologie(s) établie(s) par la SISP en vue du calcul des charges locataires, du décompte annuel des charges locatives, ventilées selon leur nature, du mode de répartition de celles-ci et du montant des provisions y afférentes;
@@ -731,15 +791,19 @@ Paragraphe 4. Les avis du Conseil consultatif des locataires comportent les opin
 La SISP informe, à intervalles réguliers, et au minimum une fois par trimestre, le Conseil consultatif des suites réservées à ses avis.
 Si elle ne suit pas l'avis émis par le Conseil consultatif des locataires, la SISP doit assortir sa décision d'une motivation écrite, explicitant les raisons pour lesquelles elle a entendu s'écarter de l'avis de celui-ci.
 Paragraphe 5. Le Conseil consultatif des locataires peut, de sa propre initiative ou à la demande de la SISP, initier ou collaborer à des activités d'animation au sein des sites de logements sociaux.
-#### Art. 86. La SLRB contrôle, selon les modalités fixées par le Gouvernement, le fonctionnement des conseils consultatifs des locataires et le bon déroulement des relations entre ceux-ci et la SISP de leur ressort.
+#### Art. 86. 
+La SLRB contrôle, selon les modalités fixées par le Gouvernement, le fonctionnement des conseils consultatifs des locataires et le bon déroulement des relations entre ceux-ci et la SISP de leur ressort.
 La SLRB annule, le cas échéant, selon la procédure fixée par le Gouvernement, les décisions des SISP dans les matières visées à l'article 85, Paragraphe 2, pour lesquelles l'avis n'a pas été recueilli.
-#### Art. 87. La SLRB organise l'information des locataires des SISP quant au rôle du Conseil consultatif et aux modalités de son fonctionnement. Elle assure la formation continue des personnes élues pour faire partie du Conseil consultatif institué auprès de la SISP.
-#### Art. 88. Le Gouvernement prévoit annuellement à son budget le montant nécessaire au fonctionnement des Conseils consultatifs des locataires, en ce compris les subsides permettant de couvrir les dépenses des SISP en la matière. Il en arrête les modalités d'attribution.
-#### Art. 89. Les différents Conseils consultatifs des locataires peuvent se regrouper au sein d'une fédération représentative, qui peut faire l'objet d'un agrément par le Gouvernement selon les modalités que celui-ci détermine.
-## CHAPITRE III. - Le Conseil consultatif du logement et de la rénovation urbaine
-### Section 1. - Statut et composition
-#### Art. 90. Il est institué auprès de la Région de Bruxelles-Capitale un organe consultatif appelé " Conseil consultatif du logement et de la rénovation urbaine " de la Région de Bruxelles-Capitale, dénommé ci-après " le Conseil consultatif ".
-#### Art. 91.Paragraphe 1. Le Conseil consultatif est composé de vingt-cinq membres, à savoir :
+#### Art. 87. 
+La SLRB organise l'information des locataires des SISP quant au rôle du Conseil consultatif et aux modalités de son fonctionnement. Elle assure la formation continue des personnes élues pour faire partie du Conseil consultatif institué auprès de la SISP.
+#### Art. 88. 
+Le Gouvernement prévoit annuellement à son budget le montant nécessaire au fonctionnement des Conseils consultatifs des locataires, en ce compris les subsides permettant de couvrir les dépenses des SISP en la matière. Il en arrête les modalités d'attribution.
+#### Art. 89. 
+Les différents Conseils consultatifs des locataires peuvent se regrouper au sein d'une fédération représentative, qui peut faire l'objet d'un agrément par le Gouvernement selon les modalités que celui-ci détermine.
+#### Art. 90. 
+Il est institué auprès de la Région de Bruxelles-Capitale un organe consultatif appelé " Conseil consultatif du logement et de la rénovation urbaine " de la Région de Bruxelles-Capitale, dénommé ci-après " le Conseil consultatif ".
+#### Art. 91.
+Paragraphe 1. Le Conseil consultatif est composé de vingt-cinq membres, à savoir :
 Point 1 un représentant de la Société du Logement de la Région de Bruxelles-Capitale;
 Point 2 un représentant de la Société de Développement pour la Région de Bruxelles-Capitale;
 Point 3 un représentant du Fonds du Logement de la Région de Bruxelles-Capitale;
@@ -759,71 +823,90 @@ Point 16 un représentant du secteur des promoteurs immobiliers désigné par l'
 Paragraphe 2. Trois représentants désignés par le Gouvernement de la Région de Bruxelles-Capitale, assistent aux réunions du Conseil consultatif. Ils sont désignés sur proposition respective du Ministre ayant le Logement dans ses attributions, du Ministre ayant la Rénovation urbaine dans ses attributions et du Secrétaire général  du Service public régional de Bruxelles.
 Leur mandat est révocable. Il est renouvelé dans les six mois de chaque élection régionale.
 Le membre du Gouvernement qui a proposé un avant-projet d'ordonnance ou d'arrêté réglementaire examiné par le Conseil consultatif en vertu de sa mission visée à l'article 97 peut assister ou se faire représenter aux discussions portant sur cet avant-projet.
-#### Art. 92. Un suppléant est désigné pour chaque membre. Les suppléants peuvent assister aux réunions du Conseil consultatif.
+#### Art. 92. 
+Un suppléant est désigné pour chaque membre. Les suppléants peuvent assister aux réunions du Conseil consultatif.
 En cas de décès, d'absence, de démission ou de perte de la qualité en vertu de laquelle un membre du Conseil consultatif a été désigné, son suppléant achève son mandat.
 En cas d'empêchement, tout membre peut se faire remplacer par son suppléant.
-#### Art. 93. Le Conseil consultatif est composé d'au moins un tiers de personnes de chaque sexe.
-#### Art. 94. Paragraphe 1. Les membres du Conseil consultatif et leurs suppléants sont désignés par le Gouvernement parmi les candidatures qui lui sont présentées sur des listes doubles par les organisations et institutions visées à l'article 91, à l'exception des candidatures spontanées prévues aux Point 6, Point 13 et Point 14 de cet article et des membres visés au Point 15.
+#### Art. 93. 
+Le Conseil consultatif est composé d'au moins un tiers de personnes de chaque sexe.
+#### Art. 94. 
+Paragraphe 1. Les membres du Conseil consultatif et leurs suppléants sont désignés par le Gouvernement parmi les candidatures qui lui sont présentées sur des listes doubles par les organisations et institutions visées à l'article 91, à l'exception des candidatures spontanées prévues aux Point 6, Point 13 et Point 14 de cet article et des membres visés au Point 15.
 Chaque désignation est précédée d'un appel aux candidatures publié au Moniteur belge.
 Le Gouvernement arrête les modalités relatives à l'appel aux candidats et à la désignation des membres du Conseil consultatif.
 Paragraphe 2. La durée du mandat des membres est de cinq ans, renouvelable. Ces membres sont renouvelés par moitié tous les trente mois.
 Par dérogation au premier alinéa, une moitié des membres est désignée, par le sort, pour trente mois, lors de la première désignation des membres du Conseil consultatif.
 Paragraphe 3. A la demande d'un membre effectif ou suppléant, le Gouvernement peut désigner en cours de mandat une autre personne pour achever ce mandat pour autant que ce remplacement ne modifie pas les équilibres légaux existants.
 Paragraphe 4. Le Gouvernement peut, à la demande de la majorité des membres du conseil, révoquer un membre qui a, au cours d'une même année, été absent sans justification à plus de trois réunions ordinaires et régulièrement convoquées du conseil, et désigner une autre personne pour achever ce mandat, pour autant que ce remplacement ne modifie pas les équilibres légaux existants. La révocation ne peut être proposée au Gouvernement qu'après avoir été mise à l'ordre du jour d'une réunion plénière du conseil, à laquelle le membre a été invité à s'expliquer.
-#### Art. 95. Tant qu'il n'est pas procédé au renouvellement prévu à l'article 94, les titulaires de mandat à renouveler continuent à exercer celui-ci.
-#### Art. 96. Paragraphe 1. La qualité de membre du Conseil consultatif est incompatible avec l'exercice d'un mandat de parlementaire ou de membre d'un cabinet ministériel.
+#### Art. 95. 
+Tant qu'il n'est pas procédé au renouvellement prévu à l'article 94, les titulaires de mandat à renouveler continuent à exercer celui-ci.
+#### Art. 96. 
+Paragraphe 1. La qualité de membre du Conseil consultatif est incompatible avec l'exercice d'un mandat de parlementaire ou de membre d'un cabinet ministériel.
 Paragraphe 2. Le mandat est exercé à titre gratuit. Le Gouvernement peut autoriser le Conseil consultatif à prévoir dans son budget une indemnité pour ses membres.
-### Section 2. - Missions
-#### Art. 97. Paragraphe 1. Le Gouvernement sollicite l'avis du Conseil consultatif sur tout avant-projet d'ordonnance et d'arrêté réglementaire, dont l'objet principal est le logement, en ce y compris au niveau de la rénovation urbaine.
+#### Art. 97. 
+Paragraphe 1. Le Gouvernement sollicite l'avis du Conseil consultatif sur tout avant-projet d'ordonnance et d'arrêté réglementaire, dont l'objet principal est le logement, en ce y compris au niveau de la rénovation urbaine.
 Paragraphe 2. Le Parlement informe le Conseil consultatif de la prise en considération de toute proposition d'ordonnance ou de résolution, dont l'objet principal est le logement, en ce y compris au niveau de la rénovation urbaine.
 Paragraphe 3. En outre, le Conseil consultatif rend des avis relatifs à la politique du logement, en ce y compris au niveau de la rénovation urbaine, à la demande du Gouvernement, du Parlement de la Région de Bruxelles-Capitale, ou de sa propre initiative à la demande d'un tiers de ses membres.
 Il peut réaliser d'initiative des études et des analyses, et soumettre des propositions au Gouvernement.
-#### Art. 98. Paragraphe 1. Chaque année et au plus tard à la fin du mois de juillet, le Gouvernement transmet au Conseil consultatif un rapport relatif à son action dans le domaine du logement.
+#### Art. 98. 
+Paragraphe 1. Chaque année et au plus tard à la fin du mois de juillet, le Gouvernement transmet au Conseil consultatif un rapport relatif à son action dans le domaine du logement.
 Paragraphe 2. Chaque année et au plus tard à la fin du mois d'octobre, le Conseil consultatif communique au Gouvernement un rapport sur ses activités. Ce rapport est transmis par le Gouvernement au Parlement de la Région de Bruxelles-Capitale.
-#### Art. 99. Paragraphe 1. Les avis et propositions ne sont valablement adoptés qu'à la condition que plus de la moitié des membres du Conseil consultatif soient présents ou représentés.
+#### Art. 99. 
+Paragraphe 1. Les avis et propositions ne sont valablement adoptés qu'à la condition que plus de la moitié des membres du Conseil consultatif soient présents ou représentés.
 Pour atteindre le quorum visé à l'alinéa 1, au maximum deux membres du conseil peuvent être représentés.
 Paragraphe 2. Si les opinions sont divergentes au sein du Conseil consultatif, elles sont mentionnées dans son avis ou sa proposition. Dans ce cas, il est fait état du nombre de membres soutenant chaque point de vue.
 Paragraphe 3. Lorsque le Conseil consultatif rend un avis en application de l'article 97, et y relate un point de vue soutenu par au moins la moitié des membres, le Gouvernement doit préciser les motifs pour lesquels il s'écarte éventuellement de ce point de vue.
-#### Art. 100. Les avis sollicités par le Gouvernement en vertu de l'article 97, Paragraphe 1, ainsi que les textes rédigés d'initiative, sont rédigés en langue française et néerlandaise.
+#### Art. 100. 
+Les avis sollicités par le Gouvernement en vertu de l'article 97, Paragraphe 1, ainsi que les textes rédigés d'initiative, sont rédigés en langue française et néerlandaise.
 Les avis sont communiqués dans les deux langues dans un délai de trente jours, à dater de la réception de la demande. Passé ce délai, il peut être passé outre à l'obligation de consultation.
 A la demande du Conseil consultatif, le Gouvernement peut prolonger ce délai.
 Le délai est suspendu pendant les périodes de vacances scolaires.
 En cas d'urgence motivée, le Gouvernement peut réduire le délai de consultation à sept jours.
-#### Art. 101. Afin d'accomplir sa mission, le Conseil consultatif peut faire appel à des experts, créer des commissions spécialisées et constituer des groupes de travail temporaires. Le règlement d'ordre intérieur arrête les modalités à cet effet.
-### Section 3. - Fonctionnement
-#### Art. 102. Paragraphe 1. Le Conseil consultatif désigne parmi ses membres un président, un vice-président, un secrétaire et un trésorier. Ils constituent le Bureau du Conseil consultatif. Leur mandat vient à échéance lors de chaque renouvellement de la moitié des membres du Conseil consultatif. Il est renouvelable une fois.
+#### Art. 101. 
+Afin d'accomplir sa mission, le Conseil consultatif peut faire appel à des experts, créer des commissions spécialisées et constituer des groupes de travail temporaires. Le règlement d'ordre intérieur arrête les modalités à cet effet.
+#### Art. 102. 
+Paragraphe 1. Le Conseil consultatif désigne parmi ses membres un président, un vice-président, un secrétaire et un trésorier. Ils constituent le Bureau du Conseil consultatif. Leur mandat vient à échéance lors de chaque renouvellement de la moitié des membres du Conseil consultatif. Il est renouvelable une fois.
 En cas de décès, d'absence ou de démission d'un membre du Bureau, ainsi qu'en cas de perte de la qualité en vertu de laquelle un membre du Bureau a été désigné comme membre du Conseil consultatif, ce membre du Bureau est remplacé par un membre du Conseil désigné par le Conseil en son sein.
 Paragraphe 2. A défaut pour le Conseil consultatif de procéder à la désignation des personnes visées au Paragraphe 1 dans les trois mois qui suivent l'installation ou, ultérieurement, dans un délai de trois mois suivant chaque renouvellement de la moitié des membres, le Gouvernement procède à cette désignation.
 Le président et le vice-président appartiennent à un groupe linguistique différent.
-#### Art. 103. Paragraphe 1. Le Conseil consultatif se réunit au moins quatre fois par an sur convocation du président ou de celui qui le remplace.
+#### Art. 103. 
+Paragraphe 1. Le Conseil consultatif se réunit au moins quatre fois par an sur convocation du président ou de celui qui le remplace.
 Paragraphe 2. Le président ou celui qui le remplace convoque le Conseil consultatif, si le Gouvernement, un des représentants visés à l'article 91, ou un tiers des membres du Conseil consultatif le demandent.
-#### Art. 104. Le Bureau assume la gestion journalière du Conseil consultatif, prépare chaque réunion et établit l'ordre du jour.
+#### Art. 104. 
+Le Bureau assume la gestion journalière du Conseil consultatif, prépare chaque réunion et établit l'ordre du jour.
 Il établit les budgets et comptes annuels et les soumet au Gouvernement après leur approbation par le Conseil consultatif.
-#### Art. 105. Le Conseil consultatif établit un règlement d'ordre intérieur, soumis à l'approbation du Gouvernement.
+#### Art. 105. 
+Le Conseil consultatif établit un règlement d'ordre intérieur, soumis à l'approbation du Gouvernement.
 Le Gouvernement arrête le contenu minimum du règlement d'ordre intérieur.
-#### Art. 106.Le Gouvernement peut désigner un ou plusieurs fonctionnaires  du Service public régional de Bruxelles ou d'un organisme d'intérêt public de la Région de Bruxelles-Capitale, afin d'assister le Bureau dans l'exécution de sa mission.
-#### Art. 107. Les frais de fonctionnement du Conseil consultatif sont imputés au budget de la Région de Bruxelles-Capitale.
-## CHAPITRE III/1.  - La commission paritaire locative
-#### Art. 107/1.  Il est institué auprès du Conseil consultatif du Logement une commission paritaire locative compétente pour rendre des avis sur la justesse du loyer pour tout bail d'habitation en Région bruxelloise qui répond aux deux conditions cumulatives suivantes :
+#### Art. 106.
+Le Gouvernement peut désigner un ou plusieurs fonctionnaires  du Service public régional de Bruxelles ou d'un organisme d'intérêt public de la Région de Bruxelles-Capitale, afin d'assister le Bureau dans l'exécution de sa mission.
+#### Art. 107. 
+Les frais de fonctionnement du Conseil consultatif sont imputés au budget de la Région de Bruxelles-Capitale.
+#### Art. 107/1. 
+Il est institué auprès du Conseil consultatif du Logement une commission paritaire locative compétente pour rendre des avis sur la justesse du loyer pour tout bail d'habitation en Région bruxelloise qui répond aux deux conditions cumulatives suivantes :
 Point 1 ne pas être conclu par un opérateur immobilier public tel que défini à l'article 2 Paragraphe 1 Point 4 du Code ou une agence immobilière sociale
 Point 2 le loyer ne fait pas l'objet d'un encadrement par une ordonnance ou un arrêté du Gouvernement.
 La commission paritaire locative rend son avis dans les deux mois à compter de l'introduction de la demande. Cet avis comprend, le cas échéant, une proposition de loyer révisé.
 Lorsque la commission paritaire locative est saisie par une des parties prenantes au bail ou par une personnes mandatée par elle et qu'elle rend un avis concluant à une révision du montant du loyer, elle propose aux parties une conciliation limitée au montant du loyer.
 Sauf accord contraire des parties, le loyer révisé à la suite d'une conciliation proposée par la commission paritaire locative produit ses effets à compter du premier jour du mois qui suit la date de saisine de ladite commission.
 Les avis motivés de la commission paritaire locative sont non contraignants.
-#### Art. 107/2.  La commission paritaire locative peut être saisie par toute personne intéressée et par le juge saisi d'une demande en vue d'obtenir un avis sur la justesse du loyer en vertu des articles 224/1, 240 et 241 du Code.
+#### Art. 107/2. 
+La commission paritaire locative peut être saisie par toute personne intéressée et par le juge saisi d'une demande en vue d'obtenir un avis sur la justesse du loyer en vertu des articles 224/1, 240 et 241 du Code.
 Le bailleur ou une personne mandatée par lui peut également saisir la commission paritaire locative afin d'obtenir un avis sur la justesse du loyer pratiqué, après le premier triennat du contrat de bail, lorsqu'il appert que le loyer exigible au moment de l'introduction de la demande est inférieur de 30 % au loyer de référence, sans que cette différence ne soit justifiée par des défauts de qualité substantiels intrinsèques, non imputables au preneur, du bien, ni par son environnement.
 Le Gouvernement arrête une liste de défauts de qualité substantiels intrinsèques.
 Le recours à la commission paritaire locative est gratuit.
-#### Art. 107/3.  A l'unanimité de ses membres, la commission paritaire locative pourra statuer, après un examen sommaire, sur toute demande, introduite par une des parties au contrat de bail ou par une personne mandatée par elle, manifestement infondée ou déraisonnable eu égard aux éléments de confort substantiels, aux défauts de qualité substantiels du bien ou à son environnement.
-#### Art. 107/4.  La commission paritaire locative est composée paritairement d'un nombre pair de membres dont la moitié sont des représentants des bailleurs et l'autre moitié des locataires.
+#### Art. 107/3. 
+A l'unanimité de ses membres, la commission paritaire locative pourra statuer, après un examen sommaire, sur toute demande, introduite par une des parties au contrat de bail ou par une personne mandatée par elle, manifestement infondée ou déraisonnable eu égard aux éléments de confort substantiels, aux défauts de qualité substantiels du bien ou à son environnement.
+#### Art. 107/4. 
+La commission paritaire locative est composée paritairement d'un nombre pair de membres dont la moitié sont des représentants des bailleurs et l'autre moitié des locataires.
 La commission paritaire locative délibère de manière collégiale et se dote d'un règlement d'ordre intérieur.
 Le Gouvernement arrête les modalités de composition, d'organisation, de fonctionnement de la commission paritaire locative ainsi que la rémunération de ses membres.
-#### Art. 107/5.  Les avis rendus par la commission paritaire locative font l'objet d'une publicité, à minima au travers d'une diffusion sur son site internet. Le Gouvernement arrête les modalités de cette publicité.
-#### Art. 107/6.  Le fonctionnement et le dispositif de saisine de la commission paritaire locative font l'objet d'une évaluation annuelle présentée dans un rapport. Celui-ci est transmis au Parlement de la Région de Bruxelles-Capitale.
+#### Art. 107/5. 
+Les avis rendus par la commission paritaire locative font l'objet d'une publicité, à minima au travers d'une diffusion sur son site internet. Le Gouvernement arrête les modalités de cette publicité.
+#### Art. 107/6. 
+Le fonctionnement et le dispositif de saisine de la commission paritaire locative font l'objet d'une évaluation annuelle présentée dans un rapport. Celui-ci est transmis au Parlement de la Région de Bruxelles-Capitale.
 Le Gouvernement fixe les modalités de cette évaluation.
-## CHAPITRE IV. - L'Observatoire de l'Habitat
-#### Art. 108. Paragraphe 1. Il est institué un Observatoire de l'Habitat qui exerce, dans les conditions fixées par le Gouvernement, les missions suivantes :
+#### Art. 108. 
+Paragraphe 1. Il est institué un Observatoire de l'Habitat qui exerce, dans les conditions fixées par le Gouvernement, les missions suivantes :
 Point 1 récolter et traiter les données statistiques relatives à l'habitat en Région de Bruxelles-Capitale;
 Point 2 d'initiative, ou à la demande du Gouvernement, la réalisation d'études relatives à l'habitat;
 Point 3 la conduite de réflexions prospectives sur le devenir de l'habitat en Région de Bruxelles-Capitale;
@@ -831,18 +914,18 @@ Point 4 récolter et traiter les informations permettant d'étudier les évoluti
 Point 5 toutes autres missions qui lui sont confiées par le Gouvernement.
 Paragraphe 2. L'Observatoire de l'Habitat remet annuellement un rapport au Parlement de la Région de Bruxelles-Capitale.
 Paragraphe 3. Le Gouvernement prévoit annuellement à son budget le montant nécessaire au fonctionnement de l'Observatoire de l'Habitat. Il en arrête les modalités d'attributions.
-## CHAPITRE V. - Le Centre d'Information sur le Logement de la Région de Bruxelles-Capitale
-#### Art. 109. Il est institué un Centre d'information sur le logement de la Région de Bruxelles-Capitale qui a pour missions de :
+#### Art. 109. 
+Il est institué un Centre d'information sur le logement de la Région de Bruxelles-Capitale qui a pour missions de :
 Point 1 centraliser toutes données relatives aux législations, réglementations et organismes présentant un lien direct ou indirect avec le logement, applicables en Région de Bruxelles-Capitale;
 Point 2 donner à toute personne intéressée une information de première ligne;
 Point 3 orienter les personnes vers les services compétents.
-#### Art. 110. Le Gouvernement fixe les modalités de fonctionnement de ce Centre d'information sur le Logement.
-## CHAPITRE VI. - Le Fonds du Logement de la Région de Bruxelles-Capitale
-### Section 1. - Statut et forme
-#### Art. 111. Le Fonds du Logement de la Région de Bruxelles-Capitale, dénommé ci-après le Fonds, est constitué sous forme d'une société coopérative à responsabilité limitée.
+#### Art. 110. 
+Le Gouvernement fixe les modalités de fonctionnement de ce Centre d'information sur le Logement.
+#### Art. 111. 
+Le Fonds du Logement de la Région de Bruxelles-Capitale, dénommé ci-après le Fonds, est constitué sous forme d'une société coopérative à responsabilité limitée.
 Le siège du Fonds est établi dans l'une des communes de la Région de Bruxelles-Capitale.
-### Section 2. - Missions
-#### Art. 112.Paragraphe 1. Le Fonds poursuit des missions d'utilité publique et notamment :
+#### Art. 112.
+Paragraphe 1. Le Fonds poursuit des missions d'utilité publique et notamment :
 Point 1  fournir par l'octroi de crédits (dont les conditions sont fixées par le Gouvernement) :
 a) aux personnes physiques à revenus moyens ou faibles, les moyens d'acquérir un droit réel ou personnel sur un logement ou de réhabiliter, de restructurer, d'adapter, de construire, d'améliorer la performance énergétique, d'adapter au handicap et à la perte d'autonomie et d'indépendance physiques des occupants ou de conserver un logement destiné, à titre principal, à l'occupation personnelle ;
 b) aux personnes morales les moyens de réaliser des travaux de construction ou de rénovation permettant le respect des exigences de sécurité, de salubrité et d'équipement des logements visées au Chapitre 1, Titre III du présent Code et permettant l'amélioration du bâti en matière d'économie d'énergie ou l'adaptation au handicap et à la perte d'autonomie et d'indépendance physiques des occupants ;
@@ -857,10 +940,11 @@ Paragraphe 2. En fonction des crédits inscrits au budget de la Région, l'assur
 Point 1 le risque du salarié qui contracte un crédit pour la rénovation d'une habitation unique, pour la construction, l'achat ou l'achat avec rénovation, amélioration, adaptation d'une habitation unique, et qui n'est pas en mesure de respecter ses obligations contractuelles suite à un chômage involontaire ou à une incapacité de travail;
 Point 2 le risque de l'indépendant qui contracte un crédit pour la rénovation d'une habitation unique, pour la construction, l'achat ou l'achat avec rénovation, amélioration, adaptation d'une habitation unique, et qui n'est pas en mesure de respecter ses obligations contractuelles suite à une incapacité de travail.
 Le crédit dont le risque est couvert par l'assurance habitat garanti, doit porter sur un logement qui est ou qui sera occupé par l'emprunteur et dont la valeur vénale ne peut pas excéder le montant fixé par le Gouvernement. Par ailleurs, l'emprunteur ne peut pas posséder d'autre logement en pleine propriété.
-### Section 3. - Contrat de gestion
-#### Art. 113. Le Fonds exerce ses missions selon les priorités et orientations définies dans le contrat de gestion qu'il conclut avec le Gouvernement pour une durée de cinq ans. A défaut de contrat de gestion, et après consultation du Fonds, le Gouvernement fixe les conditions particulières d'exécution de l'article 114 pour la durée d'un exercice budgétaire.
+#### Art. 113. 
+Le Fonds exerce ses missions selon les priorités et orientations définies dans le contrat de gestion qu'il conclut avec le Gouvernement pour une durée de cinq ans. A défaut de contrat de gestion, et après consultation du Fonds, le Gouvernement fixe les conditions particulières d'exécution de l'article 114 pour la durée d'un exercice budgétaire.
 Le contrat de gestion est communiqué par le Gouvernement au Parlement de la Région de Bruxelles-Capitale préalablement à son entrée en vigueur.
-#### Art. 114. Le contrat de gestion règle dans le cadre des ordonnances et arrêtés qui régissent le financement et les activités du Fonds :
+#### Art. 114. 
+Le contrat de gestion règle dans le cadre des ordonnances et arrêtés qui régissent le financement et les activités du Fonds :
 Point 1 les objectifs assignés aux parties;
 Point 2 les délais de réalisation de ces objectifs;
 Point 3 les moyens à mettre en oeuvre pour les atteindre;
@@ -868,15 +952,17 @@ Point 4 les critères d'évaluation;
 Point 5 les conditions de révision;
 Point 6 les sanctions en cas de manquements aux objectifs et aux délais fixés;
 Point 7 les objectifs d'accessibilité et d'adaptabilité des bâtiments et logements aux personnes handicapées.
-#### Art. 115. Un rapport annuel d'évaluation de l'exécution du contrat de gestion est établi par le Fonds et soumis au Gouvernement, après avis du/des commissaire(s) de Gouvernement visé(s) à l'article 118 du présent code.
+#### Art. 115. 
+Un rapport annuel d'évaluation de l'exécution du contrat de gestion est établi par le Fonds et soumis au Gouvernement, après avis du/des commissaire(s) de Gouvernement visé(s) à l'article 118 du présent code.
 Le rapport annuel d'évaluation de l'exécution du contrat de gestion est présenté au Gouvernement au plus tard le 1 juillet de l'année suivant l'exercice auquel il se rapporte et est transmis dans le mois suivant au Parlement de la Région de Bruxelles-Capitale.
-### Section 4. - Financement
-#### Art. 116. Paragraphe 1. Le Fonds peut être autorisé par le Gouvernement à contracter des emprunts garantis par la Région, dans les limites budgétaires fixées par le Parlement de la Région de Bruxelles-Capitale. La garantie couvre également les opérations de gestion financière afférentes à ces emprunts.
+#### Art. 116. 
+Paragraphe 1. Le Fonds peut être autorisé par le Gouvernement à contracter des emprunts garantis par la Région, dans les limites budgétaires fixées par le Parlement de la Région de Bruxelles-Capitale. La garantie couvre également les opérations de gestion financière afférentes à ces emprunts.
 Le montant, les conditions et les modalités des emprunts doivent être approuvés par le Gouvernement.
 Paragraphe 2. Dans les limites des crédits inscrits au budget régional et moyennant le respect de l'article 114, le Gouvernement subventionne les activités du Fonds, notamment par la couverture des pertes sur intérêts des emprunts qu'il contracte et par des dotations en capital.
 Par le seul fait de l'acceptation des subventions régionales, le Fonds reconnaît à la Cour des comptes le droit de faire procéder sur place au contrôle de l'emploi des fonds attribués.
 Paragraphe 3. La Région n'accorde sa garantie de bonne fin aux emprunts visés au Paragraphe 1 qu'à la condition que le Fonds se soit engagé au préalable à consacrer une partie de ses programmes d'investissement telle que fixée dans les contrats de gestion, au financement de l'acquisition, de la construction, de la réhabilitation, de la restructuration ou l'adaptation de logements destinés à être loués ou vendus en pleine propriété ou sous la forme d'un autre droit réel principal à des personnes qui remplissent les conditions particulières fixées par le Gouvernement.
-#### Art. 117. Paragraphe 1. La Région consent au Fonds une avance récupérable sans intérêt destinée à permettre l'octroi d'une aide à la constitution d'une garantie locative.
+#### Art. 117. 
+Paragraphe 1. La Région consent au Fonds une avance récupérable sans intérêt destinée à permettre l'octroi d'une aide à la constitution d'une garantie locative.
 Paragraphe 2. Moyennant les sommes mises à sa disposition, le Fonds octroie des crédits ou des cautionnements bancaires à des personnes en difficulté de constituer la garantie locative exigée par leur bailleur afin de leur permettre d'accéder à un logement décent.
 Paragraphe 3. La mise à disposition du Fonds des avances récupérables, dont question au Paragraphe 1 du présent article, est réglée par une convention passée entre la Région et le Fonds.
 Cette convention prévoit notamment que les montants confiés au Fonds doivent faire l'objet d'une comptabilité distincte et que les intérêts produits par ces montants devront exclusivement être affectés au système d'aide à la garantie locative.
@@ -886,8 +972,8 @@ Paragraphe 5. Chaque année, le Fonds remet au Gouvernement un rapport complet r
 Paragraphe 6. L'avance consentie au Fonds par la Région lui est remboursée lorsque celle-ci met fin au système d'aide à la constitution des garanties locatives, suivant les modalités fixées par le Gouvernement.
 Paragraphe 7. En cas de dissolution du Fonds, celui-ci est tenu de restituer à la Région la totalité des avances reçues. La restitution est toutefois limitée aux montants remboursés par les bénéficiaires des crédits ou des créances détenues par le Fonds sur ceux-ci. La Région est subrogée dans les droits du Fonds pour le recouvrement des crédits et des créances.
 Paragraphe 8. Le Gouvernement arrête les conditions d'accès ainsi que les modalités d'octroi des crédits et cautionnements destinés à la constitution de la garantie locative ainsi que les conditions de remboursement des crédits par les bénéficiaires ou des sommes payées à titre de caution par le Fonds. Les crédits ou cautionnements destinés à la garantie locative sont consentis sans frais pour les bénéficiaires.
-### Section 5. - Contrôle
-#### Art. 118. Paragraphe 1. Le Fonds est soumis au contrôle du Gouvernement. Ce contrôle est exercé par deux commissaires nommés par le Gouvernement, qui appartiennent à des rôles linguistiques différents.
+#### Art. 118. 
+Paragraphe 1. Le Fonds est soumis au contrôle du Gouvernement. Ce contrôle est exercé par deux commissaires nommés par le Gouvernement, qui appartiennent à des rôles linguistiques différents.
 Paragraphe 2. Les commissaires assistent avec voix consultative aux réunions des organes d'administration et de contrôle du Fonds auxquelles ils doivent être convoqués.
 Ils sont chargés de contrôler la mise en oeuvre des ordonnances et arrêtés régissant le financement et les activités du Fonds, ainsi que des contrats de gestion successifs.
 Paragraphe 3. Lorsque l'intérêt général ou le respect de la loi ou des règlements le requièrent, le Gouvernement ou les commissaires peuvent demander au Fonds de délibérer, dans le délai qu'ils fixent, sur toute question qui le concerne.
@@ -897,9 +983,10 @@ Le recours est exercé auprès du Gouvernement dans les conditions et suivant le
 Le Gouvernement statue dans les trente jours à compter de l'introduction du recours. Passé ce délai, la décision est censée approuvée.
 La décision d'annulation est notifiée au Fonds.
 Paragraphe 5. Chaque année, les commissaires adressent un rapport de leurs activités au Gouvernement.
-#### Art. 119. Sauf si elles font l'objet de dispositions propres au Fonds du Logement de la Région de Bruxelles-Capitale, les dispositions des lois et arrêtés concernant le Fonds du Logement de la Ligue des Familles nombreuses de Belgique et le Fonds du Logement des Familles de Bruxelles-Capitale sont d'application pour le Fonds du Logement de la Région de Bruxelles-Capitale.
-## CHAPITRE VII. - Les agences immobilières sociales
-#### Art. 120.Paragraphe 1. Pour réaliser ses objectifs, consistant à permettre l'accès au logement locatif aux personnes en difficulté à cet égard, l'agence immobilière sociale maintient, réintroduit ou crée dans le circuit locatif un maximum de logements des secteurs privé et public. Pour ces derniers, le Gouvernement fixe une proportion maximale.
+#### Art. 119. 
+Sauf si elles font l'objet de dispositions propres au Fonds du Logement de la Région de Bruxelles-Capitale, les dispositions des lois et arrêtés concernant le Fonds du Logement de la Ligue des Familles nombreuses de Belgique et le Fonds du Logement des Familles de Bruxelles-Capitale sont d'application pour le Fonds du Logement de la Région de Bruxelles-Capitale.
+#### Art. 120.
+Paragraphe 1. Pour réaliser ses objectifs, consistant à permettre l'accès au logement locatif aux personnes en difficulté à cet égard, l'agence immobilière sociale maintient, réintroduit ou crée dans le circuit locatif un maximum de logements des secteurs privé et public. Pour ces derniers, le Gouvernement fixe une proportion maximale.
 Paragraphe 2. Pour réaliser cette mission, l'agence immobilière sociale sera médiatrice entre les titulaires d'un droit réel principal, les titulaires d'un droit de gestion publique, ou encore, mais ici avec l'accord du bailleur, les preneurs d'un bail de rénovation ou les preneurs d'un bail commercial, d'une part, et des ménages locataires, d'autre part. A cet effet, elle conclura avec les titulaires d'un droit réel principal, d'un droit de gestion publique ou de bail commercial, des contrats de gestion ou des contrats de location d'immeubles ou de parties d'immeubles. Le Gouvernement est habilité à définir les modalités d'exécution de cette disposition.
 Elle pourra également recevoir tout don ou legs, ainsi que conclure toute opération d'emphytéose ou de droit de superficie en rapport avec ses objectifs.
 L'agence immobilière sociale pourra également acquérir des immeubles destinés aux logements
@@ -907,20 +994,24 @@ Le Gouvernement fixe les mentions obligatoires dans les contrats de gestion et l
 L'article 224/2 s'applique à tous les contrats de gestion et de location que l'agence immobilière sociale conclut avec les concédants et les locataires.
 Paragraphe 3. Les logements mis en location par l'agence immobilière sociale doivent être situés en Région de Bruxelles-Capitale et doivent répondre aux exigences élémentaires en matière de sécurité, de salubrité et d'équipement des logements telles qu'arrêtées en vertu de l'article 4.
 Paragraphe 4. L'agence immobilière sociale assure le cas échéant un accompagnement social spécifiquement en rapport avec la location d'un logement. Cet accompagnement social peut se faire en partenariat avec un C.P.A.S. ou une association agréée pour l'aide aux logements ou l'accompagnement social. Un tel partenariat est obligatoire si l'agence sociale ne compte pas en son sein un travailleur social, titulaire d'un diplôme de master ou bachelor délivré par une université ou un établissement d'enseignement supérieur (après au moins 3 années d'études), ou une autre formation agréée et équivalente.
-#### Art. 121. Paragraphe 1. L'immeuble ou partie d'immeuble dont la prise en gestion est envisagée doit être mis à la disposition de l'agence immobilière sociale par mandat de gestion ou par bail d'une durée minimale de :
+#### Art. 121. 
+Paragraphe 1. L'immeuble ou partie d'immeuble dont la prise en gestion est envisagée doit être mis à la disposition de l'agence immobilière sociale par mandat de gestion ou par bail d'une durée minimale de :
 Point 1 soit, trois ans en cas de gestion ou de location uniquement;
 Point 2 soit, neuf ans en cas de nécessité de travaux de rénovation importants.
 Paragraphe 2. Lorsqu'un contrat de gestion visé à l'article 120, Paragraphe 2, alinéa 1, a été conclu avec le titulaire d'un droit réel principal, l'agence immobilière sociale est subrogée au titulaire d'un droit réel principal dans ses droits à la récupération de toute somme due par le ménage, ainsi que dans ses droits à exiger la réalisation du bail, tels que prévus par le Code civil.
 Paragraphe 3. Dans la négociation du loyer avec le titulaire d'un droit réel principal, l'agence immobilière sociale doit veiller à obtenir en tout cas un loyer inférieur aux loyers pratiqués sur le marché privé pour des biens de degré d'équipement et de localisation comparables, par référence notamment aux données de l'Observatoire des loyers, compte tenu des garanties qu'elle offre au titulaire d'un droit réel principal.
-#### Art. 122. Le montant du loyer payé par le ménage à l'agence immobilière sociale est fixé conformément à la réglementation organisant les agences immobilières sociales, sans qu'il puisse être supérieur au montant versé par l'agence immobilière sociale au titulaire d'un droit réel principal.
-#### Art. 123. Paragraphe 1. Dans les limites du crédit budgétaire et si les conditions fixées par le Gouvernement sont réunies, celui-ci accorde aux agences immobilières sociales agréées des subventions annuelles destinées à :
+#### Art. 122. 
+Le montant du loyer payé par le ménage à l'agence immobilière sociale est fixé conformément à la réglementation organisant les agences immobilières sociales, sans qu'il puisse être supérieur au montant versé par l'agence immobilière sociale au titulaire d'un droit réel principal.
+#### Art. 123. 
+Paragraphe 1. Dans les limites du crédit budgétaire et si les conditions fixées par le Gouvernement sont réunies, celui-ci accorde aux agences immobilières sociales agréées des subventions annuelles destinées à :
 Point 1 intervenir dans le coût des travaux de rafraîchissement, dont le Gouvernement détermine la nature et l'importance desdits travaux de rénovation;
 Point 2 intervenir notamment dans la prise en charge des pertes résultant de l'inoccupation temporaire du logement, des dégâts locatifs, et des créances est déclarées irrécouvrables, conformément aux conditions fixées par le Gouvernement;
 Point 3 intervenir dans les frais de fonctionnement et de personnel, en ce compris les provisions ou fonds affectés pour risques et charges locatifs, et pour passif social.
 Paragraphe 2. Sans préjudice du Paragraphe 1, pour les ménages qui ne disposent pas de revenus supérieurs aux revenus d'admission du logement social, et si les conditions fixées par le Gouvernement sont réunies, celui-ci accorde des subventions destinées à :
 Point 1 intervenir dans le déficit constitué par la différence entre le loyer dû au bailleur et le montant que le ménage peut consacrer à se loger;
 Point 2 intervenir dans les frais d'accompagnement social des ménages locataires, tel que visé à l'article 120, Paragraphe 4.
-#### Art. 124.Paragraphe 1. L'agrément du Gouvernement ne peut être accordé qu'aux agences immobilières sociales qui remplissent les conditions suivantes :
+#### Art. 124.
+Paragraphe 1. L'agrément du Gouvernement ne peut être accordé qu'aux agences immobilières sociales qui remplissent les conditions suivantes :
 Point 1 adopter le statut d'association sans but lucratif au sens  du Code des sociétés et des associations;
 Point 2 avoir pour mission de permettre l'accès au logement à des personnes en difficulté à cet égard;
 Point 3 ;
@@ -931,7 +1022,8 @@ Point 7 ne pas présenter, en son sein, dans les fonctions de président, d'admi
 Point 8 se conformer au Chapitre IV du Titre III, à l'exception des articles 24, 25, 28bis et 33;
 Point 9
 Paragraphe 2. Le Gouvernement peut limiter le nombre d'agences immobilières sociales agréées.
-#### Art. 125.Paragraphe 1. Pour pouvoir bénéficier d'un logement géré par l'agence immobilière sociale :
+#### Art. 125.
+Paragraphe 1. Pour pouvoir bénéficier d'un logement géré par l'agence immobilière sociale :
 Point 1 le ménage ne peut disposer de revenus supérieurs aux revenus fixés en fonction de l'article 2, Paragraphe 2, Point 2.
 Deux-tiers minimum des habitations gérées par l'agence immobilière sociale sont attribuées à des ménages disposant de revenus inférieurs ou égaux aux revenus d'admission fixés en fonction de l'article 2, Paragraphe 2, Point 1 ;
 Point 2 aucun membre du ménage ne peut être plein propriétaire, emphytéote ou usufruitier d'un bien immeuble affecté au logement ou à un usage professionnel.
@@ -942,14 +1034,17 @@ Paragraphe 3. Au sens du présent article, on entend par :
 Point 1 revenus : les revenus immobiliers et mobiliers nets et le montant net imposable des revenus professionnels avant toute déduction, majorés ou diminués des rentes alimentaires selon qu'elles sont reçues ou versées. Les revenus visés sont établis sur la base du Code des impôts sur les revenus. Sont également considérés comme revenus, le montant du revenu d'intégration sociale et les allocations pour personne handicapée;
 Point 2 revenus du ménage : les revenus globalisés de tous les membres du ménage, à l'exception de ceux des enfants à charge;
 Point 3 revenus d'admission du logement social : les revenus d'accès au logement social, tels que fixés en fonction de l'article 2, Paragraphe 2, Point 1.
-#### Art. 126. Paragraphe 1. Le non-respect des conditions du présent Code entraîne le remboursement des subventions visées à l'article 123, conformément à l'article 94 de l'ordonnance organique du 23 février 2006 portant les dispositions applicables au budget, à la comptabilité et au contrôle.
+#### Art. 126. 
+Paragraphe 1. Le non-respect des conditions du présent Code entraîne le remboursement des subventions visées à l'article 123, conformément à l'article 94 de l'ordonnance organique du 23 février 2006 portant les dispositions applicables au budget, à la comptabilité et au contrôle.
 Si le remboursement ne se fait pas volontairement et dans les délais, une contrainte peut être décernée par le fonctionnaire désigné à cette fin par le gouvernement. La contrainte est visée et rendue exécutoire par le fonctionnaire susmentionné.
 Paragraphe 2. Le Gouvernement retire, suspend ou limite l'agrément lorsqu'il constate que l'agence immobilière sociale ne respecte plus les conditions du présent Code.
-#### Art. 127. Les logements faisant partie du patrimoine des SISP et du Fonds du Logement n'entrent pas dans le champ d'application du présent chapitre.
-#### Art. 128. Le Gouvernement fixe les procédures d'agrément et de retrait d'agrément, y compris les procédures de recours.
+#### Art. 127. 
+Les logements faisant partie du patrimoine des SISP et du Fonds du Logement n'entrent pas dans le champ d'application du présent chapitre.
+#### Art. 128. 
+Le Gouvernement fixe les procédures d'agrément et de retrait d'agrément, y compris les procédures de recours.
 Article 128bis. Les différentes agences immobilières sociales peuvent se regrouper au sein d'une fédération représentative, qui peut faire l'objet d'un agrément par le Gouvernement selon les modalités que celui-ci détermine.
-## CHAPITRE VIII. - Les sociétés de crédit social
-#### Art. 129. Paragraphe 1. Le Gouvernement peut accorder l'agrément de la Région à toute société de crédit qui demande à participer à l'exercice d'une mission sociale, consistant à favoriser l'accès à la propriété ou la conservation d'un premier logement par un ménage.
+#### Art. 129. 
+Paragraphe 1. Le Gouvernement peut accorder l'agrément de la Région à toute société de crédit qui demande à participer à l'exercice d'une mission sociale, consistant à favoriser l'accès à la propriété ou la conservation d'un premier logement par un ménage.
 Paragraphe 2. Le Gouvernement fixe un règlement général d'agrément par la Région des sociétés visées au Paragraphe 1. L'agrément de la Région est notamment subordonné au respect des conditions suivantes :
 Point 1 la société de crédit social a pour objet social principal l'octroi de crédits hypothécaires à des personnes physiques, et la gestion de ces crédits en nom propre ou pour compte d'organismes de placement en créances détenues majoritairement par des sociétés de crédit social;
 Point 2 les crédits hypothécaires sont accordés en vue de la construction, de l'achat, de la réhabilitation, de la restructuration, de l'adaptation ou de la conservation d'un premier logement destiné à l'occupation personnelle;
@@ -964,31 +1059,35 @@ Paragraphe 3. Le Gouvernement peut imposer des sanctions pouvant aller jusqu'au 
 Le produit des sanctions financières alimente le Fonds commun d'assistance visé à l'article 132, Paragraphe 1.
 Paragraphe 4. Le Gouvernement apporte en outre sa garantie aux emprunts contractés par les sociétés de crédit social, afin de leur permettre de financer les crédits qu'elles consentent pour l'achat, la construction, la conservation et la transformation d'habitation sociales ou assimilées, aux conditions qu'il fixe.
 Sur proposition du Ministre du Budget et du Ministre ou du Secrétaire d'Etat ayant le Logement dans ses attributions, le Gouvernement désigne, auprès de chaque société de crédit social, un commissaire chargé de veiller au respect, par celle-ci, des conditions d'octroi de la garantie, aux conditions qu'il fixe.
-#### Art. 130.Paragraphe 1. La société de crédit social est une société civile, qui prend la forme soit d'une société anonyme, soit d'une société coopérative.
+#### Art. 130.
+Paragraphe 1. La société de crédit social est une société civile, qui prend la forme soit d'une société anonyme, soit d'une société coopérative.
 Le  Code des sociétés et associations lui est applicable, dans la mesure où il n'y est pas dérogé par le présent Code.
 Paragraphe 2. Les actions sont nominatives.
 Paragraphe 3. La Région, les provinces, les intercommunales, les communes, les centres publics d'aide social, les personnes morales de droit privé et les personnes physiques sont admis à souscrire au capital des sociétés de crédit social.
 Paragraphe 4. - Dans les sociétés de crédit social où la participation des personnes morales de droit public n'atteint pas 25 %, un droit de préemption d'une durée de 3 mois est accordée à celles-ci en cas de vente de parts détenues par des personnes morales de droit privé ou par des particuliers, selon les modalités et aux conditions fixées par le Gouvernement.
-#### Art. 131. Paragraphe 1. Chaque société de crédit social est tenue de faire appel à un réviseur choisi parmi les membres de l'Institut des réviseurs d'entreprises.
+#### Art. 131. 
+Paragraphe 1. Chaque société de crédit social est tenue de faire appel à un réviseur choisi parmi les membres de l'Institut des réviseurs d'entreprises.
 Paragraphe 2. Le réviseur est chargé du contrôle de la situation financière, des comptes annuels et de la régularité des opérations à constater dans les comptes annuels.
 Il peut prendre connaissance, sans déplacement, des livres et documents comptables, de la correspondance, des procès-verbaux, des situations périodiques et généralement de toutes les écritures.
 Paragraphe 3. Le réviseur adresse au Gouvernement, sur la base d'un cahier des charges établi par ce dernier, un rapport sur la situation active et passive, ainsi que les résultats d'exploitation, au moins une fois par an, à l'occasion de la confection du bilan et du compte des pertes et profits. Il lui signale sans délai toute négligence, irrégularité ou situation susceptible de compromettre la liquidité et la solvabilité de la société de crédit social.
-#### Art. 132. Paragraphe 1. Il est institué un Fonds commun d'assistance en vue de promouvoir les intérêts des sociétés de crédits social. Ce Fonds est alimenté notamment par les quotes-parts des sociétés de crédit social, dont les montants sont fixés par le Gouvernement.
+#### Art. 132. 
+Paragraphe 1. Il est institué un Fonds commun d'assistance en vue de promouvoir les intérêts des sociétés de crédits social. Ce Fonds est alimenté notamment par les quotes-parts des sociétés de crédit social, dont les montants sont fixés par le Gouvernement.
 Les conditions et les modalités de répartition des avoirs du Fonds sont fixées par le Gouvernement.
 Paragraphe 2. Il est institué un Comité de concertation, dont la composition et les modalités de fonctionnement sont fixées par le Gouvernement. Il est constitué paritairement de représentants de la Région et de représentants des sociétés de crédit social.
-## CHAPITRE IX. - La Société de Développement pour la Région de Bruxelles-Capitale
-#### Art. 133. La Société de Développement pour la Région de Bruxelles-Capitale est compétente en matière de logement, conformément aux dispositions de l'ordonnance du 20 mai 1999 relative à la SDRB.
-## CHAPITRE X. - Les associations
-#### Art. 134. Des associations, dotées de la personnalité juridique et ayant pour objet social la défense du droit au logement, sont compétentes pour remplir des missions telles que fixées au présent Code.
+#### Art. 133. 
+La Société de Développement pour la Région de Bruxelles-Capitale est compétente en matière de logement, conformément aux dispositions de l'ordonnance du 20 mai 1999 relative à la SDRB.
+#### Art. 134. 
+Des associations, dotées de la personnalité juridique et ayant pour objet social la défense du droit au logement, sont compétentes pour remplir des missions telles que fixées au présent Code.
 Ces associations sont celles qui sont agréées par le Gouvernement conformément aux dispositions du présent Code, celles qui oeuvrent à l'insertion par le logement en vertu de l'article 187 du présent Code et celles qui oeuvrent à l'amélioration du logement, de l'habitat et à un programme de développement local intégré en matière de rénovation urbaine durable en vertu de l'article 189 du présent Code.
-## CHAPITRE XI.  - Community land trust (CLT)
-#### Art. 134/1.  - Forme et missions
+#### Art. 134/1. 
+- Forme et missions
 Paragraphe 1. Un CLT est une organisation sans but lucratif qui a vocation à acquérir et gérer des biens immeubles bâtis ou non bâtis dans la Région de Bruxelles-Capitale en vue de créer aussi bien des habitations accessibles pour les ménages à bas revenus que des équipements d'intérêt collectif, entre autres.
 Le CLT favorise dans ses projets et dans son mode de fonctionnement l'implication citoyenne et le partenariat entre monde associatif, citoyen et pouvoirs publics.
 Le CLT est agréé par le Gouvernement aux conditions et modalités qu'il détermine et agit dans le cadre de la politique sociale du logement développée par la Région pour autant qu'il respecte les conditions de revenus, de loyer et de prix de vente maximum fixées par le Gouvernement.
 Paragraphe 2. Le CLT agréé exerce ses missions selon les finalités définies dans un contrat de gestion conclu entre lui et le Gouvernement.
 Paragraphe 3. Le Gouvernement définit les missions et les règles de fonctionnement des CLT agréés.
-#### Art. 134/2.  - Fonctionnement
+#### Art. 134/2. 
+- Fonctionnement
 Paragraphe 1. Le CLT repose sur une structuration originale de la propriété immobilière en ce qu'il dissocie la propriété du foncier de celle du bâti.
 Le CLT reste propriétaire des terrains mais transfère la propriété des bâtiments aux ménages acquéreurs via des droits réels démembrés.
 Les acquéreurs souscrivent à des obligations déterminées par le Gouvernement. Ils acceptent notamment des conditions d'occupation et d'entretien ainsi que des règles de transmission spécifiques conformes aux objectifs du CLT.
@@ -997,20 +1096,24 @@ Les candidats acquéreurs sont classés en fonction de leurs revenus selon les c
 Chaque CLT tient un registre reprenant, dans l'ordre chronologique de l'introduction des demandes, la liste des candidats acquéreurs.
 Le prix de vente maximum d'un bien immeuble cédé par un CLT est déterminé par le Gouvernement en fonction des revenus des acquéreurs, de sorte que le bien reste toujours accessible aux ménages à bas revenus, et ne peut dépasser le prix de revient du logement, déduction faite de la valeur du terrain.
 Paragraphe 3. Le Gouvernement détermine les règles de revente des bâtiments, dont les conditions de revenus des acquéreurs qui doivent permettre que ceux-ci restent toujours accessibles aux ménages à bas revenus.
-#### Art. 134/3.  - Modalités de financement
+#### Art. 134/3. 
+- Modalités de financement
 Paragraphe 1. Dans les limites des moyens budgétaires disponibles et selon les modalités fixées par le Gouvernement, celui-ci accorde aux CLT agréés pour chacun de leur projet un subside destiné à couvrir partiellement le coût de celui-ci, plus spécifiquement les frais d'acquisition, de construction et de réhabilitation d'immeuble.
 Paragraphe 2. Dans les limites des moyens budgétaires disponibles et selon les modalités fixées par le Gouvernement, celui-ci accorde aux CLT agréés un subside annuel de fonctionnement pour couvrir leurs frais de fonctionnement.
 Paragraphe 3. Dans les limites des moyens budgétaires disponibles et selon les modalités fixées par le Gouvernement, celui-ci peut accorder sur demande motivée d'un CLT agréé une subvention complémentaire.
-# TITRE V. - DE LA TUTELLE ET DES MODES DE CONTROLE
-#### Art. 135. Dans les conditions fixées par le Gouvernement, et sans préjudice de l'ordonnance du 14 mai 1998 organisant la tutelle administrative sur les communes de la Région de Bruxelles-Capitale, ainsi que des articles 108 à 113 de la loi du 8 juillet 1976 organique des centres publics d'action sociale, telle que modifiée par l'ordonnance du 3 juin 2003, dans tous les cas où les autorités communales sont compétentes pour prendre des mesures ou des actes édictés par le présent Code, le Gouvernement exerce une tutelle de substitution à l'égard de ces actes en cas de défaillance dans le chef des autorités communales, après deux avertissements consécutifs, transmis par lettre recommandée avec accusé de réception, à l'autorité défaillante.
+#### Art. 135. 
+Dans les conditions fixées par le Gouvernement, et sans préjudice de l'ordonnance du 14 mai 1998 organisant la tutelle administrative sur les communes de la Région de Bruxelles-Capitale, ainsi que des articles 108 à 113 de la loi du 8 juillet 1976 organique des centres publics d'action sociale, telle que modifiée par l'ordonnance du 3 juin 2003, dans tous les cas où les autorités communales sont compétentes pour prendre des mesures ou des actes édictés par le présent Code, le Gouvernement exerce une tutelle de substitution à l'égard de ces actes en cas de défaillance dans le chef des autorités communales, après deux avertissements consécutifs, transmis par lettre recommandée avec accusé de réception, à l'autorité défaillante.
 Tous les frais engendrés par l'exercice de cette tutelle de substitution sont à charge de l'autorité défaillante.
-#### Art. 136. Les organismes compétents en matière de logement exercent leur mission conformément aux dispositions du présent Code et sous le contrôle du Gouvernement.
+#### Art. 136. 
+Les organismes compétents en matière de logement exercent leur mission conformément aux dispositions du présent Code et sous le contrôle du Gouvernement.
 A ce titre, et sans préjudice des sanctions visées au présent Code, le Gouvernement peut, après deux avertissements consécutifs transmis par lettre recommandée avec accusé de réception, se substituer à l'un des organismes compétents en matière de logement en cas de non respect par ce dernier des obligations lui incombant en vertu du présent Code.
-#### Art. 137. Pour les organismes compétents en matière de logement dans lesquels la présence d'un commissaire du Gouvernement n'est pas assurée, le Gouvernement peut déléguer l'exercice du contrôle visé à l'article 136 à la SLRB, pour autant qu'il ne s'agisse pas d'un contrôle exercé à l'égard de cette dernière.
-# TITRE VI.  Du logement social, modéré et moyen mis en location par la SLRB et les SISP
-#### Art. 138. Les dispositions du présent titre s'appliquent aux SISP et aux logements sociaux, modérés et moyens qu'elles mettent en location en vertu des articles 2, Paragraphe 2, Point 1 à Point 3, du présent Code.
+#### Art. 137. 
+Pour les organismes compétents en matière de logement dans lesquels la présence d'un commissaire du Gouvernement n'est pas assurée, le Gouvernement peut déléguer l'exercice du contrôle visé à l'article 136 à la SLRB, pour autant qu'il ne s'agisse pas d'un contrôle exercé à l'égard de cette dernière.
+#### Art. 138. 
+Les dispositions du présent titre s'appliquent aux SISP et aux logements sociaux, modérés et moyens qu'elles mettent en location en vertu des articles 2, Paragraphe 2, Point 1 à Point 3, du présent Code.
 #### Art. 139.
-#### Art. 140.Sur avis de la SLRB, le Gouvernement détermine dans le respect du présent chapitre et, au besoin, en dérogeant aux dispositions  du Titre XI du présent Code:
+#### Art. 140.
+Sur avis de la SLRB, le Gouvernement détermine dans le respect du présent chapitre et, au besoin, en dérogeant aux dispositions  du Titre XI du présent Code:
 Point 1 le mécanisme de calcul de la valeur des immeubles;
 Point 2 le mécanisme de calcul des loyers applicables aux locataires des SISP et, le cas échéant, à ceux de la SLRB, en ce compris les modalités de déplafonnement;
 Point 3  les conditions d'inscription des candidats locataires et la procédure à suivre pour l'introduction et le traitement des demandes de logement
@@ -1032,8 +1135,10 @@ Si les personnes ainsi mutées sont âgées d'au moins de soixante-cinq ans ou s
 La SISP communique à la SLRB un plan annuel de mutation;
 Point 8 les conditions relatives à la salubrité, à l'inspection, à la jouissance personnelle de l'immeuble ou de la partie d'immeuble donnée en location;
 Point 9 les précautions à prendre contre la spéculation.
-#### Art. 141. Sur avis de la SLRB, le Gouvernement établit des contrats de bail types.
-#### Art. 142.Paragraphe 1.  Ces contrats-types de bail arrêtés par le Gouvernement sont des baux de neuf ans pour les locataires dont le bail prend effet au 1 janvier 2013 ou postérieurement.
+#### Art. 141. 
+Sur avis de la SLRB, le Gouvernement établit des contrats de bail types.
+#### Art. 142.
+Paragraphe 1.  Ces contrats-types de bail arrêtés par le Gouvernement sont des baux de neuf ans pour les locataires dont le bail prend effet au 1 janvier 2013 ou postérieurement.
 Paragraphe 2. Au terme de huit années, et sans préjudice de l'application des règles de droit commun sur l'exécution des contrats (et notamment l'article 1184 du Code civil), les  SISP vérifient la situation du ménage tant en ce qui concerne ses revenus que sa composition :
 Point 1 si les revenus du ménage dépassent 150 % des revenus d'admission durant les deux dernières années, il sera mis fin au bail moyennant préavis de 6 mois; dans le cas contraire, le bail se prolonge automatiquement pour une période de trois ans. Si, au cours du préavis, ses revenus devaient retomber sous ce plafond de 150 % en conséquence d'une décision ou d'un événement prévisible ou imprévisible, indépendant de la volonté du locataire, ce dernier peut saisir en urgence la SLRB, suivant des modalités à déterminer par le Gouvernement;
 Point 2 si le ménage occupe un logement suradapté et refuse le logement adapté à sa nouvelle composition (de confort semblable et situé dans le même commune ou dans un rayon de 5 kilomètres) que la société de logement a l'obligation de lui proposer dans la mesure des disponibilités, il sera mis fin au bail moyennant préavis de 6 mois, pour autant que le nouveau loyer ne soit pas supérieur de plus de 15 % à l'ancien loyer; dans le cas contraire, le contrat existant prendra fin (moyennant préavis de 3 mois) et un nouveau contrat sera conclu pour une période de trois ans.
@@ -1044,7 +1149,8 @@ Par ailleurs, les personnes soumises au bail de neuf ans mais qui, au moment de 
 Il est mis un terme, moyennant préavis de six mois, au contrat à durée indéterminée des personnes dont le statut de handicapé viendrait à prendre fin à partir du 1 janvier 2013 et dont le bail a pris effet à cette date ou postérieurement. A la place, un bail à durée déterminée leur est proposé. Un régime similaire s'applique aux membres non handicapés du ménage lorsque, à partir du 1 janvier 2013 toujours, la personne handicapée décède ou ne fait plus partie de la composition du ménage, connue du bailleur.
 Paragraphe 4. Les locataires concluant un nouveau bail à la suite d'une  changement de logement restent également soumis à un contrat-type de bail d'une durée indéterminée, pourvu que leur bail initial ait pris effet avant le 1 janvier 2013.
 Si les locataires dont le bail initial a pris effet le 1 janvier 2013 ou postérieurement concluent un nouveau bail à la suite d'une  changement de logement, la durée de ce dernier ne pourra pas, cumulée avec celle du bail précédent, excéder neuf ans ou trois ans selon que la  changement de logement prend place à l'intérieur du premier bail ou non.
-#### Art. 143.Paragraphe 1. Les locataires d'un logement social dont les revenus sont supérieurs au revenu d'admission versent une cotisation mensuelle de solidarité. En cas de non-respect de l'obligation de cotiser, le bail prend fin, moyennant la notification d'un préavis de six mois.
+#### Art. 143.
+Paragraphe 1. Les locataires d'un logement social dont les revenus sont supérieurs au revenu d'admission versent une cotisation mensuelle de solidarité. En cas de non-respect de l'obligation de cotiser, le bail prend fin, moyennant la notification d'un préavis de six mois.
 Paragraphe 2. Les locataires visés par les dispositions du paragraphe précèdent versent une cotisation mensuelle égale à :
 - 1/10 000e de la valeur actualisée du logement par tranche de 10 % de revenus excédant le revenu d'admission si les revenus des locataires ne dépassent pas de 50 % les revenus d'accès;
 - 1/10 000e de la valeur actualisée du logement par tranche de 5 % de revenus si les revenus des locataires dépassent de plus de 50 % les revenus d'accès.
@@ -1063,7 +1169,8 @@ Le montant dont question à l'alinéa 1 est lié à l'indice santé. Il est adap
 Paragraphe 5. Les SISP doivent impérativement affecter le produit des cotisations de solidarité à des opérations de rénovation ou de construction. En l'absence d'affectation du produit de ces cotisations aux opérations précitées, la SLRB pourra d'initiative et selon les modalités déterminées par le règlement ou le contrat de gestion avec la SISP visés aux articles 47 et 48, affecter ce produit à la réalisation d'opérations de rénovation ou de construction qu'elle détermine.
 Paragraphe 6. Le produit des bonis sociaux dégagé par les SISP en dehors de la cotisation de solidarité est obligatoirement affecté aux mécanismes de solidarité horizontale qui prennent en compte les déficits sociaux des SISP qui accueillent des personnes à bas revenus.
 Les modalités d'affectation de ces mécanismes horizontaux sont déterminées par le Gouvernement, sur proposition de la SLRB.
-#### Art. 144.Lorsqu'il le demande, chaque candidat locataire d'un  modéré ou moyen logement social est également inscrit, par la SISP où il s'inscrit,  choisies par lui  autres SISP susceptibles de répondre à sa demande.
+#### Art. 144.
+Lorsqu'il le demande, chaque candidat locataire d'un  modéré ou moyen logement social est également inscrit, par la SISP où il s'inscrit,  choisies par lui  autres SISP susceptibles de répondre à sa demande.
 Le Gouvernement fixe  la procédure d'inscription, en ce compris  les modalités de cette inscription multiple.
 L'inscription d'un candidat locataire dans le registre est effectuée par la SISP auprès de laquelle celui-ci a introduit son formulaire d'inscription. L'ensemble des registres de candidats locataires des SISP sont regroupés au sein d'une Base de Données Régionale gérée par la Société du Logement de la Région de Bruxelles-Capitale, afin de favoriser le transfert d'informations entre les SISP.
 Par traitement des données à caractère personnel reprises dans la Base de Données Régionale, il faut entendre la gestion et contrôle des demandes d'inscriptions et d'attributions de logements ainsi que les échanges de données avec des institutions publiques dans le cadre de la politique sociale du logement.
@@ -1093,72 +1200,85 @@ Les données à caractère personnel relatives aux candidats locataires sont con
 Les SISP concernées et la SLRB sont, en application de l'article 4, 7) du RGPD, les responsables conjoints des données à caractère personnel des candidats locataires.
 Le Gouvernement détermine les modalités de gestion des registres des SISP et de la Base de Données Régionale, en ce compris la gestion informatisée de ceux-ci.
 La SLRB est autorisée à transmettre à des institutions publiques les données reprises dans la Base de Données Régionale dans le respect des dispositions relatives au traitement des données à caractère personnel qui sont nécessaires pour toute finalité qui s'inscrit dans la politique sociale du logement sur le territoire de la Région de Bruxelles-Capitale. Le Gouvernement détermine pour chaque finalité les institutions publiques concernées ainsi que parmi les catégories de données reprises à l'alinéa 6 du présent article celles qui sont nécessaires au vu de la finalité.
-# TITRE VII. - DU LOGEMENT MOYEN
-### Section 1. - Définition
-#### Art. 145. Conformément à l'article 2, Point 24, est considéré comme logement moyen, le bien immeuble d'habitation principale donné en location, cédé ou vendu, dans les conditions fixées par le présent Code, à un ménage dont l'ensemble des revenus n'excède pas un certain montant fixé par le Gouvernement. Au sens du présent article, on entend par :
+#### Art. 145. 
+Conformément à l'article 2, Point 24, est considéré comme logement moyen, le bien immeuble d'habitation principale donné en location, cédé ou vendu, dans les conditions fixées par le présent Code, à un ménage dont l'ensemble des revenus n'excède pas un certain montant fixé par le Gouvernement. Au sens du présent article, on entend par :
 Point 1 revenus : les revenus immobiliers et mobiliers nets et le montant net imposable des revenus professionnels avant toute déduction, majorés ou diminués des rentes alimentaires selon qu'elles sont reçues ou versées. Les revenus visés sont établis sur la base du Code des impôts sur les revenus. Sont également considérés comme revenu, le montant du revenu d'intégration sociale et les allocations pour personne handicapées;
 Point 2 revenus du ménage : les revenus globalisés de tous les membres du ménage, à l'exception de ceux des enfants à charge.
-### Section 2. - Modes d'intervention
-#### Art. 146.Paragraphe 1. Dans les conditions fixées par le Gouvernement, une personne de droit public peut conclure avec un ménage répondant aux conditions d'accès au logement moyen une vente de gré à gré ou la constitution d'un autre droit réel principal portant sur un terrain ou sur une habitation en vue de permettre à ce ménage de fixer sa résidence principale dans ce logement pour une durée minimale de dix ans.
+#### Art. 146.
+Paragraphe 1. Dans les conditions fixées par le Gouvernement, une personne de droit public peut conclure avec un ménage répondant aux conditions d'accès au logement moyen une vente de gré à gré ou la constitution d'un autre droit réel principal portant sur un terrain ou sur une habitation en vue de permettre à ce ménage de fixer sa résidence principale dans ce logement pour une durée minimale de dix ans.
 Le prix ou le canon, fixé sur la base d'une estimation, réalisée par  le receveur du bureau compétent de l'Administration Générale de la Documentation Patrimoniale ou par un comité d'acquisition d'immeubles, peut être diminué par rapport à celle-ci, à concurrence d'un pourcentage déterminé par le propriétaire.
 Le Gouvernement détermine les conditions auxquelles le prix de vente ou le canon sont fixés.
 Paragraphe 2. Dans les conditions fixées par le Gouvernement, une personne de droit public peut également conclure un bail à loyer avec un ménage répondant aux conditions d'accès au logement moyen.
 Dans les conditions fixées par le Gouvernement et dans les limites des crédits au budget, le ménage bénéficiaire peut obtenir une aide régionale telle que visée par l'article 162 du présent Code.
 Paragraphe 3. Afin de répartir géographiquement l'offre de logements moyens entre les dix-neuf communes de la Région de Bruxelles-Capitale, le Gouvernement peut fixer des conditions particulières d'intervention en fonction des zones qu'il détermine et dans lesquelles se situent les biens immobiliers visés par le présent titre.
-#### Art. 147.Dans les conditions fixées par le Gouvernement, une personne de droit public peut également conclure une vente de gré à gré ou la constitution d'un autre droit réel principal sur un ou des habitations leur appartenant nécessitant rénovation, avec un promoteur immobilier, à charge pour ce dernier de construire, de reconstruire ou de rénover du logement qu'il doit céder, vendre ou louer aux conditions du logement moyen.
+#### Art. 147.
+Dans les conditions fixées par le Gouvernement, une personne de droit public peut également conclure une vente de gré à gré ou la constitution d'un autre droit réel principal sur un ou des habitations leur appartenant nécessitant rénovation, avec un promoteur immobilier, à charge pour ce dernier de construire, de reconstruire ou de rénover du logement qu'il doit céder, vendre ou louer aux conditions du logement moyen.
 Le prix ou le canon, fixé sur base d'une estimation, réalisée par  le receveur du bureau compétent de l'Administration Générale de la Documentation Patrimoniale ou par un comité d'acquisition d'immeubles, peut être diminué par rapport à celle-ci, à concurrence d'un pourcentage déterminée par le propriétaire.
 Le pourcentage de réduction consenti est fixé par immeuble à rénover ou par terrain et doit être identique pour chaque logement de l'immeuble à rénover ou pour chaque lot d'un même lotissement. Il est fixé par l'autorité habilitée à prendre la décision de vente ou de constitution d'un autre droit réel principal.
 L'acquéreur fera une déclaration pro fisco en indiquant, au pied de l'acte de vente la valeur vénale sur laquelle il s'acquitte des droits d'enregistrement.
-### Section 3. - Bénéficiaires
-#### Art. 148. Pour bénéficier des dispositions visées par le présent titre, le ménage doit remplir les conditions suivantes :
+#### Art. 148. 
+Pour bénéficier des dispositions visées par le présent titre, le ménage doit remplir les conditions suivantes :
 Point 1 ne pas bénéficier de revenus excédant une somme déterminée par le Gouvernement;
 Point 2 ne pas jouir au moment de la passation de l'acte de la pleine propriété d'un bien immeuble.
-### Section 4. - Procédures
-#### Art. 149. Paragraphe 1. Pour bénéficier des dispositions visées à l'article 146, Paragraphe 1, du présent Code, les ménages répondant aux conditions de l'article 148 doivent s'engager à construire ou à rénover un seul logement destiné à leur occupation personnelle et à, sauf cas de force majeure :
+#### Art. 149. 
+Paragraphe 1. Pour bénéficier des dispositions visées à l'article 146, Paragraphe 1, du présent Code, les ménages répondant aux conditions de l'article 148 doivent s'engager à construire ou à rénover un seul logement destiné à leur occupation personnelle et à, sauf cas de force majeure :
 Point 1 introduire la demande de permis d'urbanisme nécessaire au plus tard six mois après l'acquisition du terrain;
 Point 2 commencer les travaux dans les six mois de l'obtention du permis d'urbanisme nécessaire;
 Point 3 occuper personnellement le bien construit ou rénové, pendant dix ans et s'y domicilier dans les trois mois suivant l'ouverture des compteurs d'énergie.
 Paragraphe 2. - Par dérogation, le Gouvernement peut, en cas de force majeure laissée à son appréciation, autoriser la location du bien acquis pour autant que :
 Point 1 le bien soit donné en location pour une durée de neuf années;
 Point 2 le loyer soit fixé en concertation avec le Gouvernement ayant autorisé la location, sans pouvoir dépasser 7 % de la valeur de la partie du bien donné en location.
-#### Art. 150. Pour bénéficier des dispositions visées à l'article 146, Paragraphe 2, du présent Code, les ménages répondant aux conditions de l'article 148 doivent s'engager à ne pas donner le bien en sous-location et à avertir le bailleur de toute modification de leur situation patrimoniale susceptible de porter atteinte aux conditions requises pour pouvoir bénéficier du régime du logement moyen.
-#### Art. 151. Le Gouvernement fixe la procédure à suivre pour introduire les demandes d'acquisition ou de location d'un logement moyen.
-#### Art. 152. Paragraphe 1. Pour bénéficier des dispositions visées à l'article 147, la commune passe un marché public de travaux sous la forme d'une promotion, conformément à l'article 9 de la loi du 24 décembre 1993 relative aux marchés public et à certains marchés de travaux, de fournitures et de service. Les promoteurs répondent à ce marché de promotion en établissant un dossier de base dont la composition est arrêtée par le Gouvernement et qui contiendra notamment une offre de prix de vente ferme des logements et un calendrier des réalisations.
+#### Art. 150. 
+Pour bénéficier des dispositions visées à l'article 146, Paragraphe 2, du présent Code, les ménages répondant aux conditions de l'article 148 doivent s'engager à ne pas donner le bien en sous-location et à avertir le bailleur de toute modification de leur situation patrimoniale susceptible de porter atteinte aux conditions requises pour pouvoir bénéficier du régime du logement moyen.
+#### Art. 151. 
+Le Gouvernement fixe la procédure à suivre pour introduire les demandes d'acquisition ou de location d'un logement moyen.
+#### Art. 152. 
+Paragraphe 1. Pour bénéficier des dispositions visées à l'article 147, la commune passe un marché public de travaux sous la forme d'une promotion, conformément à l'article 9 de la loi du 24 décembre 1993 relative aux marchés public et à certains marchés de travaux, de fournitures et de service. Les promoteurs répondent à ce marché de promotion en établissant un dossier de base dont la composition est arrêtée par le Gouvernement et qui contiendra notamment une offre de prix de vente ferme des logements et un calendrier des réalisations.
 Paragraphe 2. Le promoteur présente à la commune ainsi qu'à la personne de droit public cédante, si elle n'est pas la commune, le dossier de base. La commune transmet le dossier de base au Gouvernement accompagné de son avis sur l'opportunité du projet. Dans un délai de trois mois à partir de la transmission, renouvelable une fois par arrêté motivé, le Gouvernement se prononce sur le dossier de base.
 En cas de dépassement du délai éventuellement renouvelé, le Gouvernement est présumé avoir marqué son accord de principe.
-#### Art. 153. Après l'obtention de l'accord visé à l'article 152, la personne de droit cédante peut décider de la conclusion de la convention, dont le contenu est arrêté par le Gouvernement, qui mentionnera au minimum les éléments suivants :
+#### Art. 153. 
+Après l'obtention de l'accord visé à l'article 152, la personne de droit cédante peut décider de la conclusion de la convention, dont le contenu est arrêté par le Gouvernement, qui mentionnera au minimum les éléments suivants :
 Point 1 l'obligation pour le promoteur de construire ou faire construire, rénover ou faire rénover uniquement des biens susceptibles d'accueillir du logement moyen au sens du présent Code;
 Point 2 l'obligation pour le promoteur de respecter le calendrier des réalisations sur lequel le Gouvernement a marqué son accord;
 Point 3 l'obligation pour le promoteur de vendre le ou les logements au prix de vente autorisé par le Gouvernement, exclusivement à des ménages remplissant les conditions fixées par ou en vertu du présent titre;
 Point 4 l'obligation pour le promoteur de vendre le ou les logements ou constituer un autre droit réel principal au prix de vente autorisé par le Gouvernement, exclusivement à des ménages remplissant les conditions fixées par ou en vertu du présente titre.
-#### Art. 154. Le contrat de vente ou de constitution d'un autre droit réel principal sera conclu sous la condition suspensive de l'obtention du ou des permis d'urbanisme nécessaires et, le cas échéant, du permis de lotir.
-#### Art. 155. Le Gouvernement prend les mesures d'exécution nécessaire pour assurer le contrôle du respect des conditions fixées par ou en vertu du présent titre.
-### Section 5. - Sanctions
-#### Art. 156.En cas de non-respect des dispositions prévues à l'article 148, la vente ou la cession en emphytéose conclue entre la personne de droit public et le ménage bénéficiaire fait l'objet d'une action soit en nullité, soit en dommages et intérêts.
+#### Art. 154. 
+Le contrat de vente ou de constitution d'un autre droit réel principal sera conclu sous la condition suspensive de l'obtention du ou des permis d'urbanisme nécessaires et, le cas échéant, du permis de lotir.
+#### Art. 155. 
+Le Gouvernement prend les mesures d'exécution nécessaire pour assurer le contrôle du respect des conditions fixées par ou en vertu du présent titre.
+#### Art. 156.
+En cas de non-respect des dispositions prévues à l'article 148, la vente ou la cession en emphytéose conclue entre la personne de droit public et le ménage bénéficiaire fait l'objet d'une action soit en nullité, soit en dommages et intérêts.
 L'autorité compétente doit introduire l'action en nullité ou en dommages et intérêts dans les six mois à partir de la prise de connaissance de cet acte par cette autorité et, au plus tard dans les six mois de la transcription de l'acte  au bureau compétent de l'Administration Générale de la Documentation Patrimoniale.
-#### Art. 157.Paragraphe 1. A moins qu'elle ne soit passée avec un pouvoir public ou une personne remplissant elle-même les conditions prévues aux articles 148 et 149, la location, la donation, la vente, la revente, la constitution d'usufruit, de superficie, d'emphytéose ou la cession d'emphytéose conclue par le ménage bénéficiaire font l'objet d'une action soit en nullité, soit en dommages et intérêts.
+#### Art. 157.
+Paragraphe 1. A moins qu'elle ne soit passée avec un pouvoir public ou une personne remplissant elle-même les conditions prévues aux articles 148 et 149, la location, la donation, la vente, la revente, la constitution d'usufruit, de superficie, d'emphytéose ou la cession d'emphytéose conclue par le ménage bénéficiaire font l'objet d'une action soit en nullité, soit en dommages et intérêts.
 L'autorité compétente doit introduire l'action en nullité ou en dommages et intérêts en cas de non-respect des conditions dont question à l'article 148, s'il s'agit d'une donation, vente, revente, constitution d'usufruit, de superficie, d'emphytéose ou la cession d'emphytéose dans les six mois à partir de la prise de connaissance de cet acte par cette autorité et, au plus tard dans les six mois de la transcription de  l'acte au bureau compétent de l'Administration Générale de la Documentation Patrimoniale ou, s'il s'agit d'une location, dans les six mois à partir de la prise de connaissance de cet acte par cette autorité, et au plus tard dans les six mois de l'enregistrement de la convention non  transcrite au bureau compétent de l'Administration Générale de la Documentation Patrimoniale.
 L'autorité compétente doit introduire l'action en nullité ou en dommages et intérêts en cas de non-respect des conditions dont question à l'article 149, dans les six mois à partir du moment où l'une de ces conditions n'est pas respectée.
 Paragraphe 2. La Région dispose, dans les conditions fixées par le Gouvernement, d'un droit de préemption sur les logements moyens vendus par des ménages ou des promoteurs immobiliers, quel que soit le moment où cette vente intervient.
-#### Art. 158.En cas de non-respect des obligations prévues à l'article 153, Point 1 et Point 2, la vente ou la cession en emphytéose conclue entre la personne de droit public et le promoteur fait l'objet d'une action soit en nullité, soit en dommages et intérêts.
+#### Art. 158.
+En cas de non-respect des obligations prévues à l'article 153, Point 1 et Point 2, la vente ou la cession en emphytéose conclue entre la personne de droit public et le promoteur fait l'objet d'une action soit en nullité, soit en dommages et intérêts.
 En cas de non-respect des obligations prévues à l'article 153, Point 3 et Point 4, la vente conclue entre le promoteur et la personne physique bénéficiaire fait l'objet d'une action soit en nullité, soit en dommages et intérêts.
 L'autorité compétente doit introduire l'action en nullité ou en dommages et intérêts :
 - en cas de non-respect de la condition dont question à l'article 153, Point 1, dans les six mois de la mise en demeure notifiée par l'autorité compétente.
 - en cas de non-respect de la condition dont question à l'article 153, Point 2, dans les six mois à partir du moment où le calendrier n'est pas respecté.
 - en cas de non-respect des conditions dont question à l'article 153, Point 3 et Point 4, dans les six mois à partir de la prise de connaissance par cette autorité de cet acte ne respectant pas les conditions et, au plus tard dans les six mois de la transcription de cet acte  au bureau compétent de l'Administration Générale de la Documentation Patrimoniale.
-#### Art. 159. Paragraphe 1. En cas de non-respect des dispositions prévues à l'article 146 de la présente ordonnance, la Région peut exiger le remboursement des aides allouées par ou en vertu du présent Code, en ce compris notamment la réduction du prix visée à l'article 146, Paragraphe 1, alinéa 2 et à l'article 147, alinéa 2 du présent Code. Le Gouvernement fixe les modalités de remboursement de ces aides. Si le remboursement ne se fait pas volontairement et dans les délais, une contrainte peut être décernée par le fonctionnaire désigné à cette fin par le Gouvernement. La contrainte est visée et rendue exécutoire par le fonctionnaire susmentionné.
+#### Art. 159. 
+Paragraphe 1. En cas de non-respect des dispositions prévues à l'article 146 de la présente ordonnance, la Région peut exiger le remboursement des aides allouées par ou en vertu du présent Code, en ce compris notamment la réduction du prix visée à l'article 146, Paragraphe 1, alinéa 2 et à l'article 147, alinéa 2 du présent Code. Le Gouvernement fixe les modalités de remboursement de ces aides. Si le remboursement ne se fait pas volontairement et dans les délais, une contrainte peut être décernée par le fonctionnaire désigné à cette fin par le Gouvernement. La contrainte est visée et rendue exécutoire par le fonctionnaire susmentionné.
 Paragraphe 2. Suivant les modalités décidées par le Gouvernement, en cas de vente par le ménage ne respectant pas les dispositions prévues par le présent titre, le remboursement peut également consister en une ristourne à la personne de droit public concernée d'une fraction de la plus-value tirée de la revente.
-# TITRE VIII. - DES MOYENS D'ACTIONS
-## CHAPITRE Ier. - Des aides aux personnes physiques
-### Section 1. - Des opérations subsidiables
-#### Art. 160. La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une aide à l'acquisition d'un bien immeuble.
-#### Art. 161. La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget région, une aide à la construction.
-#### Art. 162. Paragraphe 1. La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une aide à la rénovation.
+#### Art. 160. 
+La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une aide à l'acquisition d'un bien immeuble.
+#### Art. 161. 
+La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget région, une aide à la construction.
+#### Art. 162. 
+Paragraphe 1. La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une aide à la rénovation.
 Paragraphe 2. La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une aide à la réhabilitation des logements inoccupés, liée à une prise en gestion du bien par une agence immobilière sociale.
-#### Art. 163. La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une aide à l'embellissement des façades.
-#### Art. 164. La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une aide à la démolition.
-#### Art. 165.La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional,  une allocation sous la forme d'une allocation de déménagement et d'une allocation de loyer.
-#### Art. 165/1.  Les finalités des traitements de données à caractère personnel prévus en exécution de l'article 165 sont les suivantes:
+#### Art. 163. 
+La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une aide à l'embellissement des façades.
+#### Art. 164. 
+La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une aide à la démolition.
+#### Art. 165.
+La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional,  une allocation sous la forme d'une allocation de déménagement et d'une allocation de loyer.
+#### Art. 165/1. 
+Les finalités des traitements de données à caractère personnel prévus en exécution de l'article 165 sont les suivantes:
 Point 1 garantir le droit à un logement décent consacré dans l'article 23 de la Constitution à des personnes quittant une situation de crise en se relogeant dans un logement loué sur le marché privé et répondant à des critères objectifs d'octroi de l'allocation, en intervenant partiellement dans le prix du loyer ainsi que dans les frais de déménagement, en utilisant les données visées au Paragraphe 2, Point 1, Point 2, Point 3, Point 4, Point 5, Point 6, Point 7, Point 8, Point 9, Point 10, Point 11, Point 13 et Point 14 ;
 Point 2 déterminer si les demandeurs de l'allocation répondent aux conditions d'octroi de l'allocation en vue de statuer sur la demande d'allocation, en utilisant les données visées au Paragraphe 2, Point 1, Point 2, Point 3, Point 4, Point 5, Point 8, Point 11, Point 12, Point 13, Point 14, Point 15, Point 16 et Point 17 ;
 Point 3 déterminer le montant de l'allocation pour les demandeurs répondant à toutes les conditions d'octroi de l'allocation, en utilisant les données visées au Paragraphe 2, Point 5, Point 6, Point 8 et Point 11 ;
@@ -1203,8 +1323,10 @@ Paragraphe 5. Les données à caractère personnel relatives aux citoyens ayant 
 Les données à caractère personnel relatives aux citoyens ayant bénéficié de l'allocation, ainsi qu'aux membres de leur ménage, collectées dans le cadre du traitement de la demande d'allocation, le paiement de l'allocation et le contrôle des conditions de bénéfice, sont conservées par Bruxelles Logement pendant cinq ans à partir de la fin de la période de bénéfice de l'allocation et, le cas échéant, de la fin de la procédure de recours.
 Le fait qu'une allocation a été allouée au demandeur, et la durée de bénéfice de cette allocation sont conservés au moins jusqu'à l'abrogation ou l'annulation de l'arrêté sur la base duquel l'allocation a été octroyée.
 Paragraphe 6. Bruxelles Logement est au sens de l'article 4, 7) du RGPD, le responsable du traitement des données à caractère personnel des catégories de personnes visées au paragraphe 4 pour la poursuite des finalités prévues à l'article 165/1, Paragraphe 1.
-#### Art. 166. La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une intervention dans le loyer.
-#### Art. 166/1. La finalité des traitements de données à caractère personnel prévus en exécution de l'article 165 et 166 est de garantir le droit à un logement décent consacré dans l'article 23 de la Constitution et de permettre:
+#### Art. 166. 
+La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une intervention dans le loyer.
+#### Art. 166/1. 
+La finalité des traitements de données à caractère personnel prévus en exécution de l'article 165 et 166 est de garantir le droit à un logement décent consacré dans l'article 23 de la Constitution et de permettre:
 Point 1 l'identification des locataires et candidats locataires;
 Point 2 l'identification des citoyens ayant introduit une demande d'allocation, les bénéficiaires de l'allocation, ainsi que les membres de leur ménage;
 Point 3 l'établissement et le règlement du loyer et/ou du loyer socialisé;
@@ -1252,7 +1374,8 @@ Paragraphe 6. Les opérateurs immobiliers publics concernés, Bruxelles Logement
 Les opérateurs immobiliers publics concernés sont chargés de communiquer aux locataires et candidats locataires les informations visées aux articles 13 et 14 du RGPD et qui font office de point de contact à leur égard, notamment en ce qui concerne l'exercice des droits dont disposent ces personnes. Ils sont également chargés de procéder aux communications visées aux articles 33 et 34 du RGPD après concertation avec Bruxelles Logement et la SLRB. Les opérateurs immobiliers publics concernés, Bruxelles-Logement et la SLRB se concertent par ailleurs, d'une manière appropriée et en temps utile, pour toutes les autres questions relatives à la protection des données à caractère personnel, tandis qu'ils sont chacun tenus de mettre en oeuvre et de maintenir les mesures techniques et organisationnelles appropriées de protection des données à caractère personnel qu'ils traitent. Enfin, chaque responsable conjoint est responsable envers les autres responsables conjoints de ses manquements au RGPD.
 Bruxelles Logement est, au sens de l'article 4, 7) du RGPD, le responsable du traitement des données à caractère personnel des catégories de personnes visées au Paragraphe 2, Point 2 pour la poursuite des finalités prévues au Paragraphe 1, Point 2 et Point 4 à Point 8.
 Paragraphe 7. Le Gouvernement peut déterminer que, pour bénéficier de l'intervention prévue à l'article 166, les ménages doivent remplir et signer un formulaire de demande de l'intervention dans le loyer reprenant les données à caractère personnel nécessaires au traitement de leur demande.
-#### Art. 166/2.  Paragraphe 1. La finalité des traitements de données à caractère personnel prévus en exécution de l'article 166, est:
+#### Art. 166/2. 
+Paragraphe 1. La finalité des traitements de données à caractère personnel prévus en exécution de l'article 166, est:
 Point 1 de garantir le droit à un logement décent consacré dans l'article 23 de la Constitution à des candidats locataires inscrits sur les listes d'attente d'un logement social, durant la période d'attente d'attribution d'un logement social, qui répondent à des critères objectifs d'octroi de l'allocation, en intervenant partiellement dans le prix du loyer en utilisant les données envisagées au Paragraphe 2, Point 1, Point 2, Point 3, Point 4, Point 5, Point 6, Point 7, Point 8, Point 9, Point 10, Point 11, Point 12, Point 13, Point 14 et Point 15 ;
 Point 2 de déterminer si les demandeurs de l'allocation répondent aux conditions d'octroi de l'allocation en vue de statuer sur l'octroi ou le rejet de la demande en utilisant les données envisagées au Paragraphe 2, Point 1, Point 2, Point 3, Point 4, Point 5, Point 8, Point 9, Point 12, Point 13, Point 14 et Point 15 ;
 Point 3 de déterminer le montant de l'allocation pour les demandeurs répondant à toutes les conditions d'octroi de l'allocation en utilisant les données envisagées au Paragraphe 2, Point 5, Point 6, Point 8, Point 11 et Point 12 ;
@@ -1293,8 +1416,10 @@ Paragraphe 5. Les données à caractère personnel relatives aux citoyens ayant 
 Les données à caractère personnel relatives aux citoyens ayant introduit une demande d'allocation, aux bénéficiaires de l'allocation, ainsi qu'aux membres de leur ménage sont conservées par Bruxelles Logement pendant cinq ans à partir de la prescription du délai de recours du droit commun, et, le cas échéant, de la fin définitive de la procédure de recours pour les données traitées par Bruxelles Logement qui sont nécessaires à la prise de décision mettant fin au droit à l'allocation.
 Le fait qu'une allocation ait été allouée au demandeur et la durée de bénéfice de cette allocation sont conservées au moins jusqu'à l'abrogation ou l'annulation de l'arrêté sur la base duquel l'allocation a été octroyée.
 Paragraphe 6. Bruxelles Logement est, au sens de l'article 4, 7) du RGPD, le responsable du traitement des données à caractère personnel des catégories de personnes visées au paragraphe 4 pour la poursuite des finalités prévues au paragraphe 1.
-#### Art. 166bis.  La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une intervention dans les frais de déménagement.
-#### Art. 166bis/1. Paragraphe 1. La finalité des traitements de données à caractère personnel prévus en exécution de l'article 166bis est la suivante:
+#### Art. 166bis.
+La Région peut accorder aux ménages, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une intervention dans les frais de déménagement.
+#### Art. 166bis/1. 
+Paragraphe 1. La finalité des traitements de données à caractère personnel prévus en exécution de l'article 166bis est la suivante:
 Point 1 garantir le droit à un logement décent consacré dans l'article 23 de la Constitution à des personnes quittant une situation de crise en se relogeant dans un logement social ou un logement géré par une AIS et répondant à des critères objectifs d'octroi de l'allocation, en intervenant partiellement dans les frais de déménagement, en utilisant les données visées au Paragraphe 2, Point 1, Point 2, Point 3, Point 4, Point 5, Point 6, Point 7, Point 8, Point 9 et Point 11 ;
 Point 2 déterminer si les demandeurs de l'allocation répondent aux conditions d'octroi de l'allocation en vue de statuer sur la demande d'allocation, en utilisant les données visées au Paragraphe 2, Point 1, Point 2, Point 3, Point 4, Point 5, Point 8, Point 9, Point 10, Point 11, Point 12, Point 13 et Point 14 ;
 Point 3 déterminer le montant de l'allocation pour les demandeurs répondant à toutes les conditions d'octroi de l'allocation, en utilisant les données visées au Paragraphe 2, Point 5, Point 6, Point 8 et Point 9 ;
@@ -1333,10 +1458,11 @@ Paragraphe 5. Les données à caractère personnel relatives aux citoyens ayant 
 Les données à caractère personnel relatives aux citoyens ayant bénéficié de l'allocation, ainsi qu'aux membres de leur ménage, collectées dans le cadre du traitement de la demande d'allocation et du paiement de l'allocation, sont conservées par Bruxelles Logement pendant cinq ans à partir de la date du paiement de l'allocation et, le cas échéant, de la fin de la procédure de recours.
 Le fait qu'une allocation a été allouée au demandeur, est conservé au moins jusqu'à l'abrogation ou l'annulation de l'arrêté sur la base duquel l'allocation a été octroyée.
 Paragraphe 6. Bruxelles Logement est, au sens de l'article 4, 7) du RGPD, le responsable du traitement des données à caractère personnel des catégories de personnes visées au paragraphe 4 pour la poursuite des finalités prévues au paragraphe 1
-#### Art. 167.Le Gouvernement  arrête  les conditions d'accès ainsi que les modalités d'octroi des crédits et cautions destinés à la constitution de la garantie locative ainsi que les conditions de remboursement des crédits par les bénéficiaires ou des sommes payées à titre de caution par le Fonds.
+#### Art. 167.
+Le Gouvernement  arrête  les conditions d'accès ainsi que les modalités d'octroi des crédits et cautions destinés à la constitution de la garantie locative ainsi que les conditions de remboursement des crédits par les bénéficiaires ou des sommes payées à titre de caution par le Fonds.
 Les crédits ou cautions destinés à la garantie locative sont consentis sans frais pour les bénéficiaires.
-### Section 2. - Des formes d'aides
-#### Art. 168.Les aides peuvent être accordées sous forme :
+#### Art. 168.
+Les aides peuvent être accordées sous forme :
 Point 1 de primes;
 Point 2 d'avances remboursables;
 Point 3 de subventions contribuant à la réduction de l'intérêt des crédits hypothécaires ou du coût des récits de cautionnement;
@@ -1344,8 +1470,8 @@ Point 4 d'assurance contre la perte de revenus de ménages contractant un crédi
 Point 5 de crédits ou de caution bancaire;
 Point 6  d'allocation.
 Point 7 de compensation.
-### Section 3. - Des conditions d'octroi et de calcul des aides
-#### Art. 169. Paragraphe 1. Le Gouvernement fixe les conditions d'octroi des aides. Il peut notamment tenir compte des critères suivants:
+#### Art. 169. 
+Paragraphe 1. Le Gouvernement fixe les conditions d'octroi des aides. Il peut notamment tenir compte des critères suivants:
 Point 1 le patrimoine immobilier de la personne ou du ménage demandeur;
 Point 2 l'occupation, la vente ou la location du logement;
 Point 3 l'état du bâtiment;
@@ -1356,19 +1482,22 @@ Point 1 de la composition et de la typologie du ménage;
 Point 2 des revenus du ménage;
 Point 3 de la situation géographique du bien;
 Point 4 de la durée du bénéfice de l'aide.
-#### Art. 170. Le Gouvernement détermine dans quelles limites et à quelles conditions les personnes peuvent cumuler plusieurs aides. Le Gouvernement détermine également les règles de procédure relatives à l'octroi des aides visées aux articles 160 à 167.
-## CHAPITRE II. - Des aides aux personnes morales
-### Section 1. - Des aides à l'équipement d'ensembles et logements
-#### Art. 171.Paragraphe 1. Lorsqu'une SISP, une commune, une association de communes, un centre public d'action sociale, ou une association de centres publics d'action sociale ou encore un acteur privé dûment agréé à cet effet, agissant soit seul, soit conjointement réalisent un ensemble de logements sociaux ou assimilés, ou encore des immeubles ou parties d'immeubles à caractère artisanal, commercial, communautaire ou de services qui seraient nécessaires au sein d'un tel ensemble, la Région peut prendre à sa charge :
+#### Art. 170. 
+Le Gouvernement détermine dans quelles limites et à quelles conditions les personnes peuvent cumuler plusieurs aides. Le Gouvernement détermine également les règles de procédure relatives à l'octroi des aides visées aux articles 160 à 167.
+#### Art. 171.
+Paragraphe 1. Lorsqu'une SISP, une commune, une association de communes, un centre public d'action sociale, ou une association de centres publics d'action sociale ou encore un acteur privé dûment agréé à cet effet, agissant soit seul, soit conjointement réalisent un ensemble de logements sociaux ou assimilés, ou encore des immeubles ou parties d'immeubles à caractère artisanal, commercial, communautaire ou de services qui seraient nécessaires au sein d'un tel ensemble, la Région peut prendre à sa charge :
 Point 1 le coût de tout ou partie de l'équipement en voirie, égouts, éclairage public, distribution d'eau, aménagement des abords communs des habitations, y compris les trottoirs;
 Point 2 le coût de tout ou partie d'autres équipements d'infrastructure communs ainsi que des installations, équipements et/ou constructions, à caractère artisanal, commercial, de services collectif et/ou socioculturel, pour autant que ces équipements, installations ou constructions constituent des parties intégrantes du groupe d'habitations.
 Paragraphe 2. Les aides prévues au Paragraphe 1 ne peuvent être cumulées avec l'octroi de subventions allouées sur la base de  l'ordonnance organique du 6 octobre 2016 de la revitalisation urbaine.
 Paragraphe 3. La Région peut également prendre à sa charge, en tout ou partie, le coût de la rénovation ou de la reconstruction des équipements visés au Paragraphe 1.
-#### Art. 172. Si les organismes publics visés à l'article précédent exécutent eux-mêmes les équipements qui y sont indiqués, la Région peut en prendre en tout ou en partie le coût à sa charge, dans des conditions fixées par le Gouvernement.
-#### Art. 173. La réalisation d'un ensemble de logements visés à l'article 171 consiste à :
+#### Art. 172. 
+Si les organismes publics visés à l'article précédent exécutent eux-mêmes les équipements qui y sont indiqués, la Région peut en prendre en tout ou en partie le coût à sa charge, dans des conditions fixées par le Gouvernement.
+#### Art. 173. 
+La réalisation d'un ensemble de logements visés à l'article 171 consiste à :
 Point 1 construire un groupe d'au moins 20 habitations sociales ou assimilées, ou d'habitations moyennes. Le nombre minimal d'habitations dont doit se composer ce groupe est limité à 10 lorsqu'il s'agit de la finition ou de l'extension d'un noyau d'habitations existants;
 Point 2 assainir, améliorer ou adapter un groupe d'au moins 10 habitations dont l'infrastructure est inexistante ou insuffisante.
-#### Art. 174. Paragraphe 1. Le Gouvernement fixe :
+#### Art. 174. 
+Paragraphe 1. Le Gouvernement fixe :
 Point 1 les conditions auxquelles doivent répondre les habitations construites ou à construire;
 Point 2 les conditions de vente, de location ou d'occupation;
 Point 3 les délais de réalisation de l'opération visée à la présente section.
@@ -1377,14 +1506,20 @@ Paragraphe 3. Le Gouvernement fixe le taux de la subvention ou de l'intervention
 Point 1 du type de travaux réalisés;
 Point 2 de l'affectation des équipements.
 Paragraphe 4. Le Gouvernement fixe le mode de calcul des remboursements imposés au bénéficiaire, en cas de non-respect des conditions d'octroi de l'aide, en tenant compte du délai durant lequel les conditions ont été respectées.
-#### Art. 175. Les réseaux de voirie équipée, construits ou à construire, sont transférés gratuitement et dans l'état dans lequel ils se trouvent à la commune ou à la Région et sont incorporés dans la voirie communale.
+#### Art. 175. 
+Les réseaux de voirie équipée, construits ou à construire, sont transférés gratuitement et dans l'état dans lequel ils se trouvent à la commune ou à la Région et sont incorporés dans la voirie communale.
 Ce transfert s'opère à la date de la signature du procès-verbal de réception définitive authentifié par le Gouvernement.
-#### Art. 176. Paragraphe 1. La Région peut, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, allouer aux SISP à la demande de la commune où est situé le bien, aux communes, aux centres publics d'aide sociale et aux associations de communes une aide pour l'acquisition ou l'expropriation ainsi que la démolition totale ou partielle d'habitations insalubres non améliorables, qu'il s'agisse de maisons isolées ou d'un ensemble, ou d'habitations ou d'immeubles non résidentiels, faisant partir d'un ensemble d'habitation non améliorables, insalubres en raison de leur environnement ou incompatibles avec un aménagement rationnel du territoire.
+#### Art. 176. 
+Paragraphe 1. La Région peut, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, allouer aux SISP à la demande de la commune où est situé le bien, aux communes, aux centres publics d'aide sociale et aux associations de communes une aide pour l'acquisition ou l'expropriation ainsi que la démolition totale ou partielle d'habitations insalubres non améliorables, qu'il s'agisse de maisons isolées ou d'un ensemble, ou d'habitations ou d'immeubles non résidentiels, faisant partir d'un ensemble d'habitation non améliorables, insalubres en raison de leur environnement ou incompatibles avec un aménagement rationnel du territoire.
 Paragraphe 2. Elle peut en outre leur allouer une aide destinée à l'acquisition ou à l'expropriation d'habitations salubres améliorables ou d'habitations salubres mais fonctionnellement inadaptées, ainsi qu'à leur assainissement, amélioration ou adaptation.
-#### Art. 177. La Région peut, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, allouer aux communes et aux SISP à la demande de la commune où est situé le bien, une aide pour l'acquisition d'immeubles abandonnés appartenant à des personnes physiques ou morales, et qui sont destinés à être affectés après rénovation, principalement au logement.
-#### Art. 178. La Région peut allouer, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, aux communes, aux C.P.A.S. et aux SISP à la demande de la commune où est situé le bien, une aide pour la rénovation d'immeubles isolés, insalubres ou fonctionnellement inadaptés et la démolition suivie de la reconstruction immédiate d'immeubles isolés souffrant d'insalubrité ou menaçant ruine, dont elles sont propriétaires.
-#### Art. 179. Le Gouvernement détermine les règles de procédure relatives à l'octroi des aides visées aux articles 176 à 178.
-#### Art. 180. Le Gouvernement fixe les conditions d'octroi des aides visées par la présente section. Ces conditions concernent :
+#### Art. 177. 
+La Région peut, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, allouer aux communes et aux SISP à la demande de la commune où est situé le bien, une aide pour l'acquisition d'immeubles abandonnés appartenant à des personnes physiques ou morales, et qui sont destinés à être affectés après rénovation, principalement au logement.
+#### Art. 178. 
+La Région peut allouer, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, aux communes, aux C.P.A.S. et aux SISP à la demande de la commune où est situé le bien, une aide pour la rénovation d'immeubles isolés, insalubres ou fonctionnellement inadaptés et la démolition suivie de la reconstruction immédiate d'immeubles isolés souffrant d'insalubrité ou menaçant ruine, dont elles sont propriétaires.
+#### Art. 179. 
+Le Gouvernement détermine les règles de procédure relatives à l'octroi des aides visées aux articles 176 à 178.
+#### Art. 180. 
+Le Gouvernement fixe les conditions d'octroi des aides visées par la présente section. Ces conditions concernent :
 Point 1 le prix de revient maximum du logement;
 Point 2 le délai maximum dans lequel le logement doit être réalisé;
 Point 3 les normes auxquelles doivent répondre les logements;
@@ -1393,43 +1528,47 @@ Point 5 le mode de calcul du loyer ou de l'indemnité d'occupation, s'il s'agit 
 Point 6 le bail ou la convention d'occupation précaire, et notamment les conditions relatives à la durée du contrat, à la durée des congés, aux charges, à la garantie locative, et aux sanctions, au besoin de dérogeant aux dispositions du Code civil en matière de bail de résidence principale;
 Point 7 l'acquisition par le locataire ou l'occupant de la propriété du bien qu'il loue ou qu'il occupe;
 Point 8 l'affectation du bien au logement, même en cas de transfert de propriété.
-#### Art. 181. Le Gouvernement définit les travaux pour lesquels l'aide est accordée. Il fixe le mode de calcul de l'aide, en tenant compte de la destination du logement créé avec l'aide, de l'importance des travaux réalisés, de la valeur vénale du bâtiment fixée par le Gouvernement, après avis du comité d'acquisition d'immeubles dans le ressort duquel l'immeuble est situé ou de la localisation du bâtiment.
-#### Art. 182. Les aides sont versées sous forme de subventions.
-#### Art. 183. Le Gouvernement fixe le mode de calcul des remboursements imposés au bénéficiaire, en cas de non-respect des conditions d'octroi de l'aide, en tenant compte du délai durant lequel les conditions ont été respectées.
-### Section 2. - Des aides au bénéfice des agences immobilières sociales et des associations agréées par le Gouvernement
-#### Art. 184. La Région peut accorder aux agences immobilières sociales et aux associations agréées par le Gouvernement, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une aide à la rénovation et à l'embellissement des façades.
-#### Art. 185. Les aides peuvent être accordées sous forme :
+#### Art. 181. 
+Le Gouvernement définit les travaux pour lesquels l'aide est accordée. Il fixe le mode de calcul de l'aide, en tenant compte de la destination du logement créé avec l'aide, de l'importance des travaux réalisés, de la valeur vénale du bâtiment fixée par le Gouvernement, après avis du comité d'acquisition d'immeubles dans le ressort duquel l'immeuble est situé ou de la localisation du bâtiment.
+#### Art. 182. 
+Les aides sont versées sous forme de subventions.
+#### Art. 183. 
+Le Gouvernement fixe le mode de calcul des remboursements imposés au bénéficiaire, en cas de non-respect des conditions d'octroi de l'aide, en tenant compte du délai durant lequel les conditions ont été respectées.
+#### Art. 184. 
+La Région peut accorder aux agences immobilières sociales et aux associations agréées par le Gouvernement, aux conditions déterminées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, une aide à la rénovation et à l'embellissement des façades.
+#### Art. 185. 
+Les aides peuvent être accordées sous forme :
 Point 1 de primes;
 Point 2 d'avances remboursables.
-#### Art. 186. Paragraphe 1. Le Gouvernement fixe les conditions d'octroi des aides en fonction notamment de l'état du bâtiment et de la nature et l'importance des travaux à réaliser, ainsi que leur coût.
+#### Art. 186. 
+Paragraphe 1. Le Gouvernement fixe les conditions d'octroi des aides en fonction notamment de l'état du bâtiment et de la nature et l'importance des travaux à réaliser, ainsi que leur coût.
 Paragraphe 2. Il fixe le mode de calcul des aides en fonction notamment de la situation géographique du bien.
 Paragraphe 3. Le Gouvernement détermine également les règles de procédure relatives à l'octroi des aides visées à l'article 184 du présent Code.
-### Section 3. - Des subsides au bénéfice d'associations oeuvrant à l'insertion par le logement
-#### Art. 187. Aux conditions fixées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, la Région peut accorder un subside à une association agréée oeuvrant à l'insertion par le logement.
+#### Art. 187. 
+Aux conditions fixées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, la Région peut accorder un subside à une association agréée oeuvrant à l'insertion par le logement.
 Le Gouvernement détermine également les conditions d'agrément et les règles de procédure relatives à l'octroi des subsides. Le Gouvernement peut élaborer des cahiers des charges définissant les missions à remplir par les associations agréés. Il détermine également les modes d'évaluation annuelle de leur action.
-### Section 4.-. Des subsides à l'habitat solidaire et à l'habitat intergénérationnel
-#### Art. 188. Aux conditions fixées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, la Région peut accorder, en vue de réaliser de l'habitat solidaire ou intergénérationnel, un subside à une agence immobilière sociale ou une association agréée oeuvrant à l'insertion par le logement ainsi qu'une association agréée ou à un groupement d'associations agréées oeuvrant à l'amélioration du logement, de l'habitat et à un programme de développement local intégré en matière de rénovation urbaine durable et à leur coordination.
+#### Art. 188. 
+Aux conditions fixées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, la Région peut accorder, en vue de réaliser de l'habitat solidaire ou intergénérationnel, un subside à une agence immobilière sociale ou une association agréée oeuvrant à l'insertion par le logement ainsi qu'une association agréée ou à un groupement d'associations agréées oeuvrant à l'amélioration du logement, de l'habitat et à un programme de développement local intégré en matière de rénovation urbaine durable et à leur coordination.
 Le Gouvernement détermine les règles de procédure relatives à l'octroi des subsides.
-### Section 5. - Des subsides aux associations oeuvrant à l'amélioration du logement, de l'habitat et à un programme de développement local intégré en matière de rénovation urbaine durable et à leur coordination
-#### Art. 189. Aux conditions fixées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, la Région peut accorder un subside à une association agréée ou à un groupement d'associations agréées oeuvrant à l'amélioration du logement, de l'habitat et à un programme de développement local intégré en matière de rénovation urbaine durable et à leur coordination.
+#### Art. 189. 
+Aux conditions fixées par le Gouvernement et dans les limites des crédits inscrits à cette fin au budget régional, la Région peut accorder un subside à une association agréée ou à un groupement d'associations agréées oeuvrant à l'amélioration du logement, de l'habitat et à un programme de développement local intégré en matière de rénovation urbaine durable et à leur coordination.
 Le Gouvernement détermine les conditions d'agrément et les règles de procédure relatives à l'octroi des subsides.
-## CHAPITRE III. - Des sanctions
-#### Art. 190. En cas de non-respect des conditions d'octroi des aides prévues aux chapitres Ier et II du présent titre, le Gouvernement ou le fonctionnaire délégué à cette fin peut en réclamer le remboursement majoré d'une amende administrative, qui correspond à au moins 10 % du total du montant octroyé qui doit être remboursé, et à maximum 50 % de ce montant. Si les montants susmentionnés ne se sont pas payés volontairement et dans les délais fixés par le Gouvernement ou le fonctionnaire délégué, une contrainte peut être décernée par le fonctionnaire désigné à cette fin par le Gouvernement. La contrainte est visée et rendue exécutoire par le fonctionnaire susmentionné.
-# TITRE IX. - L'HABITAT ITINERANT
-#### Art. 191. Paragraphe 1. Le droit à un logement décent rappelé à l'article 3 n'exclut pas l'habitat itinérant.
+#### Art. 190. 
+En cas de non-respect des conditions d'octroi des aides prévues aux chapitres Ier et II du présent titre, le Gouvernement ou le fonctionnaire délégué à cette fin peut en réclamer le remboursement majoré d'une amende administrative, qui correspond à au moins 10 % du total du montant octroyé qui doit être remboursé, et à maximum 50 % de ce montant. Si les montants susmentionnés ne se sont pas payés volontairement et dans les délais fixés par le Gouvernement ou le fonctionnaire délégué, une contrainte peut être décernée par le fonctionnaire désigné à cette fin par le Gouvernement. La contrainte est visée et rendue exécutoire par le fonctionnaire susmentionné.
+#### Art. 191. 
+Paragraphe 1. Le droit à un logement décent rappelé à l'article 3 n'exclut pas l'habitat itinérant.
 Afin de rendre effectif pour ce type d'habitat le droit à un logement décent, le Gouvernement détermine par arrêté les exigences minimales de sécurité, de salubrité et d'équipement visées à l'article 4 que doivent rencontrer spécifiquement l'habitat itinérant et les terrains mis à disposition de ce dernier par l'autorité publique. Il détermine également les critères du rattachement territorial des unités d'habitat itinérant à la Région.
 Paragraphe 2. Les dispositions du Titre III ne s'appliquent pas à l'habitat itinérant, à l'exception de celles du chapitre Ier de ce titre.
 Paragraphe 3. La mise à disposition du public d'unités d'habitat itinérant n'est du ressort ni des opérateurs immobiliers publics, ni des agences immobilières sociales.
 Paragraphe 4. Les aides à l'acquisition, la location ou la rénovation à charge du budget de la Région ne concernent pas l'habitat itinérant.
-# TITRE XI.  - Des baux d'habitation
-## CHAPITRE Ier.  - Dispositions générales
-#### Art. 215.  - Champ d'application
+#### Art. 215.  
+Champ d'application
 Sans préjudice du titre IV et des compétences des organismes qui y sont visés, le présent titre s'applique aux baux d'habitation.
-#### Art. 216.  - Caractère des dispositions
+#### Art. 216.  
+Caractère des dispositions
 Sauf si elles en disposent autrement, les règles du présent titre sont impératives.
-## CHAPITRE II.  - Règles communes à tous les baux d'habitation
-### Section 1.  - Information précontractuelle et forme du bail d'habitation
-#### Art. 217. - Information précontractuelle
+#### Art. 217. 
+Information précontractuelle
 Paragraphe 1. Indépendamment de toute autre information requise par des dispositions légales particulières, le bailleur communique au preneur, préalablement et au plus tard à la conclusion du bail, les informations minimales suivantes :
 Point 1 la description du logement  en ce compris son adresse exacte (rue, numéro, commune, étage, centre ou côté gauche/droit et toute autre donnée permettant d'identifier les locaux loués de manière unique et individuelle);
 Point 2 le loyer, ne pouvant en aucun cas englober le montant des charges privatives ou communes ;
@@ -1442,7 +1581,8 @@ Paragraphe 2. En cas de manquement fautif par le bailleur à son obligation d'in
 Sans préjudice de toute autre sanction en application du droit commun, le juge qui constate que le bailleur a sciemment omis de communiquer une information complète et exacte quant aux charges communes, limite le montant des charges dues par le preneur à celui communiqué avant la conclusion du bail.
 Toute mise en location d'un bien affecté à l'habitation au sens large implique, dans toute communication publique ou officielle, que figurent les informations visées au paragraphe 1. Tout non-respect par le bailleur ou son mandataire de la présente obligation pourra justifier le paiement d'une amende administrative fixée entre 50 et 200 euros. Les communes, en tant qu'autorités décentralisées, peuvent constater, poursuivre et sanctionner les manquements aux obligations du présent article. La commune compétente est celle où le bien est situé. Ces manquements sont constatés, poursuivis et sanctionnés selon les formes, délais et procédures visés à l'article 119bis de la Nouvelle loi communale, à l'exception du paragraphe 5. Chaque année, le Gouvernement peut indexer les montants susmentionnés.
 Paragraphe 3. Le preneur qui communique au bailleur des informations erronées, notamment celles visées à l'article 200ter, s'expose aux sanctions prévues par le Code civil.
-#### Art. 218. - Forme du bail
+#### Art. 218. 
+Forme du bail
 Paragraphe 1. Tout bail entrant dans le champ d'application du présent titre doit être établi dans un écrit qui devra au moins contenir, indépendamment de toutes autres modalités :
 Point 1 l'identité complète de toutes les parties contractantes ;
 Point 2 la date de prise de cours du bail ;
@@ -1469,8 +1609,8 @@ Point 9 les possibilités de mettre fin au bail et les dispositions y afférente
 Point 10 les dispositions liées au changement de propriétaire ;
 Point 11 les possibilités pour les parties de recourir, préalablement à la saisine d'une juridiction, à des processus de règlements alternatifs de leur différend tels que la médiation, l'arbitrage ou la conciliation.
 Cette annexe sera obligatoirement jointe aux contrats de bail conclus après l'entrée en vigueur du présent article.
-### Section 2.  - Etat du bien loué
-#### Art. 219. - Etat du bien loué
+#### Art. 219. 
+Etat du bien loué
 Paragraphe 1. Le bailleur est tenu de délivrer le bien loué en bon état de réparations de toute espèce.
 Paragraphe 2. Le bien loué doit répondre aux exigences élémentaires de sécurité, de salubrité et d'équipement des logements visées à l'article 4 ou arrêtées en exécution de cette disposition sous peine des sanctions prévues aux articles 8 et 10.
 Cette condition s'apprécie à tout moment.
@@ -1483,15 +1623,16 @@ Le bail n'est toutefois pas nul de plein droit si, à l'échéance du délai dan
 En cas de caducité ou de nullité du bail, le juge peut inclure dans les dommages et intérêts éventuels dus au preneur, le montant des frais de relogement de celui-ci, tels que les frais de déménagement, pour autant que l'interdiction à la location soit due à une faute imputable au bailleur.
 Paragraphe 5. Par dérogation au paragraphe 3, le juge civil prononce la nullité du bail conclu par un bailleur ayant, depuis moins de dix ans, encouru, en état de récidive, une condamnation en application du chapitre IIIquater du titre VIII du livre 2 du Code pénal si le bien ne respecte pas les normes visées au paragraphe 2.
 (NOTE : par son arrêt numéro 101/2020 du 09-07-2020 (M.B. 24-09-2020, p. 68044), la Cour constitutionnelle a annulé le Paragraphe 5 du présent article)
-#### Art. 220.  - Etat des lieux
+#### Art. 220.  
+Etat des lieux
 Paragraphe 1. Les articles 1730 et 1731 du Code civil sont applicables à tous les baux d'habitation y compris les baux de sous-location.
 Conformément à l'article 1730, Paragraphe 1, du Code civil, les parties dressent un état des lieux d'entrée détaillé, contradictoirement et à frais communs, en ce compris en cas de sous-location. Si le logement est pourvu de compteurs individuels, les états des lieux d'entrée et de sortie comprendront le relevé des index de consommation ainsi que l'indication des numéros de compteurs ainsi que les codes EAN ou tout autre code d'identification des compteurs d'eau, de gaz et d'électricité.
 Paragraphe 2. Le Gouvernement arrête un modèle-type d'état des lieux d'entrée à valeur indicative.
 Paragraphe 3. Chaque partie peut requérir l'établissement d'un état des lieux de sortie contradictoire et à frais partagés.
 Cet état des lieux est établi après la libération des lieux par le preneur et avant la remise des clés au bailleur.
 A défaut d'accord des parties, le juge compétent, saisi avant la date de remise des clés, désigne un expert pour procéder à l'état des lieux. Le jugement est exécutoire nonobstant opposition et n'est pas susceptible d'appel.
-### Section 3.  - Travaux, bail de rénovation, réparations et entretien
-#### Art. 221.  - Travaux en cours de bail
+#### Art. 221.  
+Travaux en cours de bail
 Paragraphe 1. Sans préjudice de l'article 1724 du Code civil, et pour autant que le bail ait été conclu pour une durée prévue aux articles 237 et 239, le bailleur a le droit après avertissement du preneur par courrier recommandé au moins un mois l'avance, en cours de bail mais au maximum une fois par triennat, d'exécuter dans le bien loué tous travaux destinés à améliorer la performance énergétique du logement, pour autant que les travaux :
 Point 1 n'aient pas une durée supérieure à celle fixée par le Gouvernement, qui ne peut excéder soixante jours à compter du début des travaux ;
 Point 2 puissent être réalisés en site occupé ;
@@ -1501,7 +1642,8 @@ Point 5 ne visent pas à mettre le bien en conformité avec les conditions de l'
 Paragraphe 2. Nonobstant l'article 240, les parties peuvent convenir de façon expresse et au plus tard un moins avant l'exécution de travaux visés au paragraphe 1 ou de travaux destinés à adapter le logement à une situation d'handicap ou de perte d'autonomie du preneur, que ceux-ci donneront lieu à une augmentation du loyer.
 Cette augmentation est proportionnée au coût réel des travaux réalisés, à l'amélioration de la performance énergétique ou à l'ampleur de l'adaptation du logement à la situation de handicap ou de perte d'autonomie.
 Paragraphe 3. Si la durée des travaux excède celle fixée par le Gouvernement en application du paragraphe 1, Point 1, le bailleur devra accorder au preneur une diminution de loyer à proportion du temps et de la partie de la chose louée dont il aura été privé et également de la perte de jouissance raisonnable.
-#### Art. 222.  Bail de rénovation
+#### Art. 222.  
+Bail de rénovation
 Paragraphe 1. A condition que le bail soit conclu pour une durée qui n'est pas inférieure à 3 ans, les parties peuvent convenir par écrit à tout moment, que le preneur s'engage à réaliser à ses frais, dans le bien loué, des travaux déterminés, qui incombent au bailleur.
 Le bail ou un avenant à celui-ci, conclu préalablement aux travaux, détermine avec précision :
 Point 1 le descriptif des travaux ;
@@ -1519,13 +1661,14 @@ Paragraphe 6. Sur demande préalable adressée au preneur avec un préavis d'au 
 Paragraphe 7. A la demande de la partie la plus diligente, il est procédé à une réception contradictoire des travaux au terme de leur réalisation.
 Paragraphe 8. Sans préjudice de toute autre sanction, en cas d'inexécution des travaux par le preneur dans le délai imparti ou de malfaçons affectant ces travaux, le bailleur peut solliciter du juge qu'il soit mis fin, totalement ou partiellement, aux contreparties visées au paragraphe 5.
 En fonction de l'importance des travaux qui n'ont pas été réalisés, le bailleur peut, sans préjudice des éventuels dommages et intérêts, solliciter du juge le remboursement total ou partiel des loyers non perçus.
-#### Art. 223.  - Réparations et entretien
+#### Art. 223.  
+Réparations et entretien
 Paragraphe 1. Le preneur est tenu des réparations locatives, à l'exception de celles qui sont occasionnées par la vétusté ou la force majeure, et des travaux de menu entretien.
 Les réparations locatives et de menu entretien sont celles désignées comme telles par l'usage des lieux.
 Paragraphe 2. Le bailleur est tenu de toutes les autres réparations qui peuvent devenir nécessaires.
 Paragraphe 3. Le Gouvernement établit une liste non limitative des réparations et travaux d'entretien impérativement à charge du preneur ou impérativement à charge du bailleur.
-### Section 4.  - Loyer, indexation et charges
-#### Art. 224.  Le loyer est présumé abusif lorsqu'il :
+#### Art. 224.  
+Le loyer est présumé abusif lorsqu'il :
 1. dépasse de vingt pour cent son loyer de référence. Cette présomption peut être renversée lorsqu'il est établi que la différence entre le loyer pratiqué et le loyer de référence est justifiée par des éléments de confort substantiels intrinsèques au logement ou à son environnement ;
 2. n'excède pas de vingt pour cent son loyer de référence mais qu'il accuse des défauts de qualité substantiels intrinsèques au logement ou à son environnement.
 #### Art. 224/1.
@@ -1539,7 +1682,8 @@ Le juge ainsi saisi peut solliciter, conformément à l'article 107/2 du présen
 Paragraphe 5. - Le jugement qui fait droit à une révision du loyer peut produire ses effets au plus tôt 4 mois avant la date de dépôt de l'acte introductif d'instance par l'une des parties prenantes au bail ou par une personne mandatée par elle dans le cadre d'une demande de révision de loyer.
 Paragraphe 6. - Par dérogation au paragraphe 2, le preneur d'un bien dont le bailleur a déjà été contraint de réviser un loyer abusif pour le même bien, peut introduire une demande de révision auprès de la commission ou du juge lorsqu'il estime que le loyer est abusif au sens de l'article, 224.1 du présent Code à tout moment du contrat de bail.
 Dans ce cas et par dérogation au paragraphe 5, s'il est établi que le loyer est abusif, le loyer révisé produit ses effets à compter du premier mois du contrat de bail.
-#### Art. 224/2.  - Indexation et révision des charges
+#### Art. 224/2. 
+- Indexation et révision des charges
 Paragraphe 1. Si elle n'a pas été exclue expressément, et à condition que le bail ait été conclu par écrit, l'adaptation du loyer au coût de la vie est due, une fois par année de location, à la date d'anniversaire de l'entrée en vigueur du bail, dans les conditions prévues à l'article 1728bis  de l'ancien Code civil . Cette adaptation ne s'opère qu'après que la partie intéressée en ait fait la demande écrite, et n'a d'effet pour le passé que pour les trois mois précédant celui de la demande.
 L'adaptation du loyer au coût de la vie visée à l'alinéa 1 qui a pour effet d'augmenter le montant du loyer, n'est due que si :
 Point 1 le bail écrit a été enregistré conformément à l'article 227 et ;
@@ -1560,23 +1704,26 @@ Si le contrat de bail a sa date anniversaire entre le 14 octobre 2022 et le 31 d
 Les dispositions contractuelles qui vont au-delà de l'ajustement visé au présent article peuvent être raccourcies jusqu'à cet ajustement.
 Paragraphe 2. A tout moment, chacune des parties peut demander au juge la révision des frais et charges forfaitaires ou leur conversion en frais et charges réels. Le juge statue notamment sur la base de l'évolution des dépenses réelles.
 Il décide la conversion si elle est possible.
-#### Art. 225.  - Grille indicative des loyers
+#### Art. 225.  
+Grille indicative des loyers
 Le Gouvernement arrête une grille indicative de référence des loyers à laquelle pourront se référer les parties, sans que cela ne constitue une contrainte supplémentaire pour le propriétaire.
 Cette grille de loyers est construite sur la base de critères internes et externes au logement tels que sa localisation, son état, sa superficie habitable ou le nombre de pièces existantes. Le Gouvernement peut également prévoir que les loyers qui ressortent de cette grille soient majorés ou minorés en fonction d'autres critères comme la présence d'éléments de confort ou d'inconfort particulier. Elle est aisément accessible au public.
-### Section 5.  - Précompte immobilier et frais du bail
-#### Art. 226.  - Précompte immobilier
+#### Art. 226.  
+Précompte immobilier
 Le précompte immobilier afférent à l'immeuble loué ne peut être mis à charge du preneur d'un bail de résidence principale, d'un bail de logement étudiant ou d'un bail glissant.
-#### Art. 227.  - Enregistrement
+#### Art. 227.  
+Enregistrement
 L'obligation d'enregistrement du contrat de bail repose sur le bailleur. Les frais liés à un enregistrement tardif éventuel sont entièrement à sa charge.
 Après la période de deux mois visée à l'article 32, Point 5, du Code des droits d'enregistrement, d'hypothèque et de greffe et aussi longtemps que le contrat de bail n'est pas enregistré par le bailleur, les délais du congé ainsi que les indemnités dues par le preneur au bailleur en application des articles 237, Paragraphe 5, alinéas 1 et 2, 238, alinéas 3 et 4, et 256, Paragraphe 2, alinéa 2, ne sont pas d'application, pour autant qu'une mise en demeure d'enregistrer le bail, adressée par le preneur au bailleur par voie recommandée, soit demeurée sans suite utile pendant un mois.
-#### Art. 228.  - Intervention d'un tiers à la location de l'immeuble
+#### Art. 228.  
+Intervention d'un tiers à la location de l'immeuble
 Est réputée non écrite toute clause qui met à charge du preneur les frais d'intervention d'un tiers relatifs à la location de l'immeuble, sauf si le preneur est le commanditaire de la mission d'intermédiation.
-### Section 6.  - Aliénation du bien loué
-#### Art. 229.  Si le bail a date certaine antérieure à la date à laquelle l'aliénation du bien loué a acquis une date certaine, l'acquéreur à titre gratuit ou à titre onéreux est subrogé pour l'avenir aux droits et obligations du bailleur à la date du transfert du droit de propriété et de la jouissance du bien loué, même si le bail réserve la faculté d'expulsion en cas d'aliénation.
+#### Art. 229.  
+Si le bail a date certaine antérieure à la date à laquelle l'aliénation du bien loué a acquis une date certaine, l'acquéreur à titre gratuit ou à titre onéreux est subrogé pour l'avenir aux droits et obligations du bailleur à la date du transfert du droit de propriété et de la jouissance du bien loué, même si le bail réserve la faculté d'expulsion en cas d'aliénation.
 Nonobstant toute disposition légale contraire, cette subrogation, en dépit de toute faculté d'expulsion, a de même lieu lorsque le bail n'a pas date certaine antérieure à celle de l'aliénation, si le preneur occupe le bien loué depuis six mois au moins.
 Dans ce cas, l'acquéreur peut cependant mettre fin au bail, à tout moment, pour les motifs et dans les conditions visées à l'article 237, paragraphes 2, 3 et 4, moyennant un congé de six mois notifié au preneur, à peine de déchéance, au plus tard dans les six mois qui suivent la date de la passation de l'acte authentique constatant la mutation de la propriété, sans qu'un congé puisse être notifié préalablement à cette date.
-### Section 7.  - Cession et sous-location
-#### Art. 230.  - Cession et sous-location
+#### Art. 230.  
+Cession et sous-location
 Paragraphe 1. Sans préjudice de l'article 260 et des articles 263 à 266, la cession du bail est interdite sauf accord écrit et préalable du bailleur. Dans ce cas, le cédant est déchargé de toute obligation future, sauf convention contraire, incluse dans l'accord sur la cession du bail.
 Paragraphe 2. Le projet de cession est notifié par courrier recommandé par le preneur au bailleur. Il comprend toutes les données d'identification du cessionnaire, dans le respect de l'article 200ter, Paragraphe 2.
 Le bailleur communique son accord ou son refus sur la cession dans les trente jours de la réception du projet.
@@ -1599,30 +1746,34 @@ Lorsque le bailleur met fin au bail principal, le preneur est tenu de notifier u
 Dans le cas d'un bail de résidence principale, lorsque le preneur met fin anticipativement au bail principal, il est tenu de donner au sous-locataire un congé de trois mois au moins, accompagné d'une copie du congé qu'il donne au bailleur et de payer au sous-locataire une indemnité équivalente à trois mois de loyer.
 Les articles 250 à 252 ne sont pas applicables à la sous-location d'un bien dont le bail est soumis aux règles du bail de résidence principale.
 Paragraphe 6. Le preneur répond seul vis-à-vis du bailleur et du sous-locataire ou du cessionnaire des conséquences qui résultent de l'inobservation des dispositions du présent article.
-### Section 8.  - Congés
-#### Art. 231.  - Prise de cours des congés
+#### Art. 231.  
+Prise de cours des congés
 Dans tous les cas où un congé peut être donné à tout moment, le délai de préavis prend cours le premier jour du mois qui suit le mois durant lequel le congé est donné.
-#### Art. 231/1.  Dispositions temporaires et exceptionnelles liées à la crise sanitaire causée par le Covid-19.
+#### Art. 231/1. 
+Dispositions temporaires et exceptionnelles liées à la crise sanitaire causée par le Covid-19.
 Paragraphe 1 Tous les délais de préavis en cours au 18 mars 2020 ou prenant cours à partir du 1 avril 2020 sont suspendus jusqu'au 18 mai 2020.
 L'alinéa 1 du présent paragraphe n'est pas d'application si, durant la période de suspension, le locataire a pu déménager ou si le locataire et le bailleur ont trouvé un accord amiable.
 Paragraphe 2. Les baux de logement " étudiants " visés au chapitre IV du présent titre et les baux de courte durée dont le preneur donne congé moyennant un préavis d'un mois conformément à l'article 238/1 sont exclus du champ d'application de l''alinéa 1 du premier alinéa du paragraphe 1.
-### Section 9.  - Inexécution du bail et litiges
-#### Art. 232.  - Régime des obligations du bail au décès du preneur
+#### Art. 232.  
+Régime des obligations du bail au décès du preneur
 Par dérogation à l'article 1742 du Code civil, en cas de décès du preneur, si le logement est inoccupé après ce décès par les membres du ménage du preneur et si le loyer et/ou les charges demeurent impayés pendant une durée de deux mois prenant cours au décès, le bailleur peut considérer le bail comme résilié sans préavis ni indemnité.
 Le bailleur peut disposer librement des biens à dater de la résiliation dans le respect des règles de dépôt telles que décrites dans la loi du 30 décembre 1975 concernant les biens trouvés en dehors des propriétés privées ou mis sur la voie publique en exécution de jugements d'expulsion.
 En cas de résiliation, le bailleur peut faire libérer la garantie locative à son profit, à concurrence des montants qui lui sont dus, par demande sur requête unilatérale introduite par le bailleur ou son avocat auprès du juge compétent.
-#### Art. 233.  - Résolution des conflits
+#### Art. 233.  
+Résolution des conflits
 Paragraphe 1. Sans préjudice de la saisine d'une juridiction, les parties peuvent régler leur différend à l'amiable en recourant aux services d'un médiateur agréé ou à tout autre processus alternatif auquel il est fait référence dans l'annexe visée à l'article 218, Paragraphe 5.
 Paragraphe 2. Les parties peuvent convenir de soumettre leur différend à un arbitre après la naissance du différend.
 Toute clause d'arbitrage convenue avant la naissance du différend est réputée non écrite.
-### Section 10.  Procédure en matière de bail d'habitation et en matière d'expulsion
-#### Art. 233bis.  - Disposition liminaire
+#### Art. 233bis.
+Disposition liminaire
 Sauf disposition contraire cette section s'applique aux baux d'habitation et aux baux commerciaux portant sur un bien qui constitue également une habitation pour le locataire.
 Le Code judiciaire s'applique sous réserve des dispositions qui suivent.
-#### Art. 233ter.  - Exigence de proportionnalité des décisions en matière de logement
+#### Art. 233ter.  
+Exigence de proportionnalité des décisions en matière de logement
 Le juge statue sur toute demande relative à un bail d'habitation ou à un bail visé à la section II bis du livre III, titre VIII, chapitre II, du Code civil en tenant compte des effets de sa décision sur le droit au logement du preneur.
 La résolution du contrat ne pourra être prononcée que si la créance ne peut être apurée dans le respect de délais raisonnables, eu égard à la situation des parties, ou sur le constat de ce que la résolution du contrat constitue une décision proportionnée au regard des manquements qui fondent la demande.
-#### Art. 233quater.  - Mise en demeure préalable
+#### Art. 233quater.
+Mise en demeure préalable
 Paragraphe 1. Tout recouvrement d'une dette de loyer ou de charges doit commencer par une mise en demeure écrite, adressée au preneur dont un modèle-type est disponible sur le site internet de Bruxelles Logement.
 Cette mise en demeure doit contenir de manière complète et non équivoque toutes les données relatives à la créance. Elle doit comprendre au minimum les données énumérées au Paragraphe 2 et il ne peut être procédé à d'autres techniques de recouvrement qu'après écoulement du délai prévu au Paragraphe 3.
 Paragraphe 2. Dans la mise en demeure apparaissent au moins les données suivantes :
@@ -1734,19 +1885,20 @@ Les données à caractère personnel relatives aux bailleurs ayant introduit une
 Les données à caractère personnel relatives aux locataires sont conservées, dans la mesure où leur transmission est nécessaire, par Bruxelles Logement jusqu'à l'échéance des durées de prescription applicables visées dans la loi du 16 mai 2003 fixant les dispositions générales applicables aux budgets, au contrôle des subventions et à la comptabilité des Communautés et des Régions, ainsi qu'à l'organisation du contrôle de la Cour des comptes et dans l'ordonnance organique du 23 février 2006 portant les dispositions applicables au budget, à la comptabilité et au contrôle.
 Paragraphe 7. Hormis les cas prévus par la loi, les données à caractère personnel collectées ne sont transmises à des tiers que si et dans la mesure où cette transmission s'avère nécessaire au respect des finalités visées au Paragraphe 1.
 Paragraphe 8. Bruxelles Logement est, en application de l'article 4, 7) du RGPD, le responsable du traitement des données à caractère personnel des catégories de personnes visées au Paragraphe 2 pour la poursuite des finalités prévues au Paragraphe 1, Point 1 et Point 2. Bruxelles Fiscalité est, en application de l'article 4, 7) du RGPD, le responsable du traitement des données à caractère personnel des catégories de personnes visées au Paragraphe 2 pour la poursuite des finalités prévues au Paragraphe 1, Point 3.
-## CHAPITRE III.  - Des baux relatifs à la résidence principale du preneur
-### Section 1.  - Champ d'application
-#### Art. 234.  - Principes
+#### Art. 234.  
+Principes
 Le présent chapitre s'applique aux baux portant sur le logement que le preneur, avec l'accord exprès ou tacite du bailleur, affecte dès l'entrée en jouissance à sa résidence principale. Est réputée non écrite la clause interdisant l'affectation du bien à la résidence principale du preneur lorsqu'elle n'est pas appuyée par une justification expresse et sérieuse, relative notamment à la destination naturelle du bien loué, et n'est pas accompagnée de l'indication de la résidence principale du preneur au cours du bail.
 Le présent chapitre s'applique également si l'affectation à la résidence principale se fait en cours de bail avec l'accord écrit du bailleur. Dans ce cas, le bail prend cours à la date de cet accord.
 Le présent chapitre s'applique à la sous-location conclue conformément à l'article 230, dans les limites prévues à ce même article.
 Sauf disposition contraire, le présent chapitre n'est pas applicable lorsque le contrat par lequel le logement est accordé au preneur est l'accessoire d'un contrat principal relatif à la fonction ou à l'activité du preneur.
-#### Art. 235.  - Sous-locations spécifiques
+#### Art. 235.  
+Sous-locations spécifiques
 Le présent chapitre s'applique également aux sous-locations conclues par une commune, un centre public d'aide sociale, une association sans but lucratif ou un établissement d'utilité publique soumis à la loi du 27 juin 1921 sur les associations sans but lucratif, les associations internationales sans but lucratif et les fondations, ou une société à finalité sociale, qui sous-loue le bien loué, dans sa totalité, à une au plusieurs personnes physiques démunies ou se trouvant dans une situation sociale difficile qui affectent exclusivement le bien loué à leur résidence principale, pour autant que le bailleur ait donné son accord sur la possibilité de sous-louer le bien loué à cette fin. Dans ce cas, le bail principal est également soumis aux dispositions du présent chapitre. Le bailleur et les personnes morales précitées peuvent convenir dans le bail principal d'écarter l'application de l'article 237, Paragraphe 5, ou de l'article 238, alinéas 3 et 4, pour une période maximale de neuf ans. Si le bail a une durée supérieure à neuf ans, cette clause peut être reconduite si elle est confirmée par les parties dans les six mois qui précèdent l'échéance de chaque novennat.
-#### Art. 236.  - Fin d'application du régime
+#### Art. 236.  
+Fin d'application du régime
 Le présent chapitre n'est plus applicable dès que prend fin l'affectation du bien loué à la résidence principale.
-### Section 2.  - Durée du bail
-#### Art. 237.  - Principes
+#### Art. 237.  
+Principes
 Paragraphe 1. Tout bail visé à l'article 234 ou à l'article 235 est réputé conclu pour une durée de neuf ans.
 Il prend fin à l'expiration d'une période de neuf années moyennant un congé notifié par l'une ou l'autre des parties au moins six mois avant l'échéance.
 A défaut d'un congé notifié dans ce délai, le bail est prorogé chaque fois pour une durée de trois ans, aux mêmes conditions.
@@ -1770,25 +1922,28 @@ Les parties peuvent cependant convenir d'exclure ou de limiter cette faculté de
 Paragraphe 5. Il peut être mis fin au bail par le preneur à tout moment, moyennant un congé de trois mois.
 Toutefois, si le preneur met fin au bail au cours du premier triennat, le bailleur a droit à une indemnité. Cette indemnité est égale à trois mois, à deux mois ou à un mois de loyer selon que le bail prend fin au cours de la première, de la deuxième ou de la troisième année.
 Lorsque le bailleur met fin au contrat conformément aux paragraphes 2 à 4, le preneur peut lui aussi, à tout moment, mettre fin au bail moyennant un congé d'un mois. Dans ce cas, il n'est pas redevable de l'indemnité prévue à l'alinéa précédent. Le bailleur demeure en ce cas tenu de l'exécution du motif fondant le préavis initial.
-#### Art. 238.  - Baux de courte durée
+#### Art. 238.  
+Baux de courte durée
 Par dérogation à l'article 237, Paragraphe 1, un bail peut être conclu, par écrit, pour une durée inférieure ou égale à trois ans.
 Il peut être prorogé une ou plusieurs fois mais seulement par un écrit contenu dans le bail, un avenant à celui-ci ou tout autre écrit subséquent et sous les mêmes conditions, sans préjudice de l'indexation du loyer au moment du renouvellement, et sans que la durée totale de location ne puisse excéder trois ans.
 Sauf prorogation, le bail d'une durée inférieure à six mois prend fin à l'expiration de la durée convenue.
 Le bail d'une durée égale ou supérieure à six mois prend fin moyennant un congé notifié par l'une ou l'autre des parties au moins trois mois avant l'expiration de la durée convenue. Il peut être résilié à tout moment par le preneur, moyennant un préavis de trois mois et une indemnité équivalente à un mois de loyer. Le bailleur ne peut mettre fin anticipativement au bail de courte durée qu'après la première année de location, et aux conditions prévues à l'article 237, Paragraphe 2, moyennant un préavis de 3 mois et une indemnité équivalente à un mois de loyer.
 L'article 237, paragraphes 2 et 5, n'est pas applicable à ce bail.
 Nonobstant toute clause contraire, à défaut d'un congé notifié dans les délais ou si le preneur continue à occuper le bien loué sans opposition du bailleur, et même dans l'hypothèse où un nouveau contrat est conclu entre les mêmes parties, le bail est réputé avoir été conclu pour une période de neuf ans à compter de la date à laquelle le bail initial de courte durée est entré en vigueur et est dès lors régi par l'article 237, paragraphes 1 à 5. Dans ce cas, le loyer et les autres conditions demeurent inchangés par rapport à ceux convenus dans le bail initial de courte durée, sans préjudice de l'application de l'article 224.
-#### Art. 238/1.  Dispositions temporaires et exceptionnelles liées à la crise sanitaire causée par le Covid-19.
+#### Art. 238/1. 
+Dispositions temporaires et exceptionnelles liées à la crise sanitaire causée par le Covid-19.
 Par dérogation à l'article 238, le preneur d'un contrat de bail de courte durée peut mettre fin au bail en donnant un congé d'un mois s'il peut justifier de la qualité d'étudiant et qu'il n'est pas domicilié dans les lieux.
 Ce régime dérogatoire vaut uniquement pour les baux conclus avant le 18 mars 2020 et dont les congés sont notifiés entre le 18 mars 2020 et le 30 septembre 2020
 Par étudiant, il y a lieu d'entendre la personne qui peut attester d'une inscription régulière dans un établissement d'études de cycle secondaire ou organisant l'enseignement supérieur, ou dans une commission d'examen d'un jury central.
-#### Art. 239.  - Baux de longue durée
+#### Art. 239.  
+Baux de longue durée
 Paragraphe 1. Par dérogation à l'article 237, Paragraphe 1, un bail peut également être conclu, par écrit, pour une durée supérieure à neuf ans.
 Ce bail prend fin à l'expiration du terme convenu moyennant un congé notifié par l'une ou l'autre des parties au moins six mois avant l'échéance.
 A défaut d'un congé notifié dans ce délai, le bail est prorogé chaque fois pour une durée de trois ans, aux mêmes conditions, sans préjudice de l'article 224.
 L'indemnité due en application de l'article 237, Paragraphe 4, par le bailleur qui met fin au bail à l'expiration du troisième triennat ou d'un triennat subséquent, est équivalente à trois mois de loyer.
 Paragraphe 2. Par dérogation à l'article 237, Paragraphe 1, un bail écrit peut être conclu pour la vie du preneur. Le bail prend fin de plein droit au décès du preneur. Ce bail n'est pas régi par l'article 237, paragraphes 2 à 4, à moins que les parties n'en disposent autrement.
-### Section 3.  - Révision du loyer et des charges
-#### Art. 240.  - Principes
+#### Art. 240.  
+Principes
 Sans préjudice de l'article 221, les parties peuvent convenir de la révision du loyer entre le neuvième et le sixième mois précédant l'expiration de chaque triennat.
 A défaut d'accord des parties, le juge peut accorder la révision du loyer s'il est établi que par le fait de circonstances nouvelles, la valeur locative normale du bien loué est supérieure ou inférieure de vingt pour cent au moins au loyer exigible au moment de l'introduction de la demande.
 Il peut de même accorder une augmentation de loyer au bailleur qui établit que la valeur locative normale du bien loué a augmenté de dix pour cent au moins du loyer exigible au moment de l'introduction de la demande, en raison de travaux effectués à ses frais dans le bien loué, à l'exception des travaux nécessaires en vue de mettre le bien loué en conformité avec les conditions de l'article 220.
@@ -1806,7 +1961,9 @@ Dans le cadre de cette révision triennale, aucune augmentation de loyer ne peut
  Le juge peut solliciter l'avis de la commission paritaire locative visée à l'article 107/1 du Code. Il statue en équité.
 L'action ne peut être intentée qu'entre le sixième et le troisième mois précédant l'expiration du triennat en cours.
 Le loyer révisé produit ses effets à compter du premier jour du triennat suivant, l'ancien loyer demeurant provisoirement exigible jusqu'à la décision définitive.
-Dans le cas de l'article 239, Paragraphe 2, les parties peuvent cependant renoncer à la faculté de demander la révision du loyer.#### Art. 241.  - Baux successifs
+Dans le cas de l'article 239, Paragraphe 2, les parties peuvent cependant renoncer à la faculté de demander la révision du loyer.
+#### Art. 241.  
+Baux successifs
 Si un bien fait l'objet de baux successifs, conclus avec des preneurs différents pour une durée inférieure ou égale à trois ans, auxquels il est mis fin moyennant un congé donné par le bailleur, le loyer de base ne peut pas, pendant neuf années successives, être supérieur au loyer exigible au début de cette période, proportionnellement adapté au cout de la vie, sauf si la valeur locative normale du bien loué a augmenté de vingt pour cent au moins par le fait de circonstances nouvelles ou de dix pour cent au moins en raison de travaux effectués dans le bien loué.
 Nonobstant toute clause ou toute convention contraire, le juge réduit le loyer au loyer exigible en vertu du précédent bail, proportionnellement adapté au cout de la vie, si le bailleur ne prouve pas que le loyer a été fixé conformément aux dispositions de l'alinéa 1.
 Le loyer proportionnellement adapté est calculé comme suit : loyer de base au début de la période de neuf années, multiplié par l'indice santé du mois précédant le mois de la conclusion du nouveau bail et divisé par l'indice santé du mois précédant le mois de la conclusion du bail au début de la période de neuf années.
@@ -1815,18 +1972,23 @@ Le loyer proportionnellement adapté est calculé comme suit : loyer de base au 
 Si un bien fait l'objet de baux successifs, conclus avec des preneurs différents pour une durée inférieure ou égale à trois ans, auxquels il est mis fin moyennant un congé donné par le bailleur, le loyer de base ne peut pas, pendant neuf années successives, être supérieur au loyer exigible au début de cette période, proportionnellement adapté au cout de la vie, sauf si la  loyer de référence du bien loué a augmenté de vingt pour cent au moins par le fait de circonstances nouvelles ou de dix pour cent au moins en raison de travaux effectués dans le bien loué  et que ce bien n'accuse pas des défauts de qualité substantiels qui justifient un loyer inférieur au loyer de référence.
 Chacune des parties prenantes au bail ou une personne mandatée ou le juge peut saisir la commission paritaire locative visée à l'article 107/1 du Code, pour obtenir un avis sur la justesse du loyer prévue à l'alinéa 1. Lorsque la Commission paritaire locative est saisie par une des parties prenantes au bail ou par une personne mandatée par elle et qu'elle rend un avis concluant à la révision de loyer, elle propose aux parties une conciliation limitée au montant du loyer.
 Nonobstant toute clause ou toute convention contraire, le juge réduit le loyer au loyer exigible en vertu du précédent bail, proportionnellement adapté au cout de la vie, si le bailleur ne prouve pas que le loyer a été fixé conformément aux dispositions de l'alinéa 1.
-Le loyer proportionnellement adapté est calculé comme suit : loyer de base au début de la période de neuf années, multiplié par l'indice santé du mois précédant le mois de la conclusion du nouveau bail et divisé par l'indice santé du mois précédant le mois de la conclusion du bail au début de la période de neuf années.### Section 4.  - Droit d'information du preneur en cas de transmission du bien loué
-#### Art. 242.  - Principes
+#### Art. 242.  
+Principes
 En cas de mise en vente du logement de gré à gré, le bailleur, préalablement à toute communication publique relative à la mise en vente, notifie au preneur, par lettre recommandée à la poste ou par exploit d'huissier, son intention de vendre le logement.
-#### Art. 243.  - Bien loué en commun
+#### Art. 243.  
+Bien loué en commun
 Si le bien est loué en commun par plusieurs preneurs, la notification visée à l'article 242 doit être adressée à tous les preneurs.
-#### Art. 244.  - Droit d'information au décès du preneur
+#### Art. 244.  
+Droit d'information au décès du preneur
 Au décès du preneur, seuls les membres du ménage du preneur domiciliés dans le bien loué jouissent du droit d'information prévu à l'article 242.
-#### Art. 245.  - Indivision
+#### Art. 245.  
+Indivision
 Si le bien loué appartient en indivision à plusieurs personnes, la notification prévue à l'article 242 n'est valablement faite que moyennant le concours de tous les indivisaires.
-#### Art. 246.  - Vente partielle du bien loué
+#### Art. 246.  
+Vente partielle du bien loué
 Lorsque la propriété mise en vente ne constitue qu'une partie du bien loué, l'obligation d'information s'applique à cette partie.
-#### Art. 247.  - Disposition impérative
+#### Art. 247.  
+Disposition impérative
 Est réputée non écrite, toute convention par laquelle le preneur renonce d'avance, en tout ou en partie, au droit d'information prévu par l'article 242.
 Section 4bis.  Droit de préférence du preneur en cas de vente du bien loué
 #### Art. 247/1 - Principes
@@ -1880,8 +2042,8 @@ Le preneur subrogé rembourse à l'acquéreur le prix payé par lui, sans préju
 Le preneur subrogé est tenu d'indemniser l'acquéreur pour les frais de l'acte. Les droits d'enregistrement sont restitués à la demande de l'acquéreur par l'administration fiscale en charge de la perception de ces droits.
 L'action en subrogation se prescrit par un an à dater de la transcription, soit du procès-verbal de l'adjudication publique, soit de la signification de l'acte authentique constatant la vente sous seing privé.#### Art. 247/4  - Disposition impérative
 Est réputée non-écrite, toute convention par laquelle le preneur renonce d'avance, en tout ou en partie, au droit de préférence prévu par l'article 247/1.
-### Section 5.  - Garantie
-#### Art. 248.  - Principes
+#### Art. 248.  
+Principes
 Paragraphe 1. Si, indépendamment des sûretés prévues notamment à l'article 1752 du Code civil, le preneur donne, pour assurer le respect de ses obligations, une des formes de garanties prévues au paragraphe suivant, celle-ci ne peut excéder un montant équivalent à deux ou trois mois de loyer, selon la forme de la garantie locative.
 Paragraphe 2. Les garanties mentionnées au paragraphe 1 peuvent prendre, au choix du preneur, trois formes :
 Point 1 un compte individualisé ouvert au nom du preneur auprès d'une institution financière ;
@@ -1896,30 +2058,36 @@ Le Gouvernement peut modaliser l'obligation de l'institution financière de cons
 Le preneur ne devra aucun intérêt débiteur à l'institution financière, qui lui accordera des intérêts dès le jour de la constitution totale de la garantie. L'institution financière dispose des privilèges de droit commun vis-à-vis du preneur en cas de non-exécution de son obligation de constituer progressivement la garantie.
 Paragraphe 5. Lorsque le preneur opte pour une garantie bancaire d'un montant équivalent à trois mois de loyer maximum, résultant d'un contrat-type entre un CPAS et une institution financière, c'est le CPAS qui effectue la demande auprès de l'institution financière qui l'accorde au profit du bailleur.
 Paragraphe 6. Le Gouvernement arrête le formulaire par lequel les institutions financières attesteront, vis-à-vis des bailleurs, que la garantie locative est octroyée, peu importe la manière dont cette garantie est constituée.
-#### Art. 249.  - Placement de la garantie
+#### Art. 249.  
+Placement de la garantie
 Paragraphe 1. Lorsque le bailleur est en possession de la garantie et s'abstient de la placer de la manière prévue à l'article 248, Paragraphe 2, Point 1, il est tenu de payer au preneur des intérêts au taux moyen du marché financier sur le montant de la garantie, à partir de la remise de celle-ci avec comme minimum le taux légal.
 Ces intérêts sont capitalisés.
 Paragraphe 2. Sous réserve du troisième alinéa de l'article 232, il ne peut être disposé du compte bancaire, tant en principal qu'en intérêts, ni de la garantie bancaire ni du compte sur lequel la reconstitution de la garantie s'est effectuée, qu'au profit de l'une ou l'autre des parties, moyennant production soit d'un accord écrit, établi au plus tôt à la fin du contrat de bail, soit d'une copie d'une décision judiciaire. Cette décision doit être exécutoire par provision, nonobstant opposition ou appel, et sans caution ni cantonnement.
-### Section 6.  - Prorogation pour circonstances exceptionnelles
-#### Art. 250.  - Principes
+#### Art. 250.  
+Principes
 Lorsque le bail vient à échéance ou prend fin par l'effet d'un congé, le preneur qui justifie de circonstances exceptionnelles peut demander une prorogation.
-#### Art. 251.  - Procédure
+#### Art. 251.  
+Procédure
 A peine de nullité, cette prorogation est demandée au bailleur par lettre recommandée à la poste, au plus tard un mois avant l'expiration du bail.
 A défaut d'accord entre les parties, le juge peut accorder la prorogation en tenant compte de l'intérêt des deux parties, et, notamment, du grand âge éventuel d'une des parties. Il en fixe la durée, qui doit être déterminée. Il peut également, s'il l'estime équitable, accorder dans ce cas une augmentation de loyer au bailleur qui lui en fait la demande et réduire, ou supprimer, l'indemnité due en application de l'article 237, Paragraphe 4.
-#### Art. 252.  - Nombre de prorogations
+#### Art. 252.  
+Nombre de prorogations
 Une seule demande de renouvellement de la prorogation peut être introduite, dans les mêmes conditions que celles prévues aux articles 250 et 251, alinéa 2.
 A défaut d'accord entre les parties, le juge peut l'accorder, également dans les mêmes conditions.
-## CHAPITRE IV.  - Des règles propres au bail de logement étudiant
-#### Art. 253.  - Champ d'application
+#### Art. 253.  
+Champ d'application
 Paragraphe 1. Le présent chapitre s'applique au bail de logement étudiant, pour autant que les parties consentent à l'application du régime juridique qu'il institue et que le preneur apporte la preuve de son inscription régulière au sein d'un établissement d'études de cycle secondaire ou organisant l'enseignement supérieur, ou dans une commission d'examen d'un jury central, selon les modalités suivantes.
 Paragraphe 2. Lors de la signature du bail et un mois avant la prorogation du bail prévue à l'article 256, Paragraphe 3, le preneur communique au bailleur une attestation d'inscription régulière dans un établissement d'études de cycle secondaire ou organisant l'enseignement supérieur, ou dans une commission d'examen d'un jury central pour la durée du bail ou une partie significative de celle-ci. A défaut, le preneur communique au bailleur une copie de sa demande d'inscription ou une attestation sur l'honneur de l'introduction de cette demande.
 Dans ces deux dernières hypothèses, dans les deux mois de son entrée en jouissance et dans les deux mois qui suivent la prorogation prévue à l'article 256, Paragraphe 3, le preneur communique la preuve de sa qualité d'étudiant en produisant une attestation d'inscription régulière dans un établissement d'études de cycle secondaire ou organisant l'enseignement supérieur, ou dans une commission d'examen d'un jury central pour la durée du bail ou une partie significative de celle-ci.
-#### Art. 254.  - Label
+#### Art. 254.  
+Label
 Les biens d'habitation destinés à la location des logements destinés aux étudiants peuvent se voir attribuer un label spécifique. Le Gouvernement définit les exigences auxquelles ces biens doivent répondre afin de se voir attribuer ce label.
-#### Art. 255.  - Régime applicable
+#### Art. 255.  
+Régime applicable
 Si le preneur affecte le bien loué à sa résidence principale, avec l'accord exprès ou tacite du bailleur, les dispositions des chapitres II et III du titre XI sont applicables, sans préjudice des règles spécifiques du présent chapitre et à l'exception de la section 2 et de la section 4 du chapitre III du même titre.
 Si le preneur n'affecte pas le logement à sa résidence principale, avec l'accord exprès ou tacite du bailleur, les dispositions du chapitre II, du titre XI, sont applicables, sans préjudice des règles spécifiques du présent chapitre.
-#### Art. 256.  - Durée du bail
+#### Art. 256.  
+Durée du bail
 Paragraphe 1. Sauf clause contraire prévoyant une durée inférieure, tout bail de logement étudiant est réputé conclu pour une durée de douze mois.
 Les baux conclus pour une durée supérieure à douze mois n'entrent pas dans le champ d'application du présent chapitre.
 Paragraphe 2. Le bailleur peut mettre fin au bail à son expiration moyennant un congé notifié au moins trois mois avant cette échéance.
@@ -1930,19 +2098,23 @@ Quel que soit le régime applicable, les parties peuvent solliciter la révision
 Paragraphe 4. Si le bail a été conclu pour une durée inférieure à douze mois, à défaut d'un congé notifié dans les délais prévu au paragraphe 2, alinéa 1, ou de congé éventuel donné par le preneur, et si le preneur continue à occuper le bien loué sans opposition du bailleur, le bail est réputé avoir été conclu pour une période d'un an à compter de la date à laquelle le bail initial est entré en vigueur et est dès lors régi par les dispositions du présent chapitre. Dans ce cas, le loyer et les autres conditions demeurent inchangés par rapport à ceux convenus dans le bail initial. La section III du chapitre III est applicable.
 Paragraphe 5. Le preneur peut résilier le bail de manière anticipée, jusqu'à un mois avant son entrée en jouissance effective dans le bien loué dont la date sera précisée dans le bail, pour autant qu'il invoque de justes motifs et les démontre par toutes voies de droit.
 Dans ce cas, il paye au bailleur une indemnité équivalente à un mois de loyer.
-#### Art. 256/1.  Dispositions temporaires et exceptionnelles liées à la crise sanitaire causée par le Covid-1.
+#### Art. 256/1. 
+Dispositions temporaires et exceptionnelles liées à la crise sanitaire causée par le Covid-1.
 Par dérogation à l'article 256, Paragraphe 2, alinéa 2, le délai de préavis est réduit à un mois.
 Ce régime dérogatoire vaut uniquement pour les baux conclus avant le 18 mars 2020 et dont les congés sont notifiés entre le 18 mars 2020 et le 30 septembre 2020.
 Le préavis s'entend de la période qui doit obligatoirement s'écouler entre la notification du congé et la cessation effective du contrat de bail. Au terme de celle-ci, le bail sera rompu automatiquement mais pendant toute sa durée, les obligations et les droits de chacun seront maintenus dans leur totalité.
-## CHAPITRE V.  - Des règles propres à la colocation
-#### Art. 257.  - Champ d'application
+#### Art. 257.  
+Champ d'application
 Le présent chapitre s'applique à la colocation telle que définie à l'article 2, pour autant que les parties consentent à l'application du régime juridique qu'il institue.
-#### Art. 258.  - Régime applicable
+#### Art. 258.  
+Régime applicable
 Paragraphe 1. Si, lors de l'entrée en jouissance, l'un des preneurs affecte le bien loué à sa résidence principale, avec l'accord exprès ou tacite du bailleur, les dispositions des chapitres II et III s'appliquent, sans préjudice des règles spécifiques du présent chapitre et à l'exception des dispositions relatives à la résiliation du bail par le preneur.
 Paragraphe 2. Si aucun des preneurs n'affecte le logement à sa résidence principale, les dispositions du chapitre II s'appliquent, sans préjudice des règles spécifiques du présent chapitre.
-#### Art. 259.  - Solidarité
+#### Art. 259.  
+Solidarité
 Les colocataires sont tenus solidairement vis-à-vis du bailleur des obligations qui résultent du bail.
-#### Art. 260.  - Renon/sortie anticipée
+#### Art. 260.  
+Renon/sortie anticipée
 Paragraphe 1. Lorsque l'ensemble des colocataires mettent fin au bail en même temps, le congé doit être signé par chacun d'entre eux. Dans ce cas, les règles applicables au renon sont celles prévues par le régime applicable déterminé selon l'article 258.
 Paragraphe 2. Un colocataire ou une partie des colocataires peuvent à tout moment, moyennant un congé de deux mois, sortir anticipativement du bail.
 Paragraphe 3. Lorsqu'un colocataire met fin au bail, il notifie une copie du congé aux autres colocataires par un écrit daté, simultanément à la notification du congé au bailleur.
@@ -1953,35 +2125,39 @@ Le bailleur et les colocataires non sortants peuvent refuser le colocataire prop
 Paragraphe 6. Lorsque l'ensemble des parties marquent leur accord sur l'identité d'un nouveau colocataire, ce dernier doit signer un avenant au contrat de bail initial.
 La signature de l'avenant par le nouveau colocataire entraîne son adhésion automatique aux conditions du contrat de bail ainsi qu'au pacte de colocation.
 Paragraphe 7. Le colocataire sortant est délié pour le futur de ses obligations résultant du bail à la date d'expiration de son congé et pour autant qu'un nouveau colocataire désigné conformément au paragraphe 5 ait signé l'avenant visé au paragraphe 6 ou que le colocataire sortant puisse démontrer avoir effectué une recherche active et suffisante d'un nouveau colocataire. A défaut, les obligations pour le futur du colocataire sortant et la solidarité avec les autres colocataires s'éteignent automatiquement au plus tard à l'expiration d'un délai de 6 mois après la date d'expiration du congé.
-#### Art. 261.  - Pacte de colocation
+#### Art. 261.  
+Pacte de colocation
 Paragraphe 1. Les colocataires établissent un pacte de colocation afin de formaliser les aspects de la vie en communauté et les modalités pratiques de ce mode d'habitat.
 Paragraphe 2. Le pacte peut prévoir l'obligation de procéder à un état des lieux intermédiaire lors du départ anticipé d'un colocataire afin de déterminer les responsabilités de chacun et de ventiler les frais de réparation locative.
 Paragraphe 3. En cas de départ anticipé d'un colocataire, une adaptation formelle du pacte est signée par les colocataires.
-## CHAPITRE VI.  - Habitat intergénérationnel et solidaire
-#### Art. 262.  - De l'habitat intergénérationnel et solidaire
+#### Art. 262.  
+De l'habitat intergénérationnel et solidaire
 Les biens d'habitation destinés à la location des logements visés à l'article 2, Point 25 et Point 26, peuvent se voir attribuer un label spécifique. Le Gouvernement définit les exigences auxquelles ces biens doivent répondre afin de se voir attribuer ce label.
 Le Gouvernement peut, pour les logements bénéficiant de ce label, prévoir des dérogations portant notamment sur le régime applicable au bail, à sa durée, aux conditions de sa résiliation et sur les conditions d'occupation du bien.
-## CHAPITRE VII.  - Bail glissant
-#### Art. 263.  - Champ d'application
+#### Art. 263.  
+Champ d'application
 Paragraphe 1. Le présent chapitre s'applique au bail glissant tel que défini à l'article 2, lorsqu'il déroge au chapitre III.
 Le Gouvernement arrête la liste des personnes morales autorisées à pratiquer le mécanisme du bail glissant.
 Paragraphe 2. Tout bail tombant dans le champ d'application du présent chapitre doit être établi dans un écrit qui devra contenir indépendamment de toutes autres modalités : l'identité de toutes les parties contractantes, en ce compris celle du sous-locataire bénéficiaire du suivi social qui occupe le bien loué, la date de prise de cours du bail, la durée du bail et les objectifs généraux poursuivis par la personne morale mentionnée au paragraphe 1 afin de s'assurer de la capacité pour le sous-locataire de reprendre à sa charge les obligations découlant du bail principal.
 Paragraphe 3. Le présent chapitre n'est plus applicable dès que le bail conclu entre la personne morale preneuse initiale et le bailleur est cédé au sous-locataire.
-#### Art. 264.  - Mécanisme
+#### Art. 264.  
+Mécanisme
 Paragraphe 1. Une personne morale visée à l'article 263, Paragraphe 1, peut, avec l'accord exprès ou tacite du bailleur, conclure un bail de résidence principale portant sur un bien d'habitation pour le sous-louer simultanément avec le même objet à la personne dont elle est responsable du suivi.
 Paragraphe 2. La personne morale visée au paragraphe 1 assume à l'égard du bailleur toutes les obligations d'un locataire principal, et bénéficie des mêmes droits que ce dernier.
 Paragraphe 3. Lorsque les objectifs visés par l'accompagnement social assuré par la personne morale visée au paragraphe 1 sont atteints, le bail de résidence principale conclu entre elle et le bailleur est cédé au sous-locataire, qui devient le locataire principal et direct du bailleur.
 La cession a lieu selon les conditions et modalités définies aux articles 265 et 266.
 Par dérogation à l'article 230, le bailleur ne peut s'opposer à la cession du bail de résidence principale conclu avec la personne morale visée au paragraphe 1.
 Le bail principal prévoit une clause de cession expresse, en vertu de laquelle, au terme de la première, de la deuxième, ou de la troisième année du bail, les personnes morales visées au paragraphe 1 disposent du droit de céder leurs droits et obligations issus du contrat de bail au sous-locataire, sans nouvel accord du bailleur, lorsqu'elles constatent que les objectifs généraux poursuivis sont atteints.
-#### Art. 265.  - Durée du bail de résidence principale conclu par la personne morale responsable de l'accompagnement social et cession du bail
+#### Art. 265.  
+Durée du bail de résidence principale conclu par la personne morale responsable de l'accompagnement social et cession du bail
 Paragraphe 1. Tout bail principal et toute sous-location visés à l'article 264, Paragraphe 1, sont conclus pour une durée maximale de trois années.
 Paragraphe 2. Deux mois avant l'expiration de la première et de la deuxième année du bail, la personne morale qui a conclu le bail principal peut le céder au sous-locataire, pour autant qu'elle estime qu'il a atteint les objectifs de l'accompagnement social définis en début de bail, dont un degré d'autonomie suffisant pour assumer les obligations qui découlent du contrat de bail principal.
 Si la cession de bail n'est pas intervenue au terme des deux premières années du bail principal, la personne morale preneuse du bail principal décide, au plus tard six mois avant l'expiration de la troisième année du bail, si les objectifs visés par l'accompagnement social ont été atteints par le sous-locataire.
 Au terme de cet examen, si elle constate que le sous-locataire a atteint les objectifs précités, le bail est cédé au bénéfice de ce dernier, qui devient le locataire direct du bailleur.
 Si elle constate que le sous-locataire n'a pas atteint les objectifs précités, le bail ne pourra être prorogé avec la personne morale que de l'accord exprès du bailleur et aux mêmes conditions que le bail initial.
 Paragraphe 3. Dans les hypothèses visées au paragraphe 2, alinéas 1 à 3, le bail est réputé avoir été conclu pour une période de neuf années à compter de la date à laquelle le bail de résidence principale initial est entré en vigueur, et est dès lors régi par les dispositions du chapitre III, outre le chapitre II. Dans ce cas, le loyer et les autres conditions du bail demeurent inchangés par rapport à ceux convenus dans le bail initial, sans préjudice de l'indexation du loyer.
-#### Art. 266.  - Modalités relatives à l'accompagnement social
+#### Art. 266.  
+Modalités relatives à l'accompagnement social
 Paragraphe 1. Les personnes morales visées à l'article 263, Paragraphe 1, effectuent un suivi social régulier du sous-locataire tout au long de la durée du bail conclu avec le bailleur.
 Préalablement aux échéances prévues à l'article 265, Paragraphe 2, la personne morale qui a conclu le bail principal informe le bailleur, dans le respect du secret professionnel et de la vie privée du sous-locataire, quant à la capacité du sous-locataire à reprendre à sa charge les obligations découlant du bail principal.
 Paragraphe 2. Le bail de sous-location prévoit une clause en vertu de laquelle, au terme de la troisième année du bail, les personnes morales précitées peuvent résilier le bail lorsqu'elles constatent que les objectifs généraux poursuivis ne sont pas atteints.

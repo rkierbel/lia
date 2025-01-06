@@ -1,33 +1,51 @@
-import { HuggingFaceTransformersEmbeddings } from "@langchain/community/embeddings/huggingface_transformers";
-import {UnstructuredLoader} from "@langchain/community/document_loaders/fs/unstructured";
-import {Document} from "@langchain/core/documents";
-import { HfInference } from "@huggingface/inference";
-import {AutoModel, AutoTokenizer, pipeline} from "@huggingface/transformers";
+import {UnstructuredLoader} from '@langchain/community/document_loaders/fs/unstructured';
+import {Document} from '@langchain/core/documents';
+
 
 const loader = new UnstructuredLoader(
-    "C:\\Users\\laure\\IdeaProjects\\lia\\public\\housing_code.md",
+    'public/housing_code.md',
     {
-        apiKey: "dVUvbzVnLji33vFpReFWZscLLyORF5",
+        apiKey: 'dVUvbzVnLji33vFpReFWZscLLyORF5',
         includePageBreaks: false,
-        chunkingStrategy: "by_title",
+        chunkingStrategy: 'by_title',
+        maxCharacters: 13050,
         overlapAll: false
     }
 );
 
 const docs: Document<Record<string, string>>[] = await loader.load();
-//console.log(docs);
 
-
+for (const doc in docs)  {
+    console.log(doc)
+}
 
 /*
-const pipe = await pipeline('embeddings', 'BAAI/bge-multilingual-gemma2');
-const ems = pipe("some text");
+async function query(data: string) {
+    const response = await fetch(
+        'https://z4g6g8n5rney8aq1.us-east4.gcp.endpoints.huggingface.cloud',
+        {
+            headers: {
+                Accept : "application/json",
+                Authorization: 'Bearer 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',
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+            body: JSON.stringify({
+                inputs: data
+            }),
 
-console.log(ems);
+        }
+    );
+    console.log(response);
+    return await response.json();
+}
+
+for (const doc of ["hello darkness", "my old friend"]) {
+    try {
+        const response = await query(doc);
+        console.log(JSON.stringify(response));
+    } catch (error) {
+        console.log("error:", error);
+    }
+}
 */
-const tokenizer = await AutoTokenizer.from_pretrained("BAAI/bge-multilingual-gemma2")
-const model = await AutoModel.from_pretrained("BAAI/bge-multilingual-gemma2")
-const text = "Replace me by any text you'd like."
-const encoded_input = await tokenizer(text)
-const output = await model(encoded_input)
-console.log(output)
