@@ -14,6 +14,10 @@ export class MarkdownLoader {
             })
         )
     }
+
+    public async contextualize(rawChunks: string[]): Promise<Chunk[]> {
+
+    }
 }
 
 

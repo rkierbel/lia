@@ -2,6 +2,9 @@ import * as fs from 'node:fs/promises';
 
 export class MarkdownTextSplitter {
 
+    constructor() {
+    }
+
     /*
      * Splits a Markdown document into chunks based on # headers
      * @param {string} markdownFilePath - The path to a Markdown document to split
