@@ -2,7 +2,7 @@ import * as fs from 'node:fs/promises';
 
 export class MarkdownTextSplitter {
 
-    /**
+    /*
      * Splits a Markdown document into chunks based on # headers
      * @param {string} markdownFilePath - The path to a Markdown document to split
      * @returns {Promise<string[]>} Array of chunks
@@ -19,7 +19,7 @@ export class MarkdownTextSplitter {
         const chunks: string[] = [];
         let currentChunk: string[] = [];
 
-        // Regular expression to match markdown headers (both # and === or --- style)
+        // Regular expression to match # markdown headers
         const headerRegex = /^#{1,6}/;
 
         for (let i = 0; i < lines.length; i++) {

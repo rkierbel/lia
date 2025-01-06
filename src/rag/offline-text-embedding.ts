@@ -21,6 +21,7 @@ export class OfflineTextEmbedding {
             );
 
             if (!response.ok) {
+                console.log(response);
                 return {
                     success: false,
                     error: `HTTP error! status: ${response.status}`

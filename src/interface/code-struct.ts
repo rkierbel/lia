@@ -1,10 +1,7 @@
 /*
 if no Book, save Titles under a Book 0 { num:0, titles:...}
-if a Title, a Chapter, a Section or an Article has no name, name = empty string
-
 if a Title has no chapter, articles go under a Chapter with the following properties:
 {
-  name: '',
   num: 0,
   sections: [{
       num: 0,
@@ -12,7 +9,7 @@ if a Title has no chapter, articles go under a Chapter with the following proper
   }]
 }
 if a Chapter has no sections, articles go under a section with the following properties:
-  {
+{
   num: 1,
   sections: [{
       num: 0,

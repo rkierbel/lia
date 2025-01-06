@@ -1,4 +1,3 @@
-import {Document} from '@langchain/core/documents';
 import {Chunk} from '../interface/chunk.js';
 import {CustomDocument} from './custom-document.js';
 
