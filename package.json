@@ -17,6 +17,7 @@
     "@langchain/core": "^0.3.27",
     "@langchain/langgraph": "^0.2.38",
     "@langchain/openai": "^0.3.16",
+    "@zilliz/milvus2-sdk-node": "^2.5.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "5.0.0",

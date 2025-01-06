@@ -1,23 +1,21 @@
-import { MilvusClient, DataType } from '@zilliz/milvus2-sdk-node';
+import {DataType} from '@zilliz/milvus2-sdk-node';
 
 export const legalArticleSchema = [
     {
-        name: "articleNumber",
+        name: "articleId",
         data_type: DataType.VarChar,
+        max_length: 10,
         is_primary_key: true,
         autoID: false
     },
     {
-        name: "metadata",
-        data_type: DataType.JSON,
+        name: "partitionKey",
+        data_type: DataType.VarChar,
+        max_length: 50,
+        isPartitionKey: true
     },
     {
         name: "content",
-        data_type: DataType.Array,
-        element_type: DataType.JSON
-    },
-    {
-        name: "paragraph",
-        data_type: ""
+        data_type: DataType.Float16Vector
     }
 ]
