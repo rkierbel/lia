@@ -8,20 +8,21 @@ export interface LegalArticle {
 
 export const legalArticleSchema = [
     {
-        name: "articleId",
+        name: "article-id",
         data_type: DataType.VarChar,
         max_length: 10,
         is_primary_key: true,
         autoID: false
     },
     {
-        name: "partitionKey",
+        name: "article-partition-key",
         data_type: DataType.VarChar,
         max_length: 50,
         isPartitionKey: true
     },
     {
-        name: "content",
-        data_type: DataType.Float16Vector
+        name: "article-vector",
+        data_type: DataType.FloatVector,
+        dim: 3584
     }
 ]

@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 
-async function extractStructure(inputPath: string, outputPath: string): Promise<void> {
+export async function extractStructure(inputPath: string, outputPath: string): Promise<void> {
     try {
         const content = await fs.readFile(inputPath, 'utf-8');
 
@@ -20,7 +20,6 @@ async function extractStructure(inputPath: string, outputPath: string): Promise<
                 i++;
             }
         }
-
 
         const trimmedContent = headers.join('\n');
         await fs.writeFile(outputPath, trimmedContent, 'utf-8');

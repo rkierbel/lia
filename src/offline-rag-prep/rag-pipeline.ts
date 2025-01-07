@@ -1,24 +1,23 @@
 import {MarkdownTextSplitter} from './markdown-text-splitter.js';
-import {MarkdownLoader} from './markdown-loader.js';
 import {OfflineTextEmbedding} from './offline-text-embedding.js';
 
 export class RagPipeline {
 
     constructor(
         private textSplitter: MarkdownTextSplitter,
-        private loader: MarkdownLoader,
         private offlineEmbedding: OfflineTextEmbedding
     ) {
         this.textSplitter = new MarkdownTextSplitter();
-        this.loader = new MarkdownLoader();
         this.offlineEmbedding = new OfflineTextEmbedding();
     }
 
-    public pipe(filePath: string, partitionKey: string) {
-        this.textSplitter.splitMarkdownByHeaders(filePath)
-            .then(chunks => this.loader.load(chunks, partitionKey))
-            .then(docs => docs.map(d => this.offlineEmbedding.embed(d.pageContent)));
-        // then map to entities & save in Milvus!
-    }
+    public async pipe(filePath: string, partitionKey: string) {
+        const chunks = await this.textSplitter.splitMarkdownByHeaders(filePath);
 
+        for (const chunk of chunks) {
+            const vectors = await this.offlineEmbedding.embed(chunk.content);
+            if (vectors.length === 0) console.log('error fetching vectors for chunk with id ' + chunk.id);
+            else vectors.forEach(v => console.log(v))
+        }
+    }
 }
