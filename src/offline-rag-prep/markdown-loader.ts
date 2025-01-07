@@ -20,7 +20,7 @@ export class MarkdownLoader {
 constructor(private loader = new UnstructuredLoader(
         'public/housing_code.md',
         {
-            apiKey: 'dVUvbzVnLji33vFpReFWZscLLyORF5',
+            apiKey: process.env.UNSTRUCTURED,
             includePageBreaks: false,
             chunkingStrategy: 'by_title',
             maxCharacters: 13050,
