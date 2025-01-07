@@ -17,6 +17,7 @@ export class RagPipeline {
             const articleVector: number[] = await jinaEmbeddings.embedDocuments([chunk.content]).then(v => v[0]);
             embeddings.push({articleVector, articleId, partitionKey});
         }
+        console.log('Vectorized '+embeddings.length+' articles.');
 
     }
 }
