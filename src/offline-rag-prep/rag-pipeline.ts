@@ -1,23 +1,22 @@
 import {MarkdownTextSplitter} from './markdown-text-splitter.js';
-import {OfflineTextEmbedding} from './offline-text-embedding.js';
+import {jinaEmbeddings} from "../models/jina-embeddings.js" ;
+import {LegalArticleEmbedding} from "../interface/legal-article-embedding.js";
 
 export class RagPipeline {
 
-    constructor(
-        private textSplitter: MarkdownTextSplitter,
-        private offlineEmbedding: OfflineTextEmbedding
-    ) {
+    constructor(private textSplitter: MarkdownTextSplitter,) {
         this.textSplitter = new MarkdownTextSplitter();
-        this.offlineEmbedding = new OfflineTextEmbedding();
     }
 
     public async pipe(filePath: string, partitionKey: string) {
         const chunks = await this.textSplitter.splitMarkdownByHeaders(filePath);
+        const embeddings: LegalArticleEmbedding[] = [];
 
         for (const chunk of chunks) {
-            const vectors = await this.offlineEmbedding.embed(chunk.content);
-            if (vectors.length === 0) console.log('error fetching vectors for chunk with id ' + chunk.id);
-            else vectors.forEach(v => console.log(v))
+            const articleId = [partitionKey, chunk.id].join('-');
+            const articleVector: number[] = await jinaEmbeddings.embedDocuments([chunk.content]).then(v => v[0]);
+            embeddings.push({articleVector, articleId, partitionKey});
         }
+
     }
 }
