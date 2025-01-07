@@ -14,11 +14,10 @@ export class RagPipeline {
         this.offlineEmbedding = new OfflineTextEmbedding();
     }
 
-    public pipe(filePath: string) {
+    public pipe(filePath: string, partitionKey: string) {
         this.textSplitter.splitMarkdownByHeaders(filePath)
-            .then(mdChunks => this.loader.contextualize(mdChunks))
-            .then(chunks => this.loader.load(chunks))
-            .then(docs => docs.forEach(d => this.offlineEmbedding.embed(d.pageContent)));
+            .then(chunks => this.loader.load(chunks, partitionKey))
+            .then(docs => docs.map(d => this.offlineEmbedding.embed(d.pageContent)));
         // then map to entities & save in Milvus!
     }
 

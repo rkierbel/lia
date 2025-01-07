@@ -1,22 +1,17 @@
 import {Chunk} from '../interface/chunk.js';
-import {CustomDocument} from './custom-document.js';
+import {Document} from '@langchain/core/documents';
 
 export class MarkdownLoader {
 
-    public async load(chunks: Chunk[]): Promise<CustomDocument[]>{
+    public async load(chunks: Chunk[], partitionKey: string): Promise<Document[]>{
         return chunks.map(
-            chunk => new CustomDocument({
+            chunk => new Document({
                 pageContent: chunk.content,
                 metadata: {
-                    partitionKey: chunk.metadata.partitionKey,
-                    contentId: chunk.metadata.contentId
+                    articleId: [partitionKey, chunk.id].join('-')
                 }
             })
         )
-    }
-
-    public async contextualize(rawChunks: string[]): Promise<Chunk[]> {
-
     }
 }
 

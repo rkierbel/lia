@@ -1,5 +1,11 @@
 import {DataType} from '@zilliz/milvus2-sdk-node';
 
+export interface LegalArticle {
+    vector: string,
+    id: string,
+    partitionKey: string
+}
+
 export const legalArticleSchema = [
     {
         name: "articleId",
