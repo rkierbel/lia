@@ -1,52 +1,27 @@
-/*
-if no Book, save Titles under a Book 0 { num:0, titles:...}
-if a Title has no chapter, articles go under a Chapter with the following properties:
-{
-  num: 0,
-  sections: [{
-      num: 0,
-      articles: [{articles go here}]
-  }]
-}
-if a Chapter has no sections, articles go under a section with the following properties:
-{
-  num: 1,
-  sections: [{
-      num: 0,
-      articles: [{articles go here}]
-  }]
-}
-
-partitionKey = CodeContext.name-book.num
-articleId = CodeContext.name-book-title-chapter-section-number
-*/
-
 export interface CodeContext {
     name: string,
-    book: Book
+    elements: CodeElement[]
 }
 
-export interface Book {
+export interface CodeElement {
     num: number,
+    name: string,
+    type: 'book' | 'title' | 'chapter' | 'section' | 'article'
+}
+
+export interface Book extends CodeElement {
     titles: Title[]
 }
 
-export interface Title {
-    num: number,
-    chapters: Chapter[]
+export interface Title extends CodeElement {
+    chapters?: CodeElement[]
 }
 
-export interface Chapter {
-    num: number,
-    sections: Section[]
+export interface Chapter extends CodeElement {
+    sections?: CodeElement[]
 }
 
-export interface Section {
-    num: number,
-    articles: Article
-}
-
-export interface Article {
-    num: number
+export interface Section extends CodeElement {
+    articles: CodeElement[]
 }
 

@@ -13,20 +13,26 @@ To implement this approach, you should:
     Set m in hnsw config to 0. This will disable building global index for the whole collection.
 
  */
-client.createCollection("{belgian_law_codes}", {
+client.createCollection("{belgian_law}", {
     vectors: {
         size: 1024,
         distance: "Cosine",
-        datatype: "float16",
+        datatype: "float32",
         on_disk: true
     },
     hnsw_config: {
         payload_m: 25,
         m: 50,
-        ef_construct: 260,
+        ef_construct: 300,
         max_indexing_threads: 10
     },
-
+    quantization_config: {
+      scalar: {
+          type: 'int8',
+          quantile: 0.99,
+          always_ram: false
+      }
+    },
     on_disk_payload: true
 });
 
