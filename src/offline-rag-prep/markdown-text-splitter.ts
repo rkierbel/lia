@@ -23,7 +23,7 @@ export class MarkdownTextSplitter {
         let currentChunk: string[] = [];
         let currentId: string = '';
 
-        // Regular expression to match article headers like "#### Art. 4." or "#### Art. 44/4." or "#### Art. 44/4bis."
+        // Regular expression to match article headers like "#### Art. 4." or "#### Art. 44/4." or "#### Art. 44bis." or "#### Art. 44bis/4."
         const headerRegex = /^#{1,6}\s*Art\.\s*(\d{1,3}(?:bis|ter|quater|quinqiues|sexies|septies|octies|novies|[a-z]*decies)?(?:\/\d)?\.?)\./;
 
         for (let i = 0; i < lines.length; i++) {
