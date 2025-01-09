@@ -10,10 +10,10 @@ import {LegalDocument, LegalSource} from "../interface/legal-document.js";
      4) create langgraph
      5) create UI
 */
-dotenv.config({path: '../../../.env'});
+dotenv.config({path: '../../.env'});
 
 const embeddingModel = new JinaEmbeddings({
-    apiKey: "",
+    apiKey: process.env.JINA,
     model: "jina-embeddings-v3",
     dimensions: 1024,
     normalized: true

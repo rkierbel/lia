@@ -7,6 +7,9 @@ import {pull} from "langchain/hub";
 import { z } from "zod";
 import { createRetrieverTool } from "langchain/tools/retriever";
 import {KnowledgeBase} from "../offline-rag-prep/knowledge-base.js";
+import dotenv from "dotenv";
+
+dotenv.config({path: '../../.env'});
 
 const GraphState = Annotation.Root({
     messages: Annotation<BaseMessage[]>({
@@ -68,7 +71,7 @@ async function gradeDocuments(state: typeof GraphState.State): Promise<Partial<t
     const model = new ChatOpenAI({
         model: "gpt-4o",
         temperature: 0,
-        apiKey: ""
+        apiKey: process.env.OPEN_AI
     }).bindTools([tool], {
         tool_choice: tool.name,
     });
@@ -126,7 +129,7 @@ async function agent(state: typeof GraphState.State): Promise<Partial<typeof Gra
         model: "gpt-4o",
         temperature: 0,
         streaming: true,
-        apiKey: ""
+        apiKey: process.env.OPEN_AI
     }).bindTools(tools);
 
     const response = await model.invoke(filteredMessages);
@@ -154,7 +157,7 @@ async function rewrite(state: typeof GraphState.State): Promise<Partial<typeof G
         model: "gpt-4o",
         temperature: 0,
         streaming: true,
-        apiKey: ""
+        apiKey: process.env.OPEN_AI
     });
     const response = await prompt.pipe(model).invoke({ question });
     return {
@@ -181,7 +184,7 @@ async function generate(state: typeof GraphState.State): Promise<Partial<typeof 
         model: "gpt-4o",
         temperature: 0,
         streaming: true,
-        apiKey: ""
+        apiKey: process.env.OPEN_AI
     });
 
     const ragChain = prompt.pipe(llm);
@@ -237,9 +240,9 @@ const app = workflow.compile();
 const inputs = {
     messages: [
         new HumanMessage(
-            "Is there something in brussels housing law like a 'trêve hivernale'? " +
+            "In which circumstances can a landlord evict a tenant if the tenant doesnt pay rent?" +
             "Only use articles of the brussels housing code to reply. " +
-            "Provide the references to the articles that you used. " +
+            "Provide the references to the articles that you used. If you use specific paragraphs of an articel, provide references to these paragraphs." +
             "If an article is referencing another article of the same code, check that reference in the brussels housing code to supplement your answer." +
             "Do not check references to articles or legal sources that are not the Brussels housing code." +
             "Only base your answer on the brussels housing code.",
