@@ -1783,7 +1783,8 @@ Point 3 la mention que, en l'absence de réaction dans le délai prévu au Parag
 Point 4 dans le cas où le recouvrement est effectué par un avocat, un officier ministériel ou un mandataire de justice, le texte suivant figurera dans un alinéa séparé, en caractères gras et dans un autre type de caractère :
 " Cette lettre concerne un recouvrement amiable et vise à éviter un recouvrement judiciaire (assignation au tribunal ou saisie). ".
 Paragraphe 3. Dans la mise en demeure, le délai dans lequel la créance peut être remboursée avant que des mesures complémentaires soient prises est mentionné. Ce délai est d'au moins un mois et commence à courir à la date de l'envoi de la sommation écrite.
-#### Art. 233quinquies.  - Mode d'introduction de l'instance
+#### Art. 233quinquies.
+Mode d'introduction de l'instance
 Paragraphe 1. Les demandes introductives et les demandes en intervention forcée en matière de bail d'habitation, en ce compris celles tendant à une expulsion, sont formées par requête écrite déposée au greffe du juge.
 La demande introduite par citation est recevable mais les frais de citation restent à charge du demandeur quand bien même il obtient gain de cause, sauf lorsque le recours à ce mode d'introduction de l'instance est imposé par le législateur ou justifié par le fait que le défendeur n'est pas inscrit aux registres de la population.
 Paragraphe 2. A peine de nullité, l'acte introductif contient :
@@ -1797,26 +1798,31 @@ A tout acte introductif d'instance concernant une demande d'expulsion sont en ou
 Point 1 un certificat de domicile de la personne mentionnée sous Point 3, sauf si le défendeur n'est pas inscrit aux registres de la population ou aux registres des étrangers ;
 Point 2 copie de la mise en demeure préalable ainsi que de la preuve de son envoi au moins un mois avant le dépôt de la requête ou avant la signification de la citation.
 Paragraphe 3. L'acte introductif peut contenir tout contact ou information utile pour la partie citée.
-#### Art. 233sexies.  - Délais de comparution
+#### Art. 233sexies.
+Délais de comparution
 Paragraphe 1. Lorsque la demande est introduite par requête, les parties sont convoquées par le greffier, sous pli judiciaire, à comparaître, dans les quinze jours de l'inscription de la requête au rôle général, à l'audience fixée par le juge. Une copie de la requête est annexée à la convocation.
 Le délai de comparution est porté à 40 jours lorsque la requête comporte une demande d'expulsion.
 Paragraphe 2. Le délai de citation est de 40 jours lorsque la demande porte sur l'expulsion d'un logement.
 Paragraphe 3. Les délais visés au paragraphe 1, alinéa 2, et au paragraphe 2 sont applicables aux demandes d'expulsion d'un logement accessoire au commerce faisant l'objet d'un bail visé à la section II bis du livre III, titre VIII, chapitre II, du Code civil.
-#### Art. 233septies.  - Communication au C.P.A.S. des demandes d'expulsion
+#### Art. 233septies.
+Communication au C.P.A.S. des demandes d'expulsion
 Paragraphe 1. Toute demande tendant à l'expulsion du logement d'une personne physique qui a conclu un bail d'habitation, une convention d'occupation précaire ou un bail visé à la section II bis du livre III, titre VIII, chapitre II, du Code civil, est communiquée au C.P.A.S. de la commune où se situe le logement.
 Paragraphe 2. Selon que la demande est formée par requête ou par comparution volontaire, ou par citation, le greffe ou l'huissier de justice transmet une copie de l'acte introductif d'instance au C.P.A.S., par voie électronique. Cette communication contient l'indication de la date à laquelle l'affaire est fixée conformément à l'article 233sexies.
 Paragraphe 3. Lorsque la demande d'expulsion est formulée à titre incident par voie de conclusions, le greffe en transmet sans retard une copie au C.P.A.S., par voie électronique.
 Paragraphe 4. Lorsque la demande est soumise à l'arbitrage ou présentée en cours d'arbitrage, sous réserve d'un examen prima facie de l'absence de convention d'arbitrage, le tribunal arbitral ne pourra en connaître qu'au terme d'un délai de 40 jours à dater de l'envoi au C.P.A.S. d'une copie de l'acte par lequel il en est saisi. Cet envoi est opéré par courrier électronique et contient l'indication de la date à laquelle les parties sont convoquées afin d'établir l'acte précisant la mission du ou des arbitres.
 Paragraphe 5. Le C.P.A.S. offre, de la manière la plus appropriée, d'apporter son aide dans le cadre de sa mission légale.
-#### Art. 233octies.  - Conciliation préalable
+#### Art. 233octies.
+Conciliation préalable
 Sans préjudice des dispositions des articles 731, alinéa 1, 732 et 733 du Code judiciaire, pour toute demande en matière de location de logement, le juge tente de concilier les parties.
 En cas de non-conciliation ou de défaut, la procédure a lieu au fond. Le jugement indique que les parties n'ont pu être conciliées.
-#### Art. 233novies.  - Introduction d'une demande d'expulsion par voie de conclusions
+#### Art. 233novies.
+Introduction d'une demande d'expulsion par voie de conclusions
 Le dépôt de conclusions comportant une demande incidente portant sur l'expulsion du logement d'une personne physique qui a conclu un bail d'habitation ou un bail visé à la section IIbis du livre III, titre VIII, chapitre II, du Code civil, interrompt le cours des délais fixés par le calendrier amiable ou judiciaire.
 Le greffier procède conformément à l'article 233sexies, et convoque les parties par pli judiciaire à une audience qui ne peut avoir lieu qu'au plus tôt 40 jours après cette convocation.
 Lors de cette audience, le juge entend les parties quant à la possibilité d'un accord et tente de les concilier.
 A défaut de possibilité d'accord ou de conciliation, il entend leurs observations concernant la mise en état de l'affaire et établit un nouveau calendrier.
-#### Art. 233decies.  - Notification des décisions d'expulsion
+#### Art. 233decies.
+Notification des décisions d'expulsion
 Paragraphe 1. Toute décision d'expulsion d'un logement doit être portée à la connaissance du C.P.A.S. La notification d'une copie de la décision se fait par le greffe en même temps qu'il communique la copie non signée de la décision aux parties et, le cas échéant, à leurs avocats, comme il est prévu à l'article 792 du Code judiciaire.
 Les tribunaux arbitraux doivent également communiquer copie des sentences qui ordonnent ou autorisent une expulsion au C.P.A.S.
 Paragraphe 2. A des fins de gestion et de mise en oeuvre des politiques publiques sur les expulsions, les décisions et les sentences arbitrales autorisant une expulsion sont également communiquées par le greffe ou le tribunal arbitral au tiers de confiance désigné à cet effet par le Ministre simultanément à leur communication aux parties et au C.P.A.S.
@@ -1835,7 +1841,8 @@ Au moyen des données ainsi généralisées, l'Observatoire du Logement réalise
 - déterminer les caractéristiques procédurales entourant la demande d'expulsion.
 L'Observatoire du Logement conserve ces données généralisées sans limite de temps de sorte à permettre l'évolution du monitoring sur les expulsions, dans la limite des finalités établies.
 Les données issues du monitoring, qui sont publiées sur le site internet du Bureau bruxellois de la planification, sont anonymisées préalablement à leur publication. Elles sont agrégées et ne constituent plus des données à caractère personnel.
-#### Art. 233undecies.  - Délai d'expulsion et informations préalables
+#### Art. 233undecies.
+Délai d'expulsion et informations préalables
 Paragraphe 1. Sous réserve des logements déclarés inhabitables conformément à l'article 135 de la Nouvelle loi communale ou frappés de l'interdiction visée à l'article 8 du présent Code, aucune expulsion d'un logement ne peut être exécutée qu'après un délai d'un mois suivant la signification du jugement ou de l'acte l'autorisant.
 Ce délai n'est pas applicable lorsque :
 Point 1 le bien a été abandonné, c'est-à-dire lorsqu'il n'est plus utilisé conformément à sa fonction résidentielle ;
@@ -1849,7 +1856,8 @@ Cet avis d'expulsion renseigne que les biens qui se trouveront encore dans les l
 Le délai de six mois visé au paragraphe 3 de cet article 3.58 peut être prolongé à la demande des intéressés le temps nécessaire pour trouver une solution de relogement pérenne, sauf s'il s'agit de choses qui sont périssables, sujettes à une dépréciation rapide ou préjudiciables à l'hygiène, à la santé ou à la sécurité publique.
 Copie de cet avis est immédiatement adressée, par voie électronique, au C.P.A.S., qui offre, de la manière la plus appropriée, d'apporter son aide dans le cadre de sa mission légale.
 Paragraphe 3. Le délai visé au paragraphe 2, alinéa 1, est interrompu et l'expulsion ne peut avoir lieu si le locataire ou l'occupant communique à l'huissier, le cas échéant à l'intervention du C.P.A.S., la preuve d'une solution de relogement qui sera effective au plus tard un mois à dater de l'avis d'expulsion. A défaut pour l'occupant d'avoir quitté le logement à la date prévue, l'expulsion peut être poursuivie.
-#### Art. 233duodecies.  - Moratoire hivernal
+#### Art. 233duodecies.
+Moratoire hivernal
 Paragraphe 1. Sous réserve de l'exécution des décisions administratives prises sur la base de l'article 8 ou des articles 133 et 135 de la Nouvelle loi communale, aucune expulsion d'un logement ayant fait l'objet d'un bail d'habitation ou d'un bail visé à la section IIbis du livre III, titre VIII, chapitre II, du Code civil ne peut être exécutée du 1 novembre au 15 mars de l'année suivante.
 Il peut être dérogé à cette interdiction, par une décision spécialement motivée quant au caractère impérieux de l'expulsion pour les hypothèses visées aux Point 2, Point 3, Point 4, lorsque :
 Point 1 une solution de relogement est disponible ou que le locataire a quitté le logement ;
@@ -1952,26 +1960,11 @@ Le juge statue en équité.
 L'action ne peut être intentée qu'entre le sixième et le troisième mois précédant l'expiration du triennat en cours.
 Le loyer révisé produit ses effets à compter du premier jour du triennat suivant, l'ancien loyer demeurant provisoirement exigible jusqu'à la décision définitive.
 Dans le cas de l'article 239, Paragraphe 2, les parties peuvent cependant renoncer à la faculté de demander la révision du loyer.
-#### Art. 240 DROIT FUTUR.
- - Principes
-Sans préjudice de l'article 221, les parties peuvent convenir de la révision du loyer entre le neuvième et le sixième mois précédant l'expiration de chaque triennat.  Dans ce cadre, chaque partie peut saisir la commission paritaire locative visée à l'article 107/1 du Code, pour obtenir un avis sur la justesse du loyer. Si la commission paritaire locative rend un avis concluant à la révision de loyer, elle propose aux parties une conciliation limitée au montant du loyer.
-A défaut d'accord des parties, le juge peut accorder la révision du loyer s'il est établi que par le fait de circonstances nouvelles, le loyer de référence du bien loué est supérieur de vingt pour cent au moins au loyer exigible au moment de l'introduction de la demande et que le bien n'accuse pas des défauts de qualité substantiels qui justifient cette différence.
-Si le bien n'accuse pas des défauts de qualité substantiels qui justifient cette différence, le juge peut également accorder une augmentation de loyer au bailleur qui établit que le loyer de référence du bien loué est supérieur de dix pour cent au moins au loyer exigible au moment de l'introduction de la demande, en raison de travaux effectués à ses frais dans le bien loué, à l'exception des travaux nécessaires en vue de mettre le bien loué en conformité avec les conditions de l'article 220.
-Dans le cadre de cette révision triennale, aucune augmentation de loyer ne peut cependant être accordée pour des travaux réalisés conformément à l'article 221 et si le loyer a été adapté en conséquence au cours du bail.
- Le juge peut solliciter l'avis de la commission paritaire locative visée à l'article 107/1 du Code. Il statue en équité.
-L'action ne peut être intentée qu'entre le sixième et le troisième mois précédant l'expiration du triennat en cours.
-Le loyer révisé produit ses effets à compter du premier jour du triennat suivant, l'ancien loyer demeurant provisoirement exigible jusqu'à la décision définitive.
-Dans le cas de l'article 239, Paragraphe 2, les parties peuvent cependant renoncer à la faculté de demander la révision du loyer.
 #### Art. 241.  
 Baux successifs
 Si un bien fait l'objet de baux successifs, conclus avec des preneurs différents pour une durée inférieure ou égale à trois ans, auxquels il est mis fin moyennant un congé donné par le bailleur, le loyer de base ne peut pas, pendant neuf années successives, être supérieur au loyer exigible au début de cette période, proportionnellement adapté au cout de la vie, sauf si la valeur locative normale du bien loué a augmenté de vingt pour cent au moins par le fait de circonstances nouvelles ou de dix pour cent au moins en raison de travaux effectués dans le bien loué.
 Nonobstant toute clause ou toute convention contraire, le juge réduit le loyer au loyer exigible en vertu du précédent bail, proportionnellement adapté au cout de la vie, si le bailleur ne prouve pas que le loyer a été fixé conformément aux dispositions de l'alinéa 1.
 Le loyer proportionnellement adapté est calculé comme suit : loyer de base au début de la période de neuf années, multiplié par l'indice santé du mois précédant le mois de la conclusion du nouveau bail et divisé par l'indice santé du mois précédant le mois de la conclusion du bail au début de la période de neuf années.
-#### Art. 241 DROIT FUTUR.
- - Baux successifs
-Si un bien fait l'objet de baux successifs, conclus avec des preneurs différents pour une durée inférieure ou égale à trois ans, auxquels il est mis fin moyennant un congé donné par le bailleur, le loyer de base ne peut pas, pendant neuf années successives, être supérieur au loyer exigible au début de cette période, proportionnellement adapté au cout de la vie, sauf si la  loyer de référence du bien loué a augmenté de vingt pour cent au moins par le fait de circonstances nouvelles ou de dix pour cent au moins en raison de travaux effectués dans le bien loué  et que ce bien n'accuse pas des défauts de qualité substantiels qui justifient un loyer inférieur au loyer de référence.
-Chacune des parties prenantes au bail ou une personne mandatée ou le juge peut saisir la commission paritaire locative visée à l'article 107/1 du Code, pour obtenir un avis sur la justesse du loyer prévue à l'alinéa 1. Lorsque la Commission paritaire locative est saisie par une des parties prenantes au bail ou par une personne mandatée par elle et qu'elle rend un avis concluant à la révision de loyer, elle propose aux parties une conciliation limitée au montant du loyer.
-Nonobstant toute clause ou toute convention contraire, le juge réduit le loyer au loyer exigible en vertu du précédent bail, proportionnellement adapté au cout de la vie, si le bailleur ne prouve pas que le loyer a été fixé conformément aux dispositions de l'alinéa 1.
 #### Art. 242.  
 Principes
 En cas de mise en vente du logement de gré à gré, le bailleur, préalablement à toute communication publique relative à la mise en vente, notifie au preneur, par lettre recommandée à la poste ou par exploit d'huissier, son intention de vendre le logement.
@@ -1991,7 +1984,8 @@ Lorsque la propriété mise en vente ne constitue qu'une partie du bien loué, l
 Disposition impérative
 Est réputée non écrite, toute convention par laquelle le preneur renonce d'avance, en tout ou en partie, au droit d'information prévu par l'article 242.
 Section 4bis.  Droit de préférence du preneur en cas de vente du bien loué
-#### Art. 247/1 - Principes
+#### Art. 247/1
+Principes
 Paragraphe 1. En cas de mise en vente d'un logement qui fait l'objet d'un bail de résidence principale, le preneur dispose d'un droit de préférence, à la condition qu'il soit domicilié dans ledit logement, pour lui-même, son conjoint ou cohabitant légal ou de fait, ou pour ses descendants ou enfants adoptifs ou ceux de son conjoint ou cohabitant légal ou de fait, à la condition que ceux-ci soient également domiciliés dans ledit logement à la date de la notification visée à l'article 247/2, Paragraphe 1. Ce droit de préférence s'éteint par le décès du ou des preneurs.
 En cas de pluralité de titulaires du droit de préférence, si ceux-ci souhaitent l'exercer concurremment, ils doivent s'accorder entre eux quant à la ou les personne(s) qui exercera(ont) le droit de préférence, dans le délai imparti pour l'exercice du droit, à peine de déchéance du droit de préférence.
 La présente disposition ne vaut pas pour les preneurs de baux de courte durée, tels que prévus à l'article 238, sauf s'ils sont réputés conclus pour une période de neuf ans par l'effet des dispositions du Code.
@@ -2007,7 +2001,8 @@ Point 7 les biens faisant l'objet d'un arrêté d'expropriation pour cause d'uti
 Point 8 les biens frappés par un arrêté d'inhabitabilité ;
 Point 9 les immeubles à logements multiples occupés par différents locataires, en cas de vente de la totalité de l'immeuble ;
 Point 10 les biens ayant fait l'objet d'une promesse de vente avec date certaine antérieure à la conclusion du bail, pour autant que cette promesse soit acceptée par son bénéficiaire.
-#### Art. 247/2 - Procédure
+#### Art. 247/2
+Procédure
 Paragraphe 1. Préalablement à la conclusion de toute vente d'un logement mis en location, le bailleur doit informer, par voie recommandée avec accusé de réception, le preneur de son intention de vendre et du droit de préférence dont il dispose. Cette notification vaut offre de vente au profit de son destinataire, sauf s'il s'agit d'une vente publique.
 Les notifications faites en application du présent article sont de plein droit opposables aux autres titulaires du droit de préférence tels que visés à l'article 247/1, qui ne pourront faire valoir leurs droits qu'à l'égard du preneur, sans recours contre le bailleur, le notaire ou l'agent immobilier.
 A défaut, le notaire ou l'agent immobilier au sens de l'arrêté royal du 6 septembre 1993 protégeant le titre professionnel et l'exercice de la profession d'agent immobilier, en ce compris les personnes visées à l'article 4 de cet arrêté, chargé de cette vente est soumis à la même obligation, s'il dispose de l'identité du preneur, le cas échéant pour le notaire, en ayant recours au registre national.
@@ -2033,14 +2028,17 @@ Le preneur qui n'a pas exercé son droit dans ce délai est forclos.
 Si le montant de la dernière enchère retenue par le notaire est inférieur ou égal au prix maximum renseigné par le preneur, ce dernier aura exercé son droit de préférence et le bien lui sera adjugé au prix de la dernière enchère retenue. Si le montant de la dernière enchère retenue par le notaire dépasse le prix maximum renseigné par le preneur, ce dernier ne pourra plus exercer son droit de préférence.
 Paragraphe 7. Les notifications, déclarations d'intention de vendre, demandes, offres et décisions des bailleurs, preneurs, des agents immobiliers et notaires effectuées ou prises en exécution des dispositions du présent article sont notifiées, à peine de nullité, par voie recommandée avec accusé de réception.
 Paragraphe 8. Toute convention, écrite ou verbale portant sur une vente soumise au droit de préférence est irréfragablement réputée conclue sous la condition suspensive du non-exercice du droit de préférence établi en vertu des présentes dispositions.
-#### Art. 247/3  - Sanction
+#### Art. 247/3 
+Sanction
 La réalisation d'une vente en violation du droit de préférence du preneur ouvre le droit à une action en subrogation qu'il peut intenter contre l'acquéreur.
 L'action en subrogation visée à l'alinéa 1 est également signifiée au bailleur.
 La demande n'est reçue qu'après que l'exploit introductif d'instance a été transcrit à l'Administration générale de la Documentation Patrimoniale, à la diligence de l'huissier auteur de l'exploit.
 Si le juge reçoit l'action en subrogation, le jugement vaut titre. Tout jugement relatif à une demande de subrogation est transcrit à l'Administration générale de la Documentation Patrimoniale en marge de la transcription de l'action.
 Le preneur subrogé rembourse à l'acquéreur le prix payé par lui, sans préjudice de toute action que ce dernier souhaiterait introduire à l'encontre du bailleur fautif.
 Le preneur subrogé est tenu d'indemniser l'acquéreur pour les frais de l'acte. Les droits d'enregistrement sont restitués à la demande de l'acquéreur par l'administration fiscale en charge de la perception de ces droits.
-L'action en subrogation se prescrit par un an à dater de la transcription, soit du procès-verbal de l'adjudication publique, soit de la signification de l'acte authentique constatant la vente sous seing privé.#### Art. 247/4  - Disposition impérative
+L'action en subrogation se prescrit par un an à dater de la transcription, soit du procès-verbal de l'adjudication publique, soit de la signification de l'acte authentique constatant la vente sous seing privé.
+#### Art. 247/4
+Disposition impérative
 Est réputée non-écrite, toute convention par laquelle le preneur renonce d'avance, en tout ou en partie, au droit de préférence prévu par l'article 247/1.
 #### Art. 248.  
 Principes
