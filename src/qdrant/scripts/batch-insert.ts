@@ -1,7 +1,7 @@
 import {QdrantClient} from "@qdrant/js-client-rest";
-import {RagPipeline} from "../offline-rag-prep/rag-pipeline.js";
-import {MarkdownTextSplitter} from "../offline-rag-prep/markdown-text-splitter.js";
-import {LegalArticlePoint} from "../interface/legal-article-point.js";
+import {RagPipeline} from "../../offline-rag-prep/rag-pipeline.js";
+import {MarkdownTextSplitter} from "../../offline-rag-prep/markdown-text-splitter.js";
+import {LegalArticlePoint} from "../../interface/legal-article-point.js";
 
 const client = new QdrantClient({host: "localhost", port: 6333});
 
