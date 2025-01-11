@@ -160,7 +160,7 @@ async function guideAfterInvalidQuestion(invalidQuestion: string,
     ]);
 
     const invalidQuestionChain = invalidQuestionPrompt.pipe(model);
-    const guidanceResponse = await invalidQuestionChain.invoke({});
+    const guidanceResponse = await invalidQuestionChain.invoke({questionLang});
     const response = new Command({
         update: {
             messages: messagesStateReducer(messages, [new AIMessage(guidanceResponse)])
@@ -194,7 +194,7 @@ async function guideAfterUnknownSource(invalidQuestion: string,
     ]);
 
     const unknownSourceChain = unknownSourcePrompt.pipe(model);
-    const sourceGuidanceResponse = await unknownSourceChain.invoke({});
+    const sourceGuidanceResponse = await unknownSourceChain.invoke({questionLang});
     const response = new Command({
         update: {
             messages: messagesStateReducer(messages, [new AIMessage(sourceGuidanceResponse)])
@@ -226,7 +226,7 @@ async function handleProcessingError(error: unknown,
     ]);
 
     const errorChain = errorPrompt.pipe(model);
-    const errorResponse = await errorChain.invoke({});
+    const errorResponse = await errorChain.invoke({questionLang});
     const response = new Command({
         update: {
             messages: messagesStateReducer(messages, [new AIMessage(errorResponse)])
