@@ -6,7 +6,7 @@ import {LegalSource, LegalSourceSchema} from "../../interface/legal-document.js"
 import {UserLang, UserLangSchema} from "../../interface/user-lang.js";
 import {extractContent} from "../../utils/message-to-string.js";
 
-const VALIDATOR_PROMPT = `
+const QUESTION_VALIDATOR_PROMPT = `
     You are a precise and thorough question content validator. Instructions:
     You will receive a question as input. Upon receiving the question, you have one task.
     Your only task is to validate that the question is about law, and more specifically about one of the areas of law known by our application.
@@ -31,7 +31,7 @@ const LEGAL_SOURCE_INFERENCE_PROMPT = `
 `;
 
 const validationPrompt = ChatPromptTemplate.fromMessages([
-    ["system", VALIDATOR_PROMPT],
+    ["system", QUESTION_VALIDATOR_PROMPT],
     ["human", "{question}"]
 ]);
 
