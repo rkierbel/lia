@@ -1,50 +1,23 @@
 import {PointOfContactAnnotation} from "../state.js";
 import {Command, interrupt} from "@langchain/langgraph";
 import {AIMessage} from "@langchain/core/messages";
-import {WELCOME_HUMAN} from "../prompts.js";
 import * as tools from "./point-of-contact-tools.js";
-
-const askNewQuestionMessage = "I apologize, but I can only help with questions about Brussels housing law, family law, or criminal law. " +
-    "Could you please rephrase your question to focus on one of these areas?";
+import {ChatOpenAI} from "@langchain/openai";
+import {ChatPromptTemplate} from "@langchain/core/prompts";
+import {UserLang} from "../../interface/user-lang.js";
 
 export const pointOfContact =
     async (state: typeof PointOfContactAnnotation.State) => {
         console.log("[PointOfContact] called");
 
         const messages = state.messages;
-
-        // Handles initial contact
-        if (messages.length === 0) {
-            console.log("[PointOfContact] - initial contact - welcome prompt");
-            return new Command({
-                update: {
-                    messages: [new AIMessage({
-                        content: WELCOME_HUMAN
-                    })]
-                },
-                goto: 'pointOfContact'
-            });
-        }
-
         const lastMessage = messages[messages.length - 1];
 
-        // Checks if we have an answer from legalCommunicator => transmits the answer to user
-        if (state.answer) {
-            console.log("[PointOfContact] - answer provided by legalCommunicator");
-            const response = new Command({
-                update: {
-                    messages: [new AIMessage({
-                        content: state.answer
-                    })],
-                    answer: ""
-                },
-                goto: 'pointOfContact'
-            });
+        // If we have an answer from legalCommunicator, transmits the answer to user
+        if (state.answer) return await answerAndWaitForNewQuestion(state.answer, state.userLang);
 
-            // Waits for next question after delivering answer
-            await interrupt("Waiting for next question after delivering answer");
-            return response;
-        }
+        // Handles initial contact
+        if (messages.length === 0) return await welcomeUser();
 
         // Receives a new question
         const questionContent = Array.isArray(lastMessage.content) ?
@@ -52,66 +25,209 @@ export const pointOfContact =
                 typeof part === 'string' ? part : JSON.stringify(part)).join(' ')
             : lastMessage.content;
 
+        const questionLang: UserLang = await tools.languageDetector.invoke({text: questionContent});
+
         try {
             console.log("[PointOfContact] - validating question");
+
             // First, validates the question is about a known area of law
-            const validationResult = await tools.questionValidator.invoke({
-                question: questionContent
-            });
+            const validationResult = await tools.questionValidator.invoke({question: questionContent});
+            if (validationResult !== "yes") return await guideAfterInvalidQuestion(questionContent, questionLang);
 
-            if (validationResult !== "yes") {
-                console.warn("[PointOfContact] - invalid legal question");
-                // Question is invalid, ask for another question
-                const response = new Command({
-                    update: {
-                        messages: [new AIMessage({content: askNewQuestionMessage})]
-                    },
-                    goto: 'pointOfContact'
-                });
-                await interrupt("Waiting for new question after invalid input");
-                return response;
-            }
-
+            // Validate the question relates to a known legal source
             const sourceResult = await tools.legalSourceInference.invoke({question: questionContent});
+            if (sourceResult === "unknown") return await guideAfterUnknownSource(questionContent, questionLang);
 
-            if (sourceResult === "unknown") {
-                console.warn("[PointOfContact] - unknown legal source");
-                const response = new Command({
-                    update: {
-                        messages: [new AIMessage({content: askNewQuestionMessage})]
-                    },
-                    goto: "pointOfContact"
-                })
-                await interrupt("Waiting for new question after unknown source");
-                return response;
-            }
-
-            console.warn("[PointOfContact] - question sent to legalClassifier");
+            console.log("[PointOfContact] - question sent to legalClassifier");
+            const confirmationPrompt = ChatPromptTemplate.fromMessages([
+                ["system",
+                    `
+                    You are a legal assistant processing a user's legal question.
+                    You communicate with the user in ${questionLang}
+                    Acknowledge that you understand the user's question and will help them.
+                    Indicate that you will now analyze the question to provide the most relevant legal information.
+                    Maintain a professional and reassuring tone.
+                `],
+                ["human", questionContent]
+            ]);
+            const model = new ChatOpenAI({
+                model: "gpt-4o",
+                temperature: 0
+            });
+            const confirmationChain = confirmationPrompt.pipe(model);
+            const confirmationResponse = await confirmationChain.invoke({});
             return new Command({
                 update: {
                     question: lastMessage.content,
                     sourceName: sourceResult,
-                    messages: [new AIMessage({
-                        content: "Thank you for your legal question. " +
-                            "I'll help you find the relevant legal information."
-                    })],
+                    messages: [new AIMessage(confirmationResponse)],
+                    userLang: questionLang
                 },
                 goto: 'legalClassifier'
             });
 
         } catch (error) {
-            console.error('[PointOfContact] Processing error:', error);
-            const response = new Command({
-                update: {
-                    messages: [new AIMessage({
-                        content: "I apologize, but I encountered an error processing your question. Could you please try asking again?"
-                    })]
-                },
-                goto: 'pointOfContact'
-            });
-
-            // Wait for another question after error
-            await interrupt("Waiting for new question after error");
-            return response;
+            // A processing error occurred
+            return await handleProcessingError(error, questionLang);
         }
     };
+
+
+async function answerAndWaitForNewQuestion(answer: string, questionLang: UserLang) {
+    console.log("[PointOfContact] - answer provided by legalCommunicator");
+    const model = new ChatOpenAI({
+        model: "gpt-4o",
+        temperature: 0
+    });
+    const answerPrompt = ChatPromptTemplate.fromMessages([
+        ["system",
+            `
+            You are a legal assistant communicating a precise legal answer to a user.
+            You communicate with the user in ${questionLang}.
+            The answer comes from verified legal sources.
+            Ensure the language and tone are clear, professional, and understandable.
+            If not needed, do not reformulate the answer.
+            If the answer contains legal references, present them clearly.
+        `],
+        ["human", `Communicate this legal answer: ${answer}`]
+    ]);
+    const answerChain = answerPrompt.pipe(model);
+    const communicatedAnswer = await answerChain.invoke({});
+
+    const response = new Command({
+        update: {
+            messages: [new AIMessage(communicatedAnswer)],
+            answer: ""
+        },
+        goto: 'pointOfContact'
+    });
+
+    // Waits for next question after delivering answer
+    await interrupt("Waiting for next question after delivering answer");
+    return response;
+}
+
+async function welcomeUser() {
+    console.log("[PointOfContact] - initial contact - welcome prompt");
+    const model = new ChatOpenAI({
+        model: "gpt-4o",
+        temperature: 0
+    });
+    const welcomePrompt = ChatPromptTemplate.fromMessages([
+        ["system",
+            `
+            You are a multilingual legal assistant helping users with questions about Belgian law.
+            Your goal is twofold:
+            1) welcome the user in three languages: English, French and Dutch;
+            2) encourage them to ask a legal question.
+            Respond in a friendly, professional tone.
+            Be sure to mention the areas of law you can help with: housing law, family law, and criminal law.
+            Respond in the language of the user's interface.
+        `],
+        ["human", "Start the conversation"]
+    ]);
+    const welcomeChain = welcomePrompt.pipe(model);
+    const welcomeResponse = await welcomeChain.invoke({});
+
+    return new Command({
+        update: {
+            messages: [new AIMessage(welcomeResponse)]
+        },
+        goto: 'pointOfContact'
+    });
+}
+
+async function guideAfterInvalidQuestion(invalidQuestion: string, questionLang: UserLang) {
+    console.warn("[PointOfContact] - invalid legal question");
+    const model = new ChatOpenAI({
+        model: "gpt-4o",
+        temperature: 0
+    });
+    const invalidQuestionPrompt = ChatPromptTemplate.fromMessages([
+        ["system",
+            `
+            You are a helpful legal assistant guiding a user.
+            You communicate with the user in ${questionLang}.
+            The user has asked a question that is not about law or not within the areas we can help with.
+            Kindly explain the areas of law we can assist with: housing law, family law, and criminal law.
+            Encourage the user to rephrase their question or ask a question about a known law area.
+            Maintain a friendly and professional tone.
+        `],
+        ["human", invalidQuestion]
+    ]);
+
+    const invalidQuestionChain = invalidQuestionPrompt.pipe(model);
+    const guidanceResponse = await invalidQuestionChain.invoke({});
+    const response = new Command({
+        update: {
+            messages: [new AIMessage(guidanceResponse)]
+        },
+        goto: 'pointOfContact'
+    });
+
+    await interrupt("Waiting for new question after invalid input");
+    return response;
+}
+
+async function guideAfterUnknownSource(invalidQuestion: string, questionLang: UserLang) {
+    console.warn("[PointOfContact] - unknown legal source");
+    const model = new ChatOpenAI({
+        model: "gpt-4o",
+        temperature: 0
+    });
+    const unknownSourcePrompt = ChatPromptTemplate.fromMessages([
+        ["system",
+            `
+            You are a helpful legal assistant.
+            You communicate with the user in ${questionLang}.
+            The user's question does not clearly relate to housing law, family law, or criminal law.
+            Provide clear guidance on the types of legal questions you can help with.
+            Encourage the user to rephrase or clarify their question.
+            Maintain a friendly and professional tone.
+        `],
+        ["human", invalidQuestion]
+    ]);
+
+    const unknownSourceChain = unknownSourcePrompt.pipe(model);
+    const sourceGuidanceResponse = await unknownSourceChain.invoke({});
+    const response = new Command({
+        update: {
+            messages: [new AIMessage(sourceGuidanceResponse)]
+        },
+        goto: "pointOfContact"
+    })
+    await interrupt("Waiting for new question after unknown source");
+    return response;
+}
+
+async function handleProcessingError(error: unknown, questionLang: UserLang) {
+    console.error('[PointOfContact] Processing error:', error);
+    const model = new ChatOpenAI({
+        model: "gpt-4o",
+        temperature: 0
+    });
+    const errorPrompt = ChatPromptTemplate.fromMessages([
+        ["system",
+            `
+            You are a legal assistant handling an unexpected error.
+            You communicate with the user in ${questionLang}.
+            Apologize for the inconvenience and reassure the user.
+            Invite them to try asking their question again.
+            Maintain a calm and professional tone.
+        `],
+        ["human", "Error occurred"]
+    ]);
+
+    const errorChain = errorPrompt.pipe(model);
+    const errorResponse = await errorChain.invoke({});
+    const response = new Command({
+        update: {
+            messages: [new AIMessage(errorResponse)]
+        },
+        goto: 'pointOfContact'
+    });
+
+    // Wait for another question after error
+    await interrupt("Waiting for new question after error");
+    return response;
+}

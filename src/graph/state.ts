@@ -1,8 +1,10 @@
 import {Annotation, MessagesAnnotation} from "@langchain/langgraph";
 import {LegalSource} from "../interface/legal-document.js";
+import {UserLang} from "../interface/user-lang.js";
 
 export const PointOfContactAnnotation  = Annotation.Root({
     ...MessagesAnnotation.spec,
+    userLang: Annotation<UserLang>,
     question: Annotation<string>,
     sourceName: Annotation<LegalSource>,
     answer: Annotation<string>,

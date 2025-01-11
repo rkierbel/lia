@@ -5,28 +5,6 @@ import {LegalSource, LegalSourceSchema} from "../../interface/legal-document.js"
 import {KnowledgeBase} from "../../offline-rag-prep/knowledge-base.js";
 import {z} from "zod";
 
-const legalDocsRetriever = tool(
-    async ({sourceName, query}:{
-        sourceName: LegalSource,
-        query: string
-    }) => {
-        if (sourceName === "unknown") {
-            throw new Error("Cannot retrieve documents for unknown source");
-        }
-        const retriever = await new KnowledgeBase().retriever(sourceName);
-        const docs = await retriever.invoke(query);
-        return JSON.stringify(docs);
-    },
-    {
-        name: "belgian_law_search",
-        description: "Search Belgian legal documents matching a legal question to provide a comprehensive legal answer",
-        schema: z.object({
-            sourceName: LegalSourceSchema,
-            query: z.string().describe("The search query to match with legal sources")
-        })
-    }
-)
-
 export const legalResearcher =
     async (state: typeof LegalClassifierAnnotation.State) => {
         try {
@@ -62,3 +40,25 @@ export const legalResearcher =
         }
 
     };
+
+const legalDocsRetriever = tool(
+    async ({sourceName, query}: {
+        sourceName: LegalSource,
+        query: string
+    }) => {
+        if (sourceName === "unknown") {
+            throw new Error("Cannot retrieve documents for unknown source");
+        }
+        const retriever = await new KnowledgeBase().retriever(sourceName);
+        const docs = await retriever.invoke(query);
+        return JSON.stringify(docs);
+    },
+    {
+        name: "belgian_law_search",
+        description: "Search Belgian legal documents matching a legal question to provide a comprehensive legal answer",
+        schema: z.object({
+            sourceName: LegalSourceSchema,
+            query: z.string().describe("The search query to match with legal sources")
+        })
+    }
+)

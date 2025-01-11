@@ -3,6 +3,7 @@ import {tool} from "@langchain/core/tools";
 import {ChatOpenAI} from "@langchain/openai";
 import {z} from "zod";
 import {LegalSource, LegalSourceSchema} from "../../interface/legal-document.js";
+import {UserLang, UserLangSchema} from "../../interface/user-lang.js";
 
 const VALIDATOR_PROMPT = "You are a precise and thorough question content validator." +
     "Instructions:" +
@@ -99,3 +100,43 @@ export const legalSourceInference = tool(
         })
     }
 )
+
+export const languageDetector = tool(
+    async ({text}: {text: string}): Promise<UserLang> => {
+        const model = new ChatOpenAI({
+            model: "gpt-4o",
+            temperature: 0
+        });
+
+        const prompt = ChatPromptTemplate.fromMessages([
+            ["system", `
+                You are a language detection expert. 
+                Given a piece of text, identify the language.
+                Possible languages: English, French, Dutch.
+                If you do not recognize the language, return 'en'.
+                Only return one of: 'en', 'fr', 'nl'
+            `],
+            ["human", "{text}"]
+        ]);
+
+        const chain = prompt.pipe(model);
+        const result = await chain.invoke({text});
+
+        let contentStr: string;
+        if (Array.isArray(result.content)) {
+            contentStr = result.content.map(part =>
+                JSON.stringify(part)
+            ).join(' ');
+        } else {
+            contentStr = result.content;
+        }
+        return UserLangSchema.parse(contentStr.toLowerCase().trim());
+    },
+    {
+        name: "detect_language",
+        description: "Detects the language of the input text",
+        schema: z.object({
+            text: z.string().describe("The text to detect the language of")
+        })
+    }
+);
