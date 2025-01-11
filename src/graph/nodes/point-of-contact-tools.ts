@@ -5,6 +5,11 @@ import {z} from "zod";
 import {LegalSource, LegalSourceSchema} from "../../interface/legal-document.js";
 import {UserLang, UserLangSchema} from "../../interface/user-lang.js";
 import {extractContent} from "../../utils/message-to-string.js";
+import dotenv from "dotenv";
+
+dotenv.config({path: "../../../.env"});
+
+const apiKey = process.env.OPENAI;
 
 const QUESTION_VALIDATOR_PROMPT = `
     You are a precise and thorough question content validator. Instructions:
@@ -43,8 +48,9 @@ const legalSourceInferencePrompt = ChatPromptTemplate.fromMessages([
 export const questionValidator = tool(
     async ({question}) => {
         const model = new ChatOpenAI({
-            modelName: "gpt-4",
-            temperature: 0
+            modelName: "gpt-4o-mini",
+            temperature: 0,
+            apiKey
         });
 
         const chain = validationPrompt.pipe(model);
@@ -65,8 +71,9 @@ export const questionValidator = tool(
 export const legalSourceInference = tool(
     async ({question}) => {
         const model = new ChatOpenAI({
-            modelName: "gpt-4",
-            temperature: 0
+            modelName: "gpt-4o-mini",
+            temperature: 0,
+            apiKey
         });
 
         const chain = legalSourceInferencePrompt.pipe(model);
@@ -92,8 +99,9 @@ export const legalSourceInference = tool(
 export const languageDetector = tool(
     async ({text}: { text: string }): Promise<UserLang> => {
         const model = new ChatOpenAI({
-            model: "gpt-4o",
-            temperature: 0
+            model: "gpt-4o-mini",
+            temperature: 0,
+            apiKey
         });
 
         const prompt = ChatPromptTemplate.fromMessages([

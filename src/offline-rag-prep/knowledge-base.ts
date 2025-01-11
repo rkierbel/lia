@@ -5,11 +5,7 @@ import {JinaEmbeddings} from "@langchain/community/embeddings/jina";
 import dotenv from "dotenv";
 import {LegalDocument, LegalSource} from "../interface/legal-document.js";
 
-/*
-     TODO ->
-     5) create UI
-*/
-dotenv.config({path: "/../.env"});
+dotenv.config({path: "../.env"});
 
 const embeddingModel = new JinaEmbeddings({
     apiKey: process.env.JINA,

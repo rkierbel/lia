@@ -6,6 +6,11 @@ import {ChatOpenAI} from "@langchain/openai";
 import {ChatPromptTemplate} from "@langchain/core/prompts";
 import {UserLang} from "../../interface/user-lang.js";
 import {extractContent} from "../../utils/message-to-string.js";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const apiKey = process.env.OPENAI;
 
 export const pointOfContact =
     async (state: typeof PointOfContactAnnotation.State) => {
@@ -48,8 +53,9 @@ export const pointOfContact =
                 ["human", questionContent]
             ]);
             const model = new ChatOpenAI({
-                model: "gpt-4o",
-                temperature: 0
+                model: "gpt-4o-mini",
+                temperature: 0,
+                apiKey
             });
             const confirmationChain = confirmationPrompt.pipe(model);
             const confirmationResponse = await confirmationChain.invoke({questionLang});
@@ -77,8 +83,9 @@ async function answerAndWaitForNewQuestion(answer: string,
                                            messages: BaseMessage[]) {
     console.log("[PointOfContact] - answer provided by legalCommunicator");
     const model = new ChatOpenAI({
-        model: "gpt-4o",
-        temperature: 0
+        model: "gpt-4o-mini",
+        temperature: 0,
+        apiKey
     });
     const answerPrompt = ChatPromptTemplate.fromMessages([
         ["system",
@@ -111,8 +118,9 @@ async function answerAndWaitForNewQuestion(answer: string,
 async function welcomeUser(messages: BaseMessage[]) {
     console.log("[PointOfContact] - initial contact - welcome prompt");
     const model = new ChatOpenAI({
-        model: "gpt-4o",
-        temperature: 0
+        model: "gpt-4o-mini",
+        temperature: 0,
+        apiKey
     });
     const welcomePrompt = ChatPromptTemplate.fromMessages([
         ["system",
@@ -143,8 +151,9 @@ async function guideAfterInvalidQuestion(invalidQuestion: string,
                                          messages: BaseMessage[]) {
     console.warn("[PointOfContact] - invalid legal question");
     const model = new ChatOpenAI({
-        model: "gpt-4o",
-        temperature: 0
+        model: "gpt-4o-mini",
+        temperature: 0,
+        apiKey
     });
     const invalidQuestionPrompt = ChatPromptTemplate.fromMessages([
         ["system",
@@ -177,8 +186,9 @@ async function guideAfterUnknownSource(invalidQuestion: string,
                                        messages: BaseMessage[]) {
     console.warn("[PointOfContact] - unknown legal source");
     const model = new ChatOpenAI({
-        model: "gpt-4o",
-        temperature: 0
+        model: "gpt-4o-mini",
+        temperature: 0,
+        apiKey
     });
     const unknownSourcePrompt = ChatPromptTemplate.fromMessages([
         ["system",
@@ -210,8 +220,9 @@ async function handleProcessingError(error: unknown,
                                      messages: BaseMessage[]) {
     console.error('[PointOfContact] Processing error:', error);
     const model = new ChatOpenAI({
-        model: "gpt-4o",
-        temperature: 0
+        model: "gpt-4o-mini",
+        temperature: 0,
+        apiKey
     });
     const errorPrompt = ChatPromptTemplate.fromMessages([
         ["system",

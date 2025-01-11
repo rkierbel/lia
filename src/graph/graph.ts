@@ -5,14 +5,20 @@ import {legalResearcher} from "./nodes/legal-researcher.js";
 import {legalClassifier} from "./nodes/legal-classifier.js";
 import {legalCommunicator} from "./nodes/legal-communicator.js";
 
-export const graph = new StateGraph(OverallStateAnnotation)
-    .addNode('pointOfContact', pointOfContact)
-    .addNode('legalClassifier', legalClassifier)
-    .addNode('legalResearcher', legalResearcher)
-    .addNode('legalCommunicator', legalCommunicator)
+export const workflow = new StateGraph(OverallStateAnnotation)
+    .addNode('pointOfContact', pointOfContact, {
+        ends: ['legalClassifier', 'pointOfContact', END]
+    })
+    .addNode('legalClassifier', legalClassifier, {
+        ends: ['legalResearcher']
+    })
+    .addNode('legalResearcher', legalResearcher, {
+        ends: ['legalCommunicator']
+    })
+    .addNode('legalCommunicator', legalCommunicator, {
+        ends: ['pointOfContact']
+    })
     .addEdge(START, 'pointOfContact')
-    .addEdge('pointOfContact', END)
     .compile({
         checkpointer: new MemorySaver()
     });
-
