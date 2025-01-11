@@ -12,18 +12,18 @@ export const PointOfContactAnnotation  = Annotation.Root({
 
 export const LegalClassifierAnnotation = Annotation.Root({
     pointOfLaw: Annotation<string>,
-    keywords: Annotation<string[]>,
     sourceName: Annotation<LegalSource>
 });
 
 export const LegalResearcherAnnotation = Annotation.Root({
+    ...MessagesAnnotation.spec,
     ...LegalClassifierAnnotation.spec,
     docs: Annotation<string>,
 });
 
 export const LegalCommunicatorAnnotation  = Annotation.Root({
-    conclusion: Annotation<string>,
-    references: Annotation<string[]>
+    ...MessagesAnnotation.spec,
+    conclusion: Annotation<string>
 });
 
 export const OverallStateAnnotation = Annotation.Root({

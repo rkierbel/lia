@@ -8,7 +8,7 @@ import {z} from "zod";
 export const legalResearcher =
     async (state: typeof LegalClassifierAnnotation.State) => {
         try {
-            const {sourceName, pointOfLaw, keywords} = state;
+            const {sourceName, pointOfLaw} = state;
             if (sourceName === "unknown") {
                 return new Command({
                     update: {
@@ -19,10 +19,10 @@ export const legalResearcher =
             }
             const docs: string = JSON.stringify(await legalDocsRetriever.invoke({
                 sourceName,
-                query: [pointOfLaw, keywords.join(', ')].join('; ')
+                query: pointOfLaw
             }));
 
-            if (docs) console.log("[LegalResearcher] - successfully retrieved legal sources");
+            if (docs) console.log("[LegalResearcher] - successfully retrieved legal sources!", docs);
             return new Command({
                 update: {
                     docs

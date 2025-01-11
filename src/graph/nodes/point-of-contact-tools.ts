@@ -4,12 +4,13 @@ import {ChatOpenAI} from "@langchain/openai";
 import {z} from "zod";
 import {LegalSource, LegalSourceSchema} from "../../interface/legal-document.js";
 import {UserLang, UserLangSchema} from "../../interface/user-lang.js";
+import {extractContent} from "../../utils/message-to-string.js";
 
 const VALIDATOR_PROMPT = "You are a precise and thorough question content validator." +
     "Instructions:" +
     "You will receive a question as input. Upon receiving the question, you have one task." +
     "Your only task is to validate that the question is about law, and more specifically about one of the areas of law known by our application." +
-    "You validate that the question is about one of the areas of law known by our application in a binary: you can only reply yes, or no." +
+    "You validate that the question is about one of the areas of law known by our application in a binary way: you can only reply yes, or no." +
     "Areas of law known by our application: housing law, family law, criminal law." +
     "If the question is about an area of law known by our application, reply only: yes." +
     "If the question is not about an area of law known by our application, reply only: no." +
@@ -48,14 +49,8 @@ export const questionValidator = tool(
 
         const chain = validationPrompt.pipe(model);
         const isQuestionLegal = await chain.invoke({question});
-
-        let contentStr: string;
-        if (Array.isArray(isQuestionLegal.content)) {
-            contentStr = isQuestionLegal.content.map(part =>
-                JSON.stringify(part)).join(' ');
-        } else {
-            contentStr = isQuestionLegal.content;
-        }
+        const contentStr = extractContent(isQuestionLegal);
+        
         return contentStr.toLowerCase().includes('yes') ? "yes" : "no";
     },
     {
@@ -76,14 +71,7 @@ export const legalSourceInference = tool(
 
         const chain = legalSourceInferencePrompt.pipe(model);
         const sourceName = await chain.invoke({question});
-
-        let contentStr: string;
-        if (Array.isArray(sourceName.content)) {
-            contentStr = sourceName.content.map(part =>
-                JSON.stringify(part)).join(' ');
-        } else {
-            contentStr = sourceName.content;
-        }
+        const contentStr = extractContent(sourceName);
 
         try {
             return LegalSourceSchema.parse(contentStr.toLowerCase().trim()) as LegalSource;
@@ -121,15 +109,8 @@ export const languageDetector = tool(
 
         const chain = prompt.pipe(model);
         const result = await chain.invoke({text});
+        const contentStr = extractContent(result);
 
-        let contentStr: string;
-        if (Array.isArray(result.content)) {
-            contentStr = result.content.map(part =>
-                JSON.stringify(part)
-            ).join(' ');
-        } else {
-            contentStr = result.content;
-        }
         return UserLangSchema.parse(contentStr.toLowerCase().trim());
     },
     {

@@ -1,10 +1,11 @@
 import {PointOfContactAnnotation} from "../state.js";
-import {Command, interrupt} from "@langchain/langgraph";
-import {AIMessage} from "@langchain/core/messages";
+import {Command, interrupt, messagesStateReducer} from "@langchain/langgraph";
+import {AIMessage, BaseMessage} from "@langchain/core/messages";
 import * as tools from "./point-of-contact-tools.js";
 import {ChatOpenAI} from "@langchain/openai";
 import {ChatPromptTemplate} from "@langchain/core/prompts";
 import {UserLang} from "../../interface/user-lang.js";
+import {extractContent} from "../../utils/message-to-string.js";
 
 export const pointOfContact =
     async (state: typeof PointOfContactAnnotation.State) => {
@@ -14,16 +15,13 @@ export const pointOfContact =
         const lastMessage = messages[messages.length - 1];
 
         // If we have an answer from legalCommunicator, transmits the answer to user
-        if (state.answer) return await answerAndWaitForNewQuestion(state.answer, state.userLang);
+        if (state.answer) return await answerAndWaitForNewQuestion(state.answer, state.userLang, messages);
 
         // Handles initial contact
-        if (messages.length === 0) return await welcomeUser();
+        if (messages.length === 0) return await welcomeUser(messages);
 
         // Receives a new question
-        const questionContent = Array.isArray(lastMessage.content) ?
-            lastMessage.content.map(part =>
-                typeof part === 'string' ? part : JSON.stringify(part)).join(' ')
-            : lastMessage.content;
+        const questionContent = extractContent(lastMessage);
 
         const questionLang: UserLang = await tools.languageDetector.invoke({text: questionContent});
 
@@ -32,13 +30,12 @@ export const pointOfContact =
 
             // First, validates the question is about a known area of law
             const validationResult = await tools.questionValidator.invoke({question: questionContent});
-            if (validationResult !== "yes") return await guideAfterInvalidQuestion(questionContent, questionLang);
+            if (validationResult !== "yes") return await guideAfterInvalidQuestion(questionContent, questionLang, messages);
 
             // Validate the question relates to a known legal source
             const sourceResult = await tools.legalSourceInference.invoke({question: questionContent});
-            if (sourceResult === "unknown") return await guideAfterUnknownSource(questionContent, questionLang);
+            if (sourceResult === "unknown") return await guideAfterUnknownSource(questionContent, questionLang, messages);
 
-            console.log("[PointOfContact] - question sent to legalClassifier");
             const confirmationPrompt = ChatPromptTemplate.fromMessages([
                 ["system",
                     `
@@ -55,12 +52,14 @@ export const pointOfContact =
                 temperature: 0
             });
             const confirmationChain = confirmationPrompt.pipe(model);
-            const confirmationResponse = await confirmationChain.invoke({});
+            const confirmationResponse = await confirmationChain.invoke({questionLang});
+            console.log("[PointOfContact] - question sent to legalClassifier!", questionContent, sourceResult);
+
             return new Command({
                 update: {
                     question: lastMessage.content,
                     sourceName: sourceResult,
-                    messages: [new AIMessage(confirmationResponse)],
+                    messages: messagesStateReducer(messages, [new AIMessage(confirmationResponse)]),
                     userLang: questionLang
                 },
                 goto: 'legalClassifier'
@@ -68,12 +67,14 @@ export const pointOfContact =
 
         } catch (error) {
             // A processing error occurred
-            return await handleProcessingError(error, questionLang);
+            return await handleProcessingError(error, questionLang, messages);
         }
     };
 
 
-async function answerAndWaitForNewQuestion(answer: string, questionLang: UserLang) {
+async function answerAndWaitForNewQuestion(answer: string,
+                                           questionLang: UserLang,
+                                           messages: BaseMessage[]) {
     console.log("[PointOfContact] - answer provided by legalCommunicator");
     const model = new ChatOpenAI({
         model: "gpt-4o",
@@ -92,11 +93,11 @@ async function answerAndWaitForNewQuestion(answer: string, questionLang: UserLan
         ["human", `Communicate this legal answer: ${answer}`]
     ]);
     const answerChain = answerPrompt.pipe(model);
-    const communicatedAnswer = await answerChain.invoke({});
+    const communicatedAnswer = await answerChain.invoke({questionLang, answer});
 
     const response = new Command({
         update: {
-            messages: [new AIMessage(communicatedAnswer)],
+            messages: messagesStateReducer(messages, [new AIMessage(communicatedAnswer)]),
             answer: ""
         },
         goto: 'pointOfContact'
@@ -107,7 +108,7 @@ async function answerAndWaitForNewQuestion(answer: string, questionLang: UserLan
     return response;
 }
 
-async function welcomeUser() {
+async function welcomeUser(messages: BaseMessage[]) {
     console.log("[PointOfContact] - initial contact - welcome prompt");
     const model = new ChatOpenAI({
         model: "gpt-4o",
@@ -131,13 +132,15 @@ async function welcomeUser() {
 
     return new Command({
         update: {
-            messages: [new AIMessage(welcomeResponse)]
+            messages: messagesStateReducer(messages, [new AIMessage(welcomeResponse)])
         },
         goto: 'pointOfContact'
     });
 }
 
-async function guideAfterInvalidQuestion(invalidQuestion: string, questionLang: UserLang) {
+async function guideAfterInvalidQuestion(invalidQuestion: string,
+                                         questionLang: UserLang,
+                                         messages: BaseMessage[]) {
     console.warn("[PointOfContact] - invalid legal question");
     const model = new ChatOpenAI({
         model: "gpt-4o",
@@ -160,7 +163,7 @@ async function guideAfterInvalidQuestion(invalidQuestion: string, questionLang: 
     const guidanceResponse = await invalidQuestionChain.invoke({});
     const response = new Command({
         update: {
-            messages: [new AIMessage(guidanceResponse)]
+            messages: messagesStateReducer(messages, [new AIMessage(guidanceResponse)])
         },
         goto: 'pointOfContact'
     });
@@ -169,7 +172,9 @@ async function guideAfterInvalidQuestion(invalidQuestion: string, questionLang: 
     return response;
 }
 
-async function guideAfterUnknownSource(invalidQuestion: string, questionLang: UserLang) {
+async function guideAfterUnknownSource(invalidQuestion: string,
+                                       questionLang: UserLang,
+                                       messages: BaseMessage[]) {
     console.warn("[PointOfContact] - unknown legal source");
     const model = new ChatOpenAI({
         model: "gpt-4o",
@@ -192,7 +197,7 @@ async function guideAfterUnknownSource(invalidQuestion: string, questionLang: Us
     const sourceGuidanceResponse = await unknownSourceChain.invoke({});
     const response = new Command({
         update: {
-            messages: [new AIMessage(sourceGuidanceResponse)]
+            messages: messagesStateReducer(messages, [new AIMessage(sourceGuidanceResponse)])
         },
         goto: "pointOfContact"
     })
@@ -200,7 +205,9 @@ async function guideAfterUnknownSource(invalidQuestion: string, questionLang: Us
     return response;
 }
 
-async function handleProcessingError(error: unknown, questionLang: UserLang) {
+async function handleProcessingError(error: unknown,
+                                     questionLang: UserLang,
+                                     messages: BaseMessage[]) {
     console.error('[PointOfContact] Processing error:', error);
     const model = new ChatOpenAI({
         model: "gpt-4o",
@@ -222,7 +229,7 @@ async function handleProcessingError(error: unknown, questionLang: UserLang) {
     const errorResponse = await errorChain.invoke({});
     const response = new Command({
         update: {
-            messages: [new AIMessage(errorResponse)]
+            messages: messagesStateReducer(messages, [new AIMessage(errorResponse)])
         },
         goto: 'pointOfContact'
     });
