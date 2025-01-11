@@ -7,10 +7,9 @@ import {LegalDocument, LegalSource} from "../interface/legal-document.js";
 
 /*
      TODO ->
-     4) create langgraph
      5) create UI
 */
-dotenv.config({path: '../../.env'});
+dotenv.config({path: "/../.env"});
 
 const embeddingModel = new JinaEmbeddings({
     apiKey: process.env.JINA,
@@ -27,15 +26,17 @@ export class KnowledgeBase {
         this.textSplitter = new MarkdownTextSplitter();
     }
 
-    public async retriever(sourceName: string, sourceType: string) {
+    public async retriever(sourceName: Exclude<LegalSource, "unknown">) {
         const filter = {
             must: [
-                {key: 'metadata.sourceName', match: {value: sourceName}},
-                {key: 'metadata.sourceType', match: {value: sourceType}},
+                {key: "metadata.sourceName", match: {value: sourceName}},
+                {key: "metadata.sourceType", match: {value: "law"}},
             ]
         };
-        return new QdrantVectorStore(embeddingModel, {url: "http://localhost:6333", collectionName: 'belgian_law'})
-            .asRetriever({searchType: "similarity"}, filter);
+        return new QdrantVectorStore(embeddingModel, {
+                url: "http://localhost:6333",
+                collectionName: "belgian_law"
+            }).asRetriever({searchType: "similarity"}, filter);
     }
 
     public async setUpKnowledgeBase(sourcePath: string,
@@ -47,7 +48,7 @@ export class KnowledgeBase {
             embeddingModel,
             {
                 url: "http://localhost:6333",
-                collectionName: 'belgian_law',
+                collectionName: "belgian_law",
                 collectionConfig: {
                     vectors: {
                         size: 1024,
@@ -63,7 +64,7 @@ export class KnowledgeBase {
                     },
                     quantization_config: {
                         scalar: {
-                            type: 'int8',
+                            type: "int8",
                             quantile: 0.99,
                             always_ram: false
                         }
@@ -83,7 +84,7 @@ export class KnowledgeBase {
                 metadata: {
                     sourceName,
                     sourceType,
-                    elementRef: [sourceName, c.id].join('-')
+                    elementRef: [sourceName, c.id].join("-")
                 }
             }
         });

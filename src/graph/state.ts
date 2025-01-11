@@ -1,41 +1,32 @@
 import {Annotation, MessagesAnnotation} from "@langchain/langgraph";
+import {LegalSource} from "../interface/legal-document.js";
 
-export type lang = "en" | "fr" | "nl";
-
-
-export const Messages = Annotation.Root({...MessagesAnnotation.spec});
-
-export const LegalGraphIoAnnotation = Annotation.Root({
+export const PointOfContactAnnotation  = Annotation.Root({
+    ...MessagesAnnotation.spec,
     question: Annotation<string>,
-    legalMatter: Annotation<string>,
+    sourceName: Annotation<LegalSource>,
     answer: Annotation<string>,
-    ...Messages.spec
 });
 
-// returned by the LegalClassifier to the LegalResearcher
-export const PointOfLawAnnotation = Annotation.Root({
+export const LegalClassifierAnnotation = Annotation.Root({
     pointOfLaw: Annotation<string>,
     keywords: Annotation<string[]>,
-    sourceName: Annotation<string>,
-    sourceType: Annotation<string>,
+    sourceName: Annotation<LegalSource>
 });
 
-// returned by the LegalResearcher to the LegalCommunicator
-export const LegalResearchAnnotation = Annotation.Root({
-    ...PointOfLawAnnotation.spec,
-    docs: Annotation<string>
+export const LegalResearcherAnnotation = Annotation.Root({
+    ...LegalClassifierAnnotation.spec,
+    docs: Annotation<string>,
 });
 
-// returned by the LegalCommunicator to the PointOfContact
-export const ConclusionOfLawAnnotation = Annotation.Root({
+export const LegalCommunicatorAnnotation  = Annotation.Root({
     conclusion: Annotation<string>,
     references: Annotation<string[]>
 });
 
 export const OverallStateAnnotation = Annotation.Root({
-    ...Messages.spec,
-    ...LegalGraphIoAnnotation.spec,
-    ...PointOfLawAnnotation.spec,
-    ...LegalResearchAnnotation.spec,
-    ...ConclusionOfLawAnnotation.spec
+    ...PointOfContactAnnotation.spec,
+    ...LegalClassifierAnnotation.spec,
+    ...LegalResearcherAnnotation.spec,
+    ...LegalCommunicatorAnnotation .spec
 })
