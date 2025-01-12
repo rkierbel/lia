@@ -4,13 +4,10 @@ import {z} from "zod";
 import {LegalSource, LegalSourceSchema} from "../../interface/legal-document.js";
 import {UserLang, UserLangSchema} from "../../interface/user-lang.js";
 import {extractContent} from "../../utils/message-to-string.js";
-import dotenv from "dotenv";
 import {ToolNode} from "@langchain/langgraph/prebuilt";
 import {PointOfContactAnnotation} from "../state.js";
 
-dotenv.config({path: "../../../.env"});
-
-const apiKey = process.env.OPENAI;
+const apiKey = process.env.OPEN_AI;
 const model = new ChatOpenAI({
     modelName: "gpt-4o-mini",
     temperature: 0,
@@ -103,7 +100,7 @@ export const languageDetector = tool(
     }
 );
 
-export const tools = new ToolNode<typeof PointOfContactAnnotation.State>([
+export const toolNode = new ToolNode<typeof PointOfContactAnnotation.State>([
     questionValidator,
     legalSourceInference,
     languageDetector

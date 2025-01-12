@@ -1,0 +1,28 @@
+Server running on port 3000
+[PointOfContact] called with thread:  8a567bb1-56c6-4da0-aa79-2dab9ab7fad9
+[PointOfContact] - initial contact - welcome prompt
+[PointOfContact] called with thread:  8a567bb1-56c6-4da0-aa79-2dab9ab7fad9
+[PointOfContact] - initial contact - welcome prompt
+[ValidationNode] called
+[ValidationNode] called
+[ValidationNode] called
+[ValidationNode] called
+[ValidationNode] called
+
+
+$ curl -X POST http://localhost:3000/api/conversation/start
+{"conversationId":"ce5ca201-7056-4a4e-9c2b-63280ae39505","messages":[]}
+laure@Coconut MINGW64 ~/IdeaProjects/lia (master)
+$ curl -X POST http://localhost:3000/api/conversation/ce5ca201-7056-4a4e-9c2b-63280ae39505/message \
+-H "Content-Type: application/json" \
+-d '{
+    "message": "Can I be expelled from my house in Brussels?"
+}'
+{"messages":[{"role":"ai","content":"Hello and welcome! Bonjour et bienvenue ! Hallo en welkom! \n\nI'm here to assist you with any legal questions you may have regarding housing law, family law, or criminal law. Please feel free to ask your question!"}]}
+laure@Coconut MINGW64 ~/IdeaProjects/lia (master)
+$ curl -X POST http://localhost:3000/api/conversation/ce5ca201-7056-4a4e-9c2b-63280ae39505/message \
+-H "Content-Type: application/json" \
+-d '{
+    "message": "Can I be expelled from my house in Brussels?"
+}'
+{"messages":[{"role":"ai","content":"Hello and welcome! Bonjour et bienvenue ! Hallo en welkom! \n\nI'm here to assist you with any legal questions you may have regarding housing law, family law, or criminal law. Please feel free to ask your question!"},{"role":"ai","content":"Hello! Thank you for your warm welcome! I'm here to assist you with any legal questions you may have, specifically in the areas of housing law, family law, or criminal law. If you have a question in one of these areas, please feel free to ask! If your question is about something else, I encourage you to rephrase it or ask about one of the known law areas. I'm here to help!"}]}

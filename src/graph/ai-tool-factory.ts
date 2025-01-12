@@ -1,9 +1,6 @@
 import {ChatOpenAI} from "@langchain/openai";
-import dotenv from "dotenv";
 
-dotenv.config();
-
-const apiKey = "";
+const apiKey = process.env.OPEN_AI;
 
 /**
  * Factory function to create the ChatOpenAI model instance with tools bound.

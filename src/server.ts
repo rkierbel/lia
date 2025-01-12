@@ -1,9 +1,13 @@
+import dotenv from "dotenv";
+dotenv.config({ path: '../.env'});
+
 // api/server.ts
-import express, { Request, Response } from 'express';
-import { v4 as uuidv4 } from 'uuid';
-import { workflow } from './graph/graph.js';
+import express, {Request, Response} from 'express';
+import {v4 as uuidv4} from 'uuid';
 import {BaseMessage, HumanMessage} from '@langchain/core/messages';
+import {workflow} from "./graph/graph.js";
 import {InterruptHandler} from "./graph/interrupt-handler.js";
+
 
 const app = express();
 app.use(express.json());

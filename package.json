@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node dist/server.js",
-    "dev": "nodemon --exec \"npx tsx src/server.ts \"  ",
+    "dev": "nodemon --exec \"npx tsx -r dotenv/config src/server.ts\"",
     "build": "tsc",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write 'src/**/*.ts'"

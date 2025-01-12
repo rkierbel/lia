@@ -1,10 +1,7 @@
 import {PointOfContactAnnotation} from "../state.js";
 import {Command, interrupt, LangGraphRunnableConfig} from "@langchain/langgraph";
-import dotenv from "dotenv";
 import {createChatModel} from "../ai-tool-factory.js";
 import {AIMessageChunk} from "@langchain/core/messages";
-
-dotenv.config();
 
 const model = createChatModel();
 

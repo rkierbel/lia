@@ -2,10 +2,10 @@ import {PointOfContactAnnotation} from "../state.js";
 import {Command, interrupt, LangGraphRunnableConfig, messagesStateReducer} from "@langchain/langgraph";
 import {createChatModel} from "../ai-tool-factory.js";
 import {extractContent} from "../../utils/message-to-string.js";
-import {languageDetector, legalSourceInference, questionValidator, tools} from "./point-of-contact-tools.js";
+import {languageDetector, legalSourceInference, questionValidator, toolNode} from "./validation-tools.js";
 import {BaseMessage} from "@langchain/core/messages";
 
-const model = createChatModel().bindTools([tools]);
+const model = createChatModel().bindTools(toolNode.tools);
 
 export const validationNode = async (
     state: typeof PointOfContactAnnotation.State,
