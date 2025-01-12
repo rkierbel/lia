@@ -44,7 +44,12 @@ app.post('/api/conversation/start', async (
         for await (const output of stream) {
             if (output.messages) {
                 messages.push(...output.messages);
+                console.log("[/start] Stream output:", output.messages);
             }
+        }
+
+        if (!messages.length) {
+            throw new Error('Failed to initialize conversation. No welcome message.');
         }
 
         conversations.set(conversationId, {

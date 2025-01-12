@@ -1,5 +1,5 @@
 import {PointOfContactAnnotation} from "../state.js";
-import {Command, interrupt, LangGraphRunnableConfig} from "@langchain/langgraph";
+import {Command, interrupt, LangGraphRunnableConfig, messagesStateReducer} from "@langchain/langgraph";
 import {createChatModel} from "../ai-tool-factory.js";
 import {AIMessageChunk} from "@langchain/core/messages";
 
@@ -67,15 +67,14 @@ async function welcomeUser(state: typeof PointOfContactAnnotation.State,
             You are a multilingual legal assistant helping users with questions about Belgian law.
             Your goal is twofold:
             1) welcome the user in three languages: English, French and Dutch;
-            2) encourage them to ask a legal question.
+            2) in three languages (English, French and Dutch) encourage them to ask a legal question;
             Respond in a friendly, professional tone.
             Be sure to mention the areas of law you can help with: housing law, family law, and criminal law.
-            Respond in the language of the user's interface.
         `
         },
         {role: "human", content: "Start the conversation"}
     ], config);
-
+    console.log("LLM response - welcomeUser: ", response)
     // Save current state and interrupt for user input
     return handleUserInterrupt(state, response, config);
 }
@@ -85,23 +84,24 @@ async function handleUserInterrupt(
     response: AIMessageChunk,
     config?: LangGraphRunnableConfig
 ): Promise<Command> {
-    const updatedMessages = [...state.messages, response];
     const interruptValue = await interrupt({
         message: "Waiting for user input",
         threadInfo: {
             threadId: config?.configurable?.thread_id,
             currentState: {
                 ...state,
-                messages: updatedMessages,
+                messages: messagesStateReducer(state.messages, response),
                 answer: "",
             },
         },
     });
 
+    console.log("[handleUserInterrupt] - InterruptValue: ", interruptValue);
+
     // Create and return the Command object
     return new Command({
         update: {
-            messages: updatedMessages,
+            messages: messagesStateReducer(state.messages, response),
             answer: "",
             question: interruptValue as string,
         },
