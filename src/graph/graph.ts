@@ -4,10 +4,16 @@ import {pointOfContact} from "./nodes/point-of-contact.js";
 import {legalResearcher} from "./nodes/legal-researcher.js";
 import {legalClassifier} from "./nodes/legal-classifier.js";
 import {legalCommunicator} from "./nodes/legal-communicator.js";
+import {validationNode} from "./nodes/validation-node.js";
+
+const memory = new MemorySaver();
 
 export const workflow = new StateGraph(OverallStateAnnotation)
     .addNode('pointOfContact', pointOfContact, {
-        ends: ['legalClassifier', 'pointOfContact', END]
+        ends: ['validationNode', END]
+    })
+    .addNode('validationNode', validationNode, {
+        ends: ['legalClassifier', 'validationNode']
     })
     .addNode('legalClassifier', legalClassifier, {
         ends: ['legalResearcher']
@@ -20,5 +26,5 @@ export const workflow = new StateGraph(OverallStateAnnotation)
     })
     .addEdge(START, 'pointOfContact')
     .compile({
-        checkpointer: new MemorySaver()
+        checkpointer: memory
     });

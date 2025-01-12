@@ -1,26 +1,19 @@
 import {LegalClassifierAnnotation} from "../state.js";
-import {Command} from "@langchain/langgraph";
+import {Command, LangGraphRunnableConfig} from "@langchain/langgraph";
 import {tool} from "@langchain/core/tools";
 import {LegalSource, LegalSourceSchema} from "../../interface/legal-document.js";
 import {KnowledgeBase} from "../../offline-rag-prep/knowledge-base.js";
 import {z} from "zod";
 
 export const legalResearcher =
-    async (state: typeof LegalClassifierAnnotation.State) => {
+    async (state: typeof LegalClassifierAnnotation.State,
+           config?: LangGraphRunnableConfig) => {
         try {
             const {sourceName, pointOfLaw} = state;
-            if (sourceName === "unknown") {
-                return new Command({
-                    update: {
-                        answer: 'Unable to process request - unknown legal source'
-                    },
-                    goto: 'pointOfContact'
-                });
-            }
             const docs: string = JSON.stringify(await legalDocsRetriever.invoke({
                 sourceName,
                 query: pointOfLaw
-            }));
+            }, config));
 
             if (docs) console.log("[LegalResearcher] - successfully retrieved legal sources!", docs);
             return new Command({
@@ -45,12 +38,12 @@ const legalDocsRetriever = tool(
     async ({sourceName, query}: {
         sourceName: LegalSource,
         query: string
-    }) => {
+    }, config?: LangGraphRunnableConfig) => {
         if (sourceName === "unknown") {
             throw new Error("Cannot retrieve documents for unknown source");
         }
         const retriever = await new KnowledgeBase().retriever(sourceName);
-        const docs = await retriever.invoke(query);
+        const docs = await retriever.invoke(query, config);
         return JSON.stringify(docs);
     },
     {
