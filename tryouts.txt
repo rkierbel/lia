@@ -1,28 +1,133 @@
 Server running on port 3000
-[PointOfContact] called with thread:  8a567bb1-56c6-4da0-aa79-2dab9ab7fad9
+[Conversation] Starting new conversation
+[PointOfContact] called with thread:  56fe299c-5733-47cd-b3d5-88f734f1a311
 [PointOfContact] - initial contact - welcome prompt
-[PointOfContact] called with thread:  8a567bb1-56c6-4da0-aa79-2dab9ab7fad9
-[PointOfContact] - initial contact - welcome prompt
+[Conversation] Created: {
+  conversationId: '6ffec99c-93db-4035-9d95-b70dee6e31d2',
+  threadId: '56fe299c-5733-47cd-b3d5-88f734f1a311'
+}
+Configuration passed to stream: {
+  configurable: { thread_id: '56fe299c-5733-47cd-b3d5-88f734f1a311' },
+  recursionLimit: 100
+}
+[PointOfContact] called with thread:  56fe299c-5733-47cd-b3d5-88f734f1a311
+Initial messages in conversation: [
+  AIMessage {
+    "id": "chatcmpl-ApCBDPjMFDTGUdyradlP04lmdV78X",
+    "content": "**Welcome!**  \n**English:** Hello and welcome! I'm here to assist you with your legal ques
+tions regarding housing law, family law, and criminal law. Please feel free to ask anything!  \n**Français 
+:** Bonjour et bienvenue ! Je suis ici pour vous aider avec vos questions juridiques concernant le droit du
+ logement, le droit de la famille et le droit pénal. N'hésitez pas à poser vos questions !  \n**Nederlands:
+** Hallo en welkom! Ik ben hier om u te helpen met uw juridische vragen over het huurrecht, het familierech
+t en het strafrecht. Voel je vrij om iets te vragen!  \n\n**Feel free to ask your legal question!**  \n**En
+glish:** What legal question do you have?  \n**Français :** Quelle question juridique avez-vous ?  \n**Nederlands:** Welke juridische vraag heeft u?",
+    "additional_kwargs": {},
+    "response_metadata": {
+      "tokenUsage": {
+        "promptTokens": 110,
+        "completionTokens": 176,
+        "totalTokens": 286
+      },
+      "finish_reason": "stop",
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "usage": {
+        "prompt_tokens": 110,
+        "completion_tokens": 176,
+        "total_tokens": 286,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_72ed7ab54c"
+    },
+    "tool_calls": [],
+    "invalid_tool_calls": [],
+    "usage_metadata": {
+      "output_tokens": 176,
+      "input_tokens": 110,
+      "total_tokens": 286,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    }
+  }
+]
+Stream output received: {
+  pointOfContact: {
+    messages: [
+      AIMessage {
+        "id": "chatcmpl-ApCBDPjMFDTGUdyradlP04lmdV78X",
+        "content": "**Welcome!**  \n**English:** Hello and welcome! I'm here to assist you with your legal 
+questions regarding housing law, family law, and criminal law. Please feel free to ask anything!  \n**Franç
+ais :** Bonjour et bienvenue ! Je suis ici pour vous aider avec vos questions juridiques concernant le droi
+t du logement, le droit de la famille et le droit pénal. N'hésitez pas à poser vos questions !  \n**Nederla
+nds:** Hallo en welkom! Ik ben hier om u te helpen met uw juridische vragen over het huurrecht, het familie
+recht en het strafrecht. Voel je vrij om iets te vragen!  \n\n**Feel free to ask your legal question!**  \n
+**English:** What legal question do you have?  \n**Français :** Quelle question juridique avez-vous ?  \n**Nederlands:** Welke juridische vraag heeft u?",
+        "additional_kwargs": {},
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 110,
+            "completionTokens": 176,
+            "totalTokens": 286
+          },
+          "finish_reason": "stop",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 110,
+            "completion_tokens": 176,
+            "total_tokens": 286,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_72ed7ab54c"
+        },
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 176,
+          "input_tokens": 110,
+          "total_tokens": 286,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      },
+      HumanMessage {
+        "id": "a4d52317-b83e-4d5e-a9fa-af5b7c3c8300",
+        "content": "Can I be expelled from my house in Brussels?",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    ]
+  }
+}
 [ValidationNode] called
-[ValidationNode] called
-[ValidationNode] called
-[ValidationNode] called
-[ValidationNode] called
-
-
-$ curl -X POST http://localhost:3000/api/conversation/start
-{"conversationId":"ce5ca201-7056-4a4e-9c2b-63280ae39505","messages":[]}
-laure@Coconut MINGW64 ~/IdeaProjects/lia (master)
-$ curl -X POST http://localhost:3000/api/conversation/ce5ca201-7056-4a4e-9c2b-63280ae39505/message \
--H "Content-Type: application/json" \
--d '{
-    "message": "Can I be expelled from my house in Brussels?"
-}'
-{"messages":[{"role":"ai","content":"Hello and welcome! Bonjour et bienvenue ! Hallo en welkom! \n\nI'm here to assist you with any legal questions you may have regarding housing law, family law, or criminal law. Please feel free to ask your question!"}]}
-laure@Coconut MINGW64 ~/IdeaProjects/lia (master)
-$ curl -X POST http://localhost:3000/api/conversation/ce5ca201-7056-4a4e-9c2b-63280ae39505/message \
--H "Content-Type: application/json" \
--d '{
-    "message": "Can I be expelled from my house in Brussels?"
-}'
-{"messages":[{"role":"ai","content":"Hello and welcome! Bonjour et bienvenue ! Hallo en welkom! \n\nI'm here to assist you with any legal questions you may have regarding housing law, family law, or criminal law. Please feel free to ask your question!"},{"role":"ai","content":"Hello! Thank you for your warm welcome! I'm here to assist you with any legal questions you may have, specifically in the areas of housing law, family law, or criminal law. If you have a question in one of these areas, please feel free to ask! If your question is about something else, I encourage you to rephrase it or ask about one of the known law areas. I'm here to help!"}]}
+Error processing message: TypeError: Cannot read properties of undefined (reading 'slice')
+    at <anonymous> (C:\Users\laure\IdeaProjects\lia\src\server.ts:115:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

@@ -9,6 +9,10 @@
     "lint": "eslint . --ext .ts",
     "format": "prettier --write 'src/**/*.ts'"
   },
+  "nodemonConfig": {
+    "quiet": false,
+    "verbose": true
+  },
   "type": "module",
   "dependencies": {
     "@huggingface/inference": "^2.8.1",

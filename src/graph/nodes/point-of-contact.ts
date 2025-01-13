@@ -1,7 +1,7 @@
 import {PointOfContactAnnotation} from "../state.js";
-import {Command, interrupt, LangGraphRunnableConfig, messagesStateReducer} from "@langchain/langgraph";
+import {Command, END, LangGraphRunnableConfig, messagesStateReducer} from "@langchain/langgraph";
 import {createChatModel} from "../ai-tool-factory.js";
-import {AIMessageChunk} from "@langchain/core/messages";
+import {extractContent} from "../../utils/message-to-string.js";
 
 const model = createChatModel();
 
@@ -26,7 +26,7 @@ export const pointOfContact =
 
         return new Command({
             update: {
-                messages
+                messages: messagesStateReducer(messages, []),
             },
             goto: 'validationNode'
         });
@@ -34,7 +34,7 @@ export const pointOfContact =
 
 async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotation.State,
                                            config?: LangGraphRunnableConfig) {
-    console.log("[PointOfContact] - answer provided by legalCommunicator");
+    console.log("[PointOfContact] - answer provided by legalCommunicator: ", state.answer);
     const response = await model.invoke([
         {
             role: "system",
@@ -54,8 +54,14 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
         {role: "human", content: `Communicate this legal answer: ${state.answer}; and ask for next steps`}
     ], config);
 
-    return handleUserInterrupt(state, response, config);
-}
+    console.log("[PointOfContact] - communicates response to user: ", response);
+    return new Command({
+        update: {
+            messages: messagesStateReducer(state.messages, [response]),
+            answer: extractContent(response)
+        },
+        goto: END
+    });}
 
 async function welcomeUser(state: typeof PointOfContactAnnotation.State,
                            config?: LangGraphRunnableConfig) {
@@ -74,37 +80,12 @@ async function welcomeUser(state: typeof PointOfContactAnnotation.State,
         },
         {role: "human", content: "Start the conversation"}
     ], config);
-    console.log("LLM response - welcomeUser: ", response)
-    // Save current state and interrupt for user input
-    return handleUserInterrupt(state, response, config);
-}
 
-async function handleUserInterrupt(
-    state: typeof PointOfContactAnnotation.State,
-    response: AIMessageChunk,
-    config?: LangGraphRunnableConfig
-): Promise<Command> {
-    const interruptValue = await interrupt({
-        message: "Waiting for user input",
-        threadInfo: {
-            threadId: config?.configurable?.thread_id,
-            currentState: {
-                ...state,
-                messages: messagesStateReducer(state.messages, response),
-                answer: "",
-            },
-        },
-    });
-
-    console.log("[handleUserInterrupt] - InterruptValue: ", interruptValue);
-
-    // Create and return the Command object
     return new Command({
         update: {
-            messages: messagesStateReducer(state.messages, response),
+            messages: messagesStateReducer(state.messages, [response]),
             answer: "",
-            question: interruptValue as string,
         },
-        goto: "validationNode",
+        goto: END
     });
 }

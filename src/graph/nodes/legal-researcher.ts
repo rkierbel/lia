@@ -1,5 +1,5 @@
 import {LegalClassifierAnnotation} from "../state.js";
-import {Command, LangGraphRunnableConfig} from "@langchain/langgraph";
+import {Command, LangGraphRunnableConfig, messagesStateReducer} from "@langchain/langgraph";
 import {tool} from "@langchain/core/tools";
 import {LegalSource, LegalSourceSchema} from "../../interface/legal-document.js";
 import {KnowledgeBase} from "../../offline-rag-prep/knowledge-base.js";
@@ -10,15 +10,16 @@ export const legalResearcher =
            config?: LangGraphRunnableConfig) => {
         try {
             const {sourceName, pointOfLaw} = state;
-            const docs: string = JSON.stringify(await legalDocsRetriever.invoke({
+            const docs: string = await legalDocsRetriever.invoke({
                 sourceName,
                 query: pointOfLaw
-            }, config));
+            }, config);
 
-            if (docs) console.log("[LegalResearcher] - successfully retrieved legal sources!", docs);
+            if (docs) console.log("[LegalResearcher] - successfully retrieved legal sources!", docs.length);
             return new Command({
                 update: {
-                    docs
+                    docs,
+                    messages: messagesStateReducer(state.messages, docs)
                 },
                 goto: 'legalCommunicator'
             });
@@ -26,7 +27,7 @@ export const legalResearcher =
             console.log("[LegalResearcher] - error", error);
             return new Command({
                 update: {
-                    answer: 'An error occurred during the retrieval of the legal sources.'
+                    messages: messagesStateReducer(state.messages, [])
                 },
                 goto: 'pointOfContact'
             });
@@ -38,7 +39,7 @@ const legalDocsRetriever = tool(
     async ({sourceName, query}: {
         sourceName: LegalSource,
         query: string
-    }, config?: LangGraphRunnableConfig) => {
+    }, config?: LangGraphRunnableConfig): Promise<string> => {
         if (sourceName === "unknown") {
             throw new Error("Cannot retrieve documents for unknown source");
         }

@@ -8,7 +8,7 @@ const model = createChatModel();
 export const legalCommunicator =
     async (state: typeof LegalResearcherAnnotation.State,
            config?: LangGraphRunnableConfig) => {
-        console.log("[LegalClassifier] called");
+        console.log("[LegalCommunicator] called, received the following question: ", state.pointOfLaw);
         const {pointOfLaw, docs, messages} = state;
 
         const response = await model.invoke([
@@ -29,6 +29,7 @@ export const legalCommunicator =
             {role: "human", content: "Generate a conclusion of law based on the retrieved docs and the point of law"}
         ], config);
 
+        console.log("[LegalCommunicator] responded: ", response);
         return new Command({
             update: {
                 answer: extractContent(response),

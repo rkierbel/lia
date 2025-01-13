@@ -18,7 +18,7 @@ const GraphState = Annotation.Root({
     })
 })
 
-const retriever = await new KnowledgeBase().retriever("brussels-housing-code", "law");
+const retriever = await new KnowledgeBase().retriever("brussels_housing_code");
 
 const tool = createRetrieverTool(
     retriever,

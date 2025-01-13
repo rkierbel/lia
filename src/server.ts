@@ -1,6 +1,4 @@
 import dotenv from "dotenv";
-dotenv.config({ path: '../.env'});
-
 // api/server.ts
 import express, {Request, Response} from 'express';
 import {v4 as uuidv4} from 'uuid';
@@ -8,7 +6,7 @@ import {BaseMessage, HumanMessage} from '@langchain/core/messages';
 import {workflow} from "./graph/graph.js";
 import {InterruptHandler} from "./graph/interrupt-handler.js";
 
-
+dotenv.config({path: '../.env'});
 const app = express();
 app.use(express.json());
 
@@ -24,6 +22,7 @@ app.post('/api/conversation/start', async (
     req: Request,
     res: Response) => {
     try {
+        console.log('[Conversation] Starting new conversation');
         const conversationId = uuidv4();
         const threadId = uuidv4();
 
@@ -35,69 +34,42 @@ app.post('/api/conversation/start', async (
         };
 
         // Initialize empty conversation
-        const stream = await workflow.stream(
-            { messages: [] },
-            config
-        );
-
-        const messages: BaseMessage[] = [];
-        for await (const output of stream) {
-            if (output.messages) {
-                messages.push(...output.messages);
-                console.log("[/start] Stream output:", output.messages);
-            }
-        }
-
-        if (!messages.length) {
-            throw new Error('Failed to initialize conversation. No welcome message.');
-        }
+        const result = await workflow.invoke({
+            messages: []
+        }, config);
 
         conversations.set(conversationId, {
             threadId,
-            messages
+            messages: result.messages
         });
-
+        console.log('[Conversation] Created:', { conversationId, threadId });
         res.json({
             conversationId,
-            messages: messages.map(msg => ({
-                role: msg.getType(),
-                content: msg.content
-            }))
+            messages: result.messages
         });
 
     } catch (error) {
         console.error('Error starting conversation:', error);
-        res.status(500).json({ error: 'Failed to start conversation' });
+        res.status(500).json({error: 'Failed to start conversation'});
     }
 });
 
 app.post('/api/conversation/:conversationId/message', async (req: Request, res: Response): Promise<void> => {
     try {
-        const { conversationId } = req.params;
-        const { message } = req.body;
-
-        if (!conversationId) {
-            res.status(400).json({ error: 'Invalid conversation ID' });
-            return;
-        }
-
-        if (!message || typeof message !== "string") {
-            res.status(400).json({ error: 'Invalid message' });
-            return;
-        }
-
+        const {conversationId} = req.params;
+        const {message} = req.body;
         const conversation = conversations.get(conversationId);
-        if (!conversation) {
-            console.error(`[404] Conversation with ID ${conversationId} not found.`);
-            res.status(404).json({ error: 'Conversation not found' });
+        const validation = validateConversationRequest(conversationId, message, conversation);
+
+        if (validation.error || !conversation) {
+            res.status(validation.status!).json({error: validation.error});
             return;
         }
 
         const config = {
-            configurable: { thread_id: conversation.threadId },
+            configurable: {thread_id: conversation.threadId},
             recursionLimit: 100,
         };
-
         const currentState = await workflow.getState(config);
 
         if (currentState.tasks.some(task => task.interrupts?.length > 0)) {
@@ -106,35 +78,52 @@ app.post('/api/conversation/:conversationId/message', async (req: Request, res: 
                 message,
                 config
             );
-            conversation.messages.push(...(result.messages || []));
+            if (result.messages && result.messages.length > 0) {
+                console.log("InterruptHandler result:", {result});
+                // Only add new messages
+                const newMessages = result.messages.slice(conversation.messages.length);
+                conversation.messages.push(...newMessages);
 
-            res.json({
-                messages: (result.messages || []).map(msg => ({
-                    role: msg.getType(),
-                    content: msg.content
-                }))
-            });
-            return;
-        }
-
-        const stream = await workflow.stream({ messages: [new HumanMessage(message)] }, config);
-
-        const messages: BaseMessage[] = [];
-        try {
-            for await (const output of stream) {
-                if (output.messages) {
-                    messages.push(...output.messages);
-                    conversation.messages.push(...output.messages);
-                }
+                // Return only the latest message
+                res.json({
+                    messages: conversation.messages.map(msg => ({
+                        role: msg.getType(),
+                        content: msg.content
+                    }))
+                });
+                console.log('INTERRUPT! Current conversation state:', {
+                    id: conversationId,
+                    threadId: conversation.threadId,
+                    messageCount: conversation.messages.length
+                });
+                return;
             }
-        } catch (streamError) {
-            console.error("Error while streaming workflow updates:", streamError);
-            res.status(500).json({ error: 'Stream processing error' });
-            return;
         }
 
+        const newMessage = new HumanMessage(message);
+        const currentMessages = [...conversation.messages, newMessage];
+
+        console.log("Configuration passed to stream:", config);
+        const stream = await workflow.stream({
+            messages: currentMessages
+        }, config);
+        console.log("Initial messages in conversation:", conversation.messages);
+
+        let hadUpdates = false;
+        for await (const output of stream) {
+            console.log("Stream output received:", output);
+            const newMessages = output.messages.slice(conversation.messages.length);
+            if (newMessages.length > 0) {
+                conversation.messages.push(...newMessages);
+                hadUpdates = true;
+                // Track latest assistant message
+            }
+        }
+        if (!hadUpdates) {
+            console.warn('No new messages were generated during stream processing');
+        }
         res.json({
-            messages: messages.map(msg => ({
+            messages: conversation.messages.map(msg => ({
                 role: msg.getType(),
                 content: msg.content
             }))
@@ -142,10 +131,29 @@ app.post('/api/conversation/:conversationId/message', async (req: Request, res: 
 
     } catch (error) {
         console.error('Error processing message:', error);
-        res.status(500).json({ error: 'Failed to process message' });
+        res.status(500).json({error: 'Failed to process message'});
     }
 });
 
+function validateConversationRequest(conversationId: string, message: string, conversation?: Conversation): {
+    error?: string,
+    status?: number
+} {
+    if (!conversationId) {
+        return {error: 'Invalid conversation ID', status: 400};
+    }
+
+    if (!message) {
+        return {error: 'Invalid message', status: 400};
+    }
+
+    if (!conversation) {
+        console.error(`[404] Conversation with ID ${conversationId} not found.`);
+        return {error: 'Conversation not found', status: 404};
+    }
+
+    return {};
+}
 
 const PORT = process.env.PORT || 3000;
 

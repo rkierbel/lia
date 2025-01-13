@@ -47,8 +47,7 @@ export const validationNode = async (
                 {role: "human", content: question}
             ], config);
 
-            const updatedMessages = messagesStateReducer(messages, [response]);
-            return handleInterruptFlow(state, updatedMessages, state.userLang, config);
+            return handleInterruptFlow(state, response, state.userLang, config);
         }
 
         if (sourceName === "unknown") {
@@ -68,8 +67,7 @@ export const validationNode = async (
                 {role: "human", content: question}
             ], config);
 
-            const updatedMessages = messagesStateReducer(messages, [response]);
-            return handleInterruptFlow(state, updatedMessages, state.userLang, config);
+            return handleInterruptFlow(state, response, state.userLang, config);
         }
 
         // If all validations pass, confirm to user and proceed to legal classifier
@@ -91,7 +89,7 @@ export const validationNode = async (
             update: {
                 question,
                 sourceName,
-                messages: messagesStateReducer(messages, [confirmationResponse]),
+                messages: messagesStateReducer(state.messages, [confirmationResponse]),
                 userLang
             },
             goto: 'legalClassifier'
@@ -115,14 +113,13 @@ export const validationNode = async (
             {role: "human", content: "Error occurred"}
         ], config);
 
-        const updatedMessages = messagesStateReducer(messages, [response]);
-        return handleInterruptFlow(state, updatedMessages, state.userLang, config);
+        return handleInterruptFlow(state, response, state.userLang, config);
     }
 };
 
 const handleInterruptFlow = async (
     state: typeof PointOfContactAnnotation.State,
-    messages: BaseMessage[],
+    response: BaseMessage,
     userLang?: string,
     config?: LangGraphRunnableConfig
 ) => {
@@ -131,15 +128,14 @@ const handleInterruptFlow = async (
         threadInfo: {
             threadId: config?.configurable?.thread_id,
             currentState: {
-                ...state,
-                messages
+                ...state
             }
         }
     });
 
     return new Command({
         update: {
-            messages,
+            messages: messagesStateReducer(state.messages, [response]),
             question: interruptValue as string,
             userLang
         },

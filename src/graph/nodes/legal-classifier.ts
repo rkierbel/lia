@@ -33,6 +33,6 @@ export const legalClassifier =
                 pointOfLaw: extractContent(response),
                 messages: messagesStateReducer(messages, [response]),
             },
-            goto: 'legalCommunicator'
+            goto: 'legalResearcher'
         });
     };
