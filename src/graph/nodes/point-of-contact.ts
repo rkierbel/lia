@@ -1,7 +1,6 @@
 import {PointOfContactAnnotation} from "../state.js";
-import {Command, END, LangGraphRunnableConfig, messagesStateReducer} from "@langchain/langgraph";
+import {Command, LangGraphRunnableConfig, messagesStateReducer, NodeInterrupt} from "@langchain/langgraph";
 import {createChatModel} from "../ai-tool-factory.js";
-import {extractContent} from "../../utils/message-to-string.js";
 
 const model = createChatModel();
 
@@ -23,13 +22,6 @@ export const pointOfContact =
         if (messages.length === 0) {
             return await welcomeUser(state, config);
         }
-
-        return new Command({
-            update: {
-                messages: messagesStateReducer(messages, []),
-            },
-            goto: 'validationNode'
-        });
     };
 
 async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotation.State,
@@ -55,13 +47,15 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
     ], config);
 
     console.log("[PointOfContact] - communicates response to user: ", response);
+
     return new Command({
         update: {
             messages: messagesStateReducer(state.messages, [response]),
-            answer: extractContent(response)
+            answer: ""
         },
-        goto: END
-    });}
+        goto: 'waitForQuestion'
+    });
+}
 
 async function welcomeUser(state: typeof PointOfContactAnnotation.State,
                            config?: LangGraphRunnableConfig) {
@@ -71,7 +65,6 @@ async function welcomeUser(state: typeof PointOfContactAnnotation.State,
             role: "system",
             content: `
             You are a multilingual legal assistant helping users with questions about Belgian law.
-            Your goal is twofold:
             1) welcome the user in three languages: English, French and Dutch;
             2) in three languages (English, French and Dutch) encourage them to ask a legal question;
             Respond in a friendly, professional tone.
@@ -80,12 +73,25 @@ async function welcomeUser(state: typeof PointOfContactAnnotation.State,
         },
         {role: "human", content: "Start the conversation"}
     ], config);
-
+    console.log(response);
     return new Command({
         update: {
             messages: messagesStateReducer(state.messages, [response]),
-            answer: "",
         },
-        goto: END
+        goto: 'waitForQuestion'
     });
+}
+
+export const waitForQuestion=
+    async (state: typeof PointOfContactAnnotation.State,
+           config?: LangGraphRunnableConfig) => {
+    if (!state.question) {
+        console.log("[PointOfContact] - waiting for question in thread ", config?.configurable?.thread_id);
+        throw new NodeInterrupt("Waiting for question");
+    } else {
+        console.log("[PointOfContact] - question received: ", state.question);
+        return new Command({
+            goto: 'validationNode'
+        })
+    }
 }

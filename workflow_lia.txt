@@ -1,0 +1,18 @@
+New conversation:
+1. Start -> pointOfContact
+2. welcomeUser generates welcome message
+3. interrupt() throws, graph stops
+4. Server returns welcome message to client
+
+User sends message:
+1. Server sends Command({resume: message})
+2. Graph resumes at welcomeUser after interrupt()
+3. welcomeUser processes input, goes to validationNode
+4. Normal flow continues until next interrupt
+
+Answer and wait for new question:
+1. pointOfContact calls answerAndWaitForNewQuestion
+2. Response with answer is generated
+3. interrupt() throws, graph stops
+4. Server returns answer to client
+5. Process repeats

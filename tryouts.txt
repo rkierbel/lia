@@ -1,125 +1,67 @@
 Server running on port 3000
 [Conversation] Starting new conversation
-[PointOfContact] called with thread:  56fe299c-5733-47cd-b3d5-88f734f1a311
+[PointOfContact] called with thread:  3ca4c4d8-4dc9-4da1-99a2-df52c8b03ecc
 [PointOfContact] - initial contact - welcome prompt
 [Conversation] Created: {
-  conversationId: '6ffec99c-93db-4035-9d95-b70dee6e31d2',
-  threadId: '56fe299c-5733-47cd-b3d5-88f734f1a311'
+  conversationId: '4ce81253-ffcc-4bf0-80f3-c0191a3443ad',
+  threadId: '3ca4c4d8-4dc9-4da1-99a2-df52c8b03ecc'
 }
-Configuration passed to stream: {
-  configurable: { thread_id: '56fe299c-5733-47cd-b3d5-88f734f1a311' },
-  recursionLimit: 100
-}
-[PointOfContact] called with thread:  56fe299c-5733-47cd-b3d5-88f734f1a311
+[PointOfContact] called with thread:  3ca4c4d8-4dc9-4da1-99a2-df52c8b03ecc
 Initial messages in conversation: [
   AIMessage {
-    "id": "chatcmpl-ApCBDPjMFDTGUdyradlP04lmdV78X",
-    "content": "**Welcome!**  \n**English:** Hello and welcome! I'm here to assist you with your legal ques
-tions regarding housing law, family law, and criminal law. Please feel free to ask anything!  \n**Français 
-:** Bonjour et bienvenue ! Je suis ici pour vous aider avec vos questions juridiques concernant le droit du
- logement, le droit de la famille et le droit pénal. N'hésitez pas à poser vos questions !  \n**Nederlands:
-** Hallo en welkom! Ik ben hier om u te helpen met uw juridische vragen over het huurrecht, het familierech
-t en het strafrecht. Voel je vrij om iets te vragen!  \n\n**Feel free to ask your legal question!**  \n**En
-glish:** What legal question do you have?  \n**Français :** Quelle question juridique avez-vous ?  \n**Nederlands:** Welke juridische vraag heeft u?",
+    "id": "chatcmpl-ApCKYVyl7TRosdVssvIYTnUaUHFm9",
+    "content": "Hello and welcome! / Bonjour et bienvenue ! / Hallo en welkom!\n\nFeel free to ask any lega
+l questions you may have. I can assist you with matters related to housing law, family law, and criminal law. Don't hesitate to reach out!",
     "additional_kwargs": {},
     "response_metadata": {
       "tokenUsage": {
         "promptTokens": 110,
-        "completionTokens": 176,
-        "totalTokens": 286
+        "completionTokens": 50,
+        "totalTokens": 160
       },
       "finish_reason": "stop",
-      "model_name": "gpt-4o-mini-2024-07-18",
-      "usage": {
-        "prompt_tokens": 110,
-        "completion_tokens": 176,
-        "total_tokens": 286,
-        "prompt_tokens_details": {
-          "cached_tokens": 0,
-          "audio_tokens": 0
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 0,
-          "audio_tokens": 0,
-          "accepted_prediction_tokens": 0,
-          "rejected_prediction_tokens": 0
-        }
+        ...irrelevant data
       },
       "system_fingerprint": "fp_72ed7ab54c"
     },
     "tool_calls": [],
     "invalid_tool_calls": [],
-    "usage_metadata": {
-      "output_tokens": 176,
-      "input_tokens": 110,
-      "total_tokens": 286,
-      "input_token_details": {
-        "audio": 0,
-        "cache_read": 0
-      },
-      "output_token_details": {
-        "audio": 0,
-        "reasoning": 0
-      }
+    ...irrelevant data
     }
+  },
+  HumanMessage {
+    "id": "713070f0-c22f-456a-a1a4-0f2322f105cf",
+    "content": "Can I be expelled from my house in Brussels?",
+    "additional_kwargs": {},
+    "response_metadata": {}
   }
 ]
 Stream output received: {
   pointOfContact: {
     messages: [
       AIMessage {
-        "id": "chatcmpl-ApCBDPjMFDTGUdyradlP04lmdV78X",
-        "content": "**Welcome!**  \n**English:** Hello and welcome! I'm here to assist you with your legal 
-questions regarding housing law, family law, and criminal law. Please feel free to ask anything!  \n**Franç
-ais :** Bonjour et bienvenue ! Je suis ici pour vous aider avec vos questions juridiques concernant le droi
-t du logement, le droit de la famille et le droit pénal. N'hésitez pas à poser vos questions !  \n**Nederla
-nds:** Hallo en welkom! Ik ben hier om u te helpen met uw juridische vragen over het huurrecht, het familie
-recht en het strafrecht. Voel je vrij om iets te vragen!  \n\n**Feel free to ask your legal question!**  \n
-**English:** What legal question do you have?  \n**Français :** Quelle question juridique avez-vous ?  \n**Nederlands:** Welke juridische vraag heeft u?",
+        "id": "chatcmpl-ApCKYVyl7TRosdVssvIYTnUaUHFm9",
+        "content": "Hello and welcome! / Bonjour et bienvenue ! / Hallo en welkom!\n\nFeel free to ask any
+legal questions you may have. I can assist you with matters related to housing law, family law, and criminal law. Don't hesitate to reach out!",
         "additional_kwargs": {},
         "response_metadata": {
           "tokenUsage": {
             "promptTokens": 110,
-            "completionTokens": 176,
-            "totalTokens": 286
+            "completionTokens": 50,
+            "totalTokens": 160
           },
           "finish_reason": "stop",
-          "model_name": "gpt-4o-mini-2024-07-18",
-          "usage": {
-            "prompt_tokens": 110,
-            "completion_tokens": 176,
-            "total_tokens": 286,
-            "prompt_tokens_details": {
-              "cached_tokens": 0,
-              "audio_tokens": 0
-            },
-            "completion_tokens_details": {
-              "reasoning_tokens": 0,
-              "audio_tokens": 0,
-              "accepted_prediction_tokens": 0,
-              "rejected_prediction_tokens": 0
-            }
+          ...irrelevant data
           },
           "system_fingerprint": "fp_72ed7ab54c"
         },
         "tool_calls": [],
         "invalid_tool_calls": [],
-        "usage_metadata": {
-          "output_tokens": 176,
-          "input_tokens": 110,
-          "total_tokens": 286,
-          "input_token_details": {
-            "audio": 0,
-            "cache_read": 0
-          },
-          "output_token_details": {
-            "audio": 0,
-            "reasoning": 0
-          }
+        ...irrelevant data
         }
       },
       HumanMessage {
-        "id": "a4d52317-b83e-4d5e-a9fa-af5b7c3c8300",
+        "id": "713070f0-c22f-456a-a1a4-0f2322f105cf",
         "content": "Can I be expelled from my house in Brussels?",
         "additional_kwargs": {},
         "response_metadata": {}
@@ -128,6 +70,523 @@ recht en het strafrecht. Voel je vrij om iets te vragen!  \n\n**Feel free to ask
   }
 }
 [ValidationNode] called
-Error processing message: TypeError: Cannot read properties of undefined (reading 'slice')
-    at <anonymous> (C:\Users\laure\IdeaProjects\lia\src\server.ts:115:49)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Stream output received: {
+  validationNode: {
+    question: 'Can I be expelled from my house in Brussels?',
+    sourceName: 'brussels_housing_code',
+    messages: [
+      AIMessage {
+        "id": "chatcmpl-ApCKYVyl7TRosdVssvIYTnUaUHFm9",
+        "content": "Hello and welcome! / Bonjour et bienvenue ! / Hallo en welkom!\n\nFeel free to ask any
+legal questions you may have. I can assist you with matters related to housing law, family law, and criminal law. Don't hesitate to reach out!",
+        "additional_kwargs": {},
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 110,
+            "completionTokens": 50,
+            "totalTokens": 160
+          },
+          "finish_reason": "stop",
+          ...irrelevant data
+          },
+          "system_fingerprint": "fp_72ed7ab54c"
+        },
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+        }
+      },
+      HumanMessage {
+        "id": "713070f0-c22f-456a-a1a4-0f2322f105cf",
+        "content": "Can I be expelled from my house in Brussels?",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      },
+      AIMessage {
+        "id": "chatcmpl-ApCKnhJYK7Emn9WIb1cFVGclEYBvr",
+        "content": "I understand your concern regarding the possibility of being expelled from your house i
+n Brussels, and I'm here to help you with this legal question. I will now analyze your question to provide
+you with the most relevant legal information regarding housing and eviction laws in Belgium. Please hold on for a moment.",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_a3LFnD1CcpInio0XcXmXKJv1",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 208,
+            "completionTokens": 85,
+            "totalTokens": 293
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          ...irrelevant data
+          },
+          "system_fingerprint": "fp_72ed7ab54c"
+        },
+        "tool_calls": [
+          {
+            "name": "validate_legal_question",
+            "args": {
+              "question": "Can I be expelled from my house in Brussels?"
+            },
+            "type": "tool_call",
+            "id": "call_a3LFnD1CcpInio0XcXmXKJv1"
+          }
+        ],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+        }
+      }
+    ],
+    userLang: 'en'
+  }
+}
+[LegalClassifier] called
+[LegalClassifier] responded with the following content:  AIMessage {
+  "id": "chatcmpl-ApCKpBCtfzRlmaKdx8CADaoTADk9s",
+  "content": "Am I subject to eviction from my residence in Brussels under the applicable housing laws? Legal keywords: eviction, residence, Brussels, housing laws, tenant rights.",
+  "additional_kwargs": {},
+  "response_metadata": {
+    ...irrelevant data
+    "finish_reason": "stop",
+    "model_name": "gpt-4o-mini-2024-07-18",
+    ...irrelevant data
+    },
+    "system_fingerprint": "fp_bd83329f63"
+  },
+  "tool_calls": [],
+  "invalid_tool_calls": [],
+  ...irrelevant data
+}
+Stream output received: {
+  legalClassifier: {
+    pointOfLaw: 'Am I subject to eviction from my residence in Brussels under the applicable housing laws? Legal keywords: eviction, residence, Brussels, housing laws, tenant rights.',
+    messages: [
+      AIMessage {
+        "id": "chatcmpl-ApCKYVyl7TRosdVssvIYTnUaUHFm9",
+        "content": "Hello and welcome! / Bonjour et bienvenue ! / Hallo en welkom!\n\nFeel free to ask any
+legal questions you may have. I can assist you with matters related to housing law, family law, and criminal law. Don't hesitate to reach out!",
+        "additional_kwargs": {},
+        ...irrelevant data,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+      },
+      HumanMessage {
+        "id": "713070f0-c22f-456a-a1a4-0f2322f105cf",
+        "content": "Can I be expelled from my house in Brussels?",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      },
+      AIMessage {
+        "id": "chatcmpl-ApCKnhJYK7Emn9WIb1cFVGclEYBvr",
+        "content": "I understand your concern regarding the possibility of being expelled from your house i
+n Brussels, and I'm here to help you with this legal question. I will now analyze your question to provide
+you with the most relevant legal information regarding housing and eviction laws in Belgium. Please hold on for a moment.",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_a3LFnD1CcpInio0XcXmXKJv1",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        ...irrelevant data,
+        "tool_calls": [
+          {
+            "name": "validate_legal_question",
+            "args": {
+              "question": "Can I be expelled from my house in Brussels?"
+            },
+            "type": "tool_call",
+            "id": "call_a3LFnD1CcpInio0XcXmXKJv1"
+          }
+        ],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+      },
+      AIMessage {
+        "id": "chatcmpl-ApCKpBCtfzRlmaKdx8CADaoTADk9s",
+        "content": "Am I subject to eviction from my residence in Brussels under the applicable housing laws? Legal keywords: eviction, residence, Brussels, housing laws, tenant rights.",
+        "additional_kwargs": {},
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 165,
+            "completionTokens": 32,
+            "totalTokens": 197
+          },
+          "finish_reason": "stop",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          ...irrelevant data
+        },
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+      }
+    ]
+  }
+}
+[LegalResearcher] - successfully retrieved legal sources! 9250
+Stream output received: {
+  legalResearcher: {
+    docs: `[{"pageContent":"-- i deleted the page content for ease of reading--","metadata":{"sourceName":"brussels-housing-code","sourceType":"law","elementRef":"brussels-housing-code-233undecies"},"id":"fcae76e8-bb54-4b97-ae24-6aa7afcdd0fe"}]`,
+    messages: [
+      AIMessage {
+        "id": "chatcmpl-ApCKYVyl7TRosdVssvIYTnUaUHFm9",
+        "content": "Hello and welcome! / Bonjour et bienvenue ! / Hallo en welkom!\n\nFeel free to ask any
+legal questions you may have. I can assist you with matters related to housing law, family law, and criminal law. Don't hesitate to reach out!",
+        "additional_kwargs": {},
+        ...irrelevant data
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+      },
+      HumanMessage {
+        "id": "713070f0-c22f-456a-a1a4-0f2322f105cf",
+        "content": "Can I be expelled from my house in Brussels?",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      },
+      AIMessage {
+        "id": "chatcmpl-ApCKnhJYK7Emn9WIb1cFVGclEYBvr",
+        "content": "I understand your concern regarding the possibility of being expelled from your house i
+n Brussels, and I'm here to help you with this legal question. I will now analyze your question to provide
+you with the most relevant legal information regarding housing and eviction laws in Belgium. Please hold on for a moment.",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_a3LFnD1CcpInio0XcXmXKJv1",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        ...irrelevant data
+        "tool_calls": [
+          {
+            "name": "validate_legal_question",
+            "args": {
+              "question": "Can I be expelled from my house in Brussels?"
+            },
+            "type": "tool_call",
+            "id": "call_a3LFnD1CcpInio0XcXmXKJv1"
+          }
+        ],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+      },
+      AIMessage {
+        "id": "chatcmpl-ApCKpBCtfzRlmaKdx8CADaoTADk9s",
+        "content": "Am I subject to eviction from my residence in Brussels under the applicable housing laws? Legal keywords: eviction, residence, Brussels, housing laws, tenant rights.",
+        "additional_kwargs": {},
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 165,
+            "completionTokens": 32,
+            "totalTokens": 197
+          },
+          "finish_reason": "stop",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          ...irrelevant data
+        },
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+      },
+      HumanMessage {
+        "id": "fdc0fc1e-f3a9-4cd4-a953-13fb418fe60c",
+        "content": "[{\"pageContent\":\"-- i deleted the page content for ease of reading--":\"brussels-housing-code\",\"sourceType\":\"law\",\"elementRef\":\"brussels-housing-code-233undecies\"},\"id\":\"fcae76e8-bb54-4b97-ae24-6aa7afcdd0fe\"}]",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    ]
+  }
+}
+[LegalCommunicator] called, received the following question:  Am I subject to eviction from my residence in
+ Brussels under the applicable housing laws? Legal keywords: eviction, residence, Brussels, housing laws, tenant rights.
+[LegalCommunicator] responded:  AIMessage {
+  "id": "chatcmpl-ApCKrq8fdwuEq6Yc9yB4FIMY7pLYV",
+  "content": "Based on the applicable housing laws in Brussels, you may be subject to eviction from your re
+sidence under certain conditions. The law stipulates that an eviction can only occur after a one-month noti
+ce period following a judgment or act authorizing the eviction, unless specific exceptions apply, such as a
+bandonment of the property or mutual agreement on a different timeline (Art. 233undecies). \n\nIf your resi
+dence has been declared uninhabitable or is subject to a rental prohibition, you have rights that protect y
+ou from immediate eviction. In such cases, you are entitled to a priority access to public housing managed
+by local authorities, and you should receive a relocation proposal at the time of eviction (Art. 12). Furth
+ermore, if the conditions of your rental property do not meet safety and health standards, and this non-com
+pliance is not your fault, you may have the option to demand necessary repairs or even terminate the lease
+with potential compensation for relocation costs (Art. 219).\n\nIn summary, while eviction is possible, the
+re are significant protections and procedures in place that must be followed, which may provide you with op
+tions to avoid immediate displacement.\n\nReferences:\n1. Brussels Housing Code, Art. 12\n2. Brussels Housing Code, Art. 219\n3. Brussels Housing Code, Art. 233undecies",
+  "additional_kwargs": {},
+ ...irrelevant data
+  "tool_calls": [],
+  "invalid_tool_calls": [],
+  ...irrelevant data
+}
+Stream output received: {
+  legalCommunicator: {
+    answer: 'Based on the applicable housing laws in Brussels, you may be subject to eviction from your res
+idence under certain conditions. The law stipulates that an eviction can only occur after a one-month notic
+e period following a judgment or act authorizing the eviction, unless specific exceptions apply, such as abandonment of the property or mutual agreement on a different timeline (Art. 233undecies). \n' +
+      '\n' +
+      'If your residence has been declared uninhabitable or is subject to a rental prohibition, you have ri
+ghts that protect you from immediate eviction. In such cases, you are entitled to a priority access to publ
+ic housing managed by local authorities, and you should receive a relocation proposal at the time of evicti
+on (Art. 12). Furthermore, if the conditions of your rental property do not meet safety and health standard
+s, and this non-compliance is not your fault, you may have the option to demand necessary repairs or even terminate the lease with potential compensation for relocation costs (Art. 219).\n' +
+      '\n' +
+      'In summary, while eviction is possible, there are significant protections and procedures in place that must be followed, which may provide you with options to avoid immediate displacement.\n' +
+      '\n' +
+      'References:\n' +
+      '1. Brussels Housing Code, Art. 12\n' +
+      '2. Brussels Housing Code, Art. 219\n' +
+      '3. Brussels Housing Code, Art. 233undecies',
+    messages: [
+      AIMessage {
+        "id": "chatcmpl-ApCKYVyl7TRosdVssvIYTnUaUHFm9",
+        "content": "Hello and welcome! / Bonjour et bienvenue ! / Hallo en welkom!\n\nFeel free to ask any
+legal questions you may have. I can assist you with matters related to housing law, family law, and criminal law. Don't hesitate to reach out!",
+        "additional_kwargs": {},
+        ...irrelevant data
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+      },
+      HumanMessage {
+        "id": "713070f0-c22f-456a-a1a4-0f2322f105cf",
+        "content": "Can I be expelled from my house in Brussels?",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      },
+      AIMessage {
+        "id": "chatcmpl-ApCKnhJYK7Emn9WIb1cFVGclEYBvr",
+        "content": "I understand your concern regarding the possibility of being expelled from your house i
+n Brussels, and I'm here to help you with this legal question. I will now analyze your question to provide
+you with the most relevant legal information regarding housing and eviction laws in Belgium. Please hold on for a moment.",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_a3LFnD1CcpInio0XcXmXKJv1",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        ...irrelevant data
+        "tool_calls": [
+          {
+            "name": "validate_legal_question",
+            "args": {
+              "question": "Can I be expelled from my house in Brussels?"
+            },
+            "type": "tool_call",
+            "id": "call_a3LFnD1CcpInio0XcXmXKJv1"
+          }
+        ],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+      },
+      AIMessage {
+        "id": "chatcmpl-ApCKpBCtfzRlmaKdx8CADaoTADk9s",
+        "content": "Am I subject to eviction from my residence in Brussels under the applicable housing laws? Legal keywords: eviction, residence, Brussels, housing laws, tenant rights.",
+        "additional_kwargs": {},
+        "response_metadata": {
+          ...irrelevant data
+          "finish_reason": "stop",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          ...irrelevant data
+        },
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+      },
+      HumanMessage {
+        "id": "fdc0fc1e-f3a9-4cd4-a953-13fb418fe60c",
+        "content": "[{\"pageContent\":-- i deleted the page content for ease of reading--":\"brussels-housing-code\",\"sourceType\":\"law\",\"elementRef\":\"brussels-housing-code-233undecies\"},\"id\":\"fcae76e8-bb54-4b97-ae24-6aa7afcdd0fe\"}]",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      },
+      AIMessage {
+        "id": "chatcmpl-ApCKrq8fdwuEq6Yc9yB4FIMY7pLYV",
+        "content": "Based on the applicable housing laws in Brussels, you may be subject to eviction from y
+our residence under certain conditions. The law stipulates that an eviction can only occur after a one-mont
+h notice period following a judgment or act authorizing the eviction, unless specific exceptions apply, suc
+h as abandonment of the property or mutual agreement on a different timeline (Art. 233undecies). \n\nIf you
+r residence has been declared uninhabitable or is subject to a rental prohibition, you have rights that pro
+tect you from immediate eviction. In such cases, you are entitled to a priority access to public housing ma
+naged by local authorities, and you should receive a relocation proposal at the time of eviction (Art. 12).
+ Furthermore, if the conditions of your rental property do not meet safety and health standards, and this n
+on-compliance is not your fault, you may have the option to demand necessary repairs or even terminate the
+lease with potential compensation for relocation costs (Art. 219).\n\nIn summary, while eviction is possibl
+e, there are significant protections and procedures in place that must be followed, which may provide you w
+ith options to avoid immediate displacement.\n\nReferences:\n1. Brussels Housing Code, Art. 12\n2. Brussels Housing Code, Art. 219\n3. Brussels Housing Code, Art. 233undecies",
+        "additional_kwargs": {},
+        ...irrelevant data,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+      }
+    ],
+    question: '',
+    pointOfLaw: '',
+    sourceName: '',
+    docs: ''
+  }
+}
+[PointOfContact] called with thread:  3ca4c4d8-4dc9-4da1-99a2-df52c8b03ecc
+[PointOfContact] - answer provided by legalCommunicator:  Based on the applicable housing laws in Brussels,
+ you may be subject to eviction from your residence under certain conditions. The law stipulates that an ev
+iction can only occur after a one-month notice period following a judgment or act authorizing the eviction,
+ unless specific exceptions apply, such as abandonment of the property or mutual agreement on a different timeline (Art. 233undecies).
+
+If your residence has been declared uninhabitable or is subject to a rental prohibition, you have rights th
+at protect you from immediate eviction. In such cases, you are entitled to a priority access to public hous
+ing managed by local authorities, and you should receive a relocation proposal at the time of eviction (Art
+. 12). Furthermore, if the conditions of your rental property do not meet safety and health standards, and
+this non-compliance is not your fault, you may have the option to demand necessary repairs or even terminate the lease with potential compensation for relocation costs (Art. 219).
+
+In summary, while eviction is possible, there are significant protections and procedures in place that must be followed, which may provide you with options to avoid immediate displacement.
+
+References:
+1. Brussels Housing Code, Art. 12
+2. Brussels Housing Code, Art. 219
+3. Brussels Housing Code, Art. 233undecies
+[PointOfContact] - communicates response to user:  AIMessage {
+  "id": "chatcmpl-ApCKvOMZb17ZwsfhXipti2vvZABye",
+  "content": "Based on the applicable housing laws in Brussels, you may be subject to eviction from your re
+sidence under certain conditions. The law stipulates that an eviction can only occur after a one-month noti
+ce period following a judgment or act authorizing the eviction, unless specific exceptions apply, such as a
+bandonment of the property or mutual agreement on a different timeline (Art. 233undecies).\n\nIf your resid
+ence has been declared uninhabitable or is subject to a rental prohibition, you have rights that protect yo
+u from immediate eviction. In such cases, you are entitled to priority access to public housing managed by
+local authorities, and you should receive a relocation proposal at the time of eviction (Art. 12). Furtherm
+ore, if the conditions of your rental property do not meet safety and health standards, and this non-compli
+ance is not your fault, you may have the option to demand necessary repairs or even terminate the lease wit
+h potential compensation for relocation costs (Art. 219).\n\nIn summary, while eviction is possible, there
+are significant protections and procedures in place that must be followed, which may provide you with optio
+ns to avoid immediate displacement.\n\nReferences:\n1. Brussels Housing Code, Art. 12\n2. Brussels Housing
+Code, Art. 219\n3. Brussels Housing Code, Art. 233undecies\n\nWould you like to ask another legal question or end the conversation?",
+  "additional_kwargs": {},
+  ...irrelevant data
+  "tool_calls": [],
+  "invalid_tool_calls": [],
+  ...irrelevant data
+}
+Stream output received: {
+  pointOfContact: {
+    messages: [
+      AIMessage {
+        "id": "chatcmpl-ApCKYVyl7TRosdVssvIYTnUaUHFm9",
+        "content": "Hello and welcome! / Bonjour et bienvenue ! / Hallo en welkom!\n\nFeel free to ask any
+legal questions you may have. I can assist you with matters related to housing law, family law, and criminal law. Don't hesitate to reach out!",
+        "additional_kwargs": {},
+        ...irrelevant data
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+      },
+      HumanMessage {
+        "id": "713070f0-c22f-456a-a1a4-0f2322f105cf",
+        "content": "Can I be expelled from my house in Brussels?",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      },
+      AIMessage {
+        "id": "chatcmpl-ApCKnhJYK7Emn9WIb1cFVGclEYBvr",
+        "content": "I understand your concern regarding the possibility of being expelled from your house i
+n Brussels, and I'm here to help you with this legal question. I will now analyze your question to provide
+you with the most relevant legal information regarding housing and eviction laws in Belgium. Please hold on for a moment.",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_a3LFnD1CcpInio0XcXmXKJv1",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        ...irrelevant data
+        "tool_calls": [
+          {
+            "name": "validate_legal_question",
+            "args": {
+              "question": "Can I be expelled from my house in Brussels?"
+            },
+            "type": "tool_call",
+            "id": "call_a3LFnD1CcpInio0XcXmXKJv1"
+          }
+        ],
+        "invalid_tool_calls": [],
+        ...irrelevant data
+      },
+      AIMessage {
+        "id": "chatcmpl-ApCKpBCtfzRlmaKdx8CADaoTADk9s",
+        "content": "Am I subject to eviction from my residence in Brussels under the applicable housing laws? Legal keywords: eviction, residence, Brussels, housing laws, tenant rights.",
+        ...irrelevant data
+      },
+      HumanMessage {
+        "id": "fdc0fc1e-f3a9-4cd4-a953-13fb418fe60c",
+        "content": "[{\"pageContent\":"-- i deleted the page content for ease of reading--":\"brussels-housing-code\",\"sourceType\":\"law\",\"elementRef\":\"brussels-housing-code-233undecies\"},\"id\":\"fcae76e8-bb54-4b97-ae24-6aa7afcdd0fe\"}]",
+      },
+      AIMessage {
+        "id": "chatcmpl-ApCKrq8fdwuEq6Yc9yB4FIMY7pLYV",
+        "content": "Based on the applicable housing laws in Brussels, you may be subject to eviction from y
+our residence under certain conditions. The law stipulates that an eviction can only occur after a one-mont
+h notice period following a judgment or act authorizing the eviction, unless specific exceptions apply, suc
+h as abandonment of the property or mutual agreement on a different timeline (Art. 233undecies). \n\nIf you
+r residence has been declared uninhabitable or is subject to a rental prohibition, you have rights that pro
+tect you from immediate eviction. In such cases, you are entitled to a priority access to public housing ma
+naged by local authorities, and you should receive a relocation proposal at the time of eviction (Art. 12).
+ Furthermore, if the conditions of your rental property do not meet safety and health standards, and this n
+on-compliance is not your fault, you may have the option to demand necessary repairs or even terminate the
+lease with potential compensation for relocation costs (Art. 219).\n\nIn summary, while eviction is possibl
+e, there are significant protections and procedures in place that must be followed, which may provide you w
+ith options to avoid immediate displacement.\n\nReferences:\n1. Brussels Housing Code, Art. 12\n2. Brussels Housing Code, Art. 219\n3. Brussels Housing Code, Art. 233undecies",
+        "additional_kwargs": {},
+        ...irrelevant data,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        ...irrelevant data,
+        }
+      },
+      AIMessage {
+        "id": "chatcmpl-ApCKvOMZb17ZwsfhXipti2vvZABye",
+        "content": "Based on the applicable housing laws in Brussels, you may be subject to eviction from y
+our residence under certain conditions. The law stipulates that an eviction can only occur after a one-mont
+h notice period following a judgment or act authorizing the eviction, unless specific exceptions apply, suc
+h as abandonment of the property or mutual agreement on a different timeline (Art. 233undecies).\n\nIf your
+ residence has been declared uninhabitable or is subject to a rental prohibition, you have rights that prot
+ect you from immediate eviction. In such cases, you are entitled to priority access to public housing manag
+ed by local authorities, and you should receive a relocation proposal at the time of eviction (Art. 12). Fu
+rthermore, if the conditions of your rental property do not meet safety and health standards, and this non-
+compliance is not your fault, you may have the option to demand necessary repairs or even terminate the lea
+se with potential compensation for relocation costs (Art. 219).\n\nIn summary, while eviction is possible,
+there are significant protections and procedures in place that must be followed, which may provide you with
+ options to avoid immediate displacement.\n\nReferences:\n1. Brussels Housing Code, Art. 12\n2. Brussels Ho
+using Code, Art. 219\n3. Brussels Housing Code, Art. 233undecies\n\nWould you like to ask another legal question or end the conversation?",
+        "additional_kwargs": {},
+        ...irrelevant data
+      }
+    ],
+    answer: 'Based on the applicable housing laws in Brussels, you may be subject to eviction from your res
+idence under certain conditions. The law stipulates that an eviction can only occur after a one-month notic
+e period following a judgment or act authorizing the eviction, unless specific exceptions apply, such as abandonment of the property or mutual agreement on a different timeline (Art. 233undecies).\n' +
+ghts that protect you from immediate eviction. In such cases, you are entitled to priority access to public housing managed by local authorities, and you should receive a relocation proposal at the time of eviction (Art. 12). Furthermore, if the conditions of your rental property do not meet safety and health standards, and this non-compliance is not your fault, you may have the option to demand necessary repairs or even terminate the lease with potential compensation for relocation costs (Art. 219).\n' +
+      '\n' +
+      'In summary, while eviction is possible, there are significant protections and procedures in place that must be followed, which may provide you with options to avoid immediate displacement.\n' +
+      '\n' +
+      'References:\n' +
+      '1. Brussels Housing Code, Art. 12\n' +
+      '2. Brussels Housing Code, Art. 219\n' +
+      '3. Brussels Housing Code, Art. 233undecies\n' +
+      '\n' +
+      'Would you like to ask another legal question or end the conversation?'
+  }
+}

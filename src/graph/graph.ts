@@ -1,16 +1,19 @@
 import {END, MemorySaver, START, StateGraph} from "@langchain/langgraph";
 import {OverallStateAnnotation} from "./state.js";
-import {pointOfContact} from "./nodes/point-of-contact.js";
+import {pointOfContact, waitForQuestion} from "./nodes/point-of-contact.js";
 import {legalResearcher} from "./nodes/legal-researcher.js";
 import {legalClassifier} from "./nodes/legal-classifier.js";
 import {legalCommunicator} from "./nodes/legal-communicator.js";
 import {validationNode} from "./nodes/validation-node.js";
 
-const memory = new MemorySaver();
+const checkpointer = new MemorySaver();
 
 export const workflow = new StateGraph(OverallStateAnnotation)
     .addNode('pointOfContact', pointOfContact, {
-        ends: ['validationNode', END]
+        ends: ['waitForQuestion', END]
+    })
+    .addNode('waitForQuestion', waitForQuestion, {
+        ends: ['validationNode']
     })
     .addNode('validationNode', validationNode, {
         ends: ['legalClassifier', 'validationNode']
@@ -25,6 +28,4 @@ export const workflow = new StateGraph(OverallStateAnnotation)
         ends: ['pointOfContact']
     })
     .addEdge(START, 'pointOfContact')
-    .compile({
-        checkpointer: memory
-    });
+    .compile({checkpointer});
