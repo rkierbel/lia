@@ -1,7 +1,6 @@
 import {PointOfContactAnnotation} from "../state.js";
 import {Command, interrupt, LangGraphRunnableConfig, messagesStateReducer} from "@langchain/langgraph";
 import {createChatModel} from "../ai-tool-factory.js";
-import {extractContent} from "../../utils/message-to-string.js";
 import {languageDetector, legalSourceInference, questionValidator, toolNode} from "./validation-tools.js";
 import {BaseMessage, HumanMessage} from "@langchain/core/messages";
 
@@ -12,13 +11,9 @@ export const validationNode = async (
     config?: LangGraphRunnableConfig
 ) => {
     console.log("[ValidationNode] called");
-    const {messages} = state;
+    const {question} = state;
 
     // Extract the question from the last message
-    const question = messages.length > 0 ?
-        extractContent(messages[messages.length - 1]) :
-        "";
-
     try {
         const [
             userLang,
@@ -71,6 +66,7 @@ export const validationNode = async (
         }
 
         // If all validations pass, confirm to user and proceed to legal classifier
+        console.log("[ValidationNode] - question validated!", question, sourceName, userLang);
         const confirmationResponse = await model.invoke([
             {
                 role: "system",
@@ -124,26 +120,15 @@ const handleInterruptFlow = async (
     config?: LangGraphRunnableConfig
 ) => {
     const messages = messagesStateReducer(state.messages, [response]);
-    const updatedState = {
-        ...state,
-        messages,
-        userLang
-    };
 
-    const userInput: BaseMessage = await interrupt({
+    const interruptInput: string = await interrupt({
         message: "Waiting for new question after invalid input",
-        threadInfo: {
-            threadId: config?.configurable?.thread_id,
-            currentState: {
-                currentState: updatedState,
-                threadId: config?.configurable?.thread_id
-            }
-        }
+        threadId: config?.configurable?.thread_id,
     });
 
     return new Command({
         update: {
-            messages: messagesStateReducer(messages, [new HumanMessage(userInput)]),
+            messages: messagesStateReducer(messages, [new HumanMessage(interruptInput)]),
             userLang
         },
         goto: 'validationNode'
