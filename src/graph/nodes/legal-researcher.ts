@@ -1,13 +1,12 @@
-import {LegalClassifierAnnotation} from "../state.js";
-import {Command, LangGraphRunnableConfig, messagesStateReducer} from "@langchain/langgraph";
-import {tool} from "@langchain/core/tools";
-import {LegalSource, LegalSourceSchema} from "../../interface/legal-document.js";
-import {KnowledgeBase} from "../../offline-rag-prep/knowledge-base.js";
-import {z} from "zod";
+import {LegalClassifierAnnotation} from '../state.js';
+import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
+import {tool} from '@langchain/core/tools';
+import {LegalSource, LegalSourceSchema} from '../../interface/legal-document.js';
+import {KnowledgeBase} from '../../offline-rag-prep/knowledge-base.js';
+import {z} from 'zod';
 
 export const legalResearcher =
-    async (state: typeof LegalClassifierAnnotation.State,
-           config?: LangGraphRunnableConfig) => {
+    async (state: typeof LegalClassifierAnnotation.State, config?: LangGraphRunnableConfig) => {
         try {
             const {sourceName, pointOfLaw} = state;
             const docs: string = await legalDocsRetriever.invoke({

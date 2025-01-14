@@ -1,37 +1,35 @@
-import {tool} from "@langchain/core/tools";
-import {ChatOpenAI} from "@langchain/openai";
-import {z} from "zod";
-import {LegalSource, LegalSourceSchema} from "../../interface/legal-document.js";
-import {UserLang, UserLangSchema} from "../../interface/user-lang.js";
-import {extractContent} from "../../utils/message-to-string.js";
-import {ToolNode} from "@langchain/langgraph/prebuilt";
-import {PointOfContactAnnotation} from "../state.js";
+import {tool} from '@langchain/core/tools';
+import {z} from 'zod';
+import {LegalSource, LegalSourceSchema} from '../../interface/legal-document.js';
+import {UserLang, UserLangSchema} from '../../interface/user-lang.js';
+import {extractContent} from '../../utils/message-to-string.js';
+import {ToolNode} from '@langchain/langgraph/prebuilt';
+import {PointOfContactAnnotation} from '../state.js';
+import {createChatModel} from '../ai-tool-factory.js';
 
-const apiKey = process.env.OPEN_AI;
-const model = new ChatOpenAI({
-    modelName: "gpt-4o-mini",
-    temperature: 0,
-    apiKey
-});
+const model = createChatModel();
 
 const SYSTEM_PROMPTS = {
-    validation: `You are a precise question validator for legal questions.
-        Validate if the question is about: housing law, family law, or criminal law.
-        Reply only 'yes' or 'no'.
-        If input is not a question, reply 'no'.`,
+    validation: `
+    You are a precise question validator for legal questions.
+    Validate if the question is about: housing law, family law, or criminal law.
+    Reply only 'yes' or 'no'.
+    If input is not a question, reply 'no'.`,
 
-    sourceInference: `You are a law area inference assistant.
-        Determine which source matches the question:
-        - brussels_housing_code
-        - family_code
-        - penal_code
-        If none match, reply 'unknown'.
-        Only reply with one of these exact terms.`,
+    sourceInference: `
+    You are a law area inference assistant.
+    Determine which source matches the question:
+    - brussels_housing_code
+    - family_code
+    - penal_code
+    If none match, reply 'unknown'.
+    Only reply with one of these exact terms.`,
 
-    languageDetection: `You are a language detection expert.
-        Given text, identify if it is English, French, or Dutch.
-        Reply only with: 'en', 'fr', or 'nl'.
-        Default to 'en' if uncertain.`
+    languageDetection: `
+    You are a language detection expert.
+    Given text, identify if it is English, French, or Dutch.
+    Reply only with: 'en', 'fr', or 'nl'.
+    Default to 'en' if uncertain.`
 };
 
 export const questionValidator = tool(
@@ -77,10 +75,10 @@ export const legalSourceInference = tool(
 )
 
 export const languageDetector = tool(
-    async ({text}: { text: string }): Promise<UserLang> => {
+    async ({question}): Promise<UserLang> => {
         const response = await model.invoke([
             { role: "system", content: SYSTEM_PROMPTS.languageDetection },
-            { role: "human", content: text }
+            { role: "human", content: question }
         ]);
         const detectedLang = extractContent(response).toLowerCase().trim();
 
@@ -93,9 +91,9 @@ export const languageDetector = tool(
     },
     {
         name: "detect_language",
-        description: "Detects the language of the input text",
+        description: "Detects the language of the input question",
         schema: z.object({
-            text: z.string().describe("The text to detect the language of")
+            question: z.string().describe("The question to detect the language of")
         })
     }
 );

@@ -1,6 +1,6 @@
-import {PointOfContactAnnotation} from "../state.js";
-import {Command, interrupt, LangGraphRunnableConfig, messagesStateReducer} from "@langchain/langgraph";
-import {createChatModel} from "../ai-tool-factory.js";
+import {PointOfContactAnnotation} from '../state.js';
+import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
+import {createChatModel} from '../ai-tool-factory.js';
 
 const model = createChatModel();
 
@@ -80,18 +80,4 @@ async function welcomeUser(state: typeof PointOfContactAnnotation.State,
         },
         goto: 'waitForQuestion'
     });
-}
-
-export const waitForQuestion=
-    async (state: typeof PointOfContactAnnotation.State,
-           config?: LangGraphRunnableConfig) => {
-    if (!state.question) {
-        console.log("[WaitForQuestion] - waiting for question in thread ", config?.configurable?.thread_id);
-        interrupt("Waiting for user's question");
-    } else {
-        console.log("[PointOfContact] - question received: ", state.question);
-        return new Command({
-            goto: 'validationNode'
-        })
-    }
 }

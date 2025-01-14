@@ -1,7 +1,7 @@
-import {LegalResearcherAnnotation} from "../state.js";
-import {Command, LangGraphRunnableConfig, messagesStateReducer} from "@langchain/langgraph";
-import {extractContent} from "../../utils/message-to-string.js";
-import {createChatModel} from "../ai-tool-factory.js";
+import {LegalResearcherAnnotation} from '../state.js';
+import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
+import {extractContent} from '../../utils/message-to-string.js';
+import {createChatModel} from '../ai-tool-factory.js';
 
 const model = createChatModel();
 
@@ -17,7 +17,8 @@ export const legalCommunicator =
                 content: `
                  You are an expert legal communicator. 
                  You are able to summarize complex legal sources in order to extract meaningful legal notions and conclusions.
-                 Your task is to formulate a conclusion of law that in a clear yet precise and detailed language, that is easily understandable by humans having no legal background.
+                 Your task is to formulate a conclusion of law in a clear yet precise and detailed language.
+                 Your conclusion must be easily understandable by humans having no legal background.
                  The question is the following: ${pointOfLaw}
                  You base your answer solely on the following sources: ${docs}.
                  If you do not know the answer to the question that is asked, simply reply that you do not have the sufficient knowledge to provide a valid legal answer. 
