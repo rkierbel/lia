@@ -1,30 +1,30 @@
   #### Art. 1. 
-              L'infraction que les lois punissent d'une peine criminelle est un crime.
+  L'infraction que les lois punissent d'une peine criminelle est un crime.
   L'infraction que les lois punissent d'une peine correctionnelle est un délit.
   L'infraction que les lois punissent d'une peine de police est une contravention.
 
   #### Art. 2. 
-              Nulle infraction ne peut être punie de peines qui n'étaient pas portées par la loi avant que l'infraction fût commise.
+  Nulle infraction ne peut être punie de peines qui n'étaient pas portées par la loi avant que l'infraction fût commise.
   Si la peine établie au temps du jugement diffère de celle qui était portée au temps de l'infraction, la peine la moins forte sera appliquée.
 
   #### Art. 3. 
-              L'infraction commise sur le territoire du royaume, par des Belges ou par des étrangers, est punie conformément aux dispositions des lois belges.
+  L'infraction commise sur le territoire du royaume, par des Belges ou par des étrangers, est punie conformément aux dispositions des lois belges.
 
-  #### Art. 4. 
-              L'infraction commise hors du territoire du royaume, par des Belges ou par des étrangers, n'est punie, en Belgique, que dans les cas déterminés par la loi.
+  #### Art. 4.
+  L'infraction commise hors du territoire du royaume, par des Belges ou par des étrangers, n'est punie, en Belgique, que dans les cas déterminés par la loi.
 
   #### Art. 5.
-              Toute personne morale est pénalement responsable des infractions qui sont intrinsèquement liées à la réalisation de son objet ou à la défense de ses intérêts, ou de celles dont les faits concrets démontrent qu'elles ont été commises pour son compte.
+  Toute personne morale est pénalement responsable des infractions qui sont intrinsèquement liées à la réalisation de son objet ou à la défense de ses intérêts, ou de celles dont les faits concrets démontrent qu'elles ont été commises pour son compte.
   Sont assimilées à des personnes morales:
    1° les sociétés simples;
    2° les sociétés en formation.
    La responsabilité pénale des personnes morales n'exclut pas celle des personnes physiques auteurs des mêmes faits ou y ayant participé.
 
   #### Art. 6. 
-              Les cours et les tribunaux continueront d'appliquer les lois et règlements particuliers dans toutes les matières non réglées par le présent Code.
+  Les cours et les tribunaux continueront d'appliquer les lois et règlements particuliers dans toutes les matières non réglées par le présent Code.
 
   #### Art. 7. 
-              Les peines applicables aux infractions commises par des personnes physiques sont :
+  Les peines applicables aux infractions commises par des personnes physiques sont :
   En matière criminelle :
   1° la réclusion;
   2° la détention.
@@ -42,7 +42,7 @@
   2° La confiscation spéciale.
 
   #### Art. 7bis.  
-              Les peines applicables aux infractions commises par des personnes morales, à l'exception des personnes morales de droit public visées à l'alinéa 3, sont:
+  Les peines applicables aux infractions commises par des personnes morales, à l'exception des personnes morales de droit public visées à l'alinéa 3, sont:
   en matière criminelle, correctionnelle et de police :
   1° l'amende;
   2° la confiscation spéciale; la confiscation spéciale prévue à l'article 42, 1°, prononcée à l'égard des personnes morales de droit public, ne peut porter que sur des biens civilement saisissables;
@@ -55,10 +55,10 @@
 
 
   #### Art. 8.   
-              La réclusion est à perpétuité ou à temps.
+  La réclusion est à perpétuité ou à temps.
 
   #### Art. 9.  
-              La réclusion à temps est prononcée pour un terme de :
+  La réclusion à temps est prononcée pour un terme de :
   1° cinq à dix ans;
   2° dix à quinze ans;
   3° quinze à vingt ans;
@@ -66,10 +66,10 @@
   5° trente à quarante ans.
 
   #### Art. 10.   
-              La détention est à perpétuité ou à temps.
+  La détention est à perpétuité ou à temps.
 
   #### Art. 11.  
-              La détention à temps est prononcée pour un terme de :
+  La détention à temps est prononcée pour un terme de :
   1° cinq à dix ans;
   2° dix à quinze ans;
   3° quinze à vingt ans;
@@ -77,17 +77,17 @@
   5° trente à quarante ans.
 
   #### Art. 12. 
-              La réclusion ou détention à perpétuité n'est pas prononcée à l'égard d'une personne qui n'était pas âgée de dix-huit ans accomplis au moment du crime.
+  La réclusion ou détention à perpétuité n'est pas prononcée à l'égard d'une personne qui n'était pas âgée de dix-huit ans accomplis au moment du crime.
 
   #### Art. 18.  
-              L'arrêt portant condamnation à la réclusion à perpétuité ou à la détention à perpétuité, à la réclusion ou à la détention de vingt ans à trente ans ou de trente à quarante ans sera imprimé par extrait et affiché dans la commune où le crime aura été commis et dans celle où l'arrêt aura été rendu.
+  L'arrêt portant condamnation à la réclusion à perpétuité ou à la détention à perpétuité, à la réclusion ou à la détention de vingt ans à trente ans ou de trente à quarante ans sera imprimé par extrait et affiché dans la commune où le crime aura été commis et dans celle où l'arrêt aura été rendu.
 
   #### Art. 19.  
-              Tous arrêts de condamnation à la réclusion à perpétuité ou à la détention à perpétuité, à la réclusion à temps ou à la détention de quinze ans à vingt ans ou pour un terme supérieur prononceront, contre les condamnés, la destitution des titres, grades, fonctions, emplois et offices publics dont ils sont revêtus.
+  Tous arrêts de condamnation à la réclusion à perpétuité ou à la détention à perpétuité, à la réclusion à temps ou à la détention de quinze ans à vingt ans ou pour un terme supérieur prononceront, contre les condamnés, la destitution des titres, grades, fonctions, emplois et offices publics dont ils sont revêtus.
   La cour d'assises pourra prononcer cette destitution contre les condamnés à la détention de dix ans à quinze ans ou de cinq ans à dix ans.
 
   #### Art. 25.
-              La durée de l'emprisonnement correctionnel est, sauf les cas prévus par la loi, de huit jours au moins et de cinq ans au plus.
+  La durée de l'emprisonnement correctionnel est, sauf les cas prévus par la loi, de huit jours au moins et de cinq ans au plus.
    Elle est de cinq ans au plus s'il s'agit d'un crime punissable de la réclusion de cinq ans à dix ans qui a été correctionnalisé.
    Elle est de dix ans au plus s'il s'agit d'un crime punissable de la réclusion de dix ans à quinze ans qui a été correctionnalisé.
    Elle est de quinze ans au plus s'il s'agit d'un crime punissable de la réclusion de quinze ans à vingt ans qui a été correctionnalisé.
@@ -98,17 +98,17 @@
   La durée d'un mois d'emprisonnement est de trente jours.
 
   #### Art. 28. 
-              L'emprisonnement pour contravention ne peut être moindre d'un jour ni excéder sept jours, sauf les cas exceptés par la loi.
+  L'emprisonnement pour contravention ne peut être moindre d'un jour ni excéder sept jours, sauf les cas exceptés par la loi.
 
   #### Art. 30.
-              Toute détention subie avant que la condamnation soit devenue irrévocable, par suite de l'infraction qui donne lieu à cette condamnation , à l'exception de la condamnation par simple déclaration de culpabilité, sera imputée sur la durée des peines emportant privation de la liberté restant à courir..
+  Toute détention subie avant que la condamnation soit devenue irrévocable, par suite de l'infraction qui donne lieu à cette condamnation , à l'exception de la condamnation par simple déclaration de culpabilité, sera imputée sur la durée des peines emportant privation de la liberté restant à courir..
   Toute mesure provisoire de placement en régime fermé visée à l'article 52quater de la loi du 8 avril 1965 relative à la protection de la jeunesse, à la prise en charge des mineurs ayant commis un fait qualifié infraction et à la réparation du dommage causé par ce fait ou dans la loi du 1er mars 2002 relative au placement provisoire de mineurs ayant commis un fait qualifié infraction est imputée à la même condition sur la durée des peines emportant privation de liberté auxquelles la personne renvoyée conformément à l'article 57bis de la loi du 8 avril 1965 précitée est condamnée.
 
   #### Art. 30bis.   
-              Les condamnés à une peine emportant privation de liberté subiront leur peine dans les établissements désignés par le Roi.
+  Les condamnés à une peine emportant privation de liberté subiront leur peine dans les établissements désignés par le Roi.
 
   #### Art. 31.
-              Tous jugements ou arrêts de condamnation à la réclusion ou détention à perpétuité ou à la réclusion d'une durée égale ou supérieure à dix ans ou à l'emprisonnement d'une durée égale ou supérieure à vingt ans prononceront, contre les condamnés, l'interdiction à perpétuité du droit :
+  Tous jugements ou arrêts de condamnation à la réclusion ou détention à perpétuité ou à la réclusion d'une durée égale ou supérieure à dix ans ou à l'emprisonnement d'une durée égale ou supérieure à vingt ans prononceront, contre les condamnés, l'interdiction à perpétuité du droit :
   1° De remplir des fonctions, emplois ou offices publics;
   2° d'éligibilité;
   3° De porter aucune décoration, aucun titre de noblesse;
@@ -118,55 +118,55 @@
   Les arrêts ou les jugements de condamnation visés à l'alinéa précédent peuvent en outre prononcer contre les condamnés l'interdiction du droit de vote, à perpétuité ou pour vingt ans à trente ans.
 
   #### Art. 32.
-              Les cours et tribunaux pourront interdire, en tout ou en partie, à perpétuité ou pour dix ans à vingt ans, l'exercice des droits visés à l'article 31, aux condamnés à la réclusion d'une durée égale ou supérieure à cinq ans mais inférieure à dix ans, à la détention à temps ou à l'emprisonnement d'une durée égale ou supérieure à dix ans mais inférieure à vingt ans.
+  Les cours et tribunaux pourront interdire, en tout ou en partie, à perpétuité ou pour dix ans à vingt ans, l'exercice des droits visés à l'article 31, aux condamnés à la réclusion d'une durée égale ou supérieure à cinq ans mais inférieure à dix ans, à la détention à temps ou à l'emprisonnement d'une durée égale ou supérieure à dix ans mais inférieure à vingt ans.
 
   #### Art. 33.
-              Sous réserve de l'application des articles 31 et 32, les cours et tribunaux pourront, dans les cas prévus par la loi, interdire, en tout ou en partie, aux condamnés correctionnels, l'exercice des droits énumérés en l'article 31, alinéa 1er, pour un terme de cinq ans à dix ans.
+  Sous réserve de l'application des articles 31 et 32, les cours et tribunaux pourront, dans les cas prévus par la loi, interdire, en tout ou en partie, aux condamnés correctionnels, l'exercice des droits énumérés en l'article 31, alinéa 1er, pour un terme de cinq ans à dix ans.
   Ils pourront prononcer la même interdiction pour la même durée à l'égard des coupables dont la peine criminelle aura été commuée en un emprisonnement de moins de dix ans.
 
   #### Art. 33bis. 
-              Sous réserve de l'application des articles 31 et 32, les cours et tribunaux pourront interdire aux condamnés correctionnels l'exercice du droit visé à l'article 31, alinéa 2, pour un terme de cinq ans à dix ans.
+  Sous réserve de l'application des articles 31 et 32, les cours et tribunaux pourront interdire aux condamnés correctionnels l'exercice du droit visé à l'article 31, alinéa 2, pour un terme de cinq ans à dix ans.
 
   #### Art. 34. 
-              La durée de l'interdiction, fixée par le jugement ou l'arrêt de condamnation, courra du jour où le condamné aura subi ou prescrit sa peine.
+  La durée de l'interdiction, fixée par le jugement ou l'arrêt de condamnation, courra du jour où le condamné aura subi ou prescrit sa peine.
   L'interdiction produira, en outre, ses effets, à compter du jour où la condamnation contradictoire ou par défaut sera devenue irrévocable.
   L'interdiction prononcée à l'égard d'un condamné bénéficiant d'un sursis total ou partiel pour l'exécution de sa peine en application de la loi du 29 juin 1964 concernant la suspension, le sursis et la probation, courra du jour où le sursis prendra cours pour autant que celui-ci ne soit pas révoqué.
 
   #### Art. 34bis.  
-              La mise à la disposition du tribunal de l'application des peines est une peine complémentaire qui doit ou peut être prononcée dans les cas prévus par la loi aux fins de protection de la société à l'égard de personnes ayant commis certains faits graves portant atteinte à l'intégrité de personnes. Cette peine complémentaire prend cours à l'expiration de l'emprisonnement principal ou de la réclusion.
+  La mise à la disposition du tribunal de l'application des peines est une peine complémentaire qui doit ou peut être prononcée dans les cas prévus par la loi aux fins de protection de la société à l'égard de personnes ayant commis certains faits graves portant atteinte à l'intégrité de personnes. Cette peine complémentaire prend cours à l'expiration de l'emprisonnement principal ou de la réclusion.
 
   #### Art. 34ter.  
-              Les cours et tribunaux prononcent une mise à la disposition du tribunal de l'application des peines pour une période de cinq ans minimum et de quinze ans maximum, prenant cours au terme de la peine principale, dans le cadre des condamnations suivantes :
+  Les cours et tribunaux prononcent une mise à la disposition du tribunal de l'application des peines pour une période de cinq ans minimum et de quinze ans maximum, prenant cours au terme de la peine principale, dans le cadre des condamnations suivantes :
   1° les condamnations sur la base des articles 54 et 57bis, sauf si la peine antérieure a été prononcée pour un crime politique;
   2° les condamnations qui, sur la base des articles 57 et 57bis, constatent une récidive de crime sur crime, sauf si la peine antérieure a été prononcée pour un crime politique;
   3° les condamnations à une peine privative de liberté de cinq ans au moins sur la base des articles 137, si l'infraction a occasionné la mort, 417/12, 417/2, alinéa 3, 2°, 417/16, alinéa 2, cinquième tiret, 417/17, alinéa 2, cinquième tiret, 417/18, alinéa 2, cinquième tiret et 428, § 5.
 
   #### Art. 34quater.  
-              Les cours et tribunaux peuvent prononcer une mise à la disposition du tribunal de l'application des peines pour une période de cinq ans minimum et de quinze ans maximum, prenant cours à l'expiration de la peine principale, dans le cadre des condamnations suivantes :
+  Les cours et tribunaux peuvent prononcer une mise à la disposition du tribunal de l'application des peines pour une période de cinq ans minimum et de quinze ans maximum, prenant cours à l'expiration de la peine principale, dans le cadre des condamnations suivantes :
   1° les condamnations à l'égard de personnes qui, après avoir été condamnées à une peine d'au moins cinq ans d'emprisonnement ou à une peine équivalente prise en compte conformément à l'article 99bis, pour des faits ayant causé intentionnellement de grandes souffrances ou des atteintes graves à l'intégrité physique ou à la santé physique ou mentale, sont à nouveau condamnées pour des faits similaires dans un délai de dix ans à compter du moment où la condamnation est passée en force de chose jugée;
   2° les condamnations sur la base des articles 136bis à 136septies, 347bis, § 4, 1°, in fine, 393 à 397, 417/3, alinéa 3, 2°, 433octies, 1°, 475, 518, alinéa 3, et 532;
   3° les condamnations sur la base des articles 417/7, 417/10, 417/11, 417/13 à 417/22.
   4° en cas d'application des articles 62 ou 65, les condamnations sur la base d'infractions concurrentes non visées aux 1° à 3°.
 
   #### Art. 34quinquies.  
-              Dans le cas où la mise à la disposition du tribunal de l'application des peines n'est pas légalement obligatoire, les procédures relatives aux infractions qui forment la base de la récidive sont jointes au dossier de la poursuite et les motifs de la décision y sont spécifiés.
+  Dans le cas où la mise à la disposition du tribunal de l'application des peines n'est pas légalement obligatoire, les procédures relatives aux infractions qui forment la base de la récidive sont jointes au dossier de la poursuite et les motifs de la décision y sont spécifiés.
   Si les infractions qui forment la base de la récidive, sont constatées dans une condamnation prononcée dans un autre Etat membre de l'Union européenne, une copie certifiée conforme de la décision est jointe au dossier de la poursuite, dans tous les cas.
 
   #### Art. 35.   
-              La dissolution peut être décidée par le juge lorsque la personne morale a été intentionnellement créée afin d'exercer les activités punissables pour lesquelles elle est condamnée ou lorsque son objet a été intentionnellement détourné afin d'exercer de telles activités.
+  La dissolution peut être décidée par le juge lorsque la personne morale a été intentionnellement créée afin d'exercer les activités punissables pour lesquelles elle est condamnée ou lorsque son objet a été intentionnellement détourné afin d'exercer de telles activités.
   Lorsqu'il décide la dissolution, le juge renvoie la cause devant la juridiction compétente pour connaître de la liquidation de la personne morale.
 
   #### Art. 36.   
-              L'interdiction temporaire ou définitive d'exercer une activité relevant de l'objet social de la personne morale pourra être prononcée par le juge dans les cas prévus par la loi.
+  L'interdiction temporaire ou définitive d'exercer une activité relevant de l'objet social de la personne morale pourra être prononcée par le juge dans les cas prévus par la loi.
 
   #### Art. 37.   
-              La fermeture temporaire ou définitive d'un ou plusieurs établissements de la personne morale pourra être prononcée par le juge dans les cas prévus par la loi.
+  La fermeture temporaire ou définitive d'un ou plusieurs établissements de la personne morale pourra être prononcée par le juge dans les cas prévus par la loi.
 
   #### Art. 37bis.   
-              La publication ou la diffusion de la décision aux frais du condamné pourra être prononcée par le juge dans les cas déterminés par la loi.
+  La publication ou la diffusion de la décision aux frais du condamné pourra être prononcée par le juge dans les cas déterminés par la loi.
 
   #### Art. 37ter.
-              § 1er. Lorsqu'un fait est de nature à entraîner une peine d'emprisonnement d'un an au maximum, le juge peut condamner à titre de peine principale à une peine de surveillance électronique d'une durée égale à la peine d'emprisonnement qu'il aurait prononcée et qui peut être applicable en cas de non-exécution de la peine de surveillance électronique. Pour la fixation de la durée de cette peine d'emprisonnement subsidiaire, un jour de la peine de surveillance électronique infligée correspond à un jour de peine d'emprisonnement.
+  § 1er. Lorsqu'un fait est de nature à entraîner une peine d'emprisonnement d'un an au maximum, le juge peut condamner à titre de peine principale à une peine de surveillance électronique d'une durée égale à la peine d'emprisonnement qu'il aurait prononcée et qui peut être applicable en cas de non-exécution de la peine de surveillance électronique. Pour la fixation de la durée de cette peine d'emprisonnement subsidiaire, un jour de la peine de surveillance électronique infligée correspond à un jour de peine d'emprisonnement.
    Une peine de surveillance électronique consiste en l'obligation de présence à une adresse déterminée, exception faite des déplacements ou absences autorisés, durant une période fixée par le juge conformément au paragraphe 2. Le contrôle de la présence est assuré notamment par le recours à des moyens électroniques et, conformément au paragraphe 5, cette obligation est assortie de conditions.
    La peine de surveillance électronique ne peut être prononcée pour les faits :
    1° visés aux articles 417/12 à 417/22;
@@ -187,7 +187,7 @@
    Le juge peut en outre soumettre le condamné à des conditions particulières individualisées dans l'intérêt des victimes. Ces conditions portent sur l'interdiction de fréquenter certains lieux ou de contacter la victime et/ou sur l'indemnisation de celle-ci.
 
   #### Art. 37quater. 
-              § 1er. Dès que la condamnation à une peine de surveillance électronique est passée en force de chose jugée, le greffier informe le service compétent pour la surveillance électronique en vue de faire exécuter cette peine. A cette fin, ce service prend contact avec le condamné dans les sept jours ouvrables qui suivent l'information, détermine les modalités concrètes d'exécution de la peine, après avoir entendu le condamné et en tenant compte des observations de celui-ci, et en avise sans délai le ministère public compétent.
+  § 1er. Dès que la condamnation à une peine de surveillance électronique est passée en force de chose jugée, le greffier informe le service compétent pour la surveillance électronique en vue de faire exécuter cette peine. A cette fin, ce service prend contact avec le condamné dans les sept jours ouvrables qui suivent l'information, détermine les modalités concrètes d'exécution de la peine, après avoir entendu le condamné et en tenant compte des observations de celui-ci, et en avise sans délai le ministère public compétent.
    § 2. Sans préjudice de l'application de l'article 20 de la loi du 5 août 1992 sur la fonction de police, le ministère public est chargé du contrôle du condamné. Les fonctionnaires du service compétent pour la surveillance électronique contrôlent l'exécution de la peine de surveillance électronique et assurent le suivi ou la guidance du condamné.
    § 3. Si la peine de surveillance électronique n'est pas exécutée en tout ou en partie conformément aux dispositions de l'article 37ter, § 5, le fonctionnaire du service compétent pour la surveillance électronique en informe sans délai le ministère public compétent. Ce dernier peut alors décider de procéder à l'exécution de la peine d'emprisonnement fixée dans la décision judiciaire, et ce, en tenant compte de la partie de la peine de surveillance électronique qui a déjà été exécutée par le condamné. Dans ce cas, un jour de peine de surveillance électronique exécuté équivaut à un jour d'emprisonnement. Si l'inexécution totale ou partielle concerne de nouvelles infractions, il doit être établi par une décision passée en force de chose jugée que le condamné a commis un délit ou un crime, ou une infraction équivalente prise en compte conformément à l'article 99bis, durant l'exécution de la peine de surveillance électronique.
    Le ministère public compétent motive sa décision et la communique par le biais du moyen de communication écrit le plus rapide :
@@ -219,7 +219,7 @@
    § 5. Le ministère public visé aux paragraphes 1er à 4 est le ministère public près la juridiction de jugement qui a prononcé la condamnation à une peine sous surveillance électronique.
 
   #### Art. 37quinquies.
-              ancien art. 37ter renuméroté en nouvel art. 37quinquies   § 1er. Lorsqu'un fait est de nature à entraîner une peine de police ou une peine correctionnelle, le juge peut condamner à titre de peine principale à une peine de travail. Le juge prévoit, dans les limites des peines prévues pour l'infraction et par la loi en fonction de sa saisine, une peine d'emprisonnement ou une amende qui peut être applicable en cas de non-exécution de la peine de travail.
+  ancien art. 37ter renuméroté en nouvel art. 37quinquies   § 1er. Lorsqu'un fait est de nature à entraîner une peine de police ou une peine correctionnelle, le juge peut condamner à titre de peine principale à une peine de travail. Le juge prévoit, dans les limites des peines prévues pour l'infraction et par la loi en fonction de sa saisine, une peine d'emprisonnement ou une amende qui peut être applicable en cas de non-exécution de la peine de travail.
   La peine de travail ne peut être prononcée pour les faits :
    1° qui seraient punissables, s'ils n'étaient transmués en délits, d'une peine maximale supérieure à vingt ans de réclusion;
    2° visés aux articles 417/12 à 417/22;
@@ -233,7 +233,7 @@
   En cas de condamnation sur la base des dispositions pénales des lois du 30 juillet 1981 tendant à réprimer certains actes inspirés par le racisme ou la xénophobie, du 23 mars 1995 tendant à réprimer la négation, la minimisation, la justification ou l'approbation du génocide commis par le régime national-socialiste allemand pendant la seconde guerre mondiale, du 10 mai 2007 tendant à lutter contre certaines formes de discrimination, du 10 mai 2007 tendant à lutter contre la discrimination entre les femmes et les hommes et du 22 mai 2014 tendant à lutter contre le sexisme dans l'espace public et modifiant la loi du 10 mai 2007 tendant à lutter contre la discrimination entre les femmes et les hommes afin de pénaliser l'acte de discrimination, le juge peut donner des indications afin que le contenu de la peine de travail ait un rapport avec, respectivement, la lutte contre le racisme ou la xénophobie, la discrimination, le sexisme et le négationnisme, de manière à limiter le risque de commettre de nouvelles infractions similaires.
 
   #### Art. 37sexies.
-              ancien art. 37quater renumérotée en nouvel art. 37sexies   § 1er. La peine de travail est effectuée gratuitement par le condamné pendant le temps laissé libre par ses éventuelles activités scolaires ou professionnelles.
+  ancien art. 37quater renumérotée en nouvel art. 37sexies   § 1er. La peine de travail est effectuée gratuitement par le condamné pendant le temps laissé libre par ses éventuelles activités scolaires ou professionnelles.
   La peine de travail ne peut être effectuée qu'auprès des services publics de l'Etat, des communes, des provinces, des communautés et des régions ou auprès d'associations sans but lucratif ou de fondations à but social, scientifique ou culturel.
   La peine de travail ne peut consister en un travail qui, dans le service public ou l'association désignée, est généralement exécuté par des travailleurs rémunérés.
   § 2. En vue de l'application de l'article 37ter, le ministère public, le juge d'instruction, les juridictions d'instruction et les juridictions de jugement peuvent charger la section du Service des maisons de justice du SPF Justice de l'arrondissement judiciaire du lieu de la résidence de l'inculpé, du prévenu ou du condamné de la rédaction d'un rapport d'information succinct et/ou d'une enquête sociale.
@@ -243,7 +243,7 @@
   § 4. Aux niveaux fédéral et local des structures de concertation relatives à l'application de la peine de travail et de la peine de probation autonome sont créées. Ces structures de concertation ont pour mission de réunir sur une base régulière les instances concernées par l'exécution de la peine de travail et de la peine de probation autonome afin d'évaluer leur collaboration. Le Roi arrête les modalités de composition et de fonctionnement de ces structures de concertation.
 
   #### Art. 37septies.
-              ancien art. 37quinquies renumérotée en nouvel art. 37septies   § 1er. Le condamné auquel une peine de travail a été imposée en vertu de l'article 37ter est suivi par un assistant de justice du Service des maisons de justice du SPF Justice de l'arrondissement judiciaire du lieu de la résidence du condamné.
+  ancien art. 37quinquies renumérotée en nouvel art. 37septies   § 1er. Le condamné auquel une peine de travail a été imposée en vertu de l'article 37ter est suivi par un assistant de justice du Service des maisons de justice du SPF Justice de l'arrondissement judiciaire du lieu de la résidence du condamné.
   L'exécution de la peine de travail est contrôlée par la commission de probation du lieu de la résidence du condamné à laquelle l'assistant de justice fait rapport.
   § 2. Lorsque la décision judiciaire prononçant une peine de travail est passée en force de chose jugée, le greffier en transmet dans les vingt-quatre heures une expédition au président de la commission de probation compétente ainsi qu'à la section d'arrondissement compétente du Service des maisons de justice du SPF Justice, laquelle désigne sans délai l'assistant de justice visé au § 1er.
   La compétence territoriale de la commission de probation est déterminée par le lieu de résidence du condamné au moment où le jugement ou l'arrêt passe en force de chose jugée. Lorsque l'intéressé réside en dehors du territoire du Royaume, la commission de probation territorialement compétente est celle du lieu où a été prononcée la condamnation en première instance.
@@ -256,7 +256,7 @@
   Dans ce cas-ci, le ministère public peut décider d'exécuter la peine d'emprisonnement ou l'amende prévue dans la décision judiciaire, et ce en tenant compte de la peine de travail qui a déjà été exécutée par le condamné.
 
   #### Art. 37octies.
-              § 1er. Lorsqu'un fait est de nature à entraîner une peine de police ou une peine correctionnelle, le juge peut condamner, à titre de peine principale, à une peine de probation autonome.
+  § 1er. Lorsqu'un fait est de nature à entraîner une peine de police ou une peine correctionnelle, le juge peut condamner, à titre de peine principale, à une peine de probation autonome.
   Une peine de probation autonome consiste en l'obligation:
    1° de respecter des conditions générales dès que le jugement a acquis l'autorité de la chose jugée et pendant la période fixée par le juge conformément au paragraphe 2. Ces conditions générales sont:
    a ne pas commettre d'infraction;
@@ -278,7 +278,7 @@
    § 5. Aux niveaux fédéral et local, les structures de concertation relatives à l'application de la peine de travail et de la peine de probation autonome fonctionnent conformément aux dispositions de l'article 37sexies, § 4.
 
   #### Art. 37novies.
-              § 1er. Quiconque a été condamné à une peine de probation autonome conformément à l'article 37octies sera soumis à une guidance judiciaire exercée par le service compétent des communautés de l'arrondissement judiciaire du lieu de sa résidence.
+   § 1er. Quiconque a été condamné à une peine de probation autonome conformément à l'article 37octies sera soumis à une guidance judiciaire exercée par le service compétent des communautés de l'arrondissement judiciaire du lieu de sa résidence.
    L'exécution de la peine de probation autonome est contrôlée par la commission de probation du lieu de la résidence du condamné à laquelle le service compétent des communautés fait rapport.
    Lorsque la décision judiciaire prononçant la peine de probation autonome est passée en force de chose jugée, le greffier en transmet dans les vingt-quatre heures une expédition au président de la commission de probation compétente ainsi qu'à la section d'arrondissement compétente du service compétent des communautés.
    Dans le mois qui suit le début de la guidance judiciaire par le service compétent des communautés, et ensuite chaque fois que celui-ci l'estime utile ou chaque fois que la commission lui en fait la demande, et au moins tous les six mois, il fait rapport à la commission de probation sur le respect des conditions. Il propose, le cas échéant, les mesures qu'il juge utiles.
@@ -292,7 +292,7 @@
    Le service compétent ou la personne compétente informe la commission de l'interruption de la guidance ou du traitement.
 
   #### Art. 37decies.
-              § 1er. La commission de probation peut suspendre en tout ou partie le contenu concret de la peine de probation autonome, le préciser ou l' adapter aux circonstances, soit d'office, soit sur réquisition du ministère public, soit à la demande du condamné. Dans le cas où une des conditions de la peine de probation autonome n'a pu être réalisée durant le délai de probation initial sans que cela soit dû à la volonté du condamné, la commission de probation peut prolonger une fois le délai de probation d'un an au maximum afin que le condamné puisse satisfaire à la condition.
+  § 1er. La commission de probation peut suspendre en tout ou partie le contenu concret de la peine de probation autonome, le préciser ou l' adapter aux circonstances, soit d'office, soit sur réquisition du ministère public, soit à la demande du condamné. Dans le cas où une des conditions de la peine de probation autonome n'a pu être réalisée durant le délai de probation initial sans que cela soit dû à la volonté du condamné, la commission de probation peut prolonger une fois le délai de probation d'un an au maximum afin que le condamné puisse satisfaire à la condition.
    Si la commission de probation estime devoir prendre une des mesures visées à l'alinéa 1er, le président convoque l'intéressé, par envoi recommandé, plus de dix jours avant la date fixée pour l'examen de l'affaire. Le dossier de la commission est mis pendant dix jours à la disposition de l'intéressé et de son conseil éventuel.
    Si la commission de probation estime que la peine de probation autonome a été exécutée, elle peut décider que celle-ci prend fin, même si la période fixée par le juge n'a pas encore expiré.
    La décision de la commission de probation visée à l'alinéa 1er ou à l'alinéa 3 est motivée. Cette décision est notifiée à l'intéressé et au ministère public. La notification est faite au ministère public par simple lettre et à l'intéressé par envoi recommandé, dans les trois jours, non compris les samedis, dimanches et jours fériés.
@@ -303,21 +303,21 @@
    La décision rendue sur ce recours n'est susceptible ni d'appel ni d'opposition.
 
   #### Art. 37undecies.
-              Si le condamné ne respecte pas ou ne respecte que partiellement les conditions de la peine de probation autonome, visées à l'article 37octies, § 1er, alinéa 2, le service compétent des communautés en informe sans délai la commission de probation. La commission convoque le condamné par envoi recommandé plus de dix jours avant la date fixée pour l'examen de l'affaire et en informe son conseil. Le dossier de la commission est mis pendant cinq jours à la disposition du condamné et de son conseil éventuel.
+   Si le condamné ne respecte pas ou ne respecte que partiellement les conditions de la peine de probation autonome, visées à l'article 37octies, § 1er, alinéa 2, le service compétent des communautés en informe sans délai la commission de probation. La commission convoque le condamné par envoi recommandé plus de dix jours avant la date fixée pour l'examen de l'affaire et en informe son conseil. Le dossier de la commission est mis pendant cinq jours à la disposition du condamné et de son conseil éventuel.
    La commission, siégeant hors la présence du ministère public, rédige un rapport motivé en vue de l'application de la peine de substitution.
    Le rapport est envoyé par simple lettre au condamné, au ministère public et au service compétent des communautés.
    Dans ce cas, le ministère public peut décider d'exécuter la peine d'emprisonnement ou l'amende prévue dans la décision judiciaire, et ce en tenant compte de la peine de probation autonome qui a déjà été exécutée par le condamné.
 
   #### Art. 38. 
-              L'amende pour contravention est d'un euro au moins et de vingt-cinq euros au plus, sauf les cas exceptés par la loi.
+  L'amende pour contravention est d'un euro au moins et de vingt-cinq euros au plus, sauf les cas exceptés par la loi.
   L'amende pour crime ou délit est de vingt-six euros au moins  .
   Les amendes seront perçues au profit de l'Etat.
 
   #### Art. 39. 
-              L'amende est prononcée individuellement contre chacun des condamnés à raison d'une même infraction.
+  L'amende est prononcée individuellement contre chacun des condamnés à raison d'une même infraction.
 
   #### Art. 40. 
-              A défaut de payement dans le délai de deux mois à dater de l'arrêt ou du jugement, s'il est contradictoire, ou de sa signification, s'il est par défaut, l'amende pourra être remplacée par un emprisonnement dont la durée sera fixée par le jugement ou l'arrêt de condamnation, et qui n'excédera pas six mois pour les condamnés à raison de crime, trois mois pour les condamnés à raison de délit, et trois jours pour les condamnés à raison de contravention.
+  A défaut de payement dans le délai de deux mois à dater de l'arrêt ou du jugement, s'il est contradictoire, ou de sa signification, s'il est par défaut, l'amende pourra être remplacée par un emprisonnement dont la durée sera fixée par le jugement ou l'arrêt de condamnation, et qui n'excédera pas six mois pour les condamnés à raison de crime, trois mois pour les condamnés à raison de délit, et trois jours pour les condamnés à raison de contravention.
   Les condamnés soumis à l'emprisonnement subsidiaire pourront être retenus dans la maison où ils ont subi la peine principale.
   S'il n'a été prononcé qu'une amende, l'emprisonnement à subir, à défaut de payement, est assimilé à l'emprisonnement correctionnel ou de police, selon le caractère de la condamnation.
 
