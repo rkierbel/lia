@@ -6,6 +6,7 @@ import {extractContent} from '../../utils/message-to-string.js';
 import {ToolNode} from '@langchain/langgraph/prebuilt';
 import {PointOfContactAnnotation} from '../state.js';
 import {createChatModel} from '../ai-tool-factory.js';
+import {LangGraphRunnableConfig} from '@langchain/langgraph';
 
 const model = createChatModel();
 
@@ -33,11 +34,11 @@ const SYSTEM_PROMPTS = {
 };
 
 export const questionValidator = tool(
-    async ({question}) => {
+    async ({question}, config: LangGraphRunnableConfig) => {
         const response = await model.invoke([
             { role: "system", content: SYSTEM_PROMPTS.validation },
             { role: "human", content: question }
-        ]);
+        ], config);
 
         return extractContent(response).toLowerCase().includes('yes') ? "yes" : "no";
     },
@@ -51,11 +52,11 @@ export const questionValidator = tool(
 );
 
 export const legalSourceInference = tool(
-    async ({question}) => {
+    async ({question}, config: LangGraphRunnableConfig) => {
         const response = await model.invoke([
             { role: "system", content: SYSTEM_PROMPTS.sourceInference },
             { role: "human", content: question }
-        ]);
+        ], config);
         const inferredSource = extractContent(response).toLowerCase().trim();
 
         try {
@@ -75,11 +76,11 @@ export const legalSourceInference = tool(
 )
 
 export const languageDetector = tool(
-    async ({question}): Promise<UserLang> => {
+    async ({question}, config: LangGraphRunnableConfig): Promise<UserLang> => {
         const response = await model.invoke([
             { role: "system", content: SYSTEM_PROMPTS.languageDetection },
             { role: "human", content: question }
-        ]);
+        ], config);
         const detectedLang = extractContent(response).toLowerCase().trim();
 
         try {

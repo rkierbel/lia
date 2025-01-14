@@ -11,7 +11,7 @@ type ValidationTempState = {
 };
 
 export const validationNode =
-    async (state: typeof PointOfContactAnnotation.State, config?: LangGraphRunnableConfig) => {
+    async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
         console.log('[ValidationNode] called');
         const {question} = state;
         const userLang = await languageDetector.invoke({question}, config);
@@ -110,7 +110,7 @@ export const validationNode =
 const handleInterruptFlow =
     async (state: typeof PointOfContactAnnotation.State,
            tempState: ValidationTempState,
-           config?: LangGraphRunnableConfig) => {
+           config: LangGraphRunnableConfig) => {
 
         const messages = messagesStateReducer(state.messages, [tempState.llmResponse]);
         const interruptInput: string = await interrupt({

@@ -5,20 +5,15 @@ import {createChatModel} from '../ai-tool-factory.js';
 const model = createChatModel();
 
 export const pointOfContact =
-    async (
-        state: typeof PointOfContactAnnotation.State,
-        config?: LangGraphRunnableConfig
-    ) => {
+    async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
         console.log("[PointOfContact] called with thread: ", config?.configurable?.thread_id);
 
         const {messages, answer} = state;
 
-        // If we have an answer, transmit it and wait for new question
         if (answer) {
             return await answerAndWaitForNewQuestion(state, config);
         }
 
-        // Handle initial contact
         if (messages.length === 0) {
             return await welcomeUser(state, config);
         }
@@ -58,7 +53,7 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
 }
 
 async function welcomeUser(state: typeof PointOfContactAnnotation.State,
-                           config?: LangGraphRunnableConfig) {
+                           config: LangGraphRunnableConfig) {
     console.log("[PointOfContact] - initial contact - welcome prompt");
     const response = await model.invoke([
         {

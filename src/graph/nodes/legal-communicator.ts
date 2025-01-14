@@ -6,8 +6,7 @@ import {createChatModel} from '../ai-tool-factory.js';
 const model = createChatModel();
 
 export const legalCommunicator =
-    async (state: typeof LegalResearcherAnnotation.State,
-           config?: LangGraphRunnableConfig) => {
+    async (state: typeof LegalResearcherAnnotation.State, config: LangGraphRunnableConfig) => {
         console.log("[LegalCommunicator] called, received the following question: ", state.pointOfLaw);
         const {pointOfLaw, docs, messages} = state;
 

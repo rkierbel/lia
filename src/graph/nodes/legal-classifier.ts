@@ -1,12 +1,12 @@
 import {PointOfContactAnnotation} from '../state.js';
-import {Command, messagesStateReducer} from '@langchain/langgraph';
+import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {extractContent} from '../../utils/message-to-string.js';
 import {createChatModel} from '../ai-tool-factory.js';
 
 const model = createChatModel();
 
 export const legalClassifier =
-    async (state: typeof PointOfContactAnnotation.State) => {
+    async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
         console.log("[LegalClassifier] called");
         const {question, sourceName, messages} = state;
 
@@ -25,7 +25,7 @@ export const legalClassifier =
                 `
             },
             {role: "human", content: "Generate a reformulated legal question followed by relevant legal keywords"}
-        ]);
+        ], config);
         console.log("[LegalClassifier] responded with the following content: ", response);
 
         return new Command({
