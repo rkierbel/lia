@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-// api/server.ts
+
 import express, {Request, Response} from 'express';
 import {v4 as uuidv4} from 'uuid';
 import {workflow} from "./graph/graph.js";
@@ -11,9 +11,13 @@ dotenv.config({path: '../.env'});
 const app = express();
 app.use(express.json());
 
-/* TODO -> handle language inference if changes ?
-TODO -> handle double-texting, handle interrupts at various nodes, handle network errors, handle end conversation,
- cache question & answer after legalCommunicator in parallel of answering
+/*
+TODO -> handle language inference if changes mid-chat ?
+TODO -> handle double-texting & handle interrupts at various nodes
+TODO -> handle network errors, handle end conversation,
+TODO -> cache question & answer after legalCommunicator in parallel of answering
+TODO -> Handle multiple sources
+TODO -> UI
 */
 app.post('/api/conversation', async (req: Request, res: Response) => {
     const message = req?.body?.message;
