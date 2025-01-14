@@ -13,7 +13,7 @@ const model = createChatModel();
 const SYSTEM_PROMPTS = {
     validation: `
     You are a precise question validator for legal questions.
-    Validate if the question is about: housing law, family law, or criminal law.
+    Validate if the question is about: housing law, family law or criminal law.
     Reply only 'yes' or 'no'.
     If input is not a question, reply 'no'.`,
 

@@ -1,20 +1,22 @@
 import {PointOfContactAnnotation} from '../state.js';
-import {Command, interrupt, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
+import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {createChatModel} from '../ai-tool-factory.js';
 import {languageDetector, legalSourceInference, questionValidator, toolNode} from './validation-tools.js';
-import {AIMessageChunk, HumanMessage} from '@langchain/core/messages';
+import {BaseMessage} from '@langchain/core/messages';
+import {InterruptReason} from '../../interface/interrupt-reason.js';
 
 const model = createChatModel().bindTools(toolNode.tools);
 type ValidationTempState = {
+    messages: BaseMessage[],
     userLang: string,
-    llmResponse: AIMessageChunk
+    interruptReason?: InterruptReason
 };
 
 export const validationNode =
     async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
-        console.log('[ValidationNode] called');
+        console.log("ValidationNode] called");
         const {question} = state;
-        const userLang = await languageDetector.invoke({question}, config);
+        const userLang = state.userLang ?? await languageDetector.invoke({question}, config);
 
         try {
             const [validationResult, sourceName] = await Promise.all([
@@ -22,10 +24,10 @@ export const validationNode =
                 legalSourceInference.invoke({question}, config)
             ]);
 
-            if (validationResult !== 'yes') {
+            if (validationResult !== "yes") {
                 const llmResponse = await model.invoke([
                     {
-                        role: 'system',
+                        role: "system",
                         content: `
                         You are a helpful legal assistant guiding a user.
                         You communicate with the user in ${userLang}.
@@ -35,16 +37,20 @@ export const validationNode =
                         Maintain a friendly and professional tone.
                         `
                     },
-                    {role: 'human', content: question}
+                    {role: "human", content: question}
                 ], config);
 
-                return handleInterruptFlow(state, {userLang, llmResponse}, config);
+                return toFeedbackHandler({
+                    messages: messagesStateReducer(state.messages, [llmResponse]),
+                    userLang,
+                    interruptReason: "invalidQuestion" as InterruptReason
+                });
             }
 
-            if (sourceName === 'unknown') {
+            if (sourceName === "unknown") {
                 const llmResponse = await model.invoke([
                     {
-                        role: 'system',
+                        role: "system",
                         content: `
                         You are a helpful legal assistant.
                         You communicate with the user in ${userLang}.
@@ -54,17 +60,21 @@ export const validationNode =
                         Maintain a friendly and professional tone.
                         `
                     },
-                    {role: 'human', content: question}
+                    {role: "human", content: question}
                 ], config);
 
-                return handleInterruptFlow(state, {userLang, llmResponse}, config);
+                return toFeedbackHandler({
+                    messages: messagesStateReducer(state.messages, [llmResponse]),
+                    userLang,
+                    interruptReason: "invalidQuestion" as InterruptReason
+                });
             }
 
             // If all validations pass, confirm to user and proceed to legal classifier
-            console.log('[ValidationNode] - question validated!', question, sourceName, userLang);
+            console.log("[ValidationNode] - question validated!", question, sourceName, userLang);
             const confirmationResponse = await model.invoke([
                 {
-                    role: 'system',
+                    role: "system",
                     content: `
                     You are a legal assistant processing a user's legal question.
                     You communicate with the user in ${userLang}
@@ -73,7 +83,7 @@ export const validationNode =
                     Maintain a professional and reassuring tone.
                     `
                 },
-                {role: 'human', content: question}
+                {role: "human", content: question}
             ], config);
 
             return new Command({
@@ -83,15 +93,15 @@ export const validationNode =
                     sourceName,
                     userLang
                 },
-                goto: 'legalClassifier'
+                goto: "legalClassifier"
             });
 
         } catch (error) {
-            console.error('[ValidationNode] Processing error:', error);
+            console.error("[ValidationNode] Processing error:", error);
 
             const llmResponse = await model.invoke([
                 {
-                    role: 'system',
+                    role: "system",
                     content: `
                     You are a legal assistant handling an unexpected error.
                     You communicate with the user in ${userLang}.
@@ -100,29 +110,24 @@ export const validationNode =
                     Maintain a calm and professional tone.
                     `
                 },
-                {role: 'human', content: 'Error occurred'}
+                {role: "human", content: "Error occurred"}
             ], config);
 
-            return handleInterruptFlow(state, {userLang, llmResponse}, config);
+            return toFeedbackHandler({
+                messages: messagesStateReducer(state.messages, [llmResponse]),
+                userLang,
+                interruptReason: "processingError" as InterruptReason
+            });
         }
     };
 
-const handleInterruptFlow =
-    async (state: typeof PointOfContactAnnotation.State,
-           tempState: ValidationTempState,
-           config: LangGraphRunnableConfig) => {
-
-        const messages = messagesStateReducer(state.messages, [tempState.llmResponse]);
-        const interruptInput: string = await interrupt({
-            message: 'Waiting for new question after invalid input',
-            threadId: config?.configurable?.thread_id,
-        });
-
-        return new Command({
-            update: {
-                messages: messagesStateReducer(messages, [new HumanMessage(interruptInput)]),
-                userLang: tempState.userLang
-            },
-            goto: 'validationNode'
-        });
-    };
+function toFeedbackHandler(validationTempState: ValidationTempState) {
+    return new Command({
+        update: {
+            messages: validationTempState.messages,
+            userLang: validationTempState.userLang,
+            interruptReason: validationTempState.interruptReason
+        },
+        goto: "feedbackHandler",
+    });
+}

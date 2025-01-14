@@ -1,6 +1,7 @@
 import {Annotation, MessagesAnnotation} from "@langchain/langgraph";
 import {LegalSource} from "../interface/legal-document.js";
 import {UserLang} from "../interface/user-lang.js";
+import {InterruptReason} from '../interface/interrupt-reason.js';
 
 export interface ConversationState {
     isEnding: boolean;
@@ -11,7 +12,8 @@ export const PointOfContactAnnotation  = Annotation.Root({
     userLang: Annotation<UserLang>,
     question: Annotation<string>,
     sourceName: Annotation<LegalSource>,
-    answer: Annotation<string>
+    answer: Annotation<string>,
+    interruptReason: Annotation<InterruptReason>
 });
 
 export const LegalClassifierAnnotation = Annotation.Root({

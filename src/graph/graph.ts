@@ -11,13 +11,13 @@ const checkpointer = new MemorySaver();
 
 export const workflow = new StateGraph(OverallStateAnnotation)
     .addNode('pointOfContact', pointOfContact, {
-        ends: ['feedbackHandler', END]
+        ends: ['feedbackHandler']
     })
     .addNode('feedbackHandler', feedbackHandler, {
-        ends: ['validationNode']
+        ends: ['validationNode', END]
     })
     .addNode('validationNode', validationNode, {
-        ends: ['legalClassifier', 'validationNode']
+        ends: ['legalClassifier', 'feedbackHandler']
     })
     .addNode('legalClassifier', legalClassifier, {
         ends: ['legalResearcher']

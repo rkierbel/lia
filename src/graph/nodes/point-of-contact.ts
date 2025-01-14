@@ -1,6 +1,7 @@
 import {PointOfContactAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {createChatModel} from '../ai-tool-factory.js';
+import {InterruptReason} from '../../interface/interrupt-reason.js';
 
 const model = createChatModel();
 
@@ -46,9 +47,11 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
     return new Command({
         update: {
             messages: messagesStateReducer(state.messages, [response]),
-            answer: ""
+            answer: "",
+            question: "",
+            interruptReason: "waitNewQuestion" as InterruptReason
         },
-        goto: 'waitForQuestion'
+        goto: "feedbackHandler"
     });
 }
 
@@ -72,7 +75,8 @@ async function welcomeUser(state: typeof PointOfContactAnnotation.State,
     return new Command({
         update: {
             messages: messagesStateReducer(state.messages, [response]),
+            interruptReason: "waitNewQuestion" as InterruptReason
         },
-        goto: 'waitForQuestion'
+        goto: 'feedbackHandler'
     });
 }

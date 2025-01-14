@@ -1,15 +1,24 @@
 import {PointOfContactAnnotation} from '../state.js';
-import {Command, interrupt, LangGraphRunnableConfig} from '@langchain/langgraph';
+import {Command, END, interrupt, LangGraphRunnableConfig} from '@langchain/langgraph';
+import {InterruptReason} from '../../interface/interrupt-reason.js';
 
 export const feedbackHandler = async (state: typeof PointOfContactAnnotation.State,
-                                      config?: LangGraphRunnableConfig) => {
-    if (!state.question) {
-        console.log("[FeedbackHandler] - waiting for question in thread ", config?.configurable?.thread_id);
-        interrupt("Waiting for user's question");
+                                      config: LangGraphRunnableConfig) => {
+    const {interruptReason} = state;
+
+    if (interruptReason === 'waitNewQuestion') {
+        console.log('[FeedbackHandler] - waiting for new question in thread: ', config.configurable?.thread_id);
+        interrupt({
+            interruptReason: 'waitNewQuestion' as InterruptReason
+        });
+    } else if (interruptReason === 'invalidQuestion') {
+        console.log('[FeedbackHandler] - invalid question received in thread: ', config.configurable?.thread_id);
+        interrupt({
+            interruptReason: 'invalidQuestion' as InterruptReason
+        });
+    } else if (interruptReason === 'endGraph') {
+        return new Command({goto: END});
     } else {
-        console.log("[FeedbackHandler] - question received: ", state.question);
-        return new Command({
-            goto: 'validationNode'
-        })
+        return new Command({goto: 'validationNode'});
     }
 }

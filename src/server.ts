@@ -5,12 +5,13 @@ import {v4 as uuidv4} from 'uuid';
 import {workflow} from "./graph/graph.js";
 import {Command} from "@langchain/langgraph";
 import {OverallStateAnnotation} from './graph/state.js';
+import {InterruptReason} from './interface/interrupt-reason.js';
 
 dotenv.config({path: '../.env'});
 const app = express();
 app.use(express.json());
 
-/*
+/* TODO -> handle language inference if changes ?
 TODO -> handle double-texting, handle interrupts at various nodes, handle network errors, handle end conversation,
  cache question & answer after legalCommunicator in parallel of answering
 */
@@ -31,7 +32,8 @@ app.post('/api/conversation', async (req: Request, res: Response) => {
             state = await workflow.invoke(new Command({
                 resume: "resuming after interrupt",
                 update: {
-                    question: message
+                    question: message,
+                    interruptReason: "" as InterruptReason
                 }
             }), config);
         }
