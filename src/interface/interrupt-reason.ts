@@ -1,1 +1,0 @@
-export type InterruptReason = "invalidQuestion" | "waitNewQuestion" | "processingError" | "endGraph" | "";
