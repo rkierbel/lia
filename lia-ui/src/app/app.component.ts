@@ -8,7 +8,7 @@ import {NgClass} from "@angular/common";
   standalone: true,
   imports: [NgClass, FormsModule],
   template: `
-    <h1>🤖 Angular Generative AI Demo</h1>
+    <h1>lia</h1>
 
     @for (message of messages(); track message.threadId) {
       <pre

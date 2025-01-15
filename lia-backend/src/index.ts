@@ -25,18 +25,14 @@ TODO -> Handle multiple sources
 TODO -> UI
 */
 
-console.log("hello server");
-app.get('/', (req, res) => {
-    console.log('in GET');
-    res.send('Hello World');
-});
 app.post('/api/conversation', async (req: Request, res: Response) => {
     const message = req?.body?.message;
     let threadId = req?.body?.threadId;
     const config = {configurable: {thread_id: threadId}, recursionLimit: 100};
+    // TODO -> check if necessary
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Transfer-Encoding', 'chunked');
-    process.stdout.write('Endpoint accessed\n');
+
     if (message) console.log('Received message: ', message);
 
     try {
@@ -62,6 +58,7 @@ app.post('/api/conversation', async (req: Request, res: Response) => {
                 streamMode: "messages"
             });
         }
+        res.write(JSON.stringify({threadId}));
         for await (const chunk of state) {
           if (chunk[1].langgraph_node !== 'pointOfContact') {
             continue;
@@ -74,7 +71,6 @@ app.post('/api/conversation', async (req: Request, res: Response) => {
         res.status(500).json({error: 'Failed to process conversation'});
     }
 });
-
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

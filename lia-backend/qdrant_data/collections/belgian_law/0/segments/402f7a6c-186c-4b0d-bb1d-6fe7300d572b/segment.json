@@ -1,1 +1,0 @@
-{"version":6,"config":{"vector_data":{"":{"size":1024,"distance":"Cosine","storage_type":"ChunkedMmap","index":{"type":"plain","options":{}},"quantization_config":null,"datatype":"float32"}},"payload_storage_type":{"type":"on_disk"}}}
