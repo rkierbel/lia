@@ -48,7 +48,7 @@ export class AppComponent {
 
     // scroll after the messages render
     setTimeout(() =>
-      window.scrollTo({
+      window?.scrollTo({
         top: document.body.scrollHeight,
         behavior: 'smooth',
       }),
