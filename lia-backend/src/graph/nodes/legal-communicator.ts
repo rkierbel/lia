@@ -29,7 +29,7 @@ export const legalCommunicator =
             {role: "human", content: "Generate a conclusion of law based on the retrieved docs and the point of law"}
         ], config);
 
-        console.log("[LegalCommunicator] responded: ", response);
+        console.log("[LegalCommunicator] responded");
         return new Command({
             update: {
                 answer: extractContent(response),

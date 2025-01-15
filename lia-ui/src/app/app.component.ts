@@ -1,14 +1,62 @@
-import {Component} from '@angular/core';
-import {ChatContainerComponent} from "./chat-container/chat-container.component";
+import {Component, effect, inject} from '@angular/core';
+import {MessageService} from "./message.service";
+import {FormsModule, NgForm} from "@angular/forms";
+import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ChatContainerComponent],
+  imports: [NgClass, FormsModule],
   template: `
-    <app-chat-container></app-chat-container>
-  `
+    <h1>🤖 Angular Generative AI Demo</h1>
+
+    @for (message of messages(); track message.threadId) {
+      <pre
+        class="message"
+        [ngClass]="{
+          'from-user': message.fromUser,
+          generating: message.generating
+        }"
+      >{{ message.text }}</pre
+      >
+    }
+
+    <form #form="ngForm" (ngSubmit)="sendMessage(form, form.value.message)">
+      <input
+        name="message"
+        placeholder="Type a message"
+        ngModel
+        required
+        autofocus
+        [disabled]="generatingInProgress()"
+      />
+      <button type="submit" [disabled]="generatingInProgress() || form.invalid">
+        Send
+      </button>
+    </form>
+  `,
 })
 export class AppComponent {
-  title = 'lia-ui';
+  private readonly messageService = inject(MessageService);
+  readonly threadId = this.messageService.threadId;
+  readonly messages = this.messageService.messages;
+  readonly generatingInProgress = this.messageService.generatingInProgress;
+
+  private readonly scrollOnMessageChanges = effect(() => {
+    // run this effect on every `messages` change
+    this.messages();
+
+    // scroll after the messages render
+    setTimeout(() =>
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth',
+      }),
+    );
+  });
+
+  sendMessage(form: NgForm, messageText: string): void {
+    this.messageService.sendMessage(messageText, this.threadId());
+    form.resetForm();
+  }
 }

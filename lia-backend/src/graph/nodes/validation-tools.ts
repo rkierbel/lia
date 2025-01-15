@@ -19,11 +19,11 @@ const SYSTEM_PROMPTS = {
 
     sourceInference: `
     You are a law area inference assistant.
-    Determine which source matches the question:
-    - brussels_housing_code
-    - family_code
-    - penal_code
-    If none match, reply 'unknown'.
+    Determine which source matches the question. Output only one of the following:
+    - brussels-housing-code
+    - belgian-family-code
+    - belgian-penal-code
+    If none match, output only: unknown.
     Only reply with one of these exact terms.`,
 
     languageDetection: `

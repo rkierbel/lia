@@ -26,7 +26,7 @@ export const legalClassifier =
             },
             {role: "human", content: "Generate a reformulated legal question followed by relevant legal keywords"}
         ], config);
-        console.log("[LegalClassifier] responded with the following content: ", response);
+        console.log("[LegalClassifier] responded");
 
         return new Command({
             update: {

@@ -52,7 +52,7 @@ client.scroll("{belgian_law}", {
 
 
 const retriever = await new KnowledgeBase().retriever(
-    "brussels_housing_code"
+    "brussels-housing-code"
 );
 
 retriever.invoke("trêve hivernale").then(

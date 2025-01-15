@@ -8,7 +8,7 @@ import {LegalDocument, LegalSource} from '../interface/legal-document.js';
 dotenv.config({path: '/lia/.env'});
 
 const embeddingModel = new JinaEmbeddings({
-    apiKey: process.env.JINA,
+    apiKey: "jina_3f47a80afd5b42d9985ba7fca8bedfe9WHcMCRMvQ7lQ-FheqfABgp7LF2ae",
     model: 'jina-embeddings-v3',
     dimensions: 1024,
     normalized: true
