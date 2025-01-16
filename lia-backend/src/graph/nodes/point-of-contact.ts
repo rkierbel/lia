@@ -29,9 +29,7 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
             content: `
             You are a legal assistant communicating a precise and detailed legal answer to a user.
             You communicate with the user in ${state.userLang}.
-            The answer comes from verified legal sources. Do not reformulate the answer.
-            If the answer contains technical definitions, present them clearly.
-            If the answer contains legal references, present them clearly.
+            The answer comes from verified legal sources. Do not reformulate or alter the structure of the answer you are provided with: leave it unaltered.
             After providing the answer, ask if they:
             1) Have another legal question
             2) Want to end the conversation
