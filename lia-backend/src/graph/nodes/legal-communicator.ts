@@ -25,14 +25,15 @@ export const legalCommunicator =
                  You base your answer solely on the sources you received as input.
                  Your conclusion must be easily understandable by humans having no legal background.
                  If you refer to an article of a given legal source in your conclusion, you provide the full reference of this article, that includes the name of the legal source it pertains to.
-                 If you make use of a legal technical term, you will have to provide a clear and technically correct definition it.
-                 Do not, under any circumstances, hallucinate.
+                 If you make use of a legal technical term, you will have to provide a clear and technically correct definition it. 
+                 Pay a particular attention to the fact that the text of the definition of a term should not include the defined term itself. 
+                 Example: you cannot define "Responsabilité pénale" like this: "La responsabilité pour un crime, pouvant entraîner des sanctions légales", because the text of the definition itself mentions the defined term: "responsabilité".
+                 You can only use the data that were provided to you as part of your input to formulate your conclusion.
                  Output:
-                 If you do not know the answer to the question that is asked, simply reply that you do not have the sufficient knowledge to provide a valid legal answer. 
-                 Else:
                  - First your clear, detailed conclusion, that thoroughly answers the point of law you were given as input.
                  - Second the list of legal technical terms used associated with their clear and technically correct definitions.
                  - Third the list of legal references (articles) that you used, including the legal source they belong to.
+                 Your output should not contain non-alphanumerical characters.
                 `
             },
             {role: "human", content: "Generate a conclusion of law based on the retrieved docs and the point of law"}

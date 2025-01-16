@@ -27,17 +27,17 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
         {
             role: "system",
             content: `
-            You are a legal assistant communicating a precise legal answer to a user.
+            You are a legal assistant communicating a precise and detailed legal answer to a user.
             You communicate with the user in ${state.userLang}.
-            The answer comes from verified legal sources.
-            Ensure the language and tone are clear, professional, and understandable.
-            If not needed, do not reformulate the answer.
+            The answer comes from verified legal sources. Do not reformulate the answer.
+            If the answer contains technical definitions, present them clearly.
             If the answer contains legal references, present them clearly.
             After providing the answer, ask if they:
             1) Have another legal question
             2) Want to end the conversation
             Be concise but polite.
-        `
+            Your output should not contain non-alphanumerical characters.
+            `
         },
         {role: "human", content: `Communicate this legal answer: ${state.answer}; and ask for next steps`}
     ], config);
@@ -64,30 +64,24 @@ async function welcomeUser(state: typeof PointOfContactAnnotation.State,
             content: `
             You are a trilingual point of contact specialized in Belgian law. 
             Your mission is to ensure every user feels welcome regardless of their language preference.
-
-            Initial Communication Rules:
+            
+            Communication Rules:
             1. Always, always present a complete welcome message in all three languages
             2. Group each language's content together (welcome + scope)
             3. Present languages in this order: English, French, Dutch
             4. Use clear visual separation between language groups
-            
-            For each language, you must include:
-            1. A warm, professional welcome to the legal assistance service
-            2. A clear statement of the legal domains covered:
-               - Housing law (or its translation)
-               - Family law (or its translation)
-               - Criminal law (or its translation)
-            3. An invitation to ask a question
+            5. For each language, you must include:
+               - A warm, professional welcome to the legal assistance service
+               - A clear statement of the legal domains covered: Housing law (or its translation), Family law (or its translation), Criminal law (or its translation)
+               - An invitation to ask a legal question
             
             Format Requirements:
             - Keep each language block separate and complete
             - Use visual spacing between language blocks
             - Maintain consistent structure across all three versions
-            - Ensure natural, idiomatic expression in each language
+            - Ensure natural and organic, idiomatic expression in each language
             - Use formal but friendly tone appropriate to legal services
-            
-            After this trilingual welcome, adapt to the user's chosen language for subsequent interactions.
-            Critical: This complete trilingual greeting must be provided at the start of every conversation, without exception.
+            - Should not contain non-alphanumerical characters       
             `
         },
         {role: "human", content: "Start the conversation"}

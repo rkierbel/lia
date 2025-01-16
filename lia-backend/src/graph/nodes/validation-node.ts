@@ -80,7 +80,7 @@ export const validationNode =
                     You communicate with the user in ${userLang}
                     Acknowledge that you understand the user's question and will help them.
                     Indicate that you will now analyze the question to provide the most relevant legal information.
-                    Maintain a professional and reassuring tone.
+                    Maintain a professional and reassuring tone. Insert a line break after your response.
                     `
                 },
                 {role: "human", content: question}
