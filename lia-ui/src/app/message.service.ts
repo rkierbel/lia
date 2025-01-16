@@ -66,7 +66,7 @@ export class MessageService {
         filter(
           (event: HttpEvent<string>): boolean =>
             event.type === HttpEventType.DownloadProgress ||
-            event.type === HttpEventType.Response,
+            event.type === HttpEventType.Response
         ),
         map(
           (event: HttpEvent<string>): Message =>

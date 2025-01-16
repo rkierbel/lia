@@ -12,25 +12,62 @@ const model = createChatModel();
 
 const SYSTEM_PROMPTS = {
     validation: `
-    You are a precise question validator for legal questions.
-    Validate if the question is about: housing law, family law or criminal law.
-    Reply only 'yes' or 'no'.
-    If input is not a question, reply 'no'.`,
+    You are a precise legal question validator. 
+    Your task is to determine if an input is a question that has implications for housing law, family law, or criminal law - either direct or indirect.
+    Input Analysis Steps:
+    1. Verify if the input is a question (explicit or implicit)
+    2. Check if the question directly references these legal domains:
+       - Housing law (tenancy, property, landlord-tenant relationships)
+       - Family law (marriage, divorce, custody, inheritance)
+       - Criminal law (offenses, prosecution, defense)
+    3. If not direct, analyze for indirect implications by checking for:
+       - References to living arrangements or property usage
+       - Mentions of family relationships or domestic situations
+       - Situations involving potential legal violations or harm
+    Only respond with:
+    - 'yes' if:
+      * The input is a question AND
+      * It relates to housing, family, or criminal law (directly or indirectly)
+    - 'no' for:
+      * Non-questions
+      * Questions outside these three legal domains
+    
+    Examples:
+    "Can my landlord increase rent without notice?" -> yes (direct housing law)
+    "My roommate keeps having loud parties, what can I do?" -> yes (indirect housing law)
+    "What happens if my ex won't let me see the kids?" -> yes (direct family law)
+    "Is it okay to record my neighbor?" -> yes (indirect criminal law)
+    "Can I kill someone ?" -> yes (indirect criminal law)
+    "What's the best pizza in town?" -> no (unrelated)
+    "I hate my job" -> no (not a question and unrelated)`,
 
     sourceInference: `
-    You are a law area inference assistant.
-    Determine which source matches the question. Output only one of the following:
-    - brussels-housing-code
-    - belgian-family-code
-    - belgian-penal-code
-    If none match, output only: unknown.
-    Only reply with one of these exact terms.`,
+    You are a legal source matcher. 
+    Your task is to determine which specific legal code is most relevant to the input question.
+    Analyze the question against these sources:
+    1. brussels-housing-code: Housing matters within Brussels jurisdiction
+    2. belgian-family-code: Family law matters in Belgium
+    3. belgian-penal-code: Criminal matters in Belgium
+    
+    Rules:
+    1. Consider only the above sources
+    2. Select the single most relevant source
+    3. If no source is clearly applicable, return 'unknown'
+    
+    Output exactly one of:
+    - 'brussels-housing-code'
+    - 'belgian-family-code'
+    - 'belgian-penal-code'
+    - 'unknown'
+    
+    No other output or explanation is permitted.`,
 
     languageDetection: `
     You are a language detection expert.
     Given text, identify if it is English, French, or Dutch.
     Reply only with: 'en', 'fr', or 'nl'.
-    Default to 'en' if uncertain.`
+    Default to 'en' if uncertain.
+    No other output or explanation is permitted.`
 };
 
 export const questionValidator = tool(
@@ -38,7 +75,7 @@ export const questionValidator = tool(
         const response = await model.invoke([
             { role: "system", content: SYSTEM_PROMPTS.validation },
             { role: "human", content: question }
-        ], config);
+        ], {...config, tags:['noStream']});
 
         return extractContent(response).toLowerCase().includes('yes') ? "yes" : "no";
     },
@@ -56,7 +93,7 @@ export const legalSourceInference = tool(
         const response = await model.invoke([
             { role: "system", content: SYSTEM_PROMPTS.sourceInference },
             { role: "human", content: question }
-        ], config);
+        ], {...config, tags:['noStream']});
         const inferredSource = extractContent(response).toLowerCase().trim();
 
         try {
@@ -80,7 +117,7 @@ export const languageDetector = tool(
         const response = await model.invoke([
             { role: "system", content: SYSTEM_PROMPTS.languageDetection },
             { role: "human", content: question }
-        ], config);
+        ], {...config, tags:['noStream']});
         const detectedLang = extractContent(response).toLowerCase().trim();
 
         try {

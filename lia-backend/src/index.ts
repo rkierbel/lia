@@ -37,11 +37,7 @@ app.post('/api/conversation', async (req: Request, res: Response) => {
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Transfer-Encoding', 'chunked');
     res.setHeader("Access-Control-Allow-Origin", "*");
-    /* TODO -> check if necessary
-    res.setHeader("Access-Control-Allow-Credentials", "true");
-    res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-    */
+
     if (message) console.log('Received message: ', message);
 
     try {
@@ -66,8 +62,10 @@ app.post('/api/conversation', async (req: Request, res: Response) => {
             });
         }
         for await (const chunk of state) {
-            console.log(chunk[0].content);
-            if (chunk[1].langgraph_node !== 'pointOfContact') {
+            if (chunk[1].langgraph_node !== 'pointOfContact' && chunk[1].langgraph_node !== 'validationNode') {
+                continue;
+            }
+            if (chunk[1].tags.some((tag:string) => tag === 'noStream')) {
                 continue;
             }
             res.write(chunk[0].content);
