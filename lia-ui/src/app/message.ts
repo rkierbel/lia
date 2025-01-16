@@ -1,5 +1,5 @@
 export interface Message {
-  threadId: string;
+  id: string;
   text: string;
   fromUser: boolean;
   generating?: boolean;

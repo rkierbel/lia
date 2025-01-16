@@ -1,18 +1,21 @@
 import dotenv from "dotenv";
 
 import express, {Request, Response} from 'express';
-import {v4 as uuidv4} from 'uuid';
+import cors from 'cors';
 import {workflow} from "./graph/graph.js";
 import {Command} from "@langchain/langgraph";
 import {InterruptReason} from './interface/interrupt-reason.js';
 import {PregelOutputType} from "@langchain/langgraph/pregel";
 import {IterableReadableStream} from "@langchain/core/utils/stream";
 import morgan from "morgan";
+import {v4 as uuidv4} from 'uuid';
 
 dotenv.config({path: '../.env'});
 const app = express();
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(cors());
+
 const PORT = process.env.PORT || 3003;
 
 
@@ -26,20 +29,24 @@ TODO -> UI
 */
 
 app.post('/api/conversation', async (req: Request, res: Response) => {
+    console.log(req?.body);
     const message = req?.body?.message;
-    let threadId = req?.body?.threadId;
+    const threadId = req?.body?.threadId || uuidv4();
+    const isNew = req?.body?.isNew;
     const config = {configurable: {thread_id: threadId}, recursionLimit: 100};
-    // TODO -> check if necessary
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Transfer-Encoding', 'chunked');
-
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    /* TODO -> check if necessary
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+    */
     if (message) console.log('Received message: ', message);
 
     try {
         let state: IterableReadableStream<PregelOutputType>;
-        if (!threadId) {
-            threadId = uuidv4();
-            config.configurable.thread_id = threadId;
+        if (isNew) {
             console.log('Starting new conversation with thread id: ', threadId);
             state = await workflow.stream({messages: []}, {
                 ...config,
@@ -58,12 +65,12 @@ app.post('/api/conversation', async (req: Request, res: Response) => {
                 streamMode: "messages"
             });
         }
-        res.write(JSON.stringify({threadId}));
         for await (const chunk of state) {
-          if (chunk[1].langgraph_node !== 'pointOfContact') {
-            continue;
-          }
-          res.write(chunk[0].content);
+            console.log(chunk[0].content);
+            if (chunk[1].langgraph_node !== 'pointOfContact') {
+                continue;
+            }
+            res.write(chunk[0].content);
         }
         res.end();
     } catch (error) {

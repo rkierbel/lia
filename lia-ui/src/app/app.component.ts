@@ -1,17 +1,22 @@
-import {Component, effect, inject} from '@angular/core';
+import {ChangeDetectionStrategy, Component, computed, effect, inject, OnDestroy, signal} from '@angular/core';
 import {MessageService} from "./message.service";
 import {FormsModule, NgForm} from "@angular/forms";
-import {NgClass} from "@angular/common";
+import {NgClass, NgIf} from "@angular/common";
+import {StartPopUpComponent} from "./start-pop-up/start-pop-up.component";
+import {v4 as uuidv4} from 'uuid';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgClass, FormsModule],
+  imports: [NgClass, FormsModule, StartPopUpComponent, NgIf],
   template: `
     <h1>lia</h1>
-
-    @for (message of messages(); track message.threadId) {
+    @if (showStartPopup()) {
+      <app-start-pop-up (start)="startConversation()"/>
+    }
+    @for (message of messages(); track message.id) {
       <pre
+        *ngIf="message.text !== ''"
         class="message"
         [ngClass]="{
           'from-user': message.fromUser,
@@ -36,13 +41,16 @@ import {NgClass} from "@angular/common";
     </form>
   `,
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
   private readonly messageService = inject(MessageService);
   readonly threadId = this.messageService.threadId;
+
   readonly messages = this.messageService.messages;
   readonly generatingInProgress = this.messageService.generatingInProgress;
 
-  private readonly scrollOnMessageChanges = effect(() => {
+  protected readonly showStartPopup = computed(() => this.messageService.isFirstVisit());
+
+  private readonly scrollEffect = effect(() => {
     // run this effect on every `messages` change
     this.messages();
 
@@ -55,8 +63,17 @@ export class AppComponent {
     );
   });
 
+  startConversation(): void {
+    this.messageService.sendMessage('', uuidv4());
+    this.messageService.completeFirstVisit();
+  }
+
   sendMessage(form: NgForm, messageText: string): void {
     this.messageService.sendMessage(messageText, this.threadId());
     form.resetForm();
+  }
+
+  ngOnDestroy(): void {
+    this.scrollEffect.destroy();
   }
 }
