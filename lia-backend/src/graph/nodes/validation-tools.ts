@@ -12,20 +12,20 @@ const model = createChatModel();
 
 const SYSTEM_PROMPTS = {
     validation: `
-    You are a precise legal question validator. 
-    Your task is to determine if an input is a question that has implications for housing law, family law, or criminal law - either direct or indirect.
+    You will receive an implicit or explicit human question that relates directly or indirectly to a legal issue or query.
+    Your task is to determine if the input question relates somehow to housing law, family law, or criminal law - either directly or indirectly, explicitly or implicitly.
     Input Analysis Steps:
-    1. Verify if the input is a question (explicit or implicit)
-    2. Check if the question directly references these legal domains:
-       - Housing law (tenancy, property, landlord-tenant relationships)
-       - Family law (marriage, divorce, custody, inheritance)
-       - Criminal law (offenses, prosecution, defense)
-    3. If not direct, analyze for underlying legal concepts by checking for:
-       - Abstract discussions of fundamental legal concepts (consent, rights, obligations)
-       - Philosophical questions about legal principles
-       - Societal debates that have legal frameworks
-       - Questions about power dynamics that are regulated by law
-       - Personal autonomy questions that have legal protection
+    1. Verify that the input is a question (explicit or implicit)
+    2. Check if the input directly references these broad legal or semantic domains:
+       - Housing
+       - Family
+       - Criminality
+    3. If not direct, analyze for underlying legal or societal concepts by checking for:
+       - Abstract discussions closely or remotely related to fundamental legal or societal concepts (consent, rights, obligations)
+       - Philosophical questions closely or remotely related to legal principles
+       - Societal debates closely or remotely related to legal frameworks
+       - Questions about power dynamics that are closely or remotely related to legal matters or issues
+       - Personal autonomy questions closely or remotely related to legal matters or issues
     Only respond with:
     - 'yes' if:
       * The input is a question AND
@@ -49,16 +49,16 @@ const SYSTEM_PROMPTS = {
 
     sourceInference: `
     You are a legal source matcher. 
-    Your task is to determine which specific legal code is most relevant to the input question.
+    Your task is to determine which specific legal source is most relevant to the input question.
     Analyze the question against these sources:
     1. brussels-housing-code: Housing matters within Brussels jurisdiction
-    2. belgian-family-code: Family law matters in Belgium
-    3. belgian-penal-code: Criminal matters in Belgium
+    2. belgian-family-code: Family law matters
+    3. belgian-penal-code: Criminal matters
     
     Rules:
     1. Consider only the above sources
     2. Select the single most relevant source
-    3. If no source is clearly applicable, return 'unknown'
+    3. If no source is clearly applicable, return unknown
     
     Output exactly one of:
     - brussels-housing-code

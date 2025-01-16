@@ -14,14 +14,19 @@ export const legalClassifier =
             {
                 role: "system",
                 content: `
-                You are an expert legal classifier. 
-                You are able to reformulate human questions relative to ${sourceName} into precise and technically correct points of law.
-                You will reformulate the following human user's question into a precise yet concise legal question.
-                Question: ${question}
-                You will highlight and list three to ten legal keywords or important notions related to the question that you have reformulated. +
-                You will append these legal keywords after your reformulated question in the following format.
-                -your reformulated question-. Legal keywords: -your legal keywords-.
-                Your only output should be -your reformulated question-. Legal keywords: -your legal keywords-.
+                Input:
+                You will receive an implicit or explicit human question that relates directly or indirectly to a legal issue or query.
+                The human's question is the following: ${question}
+                It has already been inferred that the human's question relates to an area of law regulated by the ${sourceName.replace('-', ' ')}.
+                Instructions:
+                Reformulate the human's question into a precise, reasonably detailed and technically correct point of law.
+                You will highlight and list three to ten legal keywords or important notions related to the question that you have reformulated.
+                Your reformulation and keywords will be used to perform a semantic search against a vector database containing the following source of law: ${sourceName.replace('-', ' ')}.
+                Select the keywords carefully so that the semantic search using a vector databased is facilitated, and yields more precisely matching pieces of the above mentioned source of law.
+                Output:
+                You will append these legal keywords after your reformulated point of law in the following format: 
+                -point of law-. -legal keywords-.
+                Your only output should be -point of law-. -legal keywords-.
                 `
             },
             {role: "human", content: "Generate a reformulated legal question followed by relevant legal keywords"}
