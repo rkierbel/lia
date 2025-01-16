@@ -1,5 +1,5 @@
 import {Component, computed, effect, inject, OnDestroy} from '@angular/core';
-import {MessageService} from "./message.service";
+import {MessageService} from "./conversation/message.service";
 import {FormsModule, NgForm} from "@angular/forms";
 import {NgClass, NgIf} from "@angular/common";
 import {v4 as uuidv4} from 'uuid';
