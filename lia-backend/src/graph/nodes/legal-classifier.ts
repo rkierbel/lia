@@ -18,7 +18,7 @@ export const legalClassifier =
                 You are able to reformulate human questions relative to ${sourceName} into precise and technically correct points of law.
                 You will reformulate the following human user's question into a precise yet concise legal question.
                 Question: ${question}
-                You will highlight and list three to five legal keywords related to the question that you have reformulated. +
+                You will highlight and list three to ten legal keywords or important notions related to the question that you have reformulated. +
                 You will append these legal keywords after your reformulated question in the following format.
                 -your reformulated question-. Legal keywords: -your legal keywords-.
                 Your only output should be -your reformulated question-. Legal keywords: -your legal keywords-.

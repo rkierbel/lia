@@ -20,10 +20,12 @@ const SYSTEM_PROMPTS = {
        - Housing law (tenancy, property, landlord-tenant relationships)
        - Family law (marriage, divorce, custody, inheritance)
        - Criminal law (offenses, prosecution, defense)
-    3. If not direct, analyze for indirect implications by checking for:
-       - References to living arrangements or property usage
-       - Mentions of family relationships or domestic situations
-       - Situations involving potential legal violations or harm
+    3. If not direct, analyze for underlying legal concepts by checking for:
+       - Abstract discussions of fundamental legal concepts (consent, rights, obligations)
+       - Philosophical questions about legal principles
+       - Societal debates that have legal frameworks
+       - Questions about power dynamics that are regulated by law
+       - Personal autonomy questions that have legal protection
     Only respond with:
     - 'yes' if:
       * The input is a question AND
@@ -39,7 +41,11 @@ const SYSTEM_PROMPTS = {
     "Is it okay to record my neighbor?" -> yes (indirect criminal law)
     "Can I kill someone ?" -> yes (indirect criminal law)
     "What's the best pizza in town?" -> no (unrelated)
-    "I hate my job" -> no (not a question and unrelated)`,
+    "I hate my job" -> no (not a question and unrelated)
+    "Le consentement, ça existe vraiment?" -> yes (indirect criminal law)
+    "C'est quoi le consentement ?" -> yes (indirect criminal law)
+    "Does consent really exist?" -> yes (indirect criminal law - consent)
+    "Who decides what's right and wrong?" -> yes (indirect criminal law - legal principles)`,
 
     sourceInference: `
     You are a legal source matcher. 
@@ -55,10 +61,10 @@ const SYSTEM_PROMPTS = {
     3. If no source is clearly applicable, return 'unknown'
     
     Output exactly one of:
-    - 'brussels-housing-code'
-    - 'belgian-family-code'
-    - 'belgian-penal-code'
-    - 'unknown'
+    - brussels-housing-code
+    - belgian-family-code
+    - belgian-penal-code
+    - unknown
     
     No other output or explanation is permitted.`,
 

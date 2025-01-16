@@ -15,17 +15,19 @@ import {MorphComponent} from "./morph/morph.component";
       <app-morph (start)="startConversation()"/>
     }
     @if (!showStartPopup()) {
-      @for (message of messages(); track message.id) {
-        <pre
-          *ngIf="message.text !== ''"
-          class="message"
-          [ngClass]="{
+      <div class="messages-container">
+        @for (message of messages(); track message.id) {
+          <pre
+            *ngIf="message.text !== ''"
+            class="message"
+            [ngClass]="{
           'from-user': message.fromUser,
           generating: message.generating
         }"
-        >{{ message.text }}</pre
-        >
-      }
+          >{{ message.text }}</pre
+          >
+        }
+      </div>
 
       <form #form="ngForm" (ngSubmit)="sendMessage(form, form.value.message)">
         <input
@@ -56,16 +58,12 @@ export class AppComponent implements OnDestroy {
     // run this effect on every `messages` change
     this.messages();
 
-    // scroll after the messages render
-    console.log(this.messages().length);
-    if(this.messages().length > 2) {
-      setTimeout(() =>
-        window?.scrollTo({
-          top: document?.body.scrollHeight,
-          behavior: 'smooth',
-        }),
-      );
-    }
+    setTimeout(() =>
+      window?.scrollTo({
+        top: document?.body.scrollHeight,
+        behavior: 'smooth',
+      }),
+    );
   });
 
   startConversation(): void {
