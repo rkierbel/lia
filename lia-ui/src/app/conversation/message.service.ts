@@ -2,6 +2,7 @@ import {inject, Injectable, signal} from '@angular/core';
 import {HttpClient, HttpDownloadProgressEvent, HttpEvent, HttpEventType, HttpResponse} from "@angular/common/http";
 import {Message} from "./message";
 import {filter, map, Observable, startWith, tap} from "rxjs";
+import {Language} from "../morph/morph.component";
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,7 @@ export class MessageService {
   readonly messages = this._messages.asReadonly();
   readonly generatingInProgress = this._generatingInProgress.asReadonly();
 
-  sendMessage(prompt: string = '', threadId: string): void {
+  sendMessage(prompt: string = '', threadId: string, language?: Language): void {
     this._generatingInProgress.set(true);
 
     this._threadId.set(threadId);
@@ -35,7 +36,7 @@ export class MessageService {
       }
     ]);
 
-    this.getChatResponseStream(prompt, this._threadId()).subscribe({
+    this.getChatResponseStream(prompt, this._threadId(), language).subscribe({
       next: (message) =>
         this._messages.set([...this._completeMessages(), message]),
 
@@ -48,14 +49,17 @@ export class MessageService {
     });
   }
 
-  private getChatResponseStream(prompt: string, threadId: string): Observable<Message> {
+  private getChatResponseStream(prompt: string,
+                                threadId: string,
+                                language?: Language): Observable<Message> {
     const id = window.crypto.randomUUID();
 
     return this.http
       .post('http://localhost:3003/api/conversation', {
         message: prompt,
         threadId,
-        isNew: this.isFirstVisit()
+        isNew: this.isFirstVisit(),
+        userLang: language
       }, {
         responseType: 'text',
         observe: 'events',

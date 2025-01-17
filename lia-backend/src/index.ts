@@ -44,7 +44,10 @@ app.post('/api/conversation', async (req: Request, res: Response) => {
         let state: IterableReadableStream<PregelOutputType>;
         if (isNew) {
             console.log('Starting new conversation with thread id: ', threadId);
-            state = await workflow.stream({messages: []}, {
+            state = await workflow.stream({
+                messages: [],
+                userLang: req?.body?.userLang
+            }, {
                 ...config,
                 streamMode: "messages"
             });
@@ -65,7 +68,7 @@ app.post('/api/conversation', async (req: Request, res: Response) => {
             if (chunk[1].langgraph_node !== 'pointOfContact' && chunk[1].langgraph_node !== 'validationNode') {
                 continue;
             }
-            if (chunk[1].tags.some((tag:string) => tag === 'noStream')) {
+            if (chunk[1].tags.some((tag: string) => tag === 'noStream')) {
                 continue;
             }
             res.write(chunk[0].content);

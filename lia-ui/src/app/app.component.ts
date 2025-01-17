@@ -3,7 +3,7 @@ import {MessageService} from "./conversation/message.service";
 import {FormsModule, NgForm} from "@angular/forms";
 import {NgClass, NgIf} from "@angular/common";
 import {v4 as uuidv4} from 'uuid';
-import {MorphComponent} from "./morph/morph.component";
+import {Language, MorphComponent} from "./morph/morph.component";
 import {MarkdownPipe} from "./markdown.pipe";
 
 @Component({
@@ -13,7 +13,7 @@ import {MarkdownPipe} from "./markdown.pipe";
   template: `
     <h1></h1>
     @if (showStartPopup()) {
-      <app-morph (start)="startConversation()"/>
+      <app-morph (start)="startConversation($event)"/>
     }
     @if (!showStartPopup()) {
       <div class="messages-container">
@@ -66,8 +66,9 @@ export class AppComponent implements OnDestroy {
     );
   });
 
-  startConversation(): void {
-    this.messageService.sendMessage('', uuidv4());
+  startConversation(language: Language): void {
+    console.log('Received language: ' + language);
+    this.messageService.sendMessage('', uuidv4(), language);
     this.messageService.completeFirstVisit();
   }
 

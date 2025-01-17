@@ -1,13 +1,23 @@
 import {Component, EventEmitter, Output} from "@angular/core";
 import anime from "animejs";
 
+export type Language = 'en' | 'fr' | 'nl';
+
 @Component({
   selector: 'app-morph',
   standalone: true,
   template: `
     <div class="morph-container">
-      <div class="morph-element">
-        <span class="start-text">Start</span>
+      <div class="buttons-container">
+        <div class="morph-element" data-index="0" data-lang="en">
+          <span class="start-text">english</span>
+        </div>
+        <div class="morph-element" data-index="1" data-lang="fr">
+          <span class="start-text">français</span>
+        </div>
+        <div class="morph-element" data-index="2" data-lang="nl">
+          <span class="start-text">nederlands</span>
+        </div>
       </div>
     </div>
   `,
@@ -22,6 +32,12 @@ import anime from "animejs";
       justify-content: center;
       align-items: center;
       z-index: 1000;
+    }
+
+    .buttons-container {
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
     }
 
     .morph-element {
@@ -50,25 +66,30 @@ import anime from "animejs";
   `]
 })
 export class MorphComponent {
-  @Output() start = new EventEmitter<void>();
+  @Output() start = new EventEmitter<Language>();
 
   constructor() {
-    // Ensure we capture the click on the morphing element
+    // Add click handlers to all morph elements
     setTimeout(() => {
-      const morphElement = document?.querySelector('.morph-element');
-      if (morphElement) {
-        morphElement.addEventListener('click', () => this.startMorph());
-      }
+      const morphElements = document?.querySelectorAll('.morph-element');
+      morphElements?.forEach(element => {
+        element.addEventListener('click', (event) => {
+          const target = event.currentTarget as HTMLElement;
+          const language = target.dataset["lang"] as Language;
+          const buttonIndex = parseInt(target.dataset["index"] || '0');
+          this.startMorph(buttonIndex, language);
+        });
+      });
     });
   }
 
-  startMorph(): void {
+  startMorph(buttonIndex: number, language: Language): void {
     const timeline = anime.timeline({
       easing: 'easeInOutSine',
       duration: 1500
     });
 
-    // First fade out the text smoothly
+    // Fade out all texts
     timeline.add({
       targets: '.start-text',
       opacity: 0,
@@ -76,24 +97,32 @@ export class MorphComponent {
       duration: 400,
       easing: 'easeOutSine'
     })
-      // Then expand and transform the circle
+      // Fade out non-selected buttons
       .add({
-        targets: '.morph-element',
+        targets: `.morph-element:not([data-index="${buttonIndex}"])`,
+        opacity: 0,
+        scale: 0.8,
+        duration: 400,
+        easing: 'easeOutSine'
+      }, '-=400')
+      // Expand the selected button
+      .add({
+        targets: `.morph-element[data-index="${buttonIndex}"]`,
         borderRadius: ['50%', '0%'],
         scale: [1, {
           value: Math.max(
             window.innerWidth / 120,
             window.innerHeight / 120
-          ) * 1.2 // Scale a bit extra to ensure full coverage
+          ) * 1.2
         }],
         backgroundColor: {
           value: 'rgb(235, 244, 255)',
           duration: 2000,
           easing: 'easeOutQuad'
         }
-      }, '-=200') // Start slightly before text fade completes
+      }, '-=200')
       .finished.then(() => {
-        this.start.emit();
+      this.start.emit(language);
     });
   }
 }

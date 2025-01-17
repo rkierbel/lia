@@ -67,25 +67,18 @@ async function welcomeUser(state: typeof PointOfContactAnnotation.State,
             Your mission is to ensure every user feels welcome regardless of their language preference.
             
             Communication Rules:
-            1. Always, always present a complete welcome message in all three languages
-            2. Group each language's content together (welcome + scope)
-            3. Present languages in this order: English, French, Dutch
-            4. Use clear visual separation between language groups
-            5. For each language, you must include:
+            1. Present a complete welcome message only in the following language: ${state.userLang}
+            2. In your welcome message, include:
                - A warm, professional welcome to the legal assistance service
                - A clear statement of the legal domains covered: Housing law (or its translation), Family law (or its translation), Criminal law (or its translation)
                - An invitation to ask a legal question
             
             Format Requirements:
-            - Keep each language block separate and complete
-            - Use visual spacing between language blocks
-            - Maintain consistent structure across all three versions
-            - Ensure natural and organic, idiomatic expression in each language
+            - Ensure natural and organic, idiomatic expression in the following language: ${state.userLang}
             - Use formal but friendly tone appropriate to legal services
-            - Should not contain non-alphanumerical characters       
             `
         },
-        {role: "human", content: "Start the conversation"}
+        {role: "human", content: `Start the conversation in ${state.userLang}`}
     ], config);
     console.log(response);
     return new Command({
