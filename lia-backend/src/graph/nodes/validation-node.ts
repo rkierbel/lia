@@ -19,7 +19,7 @@ export const validationNode =
         try {
             const question: string = await questionSpecifier.invoke({
                 question: state.question,
-                humanMessages: state.messages.filter(m => isHumanMessage(m)).slice(-1).map(m => m.content as string)
+                humanMessages: state.messages.filter(m => isHumanMessage(m)).slice(-2).map(m => m.content as string)
             });
             console.log("Question specified: ", question);
             const [validationResult, sourceName] = await Promise.all([
