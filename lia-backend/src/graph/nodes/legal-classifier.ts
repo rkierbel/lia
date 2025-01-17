@@ -1,6 +1,6 @@
 import {PointOfContactAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
-import {extractContent} from '../../utils/message-to-string.js';
+import {extractContent} from '../utils/message-to-string.js';
 import {writingChatModel} from '../ai-tool-factory.js';
 
 const model = writingChatModel();

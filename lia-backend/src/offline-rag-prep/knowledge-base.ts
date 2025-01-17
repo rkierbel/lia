@@ -16,9 +16,11 @@ const embeddingModel = new JinaEmbeddings({
 
 export class KnowledgeBase {
 
+    public static readonly instance: KnowledgeBase = new KnowledgeBase();
+
     private textSplitter;
 
-    constructor() {
+    private constructor() {
         this.textSplitter = new MarkdownTextSplitter();
     }
 
@@ -30,7 +32,7 @@ export class KnowledgeBase {
             ]
         };
         return new QdrantVectorStore(embeddingModel, {
-            url: 'http://localhost:6333',
+            url: process.env.DB_URL,
             collectionName: 'belgian_law'
         }).asRetriever({searchType: 'similarity'}, filter);
     }
@@ -41,7 +43,7 @@ export class KnowledgeBase {
                          sourceEntity: string) {
         const docs = await this.chunksToDocs(sourcePath, sourceName, sourceType, sourceEntity);
         const vectorStore = await QdrantVectorStore.fromExistingCollection(embeddingModel, {
-                url: 'http://localhost:6333',
+                url: process.env.DB_URL,
                 collectionName: 'belgian_law'
             });
         await vectorStore.addDocuments(docs);
@@ -56,7 +58,7 @@ export class KnowledgeBase {
             docs,
             embeddingModel,
             {
-                url: 'http://localhost:6333',
+                url: process.env.DB_URL,
                 collectionName: 'belgian_law',
                 collectionConfig: {
                     vectors: {

@@ -6,18 +6,13 @@ export class MarkdownTextSplitter {
     constructor() {
     }
 
-    /*
-     * Splits a Markdown document into chunks based on # headers
-     * @param {string} markdownFilePath - The path to a Markdown document to split
-     * @returns {Promise<string[]>} Array of chunks
-     */
+    // Splits a Markdown document into chunks based on # headers
     public async splitMarkdownByHeaders(markdownFilePath: string): Promise<Chunk[]> {
         const markdown = await fs.readFile(markdownFilePath, {
             encoding: 'utf-8',
             flag: 'r'
         });
 
-        // Split the document into lines
         const lines: string[] = markdown.split('\n').map(l => l.trim()).filter(l => l !== '');
         const chunks: Chunk[] = [];
         let currentChunk: string[] = [];
@@ -28,7 +23,6 @@ export class MarkdownTextSplitter {
 
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i];
-
 
             const headerMatch = line.match(headerRegex);
 

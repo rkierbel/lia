@@ -16,6 +16,7 @@ export const legalResearcher =
             }, config);
 
             if (docs) console.log('[LegalResearcher] - successfully retrieved legal sources!', docs.length);
+
             return new Command({
                 update: {
                     docs,
@@ -25,6 +26,7 @@ export const legalResearcher =
             });
         } catch (error) {
             console.log('[LegalResearcher] - error', error);
+
             return new Command({
                 update: {
                     messages: messagesStateReducer(state.messages, [])
@@ -41,7 +43,7 @@ const legalDocsRetriever = tool(
         if (sourceName === 'unknown') {
             throw new Error('Cannot retrieve documents for unknown source');
         }
-        const retriever = await new KnowledgeBase().retriever(sourceName);
+        const retriever = await KnowledgeBase.instance.retriever(sourceName);
         const docs: Document[] = await retriever.invoke(query, config);
         return JSON.stringify(docs);
     },
