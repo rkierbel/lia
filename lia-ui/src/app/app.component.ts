@@ -19,7 +19,7 @@ import {MarkdownPipe} from "./markdown.pipe";
       <div class="messages-container">
         @for (message of messages(); track message.id) {
           <div
-            *ngIf="message.text !== ''"
+            *ngIf="!(message.text === '' && message.fromUser)"
             class="message"
             [ngClass]="{
                 'from-user': message.fromUser,
