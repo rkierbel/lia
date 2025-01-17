@@ -1,9 +1,9 @@
 import {PointOfContactAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
-import {createChatModel} from '../ai-tool-factory.js';
+import {writingChatModel} from '../ai-tool-factory.js';
 import {InterruptReason} from '../../interface/interrupt-reason.js';
 
-const model = createChatModel();
+const model = writingChatModel();
 
 export const pointOfContact =
     async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
@@ -28,8 +28,11 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
             role: "system",
             content: `
             You are a legal assistant communicating a precise and detailed legal answer to a user.
-            You communicate with the user in ${state.userLang}.
-            The answer comes from verified legal sources. Do not reformulate or alter the structure of the answer you are provided with: leave it unaltered.
+            You communicate with the human user entirely in ${state.userLang}.
+            The answer comes from verified legal sources. 
+            Do not reformulate the content or alter the structure of the answer you are provided with: leave it unaltered.
+            You may only translate the content of the answer, if the answer is provided in a language that is different from the following language: ${state.userLang}.
+            In that case only, translate the answer to ${state.userLang}.
             After providing the answer, ask if they:
             1) Have another legal question
             2) Want to end the conversation
@@ -37,7 +40,7 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
             Your output should not contain non-alphanumerical characters.
             `
         },
-        {role: "human", content: `Communicate this legal answer: ${state.answer}; and ask for next steps`}
+        {role: "human", content: `Communicate this legal answer: ${state.answer}; and ask for next steps. Do it in the following language: ${state.userLang}`}
     ], config);
 
     console.log("[PointOfContact] - communicates response to user: ", response);

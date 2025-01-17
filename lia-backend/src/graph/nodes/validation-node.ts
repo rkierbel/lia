@@ -1,11 +1,11 @@
 import {PointOfContactAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
-import {createChatModel} from '../ai-tool-factory.js';
-import {languageDetector, legalSourceInference, questionValidator, toolNode} from './validation-tools.js';
+import {writingChatModel} from '../ai-tool-factory.js';
+import {languageDetector, legalSourceInference, questionValidator} from './validation-tools.js';
 import {BaseMessage} from '@langchain/core/messages';
 import {InterruptReason} from '../../interface/interrupt-reason.js';
 
-const model = createChatModel().bindTools(toolNode.tools);
+const model = writingChatModel();
 type ValidationTempState = {
     messages: BaseMessage[],
     userLang: string,

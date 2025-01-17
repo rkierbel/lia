@@ -4,11 +4,12 @@ import {FormsModule, NgForm} from "@angular/forms";
 import {NgClass, NgIf} from "@angular/common";
 import {v4 as uuidv4} from 'uuid';
 import {MorphComponent} from "./morph/morph.component";
+import {MarkdownPipe} from "./markdown.pipe";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgClass, FormsModule, MorphComponent, NgIf],
+  imports: [NgClass, FormsModule, MorphComponent, NgIf, MarkdownPipe],
   template: `
     <h1></h1>
     @if (showStartPopup()) {
@@ -17,15 +18,14 @@ import {MorphComponent} from "./morph/morph.component";
     @if (!showStartPopup()) {
       <div class="messages-container">
         @for (message of messages(); track message.id) {
-          <pre
+          <div
             *ngIf="message.text !== ''"
             class="message"
             [ngClass]="{
-          'from-user': message.fromUser,
-          generating: message.generating
-        }"
-          >{{ message.text }}</pre
-          >
+                'from-user': message.fromUser,
+                generating: message.generating
+            }"
+            [innerHTML]="message.text | markdown"></div>
         }
       </div>
 

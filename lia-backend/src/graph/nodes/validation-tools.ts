@@ -3,12 +3,11 @@ import {z} from 'zod';
 import {LegalSource, LegalSourceSchema} from '../../interface/legal-document.js';
 import {UserLang, UserLangSchema} from '../../interface/user-lang.js';
 import {extractContent} from '../../utils/message-to-string.js';
-import {ToolNode} from '@langchain/langgraph/prebuilt';
-import {PointOfContactAnnotation} from '../state.js';
-import {createChatModel} from '../ai-tool-factory.js';
+import {deterministicChatModel, writingChatModel} from '../ai-tool-factory.js';
 import {LangGraphRunnableConfig} from '@langchain/langgraph';
 
-const model = createChatModel();
+const creativeValidator = writingChatModel();
+const  deterministicValidator = deterministicChatModel();
 
 const SYSTEM_PROMPTS = {
     validation: `
@@ -78,7 +77,7 @@ const SYSTEM_PROMPTS = {
 
 export const questionValidator = tool(
     async ({question}, config: LangGraphRunnableConfig) => {
-        const response = await model.invoke([
+        const response = await creativeValidator.invoke([
             { role: "system", content: SYSTEM_PROMPTS.validation },
             { role: "human", content: question }
         ], {...config, tags:['noStream']});
@@ -96,7 +95,7 @@ export const questionValidator = tool(
 
 export const legalSourceInference = tool(
     async ({question}, config: LangGraphRunnableConfig) => {
-        const response = await model.invoke([
+        const response = await deterministicValidator.invoke([
             { role: "system", content: SYSTEM_PROMPTS.sourceInference },
             { role: "human", content: question }
         ], {...config, tags:['noStream']});
@@ -120,7 +119,7 @@ export const legalSourceInference = tool(
 
 export const languageDetector = tool(
     async ({question}, config: LangGraphRunnableConfig): Promise<UserLang> => {
-        const response = await model.invoke([
+        const response = await deterministicValidator.invoke([
             { role: "system", content: SYSTEM_PROMPTS.languageDetection },
             { role: "human", content: question }
         ], {...config, tags:['noStream']});
@@ -141,9 +140,3 @@ export const languageDetector = tool(
         })
     }
 );
-
-export const toolNode = new ToolNode<typeof PointOfContactAnnotation.State>([
-    questionValidator,
-    legalSourceInference,
-    languageDetector
-]);
