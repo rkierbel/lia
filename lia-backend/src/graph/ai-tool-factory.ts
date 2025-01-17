@@ -7,7 +7,7 @@ export function writingChatModel() {
         model: "deepseek-chat",
         temperature: 1.3,
         apiKey,
-        maxTokens: 800
+        maxTokens: 1000
     }, {
         baseURL: 'https://api.deepseek.com',
     });

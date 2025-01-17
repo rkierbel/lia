@@ -3,12 +3,13 @@ import dotenv from "dotenv";
 import express, {Request, Response} from 'express';
 import cors from 'cors';
 import {workflow} from "./graph/graph.js";
-import {Command} from "@langchain/langgraph";
+import {Command, messagesStateReducer} from "@langchain/langgraph";
 import {InterruptReason} from './interface/interrupt-reason.js';
 import {PregelOutputType} from "@langchain/langgraph/pregel";
 import {IterableReadableStream} from "@langchain/core/utils/stream";
 import morgan from "morgan";
 import {v4 as uuidv4} from 'uuid';
+import {OverallStateAnnotation} from "./graph/state.js";
 
 dotenv.config({path: '../.env'});
 const app = express();
@@ -41,10 +42,10 @@ app.post('/api/conversation', async (req: Request, res: Response) => {
     if (message) console.log('Received message: ', message);
 
     try {
-        let state: IterableReadableStream<PregelOutputType>;
+        let graphStream: IterableReadableStream<PregelOutputType>;
         if (isNew) {
             console.log('Starting new conversation with thread id: ', threadId);
-            state = await workflow.stream({
+            graphStream = await workflow.stream({
                 messages: [],
                 userLang: req?.body?.userLang
             }, {
@@ -53,18 +54,20 @@ app.post('/api/conversation', async (req: Request, res: Response) => {
             });
         } else {
             console.log('Resuming conversation with thread id: ', config.configurable.thread_id);
-            state = await workflow.stream(new Command({
+            const state: typeof OverallStateAnnotation.State = await workflow.getState(config).then(s => s.values);
+            graphStream = await workflow.stream(new Command({
                 resume: "resuming after interrupt",
                 update: {
                     question: message,
-                    interruptReason: "" as InterruptReason
+                    interruptReason: "" as InterruptReason,
+                    messages: messagesStateReducer(state.messages, [message])
                 }
             }), {
                 ...config,
                 streamMode: "messages"
             });
         }
-        for await (const chunk of state) {
+        for await (const chunk of graphStream) {
             if (chunk[1].langgraph_node !== 'pointOfContact' && chunk[1].langgraph_node !== 'validationNode') {
                 continue;
             }

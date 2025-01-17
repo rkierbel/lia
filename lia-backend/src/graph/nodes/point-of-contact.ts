@@ -33,11 +33,11 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
             Do not reformulate the content or alter the structure of the answer you are provided with: leave it unaltered.
             You may only translate the content of the answer, if the answer is provided in a language that is different from the following language: ${state.userLang}.
             In that case only, translate the answer to ${state.userLang}.
+            Start your output with an empty line.
             After providing the answer, ask if they:
             1) Have another legal question
             2) Want to end the conversation
             Be concise but polite.
-            Your output should not contain non-alphanumerical characters.
             `
         },
         {role: "human", content: `Communicate this legal answer: ${state.answer}; and ask for next steps. Do it in the following language: ${state.userLang}`}
