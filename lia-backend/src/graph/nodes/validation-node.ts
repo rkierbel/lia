@@ -87,12 +87,12 @@ export const validationNode =
                     Keep your communication simple and to the point.
                     `
                 },
-                {role: "human", content: `Start confirming as per your instructions. Do so in my language: ${state.userLang}. Add a line break after your confirmation.`}
+                {role: "human", content: `Start confirming as per your instructions. Do so in my language: ${state.userLang}.`}
             ], config);
 
             return new Command({
                 update: {
-                    messages: messagesStateReducer(state.messages, [confirmationResponse]),
+                    messages: messagesStateReducer(state.messages, [confirmationResponse+'\n']),
                     question,
                     sourceName
                 },
