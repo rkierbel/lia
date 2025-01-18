@@ -3,7 +3,7 @@ import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain
 import {writingChatModel} from '../ai-tool-factory.js';
 import {InterruptReason} from '../../interface/interrupt-reason.js';
 
-const model = writingChatModel();
+const creativeModel = writingChatModel();
 
 export const pointOfContact =
     async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
@@ -23,21 +23,20 @@ export const pointOfContact =
 async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotation.State,
                                            config?: LangGraphRunnableConfig) {
     console.log("[PointOfContact] - answer provided by legalCommunicator: ", state.answer);
-    const response = await model.invoke([
+    const response = await creativeModel.invoke([
         {
             role: "system",
             content: `
-            You are a legal assistant communicating a precise and detailed legal answer to a user.
+            You are a kind legal assistant communicating a legal answer to a user.
+            Do not ever use the following in your output: --- or *** or ___.
             You communicate with the human user entirely in ${state.userLang}.
             The answer comes from verified legal sources. 
             Do not reformulate the content or alter the structure of the answer you are provided with: leave it unaltered.
             You may only translate the content of the answer, if the answer is provided in a language that is different from the following language: ${state.userLang}.
             In that case only, translate the answer to ${state.userLang}.
-            Start your output with an empty line.
             After providing the answer, ask if they:
             1) Have another legal question
             2) Want to end the conversation
-            Be concise but polite.
             `
         },
         {role: "human", content: `Communicate this legal answer: ${state.answer}; and ask for next steps. Do it in the following language: ${state.userLang}`}
@@ -59,7 +58,7 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
 async function welcomeUser(state: typeof PointOfContactAnnotation.State,
                            config: LangGraphRunnableConfig) {
     console.log("[PointOfContact] - initial contact - welcome prompt");
-    const response = await model.invoke([
+    const response = await creativeModel.invoke([
         {
             role: "system",
             content: `
@@ -70,7 +69,7 @@ async function welcomeUser(state: typeof PointOfContactAnnotation.State,
             1. Present a complete welcome message only in the following language: ${state.userLang}
             2. In your welcome message, include:
                - A warm, professional welcome to the legal assistance service
-               - A clear statement of the legal domains covered: Housing law (or its translation), Family law (or its translation), Criminal law (or its translation)
+               - A clear statement of the legal domains covered: Housing law (or its translation), Civil law including family law (or its translation), Criminal law (or its translation)
                - An invitation to ask a legal question
             
             Format Requirements:

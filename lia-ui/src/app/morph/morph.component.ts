@@ -10,13 +10,13 @@ export type Language = 'en' | 'fr' | 'nl';
     <div class="morph-container">
       <div class="buttons-container">
         <div class="morph-element" data-index="0" data-lang="en">
-          <span class="start-text">english</span>
+          <span class="start-text">English</span>
         </div>
         <div class="morph-element" data-index="1" data-lang="fr">
-          <span class="start-text">français</span>
+          <span class="start-text">Français</span>
         </div>
         <div class="morph-element" data-index="2" data-lang="nl">
-          <span class="start-text">nederlands</span>
+          <span class="start-text">Nederlands</span>
         </div>
       </div>
     </div>
@@ -43,7 +43,7 @@ export type Language = 'en' | 'fr' | 'nl';
     .morph-element {
       width: 120px;
       height: 120px;
-      background-color: dodgerblue;
+      background-color: #7091E6;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -53,13 +53,14 @@ export type Language = 'en' | 'fr' | 'nl';
     }
 
     .morph-element:hover {
+      background-color: #3D52A0;
       transform: scale(1.05);
     }
 
     .start-text {
       color: white;
-      font-size: 1.2rem;
-      font-weight: 500;
+      font-size: 1.3rem;
+      font-weight: 600;
       pointer-events: none;
       opacity: 1;
     }

@@ -31,10 +31,11 @@ const SYSTEM_PROMPTS = {
     validation: `
     Input:
     You will receive an implicit or explicit human interrogation that relates directly or indirectly to a legal issue or query.
-    Your task is to determine if the input relates somehow to housing law, family law, or criminal law - either directly or indirectly, explicitly or implicitly.
+    Your task is to determine if the input relates somehow to housing law, civil law (Obligations, Property, Inheritance, Donations, Wills, Liability, Contracts, Couples, Patrimonial relations, Family), or criminal law - either directly or indirectly, explicitly or implicitly.
     Input Analysis Steps:
     1. Verify that the input is a question (explicit or implicit). 
-    2. Check if the input directly references these broad legal or semantic domains: Housing, Family or Criminality
+    2. Check if the input directly references these broad legal or semantic domains: 
+    Housing, Family, Obligations, Property, Inheritance, Donations, Wills, Liability, Contracts, Couples, Patrimonial relations or Criminality
     3. If not direct, analyze for underlying legal or societal concepts by checking for:
        - Abstract discussions closely or remotely related to fundamental legal or societal concepts (consent, rights, obligations)
        - Philosophical questions closely or remotely related to legal principles

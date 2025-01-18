@@ -34,7 +34,7 @@ export const validationNode =
                         You are a helpful and professional legal assistant guiding a user.
                         You communicate with the user in its language: ${state.userLang}.
                         The user has asked a question that is not about law or not within the areas we can help with.
-                        Kindly explain the areas of law we can assist with: housing law, family law, and criminal law.
+                        Kindly explain the areas of law we can assist with: housing law, civil law including family law, and criminal law.
                         Encourage the user to rephrase their question or ask a question about a known law area.
                         `
                     },
@@ -79,19 +79,22 @@ export const validationNode =
                 {
                     role: "system",
                     content: `
-                    You are a kind legal assistant processing a user's legal question.
+                    You are a kind legal assistant.
+                    Instructions:
                     You communicate with the user in its language: ${state.userLang}.
-                    Acknowledge that you understand the user's question which is the following: 
-                    ${state.question}.
-                    Indicate that you will now analyze the question to provide the most relevant legal information.
+                    Your only task is to output three sentences:
+                    1. to acknowledge that you understand the user's question
+                    2. to indicate that you will now analyze it
+                    3. to indicate that you will provide an answer backed by trusted legal sources
                     Keep your communication simple and to the point.
+                    Output: the three sentences as described above, in the following language: ${state.userLang}. 
                     `
                 }
-            ], config);
-
+            ], {...config, tags: ['breakAfter']});
+            console.log(confirmationResponse);
             return new Command({
                 update: {
-                    messages: messagesStateReducer(state.messages, [confirmationResponse+'\n']),
+                    messages: messagesStateReducer(state.messages, [confirmationResponse]),
                     question: questionSpecified,
                     sources
                 },

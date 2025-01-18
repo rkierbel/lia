@@ -29,8 +29,7 @@ export const legalClassifier =
                 Select the keywords carefully so that the semantic search using a vector databased is facilitated, and yields more precisely matching pieces of the above mentioned source of law.
                 Output:
                 You will append these legal keywords after your reformulated point of law in the following format: 
-                -point of law-. -legal keywords-.
-                Your only output should be -point of law-. -legal keywords-.
+                point of law. legal keywords.
                 `
             },
             {role: "human", content: "Generate a reformulated legal question followed by relevant legal keywords"}
