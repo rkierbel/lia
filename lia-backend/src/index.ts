@@ -22,15 +22,13 @@ const PORT = process.env.PORT || 3003;
 
 /*
 TODO -> handle language inference if changes mid-chat ?
-TODO -> handle double-texting & handle interrupts at various nodes
+TODO -> handle double-texting
 TODO -> handle network errors, handle end conversation,
 TODO -> cache question & answer after legalCommunicator in parallel of answering
 TODO -> Handle multiple sources
-TODO -> UI
 */
 
 app.post('/api/conversation', async (req: Request, res: Response) => {
-    console.log(req?.body);
     const message = req?.body?.message;
     const threadId = req?.body?.threadId || uuidv4();
     const isNew = req?.body?.isNew;
@@ -38,8 +36,6 @@ app.post('/api/conversation', async (req: Request, res: Response) => {
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Transfer-Encoding', 'chunked');
     res.setHeader("Access-Control-Allow-Origin", "*");
-
-    if (message) console.log('Received message: ', message);
 
     try {
         let graphStream: IterableReadableStream<PregelOutputType>;

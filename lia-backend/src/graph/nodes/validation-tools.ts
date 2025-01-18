@@ -85,6 +85,8 @@ export const questionSpecifier = tool(
             }
         ], {...config, tags: ['noStream']});
 
+        console.log("Question specified: ", response.content);
+
         return response.content as string;
     },
     {

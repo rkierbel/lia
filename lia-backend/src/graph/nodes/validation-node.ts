@@ -17,14 +17,13 @@ export const validationNode =
     async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
         console.log("ValidationNode] called");
         try {
-            const question: string = await questionSpecifier.invoke({
+            const questionSpecified: string = await questionSpecifier.invoke({
                 question: state.question,
                 humanMessages: state.messages.filter(m => isHumanMessage(m)).slice(-2).map(m => m.content as string)
             });
-            console.log("Question specified: ", question);
             const [validationResult, sourceName] = await Promise.all([
-                questionValidator.invoke({question}, config),
-                legalSourceInference.invoke({question}, config)
+                questionValidator.invoke({question: questionSpecified}, config),
+                legalSourceInference.invoke({question: questionSpecified}, config)
             ]);
 
             if (validationResult !== "yes") {
@@ -39,11 +38,11 @@ export const validationNode =
                         Encourage the user to rephrase their question or ask a question about a known law area.
                         `
                     },
-                    {role: "human", content: question}
+                    {role: "human", content: questionSpecified}
                 ], config);
 
                 return toFeedbackHandler({
-                    question,
+                    question: questionSpecified,
                     messages: messagesStateReducer(state.messages, [llmResponse]),
                     userLang: state.userLang,
                     interruptReason: "invalidQuestion" as InterruptReason
@@ -63,11 +62,11 @@ export const validationNode =
                         Maintain a friendly and professional tone.
                         `
                     },
-                    {role: "human", content: question}
+                    {role: "human", content: questionSpecified}
                 ], config);
 
                 return toFeedbackHandler({
-                    question,
+                    question: questionSpecified,
                     messages: messagesStateReducer(state.messages, [llmResponse]),
                     userLang: state.userLang,
                     interruptReason: "invalidQuestion" as InterruptReason
@@ -75,7 +74,7 @@ export const validationNode =
             }
 
             // If all validations pass, confirm to user and proceed to legal classifier
-            console.log("[ValidationNode] - question validated!", question, sourceName, state.userLang);
+            console.log("[ValidationNode] - question validated!");
             const confirmationResponse = await model.invoke([
                 {
                     role: "system",
@@ -93,7 +92,7 @@ export const validationNode =
             return new Command({
                 update: {
                     messages: messagesStateReducer(state.messages, [confirmationResponse+'\n']),
-                    question,
+                    question: questionSpecified,
                     sourceName
                 },
                 goto: "legalClassifier"
