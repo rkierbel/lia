@@ -51,24 +51,43 @@ const SYSTEM_PROMPTS = {
 
     sourceInference: `
     You are a legal source matcher. 
-    Your task is to determine which specific legal source is most relevant to the input question.
+    Your task is to determine which specific legal source or sources relate the most to the input question.
     Analyze the question against these sources:
-    1. brussels-housing-code: Housing matters within Brussels jurisdiction
-    2. belgian-family-code: Family law matters
-    3. belgian-penal-code: Criminal matters
+    1. brussels-housing-code,
+    2. belgian-civil-code-general-provisions,
+    3. belgian-civil-code-inheritance-donations-wills,
+    4. belgian-civil-code-patrimonial-relations-and-couples,
+    5. belgian-civil-code-property,
+    6. belgian-civil-code-evidence,
+    7. belgian-civil-code-obligations,
+    8. belgian-civil-code-extra-contractual-liability,
+    9. belgian-penal-code
     
     Rules:
     1. Consider only the above sources
-    2. Select the single most relevant source
-    3. If no source is clearly applicable, return unknown
+    2. Select sources that meet the relevance criteria below
+    3. Return unknown if no source meets the relevance criteria
+
+    Relevance Criteria:
+    A source is clearly applicable when ANY of these conditions are met: 
+    the question directly or indirectly addresses the primary subject matter of that source OR
+    the question involves legal or societal or philosophical concepts or words primarily regulated by that source OR
+    the question references specific articles or provisions or wording typically found in that source
+
+    Return "unknown" when ANY of these conditions are met:
+    no single source can be identified with reasonable confidence OR
+    the question is too broad or vague to map to specific sources OR
+    legal terminology is present but doesn't align with any source's core subject matter
+
+    Output exactly either:
+    unknown OR one or more source names in a comma-separated list without spaces
     
-    Output exactly one of:
-    - brussels-housing-code
-    - belgian-family-code
-    - belgian-penal-code
-    - unknown
+    Valid outputs examples:
+    unknown
+    brussels-housing-code
+    belgian-civil-code-property,belgian-civil-code-obligations
     
-    No other output or explanation is permitted.`
+    No altering the source names in any way are permitted. No other output or explanation is permitted.`
 };
 
 export const questionSpecifier = tool(
@@ -126,12 +145,15 @@ export const legalSourceInference = tool(
             {role: "system", content: SYSTEM_PROMPTS.sourceInference},
             {role: "human", content: question}
         ], {...config, tags: ['noStream']});
-        const inferredSource = extractContent(response).toLowerCase().trim();
 
+        const sourcesAsString = extractContent(response).toLowerCase().trim();
         try {
-            return LegalSourceSchema.parse(inferredSource) as LegalSource;
+            if (sourcesAsString === 'unknown')
+                return LegalSourceSchema.parse(sourcesAsString);
+            else
+                return sourcesAsString.split(",").map(src => LegalSourceSchema.parse(src) as LegalSource);
         } catch (error) {
-            console.warn(`Invalid legal source inference ${inferredSource}. Defaulting to unknown.`, error);
+            console.warn(`Invalid legal source inference ${sourcesAsString}. Defaulting to unknown.`, error);
             return "unknown" as const;
         }
     },

@@ -21,7 +21,7 @@ export const validationNode =
                 question: state.question,
                 humanMessages: state.messages.filter(m => isHumanMessage(m)).slice(-2).map(m => m.content as string)
             });
-            const [validationResult, sourceName] = await Promise.all([
+            const [validationResult, sources] = await Promise.all([
                 questionValidator.invoke({question: questionSpecified}, config),
                 legalSourceInference.invoke({question: questionSpecified}, config)
             ]);
@@ -49,7 +49,7 @@ export const validationNode =
                 });
             }
 
-            if (sourceName === "unknown") {
+            if (sources[0] === "unknown") {
                 const llmResponse = await model.invoke([
                     {
                         role: "system",
@@ -81,19 +81,19 @@ export const validationNode =
                     content: `
                     You are a kind legal assistant processing a user's legal question.
                     You communicate with the user in its language: ${state.userLang}.
-                    Acknowledge that you understand the user's question by specifying the question itself as well, and inform that you will help them.
+                    Acknowledge that you understand the user's question which is the following: 
+                    ${state.question}.
                     Indicate that you will now analyze the question to provide the most relevant legal information.
                     Keep your communication simple and to the point.
                     `
-                },
-                {role: "human", content: `Start confirming as per your instructions. Do so in my language: ${state.userLang}.`}
+                }
             ], config);
 
             return new Command({
                 update: {
                     messages: messagesStateReducer(state.messages, [confirmationResponse+'\n']),
                     question: questionSpecified,
-                    sourceName
+                    sources
                 },
                 goto: "legalClassifier"
             });

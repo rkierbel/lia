@@ -24,26 +24,13 @@ export class KnowledgeBase {
         this.textSplitter = new MarkdownTextSplitter();
     }
 
-    public async retriever(sourceName: Exclude<LegalSource, 'unknown'>) {
-        const filter = {
-            must: [
-                {key: 'metadata.sourceName', match: {value: sourceName}},
-                {key: 'metadata.sourceType', match: {value: 'law'}},
-            ]
-        };
-        return new QdrantVectorStore(embeddingModel, {
-            url: process.env.DB_URL,
-            collectionName: 'belgian_law'
-        }).asRetriever({searchType: 'similarity'}, filter);
-    }
-
     public async addDocs(sourcePath: string,
                          sourceName: LegalSource,
                          sourceType: string,
                          sourceEntity: string) {
         const docs = await this.chunksToDocs(sourcePath, sourceName, sourceType, sourceEntity);
         const vectorStore = await QdrantVectorStore.fromExistingCollection(embeddingModel, {
-                url: process.env.DB_URL,
+                url: 'http://localhost:6333',
                 collectionName: 'belgian_law'
             });
         await vectorStore.addDocuments(docs);

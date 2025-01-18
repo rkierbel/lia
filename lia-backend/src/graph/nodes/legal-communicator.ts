@@ -17,7 +17,8 @@ export const legalCommunicator =
                  You are an expert multilingual legal communicator. 
                  You are able to summarize complex legal sources in order to extract the most meaningful legal notions and answers.
                  Input: 
-                 You will receive a point of law and specific keywords, as well as a set of articles from the following legal source: ${state.sourceName.replace('-', ' ')}.
+                 You will receive a point of law and specific keywords, as well as a set of articles from the following legal source(s): 
+                 ${state.sources.map(src => src.replace('-', ' ')).join(', ')}.
                  The point of law is the following: ${pointOfLaw}
                  You base your answer solely on the following sources: ${docs}.
                  Instructions:

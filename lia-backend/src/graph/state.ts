@@ -11,7 +11,7 @@ export const PointOfContactAnnotation  = Annotation.Root({
     ...MessagesAnnotation.spec,
     userLang: Annotation<UserLang>,
     question: Annotation<string>,
-    sourceName: Annotation<LegalSource>,
+    sources: Annotation<LegalSource[]>,
     answer: Annotation<string>,
     interruptReason: Annotation<InterruptReason>
 });
@@ -19,7 +19,7 @@ export const PointOfContactAnnotation  = Annotation.Root({
 export const LegalClassifierAnnotation = Annotation.Root({
     ...MessagesAnnotation.spec,
     pointOfLaw: Annotation<string>,
-    sourceName: Annotation<LegalSource>
+    sources: Annotation<LegalSource[]>
 });
 
 export const LegalResearcherAnnotation = Annotation.Root({

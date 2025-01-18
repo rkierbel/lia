@@ -1,4 +1,5 @@
 import {ChatOpenAI} from '@langchain/openai';
+import {JinaEmbeddings} from "@langchain/community/embeddings/jina";
 
 const apiKey = process.env.DEEP_SEEK_V3;
 
@@ -21,5 +22,14 @@ export function deterministicChatModel() {
         maxTokens: 200
     }, {
         baseURL: 'https://api.deepseek.com',
+    });
+}
+
+export function embeddingsModel() {
+    return new JinaEmbeddings({
+        apiKey: process.env.JINA,
+        model: 'jina-embeddings-v3',
+        dimensions: 1024,
+        normalized: true
     });
 }

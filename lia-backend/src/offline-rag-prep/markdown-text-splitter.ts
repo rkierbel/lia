@@ -18,8 +18,8 @@ export class MarkdownTextSplitter {
         let currentChunk: string[] = [];
         let currentId: string = '';
 
-        // Regular expression to match article headers like "#### Art. 4." or "#### Art. 44/4." or "#### Art. 44bis." or "#### Art. 44bis/4."
-        const headerRegex = /^#{1,6}\s*Art\.\s*(\d{1,3}(?:\/\d+)*(?:bis|ter|quater|[a-z]*es)?(?:\/\d+)?)\.*/;
+        // Regular expression to match article headers like "#### Art. 4." or "#### Art. 44/4." or "#### Art. 44bis." or "#### Art. 44bis/4." or "#### Art. 1.1." or "#### Art. 1.1.1"
+        const headerRegex = /^#{1,6}\s*Art\.\s*(\d{1,3}(?:\/\d+)*(?:bis|ter|quater|[a-z]*es)?(?:\/\d+)?(?:\.\d+)*)\.*/;
 
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i];
@@ -37,6 +37,7 @@ export class MarkdownTextSplitter {
                 }
                 // Start new chunk with the header and store the article number
                 currentId = headerMatch[1];
+                currentId = currentId.replace(/\.$/, '');
                 currentChunk.push(line.replace('####', '').trim());
             } else {
                 currentChunk.push(line.trim());
