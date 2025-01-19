@@ -11,7 +11,7 @@ export const conversationValidationRules: ValidationChain[] = [
         .custom((value: string) => {
             const validPattern = /^[a-zA-Z0-9\s,.?!;\-':]+$/;
             if (!validPattern.test(value)) {
-                throw new Error('Message can only contain letters, numbers, spaces and basic punctuation (,.?!;:)');
+                throw new Error("Message can only contain letters, numbers, spaces and basic punctuation (,.?!'-;:)");
             }
             return true;
         }).trim()
