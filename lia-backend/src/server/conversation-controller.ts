@@ -15,10 +15,10 @@ export class ConversationController {
 
     // validation performed at this point, request safe to use
     async handleConversation(req: Request, res: Response, next: NextFunction): Promise<void> {
+        setResponseHeaders(res);
         const reqBody = req.body as ConversationReq;
 
         try {
-            setResponseHeaders(res);
             const {graphStream} =
                 await this.conversationService.getConversationStream(reqBody);
             await handleStream(graphStream, res);

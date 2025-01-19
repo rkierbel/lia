@@ -22,10 +22,8 @@ app.listen(PORT, () => {
 
 /*
 TODO -> handle legal-pro vs citizen ?
-TODO -> handle message content validation ?
 TODO -> handle language inference if changes mid-chat ?
 TODO -> handle double-texting
 TODO -> handle network errors, handle end conversation,
 TODO -> cache question & answer after legalCommunicator in parallel of answering
-TODO -> Handle multiple sources
 */

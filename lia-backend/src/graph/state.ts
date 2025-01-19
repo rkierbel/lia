@@ -3,10 +3,6 @@ import {LegalSource} from "../interface/legal-document.js";
 import {UserLang} from "../interface/user-lang.js";
 import {InterruptReason} from '../interface/interrupt-reason.js';
 
-export interface ConversationState {
-    isEnding: boolean;
-}
-
 export const PointOfContactAnnotation  = Annotation.Root({
     ...MessagesAnnotation.spec,
     userLang: Annotation<UserLang>,

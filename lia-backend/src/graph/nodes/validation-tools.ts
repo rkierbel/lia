@@ -2,7 +2,7 @@ import {tool} from '@langchain/core/tools';
 import {z} from 'zod';
 import {LegalSource, LegalSourceSchema} from '../../interface/legal-document.js';
 import {extractContent} from '../utils/message-to-string.js';
-import {deterministicChatModel, writingChatModel} from '../ai-tool-factory.js';
+import {deterministicChatModel, writingChatModel} from '../utils/ai-tool-factory.js';
 import {LangGraphRunnableConfig} from '@langchain/langgraph';
 
 const creativeValidator = writingChatModel();

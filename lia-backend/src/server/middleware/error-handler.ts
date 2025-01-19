@@ -9,7 +9,7 @@ const errorHandler = (
     next: NextFunction
 ) => {
     if (error instanceof ValidationError) {
-        res.status(error.statusCode).json({
+        res.status(error.statusCode).json({ //TODO -> log this in the backend, only return the status code to the front
             status: 'error',
             type: error.type,
             message: error.message,

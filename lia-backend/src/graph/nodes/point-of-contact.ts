@@ -1,6 +1,6 @@
 import {PointOfContactAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
-import {writingChatModel} from '../ai-tool-factory.js';
+import {writingChatModel} from '../utils/ai-tool-factory.js';
 import {InterruptReason} from '../../interface/interrupt-reason.js';
 
 const creativeModel = writingChatModel();

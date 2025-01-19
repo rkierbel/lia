@@ -5,7 +5,7 @@ import {LegalSource, LegalSourceSchema} from '../../interface/legal-document.js'
 import {z} from 'zod';
 import {Document} from '@langchain/core/documents';
 import {QdrantVectorStore} from "@langchain/qdrant";
-import {embeddingsModel} from "../ai-tool-factory.js";
+import {embeddingsModel} from "../utils/ai-tool-factory.js";
 
 export const legalResearcher =
     async (state: typeof LegalClassifierAnnotation.State, config: LangGraphRunnableConfig) => {
