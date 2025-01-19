@@ -1,14 +1,23 @@
 import {inject, Injectable, signal} from '@angular/core';
-import {HttpClient, HttpDownloadProgressEvent, HttpEvent, HttpEventType, HttpResponse} from "@angular/common/http";
+import {
+  HttpClient,
+  HttpDownloadProgressEvent,
+  HttpErrorResponse,
+  HttpEvent,
+  HttpEventType,
+  HttpResponse
+} from "@angular/common/http";
 import {Message} from "./message";
-import {filter, map, Observable, startWith, tap} from "rxjs";
+import {catchError, filter, map, Observable, startWith, tap} from "rxjs";
 import {Language} from "../morph/morph.component";
+import {ErrorService} from "../error.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
   private readonly http = inject(HttpClient);
+  private readonly errorService = inject(ErrorService);
 
   private readonly _threadId = signal<string>('');
   private readonly _isFirstVisit = signal<boolean>(true);
@@ -45,7 +54,10 @@ export class MessageService {
         this._generatingInProgress.set(false);
       },
 
-      error: () => this._generatingInProgress.set(false),
+      error: (error) => {
+        this._generatingInProgress.set(false);
+          this.handleError(error);
+      }
     });
   }
 
@@ -66,7 +78,9 @@ export class MessageService {
         reportProgress: true,
       })
       .pipe(
-        tap(e => console.log(e)),
+        catchError((error: HttpErrorResponse) => {
+          throw this.transformError(error);
+        }),
         filter(
           (event: HttpEvent<string>): boolean =>
             event.type === HttpEventType.DownloadProgress ||
@@ -99,5 +113,34 @@ export class MessageService {
 
   completeFirstVisit(): void {
     this._isFirstVisit.set(false);
+  }
+
+  private transformError(error: HttpErrorResponse): Error {
+    if (error.error?.message) {
+      // Handle backend specific error messages
+      return new Error('errors.unexpected');
+    }
+
+    switch (error.status) {
+      case 400:
+        return new Error('errors.invalid_request');
+      case 401:
+        return new Error('errors.unauthorized');
+      case 403:
+        return new Error('errors.forbidden');
+      case 404:
+        return new Error('errors.not_found');
+      case 429:
+        return new Error('errors.too_many_requests');
+      case 500:
+        return new Error('errors.server_error');
+      default:
+        return new Error('errors.unexpected');
+    }
+  }
+
+  private handleError(error: any): void {
+    const messageKey = error?.message || 'errors.unexpected';
+    this.errorService.showError(messageKey);
   }
 }

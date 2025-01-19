@@ -1,21 +1,24 @@
-import {Component, computed, effect, inject, OnDestroy} from '@angular/core';
+import {Component, computed, effect, inject, OnDestroy, OnInit} from '@angular/core';
 import {MessageService} from "./conversation/message.service";
 import {FormsModule, NgForm} from "@angular/forms";
 import {NgClass, NgIf} from "@angular/common";
 import {v4 as uuidv4} from 'uuid';
 import {Language, MorphComponent} from "./morph/morph.component";
 import {MarkdownPipe} from "./markdown.pipe";
+import {ErrorComponent} from "./error/error.component";
+import {TranslocoService} from "@jsverse/transloco";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgClass, FormsModule, MorphComponent, NgIf, MarkdownPipe],
+  imports: [NgClass, FormsModule, MorphComponent, NgIf, MarkdownPipe, ErrorComponent],
   template: `
-    <h1></h1>
-    @if (showStartPopup()) {
+    <app-error />
+
+    @if (showStartScreen()) {
       <app-morph (start)="startConversation($event)"/>
     }
-    @if (!showStartPopup()) {
+    @if (!showStartScreen()) {
       <div class="messages-container">
         @for (message of messages(); track message.id) {
           <div
@@ -47,12 +50,13 @@ import {MarkdownPipe} from "./markdown.pipe";
 })
 export class AppComponent implements OnDestroy {
   private readonly messageService = inject(MessageService);
+  private readonly i18nService = inject(TranslocoService);
   readonly threadId = this.messageService.threadId;
 
   readonly messages = this.messageService.messages;
   readonly generatingInProgress = this.messageService.generatingInProgress;
 
-  protected readonly showStartPopup = computed(() => this.messageService.isFirstVisit());
+  protected readonly showStartScreen = computed(() => this.messageService.isFirstVisit());
 
   private readonly scrollEffect = effect(() => {
     // run this effect on every `messages` change
@@ -67,7 +71,6 @@ export class AppComponent implements OnDestroy {
   });
 
   startConversation(language: Language): void {
-    console.log('Received language: ' + language);
     this.messageService.sendMessage('', uuidv4(), language);
     this.messageService.completeFirstVisit();
   }
