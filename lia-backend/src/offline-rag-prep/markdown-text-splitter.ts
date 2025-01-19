@@ -23,6 +23,7 @@ export class MarkdownTextSplitter {
 
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i];
+            if (!line) continue;
 
             const headerMatch = line.match(headerRegex);
 
@@ -36,8 +37,10 @@ export class MarkdownTextSplitter {
                     currentChunk = [];
                 }
                 // Start new chunk with the header and store the article number
-                currentId = headerMatch[1];
-                currentId = currentId.replace(/\.$/, '');
+                if (headerMatch[1]) {
+                    currentId = headerMatch[1];
+                    currentId = currentId.replace(/\.$/, '');
+                }
                 currentChunk.push(line.replace('####', '').trim());
             } else {
                 currentChunk.push(line.trim());
