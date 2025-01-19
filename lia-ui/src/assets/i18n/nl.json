@@ -1,0 +1,11 @@
+{
+  "errors": {
+    "invalid_request": "Ongeldige aanvraag. Controleer uw invoer.",
+    "unauthorized": "Niet geautoriseerd. Log opnieuw in.",
+    "forbidden": "U heeft geen toestemming voor deze actie.",
+    "not_found": "De gevraagde bron is niet gevonden.",
+    "too_many_requests": "Te veel verzoeken. Probeer het later opnieuw.",
+    "server_error": "Serverfout. Probeer het later opnieuw.",
+    "unexpected": "Er is een onverwachte fout opgetreden. Probeer het opnieuw."
+  }
+}
