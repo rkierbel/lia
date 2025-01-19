@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "node dist/index.ts",
-    "dev": "node --loader=ts-node/esm --env-file=.env --watch src/index.ts",
+    "dev": "node --loader=ts-node/esm --env-file=.env --watch src/server.ts",
     "build": "tsc",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write 'src/**/*.ts'"
