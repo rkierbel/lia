@@ -10,85 +10,55 @@ const deterministicValidator = deterministicChatModel();
 
 const SYSTEM_PROMPTS = {
     specification: `
-    Input:
-    You will receive
-    1. a history of previous human messages,
-    2. an implicit or explicit human interrogation that relates directly or indirectly to a legal issue or query.
-    Instructions:
-    Your task is to specify the question based on the human messages history, if the question is too broad or generic.
-    The question might seem incomplete or too broad, but could be specified by the message history.
-    Example of broad or incomplete questions:
-    - "in criminal law ?"
-    - "in family law, please."
-    Verify that the human history added to the broad interrogation constitutes a more specific question. 
-    If it does, rephrase the question so that it is more specific based on the messages history.
-    Output:
-    If the question is specific enough, output the human's question as is, without altering it.
-    Else, if the question can be specified by the messages history, output a revised more specific question. 
-    Strictly stick to the message history to specify the question.
+    Role: Refine broad/generic legal questions using message history only if the history provides missing context.
+    Process:
+        Assess Specificity:
+            Specific: Includes actionable details (parties, events, legal concepts).
+            Example: “Can my landlord increase rent during a fixed-term lease?”
+            Broad/Vague: Lacks context or is fragmentary.
+            Examples: “In criminal law?”, “What about property rights?”
+        Use History to Refine:
+        Revise only if the message history contains:
+            Prior details (e.g., “My landlord entered without notice” + “In housing law?” → “Can my landlord enter my rental unit without notice?”).
+            Clarifying context (e.g., “I donated money to my nephew” + “Inheritance?” → “Does my donation affect my nephew’s inheritance rights?”).
+        Output Rules:
+            Return the original question if it’s already specific.
+            Revise only with explicit context from history; never invent facts.
+    Examples:
+        Input (History: “My partner and I split. We own a house.” + Question: “In patrimonial relations?”)
+        → Output: “How is our jointly owned house divided under patrimonial relations law after separation?”
+        Input (Specific Question: “Is a verbal lease valid in Brussels?”)
+        → Output: “Is a verbal lease valid in Brussels?”
     `,
 
     validation: `
-    Input:
-    You will receive an implicit or explicit human interrogation that relates directly or indirectly to a legal issue or query.
-    Your task is to determine if the input relates somehow to housing law, civil law (Obligations, Property, Inheritance, Donations, Wills, Liability, Contracts, Couples, Patrimonial relations, Family), or criminal law - either directly or indirectly, explicitly or implicitly.
-    Input Analysis Steps:
-    1. Verify that the input is a question (explicit or implicit). 
-    2. Check if the input directly references these broad legal or semantic domains: 
-    Housing, Family, Persons, Obligations, Property, Inheritance, Donations, Wills, Liability, Contracts, Couples, Patrimonial relations or Criminality in general
-    3. If not direct, analyze for underlying legal or societal concepts by checking for:
-       - Abstract discussions closely or remotely related to fundamental legal or societal concepts (consent, rights, obligations)
-       - Philosophical questions closely or remotely related to legal principles
-       - Societal debates closely or remotely related to legal frameworks
-       - Personal questions closely or remotely related to legal matters or issues
-    Only respond with:
-    - 'yes' if:
-      * The input is a question AND
-      * It relates to housing, family, or criminal law (directly or indirectly)
-    - 'no' for:
-      * Non-questions
-      * Questions outside these three legal domains
+    Role: Validate if a user’s input is a legal question within housing, civil, or criminal law, including philosophical/societal concepts implying a legal principle.
+    Process:
+        Is it a question?
+            Explicit (“Can I sue my landlord?”) or implicit (“My spouse hid assets”).
+            Non-questions → no.
+        Does it relate to housing, civil, or criminal law?
+            Direct: Mentions legal domains/subfields (e.g., evictions, contracts, inheritance, assault).
+            Indirect: Raises concepts tied to legal rights, obligations, liability, property, consent, or societal debates (e.g., “Is it ethical to withhold rent?” → housing law implications).
+    Output:
+        yes if the question (explicit/implicit) could require legal analysis of the specified domains, even via abstract principles.
+        no if non-question or unrelated to the domains (e.g., tax, corporate law).
     `,
 
     sourceInference: `
-    You are a legal source matcher. 
-    Your task is to determine which specific legal source or sources relate the most to the input question.
-    Analyze the question against these sources:
-    1. brussels-housing-code,
-    2. belgian-civil-code-general-provisions,
-    3. belgian-civil-code-inheritance-donations-wills,
-    4. belgian-civil-code-patrimonial-relations-and-couples,
-    5. belgian-civil-code-property,
-    6. belgian-civil-code-evidence,
-    7. belgian-civil-code-obligations,
-    8. belgian-civil-code-extra-contractual-liability,
-    9. belgian-penal-code
-    
+    Role: Match the input question to pre-defined legal sources.
+    Sources (exact names):
+    brussels-housing-code, belgian-civil-code-general-provisions, belgian-civil-code-inheritance-donations-wills, belgian-civil-code-patrimonial-relations-and-couples, belgian-civil-code-property, belgian-civil-code-evidence, belgian-civil-code-obligations, belgian-civil-code-extra-contractual-liability, belgian-penal-code.
     Rules:
-    1. Consider only the above sources
-    2. Select sources that meet the relevance criteria below
-    3. Return unknown if no source meets the relevance criteria
-
-    Relevance Criteria:
-    A source is clearly applicable when ANY of these conditions are met: 
-    the question directly or indirectly addresses the primary subject matter of that source OR
-    the question involves legal or societal or philosophical concepts or words primarily regulated by that source OR
-    the question references specific articles or provisions or wording typically found in that source
-
-    Return "unknown" when ANY of these conditions are met:
-    no single source can be identified with reasonable confidence OR
-    the question is too broad or vague to map to specific sources OR
-    legal terminology is present but doesn't align with any source's core subject matter
-
-    Output exactly either:
-    unknown OR one or more source names in a comma-separated list without spaces
-    
-    Valid outputs examples:
-    unknown
-    brussels-housing-code
-    belgian-civil-code-property,belgian-civil-code-obligations
-    
-    No altering the source names in any way are permitted. No other output or explanation is permitted.`
+        Relevance = question directly/indirectly/explicitly/implicitly addresses the source’s core subject closely or remotely, its regulated legal/societal/philosophical concepts (e.g., inheritance, liability, family, crime, persons, etc), or references its provisions.
+        Exclusion = return unknown if no source aligns confidently, the question is too broad/vague, or terminology is irrelevant to sources.
+    Output:
+        Comma-separated source names (e.g., belgian-civil-code-property,belgian-penal-code) or unknown.
+        No deviations in source names, spacing, or formatting.
+    Examples:
+        Valid: belgian-civil-code-obligations
+        Valid: brussels-housing-code,belgian-civil-code-evidence
+        Invalid: civil-code (incorrect name), unknown (space).`
 };
 
 export const questionSpecifier = tool(

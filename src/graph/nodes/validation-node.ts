@@ -27,6 +27,7 @@ export const validationNode =
             ]);
 
             if (validationResult !== "yes") {
+                console.log("[ValidationNode] validation failure - not a related to law");
                 const llmResponse = await model.invoke([
                     {
                         role: "system",
@@ -50,16 +51,17 @@ export const validationNode =
             }
 
             if (sources[0] === "unknown") {
+                console.log("[ValidationNode] validation failure - unknown sources");
                 const llmResponse = await model.invoke([
                     {
                         role: "system",
                         content: `
                         You are a helpful legal assistant.
                         You communicate with the user in its language: ${state.userLang}.
-                        The user's question does not clearly relate to housing law, family law, or criminal law.
-                        Provide clear guidance on the types of legal questions you can help with.
+                        The user's question does not clearly relate to a legal source supported by our application.
+                        Provide clear guidance on the types of legal questions you can help with:
+                        housing law, civil law (Persons, Obligations, Property, Inheritance, Donations, Wills, Liability, Contracts, Couples, Patrimonial relations, Family), or criminal law.
                         Encourage the user to rephrase or clarify their question.
-                        Maintain a friendly and professional tone.
                         `
                     },
                     {role: "human", content: questionSpecified}
