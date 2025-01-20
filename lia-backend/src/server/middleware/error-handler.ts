@@ -19,17 +19,14 @@ const errorHandler = (
         // Only send status code to client
         console.error('Validation error details:', error.errors);
         res.status(error.statusCode).end();
-    }
-
-    if (error instanceof ConversationError) {
+    } else if (error instanceof ConversationError) {
         // Only send status code to client
         console.error('Conversation error:', error.message);
         res.status(error.statusCode).end();
+    } else {
+        console.error('Unexpected error:', error);
+        res.status(500).end();
     }
-
-    // For unexpected errors
-    console.error('Unexpected error:', error);
-    res.status(500).end();
 
 };
 

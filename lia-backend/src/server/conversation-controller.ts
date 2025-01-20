@@ -15,7 +15,8 @@ export class ConversationController {
 
     // validation performed at this point, request safe to use
     async handleConversation(req: Request, res: Response, next: NextFunction): Promise<void> {
-        setResponseHeaders(res);
+        setResponseHeaders(res); // TODO -> not here
+        console.log('Incoming request body:', req.body);
         const reqBody = req.body as ConversationReq;
 
         try {
@@ -24,6 +25,7 @@ export class ConversationController {
             await handleStream(graphStream, res);
             res.end();
         } catch (error) {
+            console.log(error);
             next(new ConversationError(error instanceof Error ? error.message : 'Failed to process conversation'));
         }
     }

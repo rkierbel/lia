@@ -15,7 +15,7 @@ export function writingChatModel() {
 export function deterministicChatModel() {
     return new ChatOpenAI({
         model: "deepseek-chat",
-        temperature: 0.5,
+        temperature: 0.8,
         apiKey: process.env.DEEP_SEEK_V3,
         maxTokens: 512
     }, {

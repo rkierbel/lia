@@ -35,21 +35,23 @@ export class MessageService {
 
   sendMessage(prompt: string = '', threadId: string, language?: Language): void {
     this._generatingInProgress.set(true);
-
     this._threadId.set(threadId);
 
-    this._completeMessages.set([
-      ...this._completeMessages(),
-      {
-        id: window.crypto.randomUUID(),
-        text: prompt,
-        fromUser: true
-      }
-    ]);
+    const userMessage  = {
+      id: window.crypto.randomUUID(),
+      text: prompt,
+      fromUser: true
+    };
+
+    this._messages.set([...this._messages(), userMessage]);
+    this._completeMessages.set([...this._completeMessages(), userMessage]);
 
     this.getChatResponseStream(prompt, this._threadId(), language).subscribe({
       next: (message) =>
-        this._messages.set([...this._completeMessages(), message]),
+        this._messages.set([
+          ...this._completeMessages(),
+          message
+        ]),
 
       complete: () => {
         this._completeMessages.set(this._messages());
@@ -58,7 +60,8 @@ export class MessageService {
 
       error: (error) => {
         this._generatingInProgress.set(false);
-          this.handleError(error);
+        this._messages.set(this._completeMessages());
+        this.handleError(error);
       }
     });
   }

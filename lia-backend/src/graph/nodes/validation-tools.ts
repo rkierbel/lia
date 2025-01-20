@@ -35,7 +35,7 @@ const SYSTEM_PROMPTS = {
     Input Analysis Steps:
     1. Verify that the input is a question (explicit or implicit). 
     2. Check if the input directly references these broad legal or semantic domains: 
-    Housing, Family, Obligations, Property, Inheritance, Donations, Wills, Liability, Contracts, Couples, Patrimonial relations or Criminality
+    Housing, Family, Persons, Obligations, Property, Inheritance, Donations, Wills, Liability, Contracts, Couples, Patrimonial relations or Criminality in general
     3. If not direct, analyze for underlying legal or societal concepts by checking for:
        - Abstract discussions closely or remotely related to fundamental legal or societal concepts (consent, rights, obligations)
        - Philosophical questions closely or remotely related to legal principles
@@ -146,11 +146,10 @@ export const legalSourceInference = tool(
             {role: "system", content: SYSTEM_PROMPTS.sourceInference},
             {role: "human", content: question}
         ], {...config, tags: ['noStream']});
-
         const sourcesAsString = extractContent(response).toLowerCase().trim();
         try {
             if (sourcesAsString === 'unknown')
-                return LegalSourceSchema.parse(sourcesAsString);
+                return [LegalSourceSchema.parse(sourcesAsString)];
             else
                 return sourcesAsString.split(",").map(src => LegalSourceSchema.parse(src) as LegalSource);
         } catch (error) {
