@@ -7,6 +7,7 @@ import {Language, MorphComponent} from "./morph/morph.component";
 import {MarkdownPipe} from "./markdown.pipe";
 import {ErrorComponent} from "./error/error.component";
 import {TranslocoService} from "@jsverse/transloco";
+import {environment} from "../environments/environment.development";
 
 @Component({
   selector: 'app-root',
@@ -48,7 +49,7 @@ import {TranslocoService} from "@jsverse/transloco";
     }
   `,
 })
-export class AppComponent implements OnDestroy {
+export class AppComponent implements OnDestroy, OnInit {
   private readonly messageService = inject(MessageService);
   private readonly i18nService = inject(TranslocoService);
   readonly threadId = this.messageService.threadId;
@@ -57,6 +58,12 @@ export class AppComponent implements OnDestroy {
   readonly generatingInProgress = this.messageService.generatingInProgress;
 
   protected readonly showStartScreen = computed(() => this.messageService.isFirstVisit());
+
+  ngOnInit() {
+    this.i18nService.load(`${environment.baseUrl}/assets/i18n/en.json`)
+    this.i18nService.load(`${environment.baseUrl}/assets/i18n/fr.json`)
+    this.i18nService.load(`${environment.baseUrl}/assets/i18n/nl.json`)
+  }
 
   private readonly scrollEffect = effect(() => {
     // run this effect on every `messages` change

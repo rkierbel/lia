@@ -21,7 +21,7 @@ export class ErrorService {
     // Auto hide after 5 seconds
     setTimeout(() => {
       this.hideError();
-    }, 5000);
+    }, 10000);
   }
 
   hideError(): void {
