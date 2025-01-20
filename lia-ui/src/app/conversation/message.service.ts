@@ -11,6 +11,7 @@ import {Message} from "./message";
 import {catchError, filter, map, Observable, startWith, tap} from "rxjs";
 import {Language} from "../morph/morph.component";
 import {ErrorService} from "../error.service";
+import {environment} from "../../environments/environment.development";
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,7 @@ import {ErrorService} from "../error.service";
 export class MessageService {
   private readonly http = inject(HttpClient);
   private readonly errorService = inject(ErrorService);
+  private hasError = false;
 
   private readonly _threadId = signal<string>('');
   private readonly _isFirstVisit = signal<boolean>(true);
@@ -64,10 +66,11 @@ export class MessageService {
   private getChatResponseStream(prompt: string,
                                 threadId: string,
                                 language?: Language): Observable<Message> {
+    this.hasError = false;
     const id = window.crypto.randomUUID();
 
     return this.http
-      .post('http://localhost:3003/api/conversation', {
+      .post(`${environment.apiUrl}/api/conversation`, {
         message: prompt,
         threadId,
         isNew: this.isFirstVisit(),
@@ -76,13 +79,17 @@ export class MessageService {
         responseType: 'text',
         observe: 'events',
         reportProgress: true,
+        withCredentials: false
       })
       .pipe(
         catchError((error: HttpErrorResponse) => {
+          this.hasError = true;
+          this._generatingInProgress.set(false);
           throw this.transformError(error);
         }),
         filter(
           (event: HttpEvent<string>): boolean =>
+            !this.hasError &&
             event.type === HttpEventType.DownloadProgress ||
             event.type === HttpEventType.Response
         ),
@@ -101,13 +108,7 @@ export class MessageService {
                 fromUser: false,
                 generating: false,
               }
-        ),
-        startWith<Message>({
-          id,
-          text: '',
-          fromUser: false,
-          generating: true,
-        }),
+        )
       );
   }
 
@@ -116,11 +117,6 @@ export class MessageService {
   }
 
   private transformError(error: HttpErrorResponse): Error {
-    if (error.error?.message) {
-      // Handle backend specific error messages
-      return new Error('errors.unexpected');
-    }
-
     switch (error.status) {
       case 400:
         return new Error('errors.invalid_request');

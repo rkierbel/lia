@@ -8,10 +8,23 @@ dotenv.config({path: '../../.env'});
 export const configureServer = () => {
     const app = express();
     const PORT = process.env.PORT || 3003;
+    const corsOptions = {
+        origin: 'http://localhost:4200',
+        methods: ['GET', 'POST', 'OPTIONS'],
+        allowedHeaders: [
+            'Origin',
+            'X-Requested-With',
+            'Content-Type',
+            'Accept',
+            'Authorization'
+        ],
+        credentials: true,
+    };
 
+    // Apply cors middleware
     app.use(express.json());
     app.use(morgan('dev'));
-    app.use(cors());
+    app.use(cors(corsOptions));
 
     return { app, PORT };
 };
@@ -19,5 +32,4 @@ export const configureServer = () => {
 export const setResponseHeaders = (res: express.Response) => {
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Transfer-Encoding', 'chunked');
-    res.setHeader("Access-Control-Allow-Origin", "*");
 };

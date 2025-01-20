@@ -8,33 +8,29 @@ const errorHandler = (
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     next: NextFunction
 ) => {
+    console.error('Error details:', {
+        type: error.constructor.name,
+        message: error.message,
+        stack: error.stack,
+        timestamp: new Date().toISOString()
+    });
+
     if (error instanceof ValidationError) {
-        res.status(error.statusCode).json({ //TODO -> log this in the backend, only return the status code to the front
-            status: 'error',
-            type: error.type,
-            message: error.message,
-            errors: error.errors,
-            stack: process.env.NODE_ENV === 'development' ? error.stack : {}
-        });
+        // Only send status code to client
+        console.error('Validation error details:', error.errors);
+        res.status(error.statusCode).end();
     }
 
     if (error instanceof ConversationError) {
-        res.status(error.statusCode).json({
-            status: 'error',
-            type: error.type,
-            message: error.message,
-            stack: process.env.NODE_ENV === 'development' ? error.stack : {}
-        });
+        // Only send status code to client
+        console.error('Conversation error:', error.message);
+        res.status(error.statusCode).end();
     }
 
-    // Handle unexpected errors
+    // For unexpected errors
     console.error('Unexpected error:', error);
-    res.status(500).json({
-        status: 'error',
-        type: 'UnexpectedError',
-        message: 'An unexpected error occurred',
-        stack: process.env.NODE_ENV === 'development' ? error.stack : {}
-    });
+    res.status(500).end();
+
 };
 
 export default errorHandler;
