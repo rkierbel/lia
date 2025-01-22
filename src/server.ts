@@ -26,7 +26,9 @@ TODO -> handle language inference if changes mid-chat ?
 TODO -> handle double-texting
 TODO -> handle network errors, handle end conversation,
 TODO -> cache question & answer after jurist in parallel of answering
-TODO -> semantic caching with feature flag + ui reflection - implement after legal Qualification -> offer option to review response from other semantically similar qs
+TODO -> implement effective caching of Q&As (so far, retrieval of cached answers implemented)
+TODO -> implement ui component to click on selected cached questions if user wants to see previously cached questions
+TODO -> give the user the choice to chose a semantically cached answer or to pursue with a new one based on cached questions
 TODO -> implement tracing with LangSmith
 TODO -> verify correct usage of MemorySaver
 TODO -> export chat feature + end convo button

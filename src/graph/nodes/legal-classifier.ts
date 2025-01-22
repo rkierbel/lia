@@ -38,7 +38,7 @@ export const qualifier =
 
         return new Command({
             update: {
-                pointOfLaw: extractContent(response),
+                pointOfLaw: { content: extractContent(response)},
                 messages: messagesStateReducer(messages, [response]),
             },
             goto: 'legalResearcher'

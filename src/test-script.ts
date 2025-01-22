@@ -1,5 +1,5 @@
-import {KnowledgeBase} from "./offline-rag-prep/knowledge-base.js";
-import {MarkdownTextSplitter} from "./offline-rag-prep/markdown-text-splitter.js";
+import {KnowledgeBase} from "./rag-tooling/knowledge-base.js";
+import {MarkdownTextSplitter} from "./rag-tooling/markdown-text-splitter.js";
 
 
 /*await KnowledgeBase.instance.addDocs(

@@ -39,7 +39,9 @@ export class ConversationService {
         console.log('Starting new conversation with thread id: ', config.configurable.thread_id);
         return await workflow.stream({
             messages: [],
-            userLang: (reqBody?.userLang as UserLang)
+            userLang: (reqBody?.userLang as UserLang),
+            cachedQuestions: [],
+            hasCheckedSemanticCache: false
         }, {
             ...config,
             streamMode: "messages"

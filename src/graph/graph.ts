@@ -23,7 +23,7 @@ export const workflow = new StateGraph(OverallStateAnnotation)
         ends: ['legalResearcher']
     })
     .addNode('legalResearcher', legalResearcher, {
-        ends: ['jurist']
+        ends: ['jurist', 'feedbackHandler', 'pointOfContact']
     })
     .addNode('jurist', jurist, {
         ends: ['pointOfContact']

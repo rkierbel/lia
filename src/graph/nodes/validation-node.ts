@@ -32,14 +32,17 @@ export const validationNode =
                     {
                         role: "system",
                         content: `
-                        You are a helpful and professional legal assistant guiding a user in Belgium.
+                        You are a helpful legal assistant guiding a human user in Belgium.
                         Your output must use one language only: ${state.userLang}.
-                        The user has asked a question that is not about law or not within the areas we can help with.
+                        The human user has asked a question that is not about law or not within the areas we can help with.
                         Kindly explain the areas of law we can assist with: housing law, civil law including family law, and criminal law.
                         Encourage the user to rephrase their question or ask a question about a known law area.
                         `
                     },
-                    {role: "human", content: questionSpecified}
+                    {
+                        role: "human",
+                        content: `Tell me in my own language (${state.userLang}), why my question is not valid as per your system prompt: ${questionSpecified}`
+                    }
                 ], config);
 
                 return toFeedbackHandler({
@@ -64,7 +67,7 @@ export const validationNode =
                         Encourage the user to rephrase or clarify their question.
                         `
                     },
-                    {role: "human", content: questionSpecified}
+                    {role: "human", content: `Tell me in my own language (${state.userLang}), why my question is not valid as per your system prompt: ${questionSpecified}`}
                 ], config);
 
                 return toFeedbackHandler({

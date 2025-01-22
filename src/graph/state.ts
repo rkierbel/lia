@@ -1,5 +1,5 @@
 import {Annotation, MessagesAnnotation} from "@langchain/langgraph";
-import {LegalSource} from "../interface/legal-document.js";
+import {CachedQuestionDto, LegalSource} from "../interface/custom-document.js";
 import {UserLang} from "../interface/user-lang.js";
 import {InterruptReason} from '../interface/interrupt-reason.js';
 
@@ -12,20 +12,23 @@ export const PointOfContactAnnotation  = Annotation.Root({
     interruptReason: Annotation<InterruptReason>
 });
 
-export const qualifierAnnotation = Annotation.Root({
+export const QualifierAnnotation = Annotation.Root({
     ...MessagesAnnotation.spec,
-    pointOfLaw: Annotation<string>,
-    sources: Annotation<LegalSource[]>
+    pointOfLaw: Annotation<{ content: string, answerId: string | undefined }>,
+    sources: Annotation<LegalSource[]>,
+    cachedQuestions: Annotation<CachedQuestionDto[]>,
+    hasCheckedSemanticCache: Annotation<boolean>,
+    interruptReason: Annotation<InterruptReason>
 });
 
 export const LegalResearcherAnnotation = Annotation.Root({
     ...MessagesAnnotation.spec,
-    ...qualifierAnnotation.spec,
+    ...QualifierAnnotation.spec,
     docs: Annotation<string>,
 });
 
 export const OverallStateAnnotation = Annotation.Root({
     ...PointOfContactAnnotation.spec,
-    ...qualifierAnnotation.spec,
+    ...QualifierAnnotation.spec,
     ...LegalResearcherAnnotation.spec
 })

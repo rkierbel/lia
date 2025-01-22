@@ -12,13 +12,32 @@ export const LegalSourceSchema = z.enum([
     "belgian-civil-code-obligations",
     "belgian-civil-code-extra-contractual-liability",
     "belgian-penal-code"]);
-// TypeScript type derived from the schema
 export type LegalSource = z.infer<typeof LegalSourceSchema>;
 
-export interface LegalDocument extends Document {
+export const SourceTypeSchema = z.enum(['law', 'jurisprudence', 'doctrine', 'cached-question', 'cached-answer']);
+export type LegalSourceType = z.infer<typeof SourceTypeSchema>;
+
+export interface CustomDocument extends Document {
     metadata: {
         sourceName: LegalSource,
         sourceType: string,
         elementRef: string
+    }
+}
+
+export interface CachedQuestionDocument extends Document {
+    metadata: {
+        answerId: string
+    }
+}
+
+export interface CachedQuestionDto {
+    content: string,
+    answerId: string
+}
+
+export interface CachedAnswerDocument extends Document {
+    metadata: {
+        sourceType: string
     }
 }

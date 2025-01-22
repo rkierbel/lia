@@ -17,7 +17,7 @@ export const jurist =
                 Role: Expert Legal Communicator: Summarize complex legal sources into clear explanations for non-experts. 
                 Strict 1,000-token limit.
                 Input:
-                    Legal question: ${pointOfLaw};
+                    Legal question: ${pointOfLaw.content};
                     Keywords;
                     Articles from these sources: ${state.sources.map(src => src.replace('-', ' ')).join(', ')};
                     Base answers only on provided materials: ${docs}.
@@ -36,7 +36,7 @@ export const jurist =
                         Human-friendly formatting (clear headings, bullet points / numbered lists when relevant).
                 `
             },
-            {role: "human", content: `Generate a clear, meaningful and thorough answer based on the retrieved docs and the following point of law: ${pointOfLaw}`}
+            {role: "human", content: `Generate a clear, meaningful and thorough answer based on the retrieved docs and the following point of law: ${pointOfLaw.content}`}
         ], config);
 
         console.log("[jurist] responded");
@@ -44,8 +44,7 @@ export const jurist =
             update: {
                 answer: extractContent(response),
                 messages: messagesStateReducer(messages, [response]),
-                question: "",
-                pointOfLaw: "",
+                pointOfLaw: {},
                 sourceName: "",
                 docs: ""
             },

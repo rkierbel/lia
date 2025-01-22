@@ -1,5 +1,6 @@
 import {ChatOpenAI} from '@langchain/openai';
 import {JinaEmbeddings} from "@langchain/community/embeddings/jina";
+import {QdrantVectorStore} from "@langchain/qdrant";
 
 export function writingChatModel() {
     return new ChatOpenAI({
@@ -29,5 +30,12 @@ export function embeddingsModel() {
         model: 'jina-embeddings-v3',
         dimensions: 1024,
         normalized: true
+    });
+}
+
+export async function vectorStore() {
+    return await QdrantVectorStore.fromExistingCollection(embeddingsModel(), {
+        url: 'http://localhost:6333',
+        collectionName: 'belgian_law'
     });
 }

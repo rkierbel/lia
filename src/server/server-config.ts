@@ -16,9 +16,11 @@ export const configureServer = () => {
             'X-Requested-With',
             'Content-Type',
             'Accept',
+            'Accept-Encoding',
+            'Accept-Language',
             'Authorization'
         ],
-        credentials: true,
+        credentials: false,
     };
 
     // Apply cors middleware
