@@ -1,15 +1,18 @@
-import {configureServer} from './server/server-config.js';
+import {configureServer, corsOptions} from './server/server-config.js';
 import {Request, Response} from 'express/';
 import {ConversationController} from './server/conversation-controller.js';
 import {conversationValidationRules, validate} from "./server/middleware/conversation-validator.js";
 import {NextFunction} from "express";
 import errorHandler from "./server/middleware/error-handler.js";
+import cors from "cors";
 
 const { app, PORT } = configureServer();
 const conversationController = new ConversationController();
 
+app.options('/api/conversation', cors(corsOptions));
 app.post(
     '/api/conversation',
+    cors(corsOptions),
     validate(conversationValidationRules),
     (req: Request, res: Response, next: NextFunction): Promise<void> => conversationController.handleConversation(req, res, next)
 );
