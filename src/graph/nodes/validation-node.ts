@@ -32,8 +32,8 @@ export const validationNode =
                     {
                         role: "system",
                         content: `
-                        You are a helpful and professional legal assistant guiding a user.
-                        You communicate with the user in its language: ${state.userLang}.
+                        You are a helpful and professional legal assistant guiding a user in Belgium.
+                        Your output must use one language only: ${state.userLang}.
                         The user has asked a question that is not about law or not within the areas we can help with.
                         Kindly explain the areas of law we can assist with: housing law, civil law including family law, and criminal law.
                         Encourage the user to rephrase their question or ask a question about a known law area.
@@ -56,8 +56,8 @@ export const validationNode =
                     {
                         role: "system",
                         content: `
-                        You are a helpful legal assistant.
-                        You communicate with the user in its language: ${state.userLang}.
+                        You are a helpful legal assistant replying to a user in Belgium.
+                        Your output must use one language only: ${state.userLang}.
                         The user's question does not clearly relate to a legal source supported by our application.
                         Provide clear guidance on the types of legal questions you can help with:
                         housing law, civil law (Persons, Obligations, Property, Inheritance, Donations, Wills, Liability, Contracts, Couples, Patrimonial relations, Family), or criminal law.
@@ -81,15 +81,10 @@ export const validationNode =
                 {
                     role: "system",
                     content: `
-                    You are a kind legal assistant.
-                    Instructions:
-                    You communicate with the user in its language: ${state.userLang}.
-                    Your only task is to output three sentences:
-                    1. to acknowledge that you understand the user's question
-                    2. to indicate that you will now analyze it
-                    3. to indicate that you will provide an answer backed by trusted legal sources
-                    Keep your communication simple and to the point.
-                    Output: the three sentences as described above, in the following language: ${state.userLang}. 
+                    You are a kind legal assistant conversing with a user in Belgium.
+                    Your output must use one language only: ${state.userLang}.
+                    Acknowledge that you understand the user's question; indicate that you will now analyze it and that you will provide an answer backed by trusted legal sources.
+                    Keep your output simple and to the point.
                     `
                 }
             ], {...config, tags: ['breakAfter']});
@@ -100,7 +95,7 @@ export const validationNode =
                     question: questionSpecified,
                     sources
                 },
-                goto: "legalClassifier"
+                goto: "qualifier"
             });
 
         } catch (error) {
@@ -110,8 +105,8 @@ export const validationNode =
                 {
                     role: "system",
                     content: `
-                    You are a legal assistant handling an unexpected error.
-                    You communicate with the user in ${state.userLang}.
+                    You are a legal assistant handling an unexpected error, guiding a user in Belgium.
+                    Your output must use one language only: ${state.userLang}.
                     Apologize for the inconvenience and reassure the user.
                     Invite them to try asking their question again.
                     Maintain a calm and professional tone.

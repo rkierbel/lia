@@ -1,4 +1,4 @@
-import {LegalClassifierAnnotation} from '../state.js';
+import {qualifierAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {tool} from '@langchain/core/tools';
 import {LegalSource, LegalSourceSchema} from '../../interface/legal-document.js';
@@ -8,7 +8,7 @@ import {QdrantVectorStore} from "@langchain/qdrant";
 import {embeddingsModel} from "../utils/ai-tool-factory.js";
 
 export const legalResearcher =
-    async (state: typeof LegalClassifierAnnotation.State, config: LangGraphRunnableConfig) => {
+    async (state: typeof qualifierAnnotation.State, config: LangGraphRunnableConfig) => {
         try {
             const {sources, pointOfLaw} = state;
             const docs: string = await legalDocsRetriever.invoke({
@@ -23,7 +23,7 @@ export const legalResearcher =
                     docs,
                     messages: messagesStateReducer(state.messages, docs)
                 },
-                goto: 'legalCommunicator'
+                goto: 'jurist'
             });
         } catch (error) {
             console.log('[LegalResearcher] - error', error);

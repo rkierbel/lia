@@ -2,8 +2,8 @@ import {END, MemorySaver, START, StateGraph} from '@langchain/langgraph';
 import {OverallStateAnnotation} from './state.js';
 import {pointOfContact} from './nodes/point-of-contact.js';
 import {legalResearcher} from './nodes/legal-researcher.js';
-import {legalClassifier} from './nodes/legal-classifier.js';
-import {legalCommunicator} from './nodes/legal-communicator.js';
+import {qualifier} from './nodes/legal-classifier.js';
+import {jurist} from './nodes/legal-communicator.js';
 import {validationNode} from './nodes/validation-node.js';
 import {feedbackHandler} from './nodes/feedback-handler.js';
 
@@ -17,15 +17,15 @@ export const workflow = new StateGraph(OverallStateAnnotation)
         ends: ['validationNode', END]
     })
     .addNode('validationNode', validationNode, {
-        ends: ['legalClassifier', 'feedbackHandler']
+        ends: ['qualifier', 'feedbackHandler']
     })
-    .addNode('legalClassifier', legalClassifier, {
+    .addNode('qualifier', qualifier, {
         ends: ['legalResearcher']
     })
     .addNode('legalResearcher', legalResearcher, {
-        ends: ['legalCommunicator']
+        ends: ['jurist']
     })
-    .addNode('legalCommunicator', legalCommunicator, {
+    .addNode('jurist', jurist, {
         ends: ['pointOfContact']
     })
     .addEdge(START, 'pointOfContact')

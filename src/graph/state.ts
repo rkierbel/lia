@@ -12,7 +12,7 @@ export const PointOfContactAnnotation  = Annotation.Root({
     interruptReason: Annotation<InterruptReason>
 });
 
-export const LegalClassifierAnnotation = Annotation.Root({
+export const qualifierAnnotation = Annotation.Root({
     ...MessagesAnnotation.spec,
     pointOfLaw: Annotation<string>,
     sources: Annotation<LegalSource[]>
@@ -20,12 +20,12 @@ export const LegalClassifierAnnotation = Annotation.Root({
 
 export const LegalResearcherAnnotation = Annotation.Root({
     ...MessagesAnnotation.spec,
-    ...LegalClassifierAnnotation.spec,
+    ...qualifierAnnotation.spec,
     docs: Annotation<string>,
 });
 
 export const OverallStateAnnotation = Annotation.Root({
     ...PointOfContactAnnotation.spec,
-    ...LegalClassifierAnnotation.spec,
+    ...qualifierAnnotation.spec,
     ...LegalResearcherAnnotation.spec
 })

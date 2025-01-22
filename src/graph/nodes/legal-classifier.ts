@@ -5,36 +5,36 @@ import {writingChatModel} from '../utils/ai-tool-factory.js';
 
 const model = writingChatModel();
 
-export const legalClassifier =
+export const qualifier =
     async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
-        console.log("[LegalClassifier] called");
+        console.log("[qualifier] called");
         const {question, userLang, sources, messages} = state;
 
         const response = await model.invoke([
             {
                 role: "system",
                 content: `
-                You are a multilingual legal classifier tasked with reformulating a human question that relates closely or remotely to law, into a precise, reasonably detailed and technically correct point of law.
+                Role: Multilingual Legal Qualifier: Transform ambiguous, broad or generic law-related questions into precise points of law.
                 Input:
-                You will receive an implicit or explicit human question that relates directly or indirectly to a legal issue or query.
-                The human's question is the following: ${question}
-                It has already been inferred that the human's question relates to an area of law regulated by the following legal source(s):
-                ${sources.map(src => src.replace('-', ' ')).join(', ')}.
-                Instructions:
-                Reformulate the human's question into a precise, reasonably detailed and technically correct point of law.
-                Your reformulation must use the same language as the initial question, that is the language ${userLang}.
-                You will highlight and list three to ten legal keywords or important notions related to the question that you have reformulated.
-                Your reformulation and keywords will be used to perform a semantic search against a vector database containing the following legal source(s):
-                ${sources.map(src => src.replace('-', ' ')).join(', ')}.
-                Select the keywords carefully so that the semantic search using a vector databased is facilitated, and yields more precisely matching pieces of the above mentioned source of law.
-                Output:
-                You will append these legal keywords after your reformulated point of law in the following format: 
-                point of law. legal keywords.
+                    Human question, in the following language: ${userLang};
+                    Pre-linked legal sources: ${sources.map(src => src.replace('-', ' ')).join(', ')}.
+                Task:
+                    Reformulate the question into a technically precise point of law:
+                        Use ${userLang} (same as input);
+                        Maintain original intent while adding legal specificity;
+                        Example: "Is verbal abuse punishable?" → "Under [Source X], does verbal abuse constitute a criminal offense triggering liability?"
+                    Extract 3–10 keywords:  
+                        Prioritize terms that directly that are directly related to the question and match primary concepts in these sources: ${sources}.            
+                Output Format:
+                    [Reformulated point of law]. [Keyword 1, Keyword 2, ..., Keyword N].
                 `
             },
-            {role: "human", content: "Generate a reformulated legal question followed by relevant legal keywords"}
+            {
+                role: "human",
+                content: `Generate a reformulated legal question followed by relevant legal keywords. Original human question: ${question}`
+            }
         ], config);
-        console.log("[LegalClassifier] responded");
+        console.log("[qualifier] responded");
 
         return new Command({
             update: {

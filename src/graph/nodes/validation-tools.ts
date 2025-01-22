@@ -18,7 +18,7 @@ const SYSTEM_PROMPTS = {
             Broad/Vague: Lacks context or is fragmentary.
             Examples: “In criminal law?”, “What about property rights?”
         Use History to Refine:
-        Revise only if the message history contains:
+            Revise only if the message history contains:
             Prior details (e.g., “My landlord entered without notice” + “In housing law?” → “Can my landlord enter my rental unit without notice?”).
             Clarifying context (e.g., “I donated money to my nephew” + “Inheritance?” → “Does my donation affect my nephew’s inheritance rights?”).
         Output Rules:
@@ -26,9 +26,9 @@ const SYSTEM_PROMPTS = {
             Revise only with explicit context from history; never invent facts.
     Examples:
         Input (History: “My partner and I split. We own a house.” + Question: “In patrimonial relations?”)
-        → Output: “How is our jointly owned house divided under patrimonial relations law after separation?”
+        Output: “How is our jointly owned house divided under patrimonial relations law after separation?”
         Input (Specific Question: “Is a verbal lease valid in Brussels?”)
-        → Output: “Is a verbal lease valid in Brussels?”
+        Output: “Is a verbal lease valid in Brussels?”
     `,
 
     validation: `
@@ -36,13 +36,14 @@ const SYSTEM_PROMPTS = {
     Process:
         Is it a question?
             Explicit (“Can I sue my landlord?”) or implicit (“My spouse hid assets”).
-            Non-questions → no.
-        Does it relate to housing, civil, or criminal law?
+            Non-questions: output no.
+        Does it relate remotely or closely to housing, civil, or criminal law?
             Direct: Mentions legal domains/subfields (e.g., evictions, contracts, inheritance, assault).
-            Indirect: Raises concepts tied to legal rights, obligations, liability, property, consent, or societal debates (e.g., “Is it ethical to withhold rent?” → housing law implications).
+            Indirect: Raises concepts tied to legal rights, obligations, liability, property, consent, or societal debates (e.g., “Is it ethical to withhold rent?” has housing law implications).
     Output:
-        yes if the question (explicit/implicit) could require legal analysis of the specified domains, even via abstract principles.
-        no if non-question or unrelated to the domains (e.g., tax, corporate law).
+        yes, if the question (explicit/implicit) could require legal analysis of the specified domains, even via abstract principles.
+        no, if non-question or unrelated to the domains (e.g., tax, corporate law).
+        Output contains only yes or no.
     `,
 
     sourceInference: `
@@ -50,7 +51,7 @@ const SYSTEM_PROMPTS = {
     Sources (exact names):
     brussels-housing-code, belgian-civil-code-general-provisions, belgian-civil-code-inheritance-donations-wills, belgian-civil-code-patrimonial-relations-and-couples, belgian-civil-code-property, belgian-civil-code-evidence, belgian-civil-code-obligations, belgian-civil-code-extra-contractual-liability, belgian-penal-code.
     Rules:
-        Relevance = question directly/indirectly/explicitly/implicitly addresses the source’s core subject closely or remotely, its regulated legal/societal/philosophical concepts (e.g., inheritance, liability, family, crime, persons, etc), or references its provisions.
+        Relevance = question directly/indirectly/explicitly/implicitly addresses the source’s core subject remotely or closely, its regulated legal/societal/philosophical concepts (e.g., inheritance, liability, family, crime, persons, etc), or references its provisions.
         Exclusion = return unknown if no source aligns confidently, the question is too broad/vague, or terminology is irrelevant to sources.
     Output:
         Comma-separated source names (e.g., belgian-civil-code-property,belgian-penal-code) or unknown.
@@ -69,8 +70,8 @@ export const questionSpecifier = tool(
                 role: "human",
                 content: `
                 Analyze this history 1) "${humanMessages.join(' ')}" and 2) this interrogation: ${question}. 
-                If my interrogation specific enough, output my interrogation as is, without altering it. 
-                Else, if should be specified using my messages history, output a revised more specific question as per your system instructions.
+                If my interrogation is specific enough, output my interrogation as is, without altering it. 
+                Else, if my interrogation should be specified using my messages history, output a revised more specific question as per your system instructions.
                 `
             }
         ], {...config, tags: ['noStream']});
@@ -81,9 +82,9 @@ export const questionSpecifier = tool(
     },
     {
         name: "specify_question",
-        description: "Validates if a question is about law and specifically about one of the areas of law known by the application",
+        description: "Specifies a question if too broad or generic based on the user's message history",
         schema: z.object({
-            question: z.string().describe("The question to validate"),
+            question: z.string().describe("The question to specify"),
             humanMessages: z.array(z.string()).describe("The previous human messages")
         })
     }
@@ -114,7 +115,10 @@ export const legalSourceInference = tool(
     async ({question}, config: LangGraphRunnableConfig) => {
         const response = await deterministicValidator.invoke([
             {role: "system", content: SYSTEM_PROMPTS.sourceInference},
-            {role: "human", content: question}
+            {
+                role: "human",
+                content: `Based on your system instructions, identify which legal sources from the predefined list the question relates to, remotely or closely: ${question}`
+            }
         ], {...config, tags: ['noStream']});
         const sourcesAsString = extractContent(response).toLowerCase().trim();
         try {
