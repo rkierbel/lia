@@ -5,6 +5,14 @@ import {writingChatModel} from '../utils/ai-tool-factory.js';
 
 const model = writingChatModel();
 
+/*
+TODO _> extra linebreak after enum value
+"Invalid enum value. Expected 'unknown' | 'brussels-housing-code' | 'belgian-civil-code-general-provisions' | 'belgian-civil-code-inheritance-donations-wills' | 'belgian-civil-code-patrimonial-relations-and-couple
+s' | 'belgian-civil-code-property' | 'belgian-civil-code-evidence' | 'belgian-civil-code-obligations' | 'belgian-civil-code-extra-contractual-liability' | 'belgian-penal-code',
+
+received 'belgian-civil-code-extra-contractual-liability\n"
+
+ */
 export const qualifier =
     async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
         console.log("[qualifier] called");
@@ -38,7 +46,7 @@ export const qualifier =
 
         return new Command({
             update: {
-                pointOfLaw: { content: extractContent(response)},
+                pointOfLaw: extractContent(response),
                 messages: messagesStateReducer(messages, [response]),
             },
             goto: 'legalResearcher'

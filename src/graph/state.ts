@@ -14,10 +14,11 @@ export const PointOfContactAnnotation  = Annotation.Root({
 
 export const QualifierAnnotation = Annotation.Root({
     ...MessagesAnnotation.spec,
-    pointOfLaw: Annotation<{ content: string, answerId: string | undefined }>,
+    pointOfLaw: Annotation<string>,
     sources: Annotation<LegalSource[]>,
-    cachedQuestions: Annotation<CachedQuestionDto[]>,
     hasCheckedSemanticCache: Annotation<boolean>,
+    cachedQuestions: Annotation<CachedQuestionDto[]>,
+    selectedCachedQuestion: Annotation<{ content: string, answerId: string | undefined }>,
     interruptReason: Annotation<InterruptReason>
 });
 

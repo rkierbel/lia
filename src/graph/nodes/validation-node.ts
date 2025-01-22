@@ -27,7 +27,7 @@ export const validationNode =
             ]);
 
             if (validationResult !== "yes") {
-                console.log("[ValidationNode] validation failure - not a related to law");
+                console.log("[ValidationNode] validation failure - not a question related to law");
                 const llmResponse = await model.invoke([
                     {
                         role: "system",
@@ -78,7 +78,7 @@ export const validationNode =
                 });
             }
 
-            // If all validations pass, confirm to user and proceed to legal classifier
+            // If all validations pass, confirm to user and proceed to qualifier
             console.log("[ValidationNode] - question validated!");
             const confirmationResponse = await model.invoke([
                 {

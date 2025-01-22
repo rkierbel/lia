@@ -1,7 +1,8 @@
 import {LegalResearcherAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {extractContent} from '../utils/message-to-string.js';
-import {writingChatModel} from "../utils/ai-tool-factory.js";
+import {vectorStore, writingChatModel} from "../utils/ai-tool-factory.js";
+import {v4 as uuid} from "uuid";
 
 const model = writingChatModel();
 
@@ -17,7 +18,7 @@ export const jurist =
                 Role: Expert Legal Communicator: Summarize complex legal sources into clear explanations for non-experts. 
                 Strict 1,000-token limit.
                 Input:
-                    Legal question: ${pointOfLaw.content};
+                    Legal question: ${pointOfLaw};
                     Keywords;
                     Articles from these sources: ${state.sources.map(src => src.replace('-', ' ')).join(', ')};
                     Base answers only on provided materials: ${docs}.
@@ -36,10 +37,18 @@ export const jurist =
                         Human-friendly formatting (clear headings, bullet points / numbered lists when relevant).
                 `
             },
-            {role: "human", content: `Generate a clear, meaningful and thorough answer based on the retrieved docs and the following point of law: ${pointOfLaw.content}`}
+            {
+                role: "human",
+                content: `Generate a clear, meaningful and thorough answer based on the retrieved docs and the following point of law: ${pointOfLaw}`
+            }
         ], config);
 
         console.log("[jurist] responded");
+
+        if (process.env.SEMANTIC_CACHE_ENABLED) {
+            await cacheQuestionAnswer(pointOfLaw, extractContent(response));
+        }
+
         return new Command({
             update: {
                 answer: extractContent(response),
@@ -51,3 +60,23 @@ export const jurist =
             goto: 'pointOfContact'
         });
     };
+
+async function cacheQuestionAnswer(question: string, answer: string) {
+    const store = await vectorStore();
+    const answerId = uuid();
+
+    await store.addDocuments([{
+        id: answerId,
+        pageContent: answer,
+        metadata: {
+            sourceType: 'cached-answer',
+        }
+    }]);
+    await store.addDocuments([{
+        id: uuid(),
+        pageContent: question,
+        metadata: {
+            answerId: answerId
+        }
+    }]);
+}

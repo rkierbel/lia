@@ -1,11 +1,8 @@
 import {MarkdownTextSplitter} from './markdown-text-splitter.js';
 import {v4 as uuid} from 'uuid';
 import {QdrantVectorStore} from '@langchain/qdrant';
-import dotenv from 'dotenv';
 import {CustomDocument, LegalSource} from '../interface/custom-document.js';
 import {embeddingsModel, vectorStore} from "../graph/utils/ai-tool-factory";
-
-dotenv.config({path: '/lia/.env'});
 
 export class KnowledgeBase {
 
@@ -14,27 +11,6 @@ export class KnowledgeBase {
 
     private constructor() {
         this.textSplitter = new MarkdownTextSplitter();
-    }
-
-    public async cacheQuestionAnswer(question: string,
-                                     answer: string) {
-        const vs = await vectorStore();
-        const answerId = uuid();
-
-        await vs.addDocuments([{
-            id: answerId,
-            pageContent: answer,
-            metadata: {
-                sourceType: 'cached-answer',
-            }
-        }]);
-        await vs.addDocuments([{
-            id: uuid(),
-            pageContent: question,
-            metadata: {
-                answerId: answerId
-            }
-        }]);
     }
 
     public async addLegalDocs(sourcePath: string,

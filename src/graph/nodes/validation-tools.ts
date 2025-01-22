@@ -55,7 +55,7 @@ const SYSTEM_PROMPTS = {
         Exclusion = return unknown if no source aligns confidently, the question is too broad/vague, or terminology is irrelevant to sources.
     Output:
         Comma-separated source names (e.g., belgian-civil-code-property,belgian-penal-code) or unknown.
-        No deviations in source names, spacing, or formatting.
+        There should be no other characters that the ones mentioned above: no deviations in source names, spacing, line breaks, or formatting.
     Examples:
         Valid: belgian-civil-code-obligations
         Valid: brussels-housing-code,belgian-civil-code-evidence
@@ -123,9 +123,9 @@ export const legalSourceInference = tool(
         const sourcesAsString = extractContent(response).toLowerCase().trim();
         try {
             if (sourcesAsString === 'unknown')
-                return [LegalSourceSchema.parse(sourcesAsString)];
+                return [LegalSourceSchema.parse(sourcesAsString).trim()];
             else
-                return sourcesAsString.split(",").map(src => LegalSourceSchema.parse(src) as LegalSource);
+                return sourcesAsString.split(",").map(src => LegalSourceSchema.parse(src).trim() as LegalSource);
         } catch (error) {
             console.warn(`Invalid legal source inference ${sourcesAsString}. Defaulting to unknown.`, error);
             return "unknown" as const;

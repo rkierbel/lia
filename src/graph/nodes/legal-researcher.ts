@@ -29,7 +29,7 @@ export const legalResearcher =
             const docs: Document[] = await legalSourcesRetriever.invoke({
                 sources,
                 sourceType: 'law',
-                query: pointOfLaw.content
+                query: pointOfLaw
             }, config);
 
             if (docs) console.log('[LegalResearcher] - successfully retrieved legal sources!', docs.length);
@@ -59,12 +59,14 @@ async function handleSemanticCacheRetrieval(
     config: LangGraphRunnableConfig
 ): Promise<Command | void> {
 
-    const {sources, pointOfLaw} = state;
+    const {sources, pointOfLaw, selectedCachedQuestion} = state;
 
-    if (state.cachedQuestions.length !== 0 && pointOfLaw.answerId !== undefined) {
+    if (state.hasCheckedSemanticCache &&
+        selectedCachedQuestion.content !== undefined && //TODO -> assign after interrupt
+        selectedCachedQuestion.answerId !== undefined) {
         const cachedAnswer: string = await cacheRetriever.invoke({
-            question: pointOfLaw.content,
-            answerId: pointOfLaw.answerId
+            question: selectedCachedQuestion.content,
+            answerId: selectedCachedQuestion.answerId
         }, config);
 
         return new Command({
@@ -81,7 +83,7 @@ async function handleSemanticCacheRetrieval(
         const cachedQuestionsDocs: Document[] = await legalSourcesRetriever.invoke({
             sources,
             sourceType: 'cached-question',
-            query: pointOfLaw.content
+            query: pointOfLaw
         }, config);
         const cachedQuestions: CachedQuestionDto[] = cachedQuestionsDocs.map(q => {
                 return {
@@ -130,7 +132,7 @@ const cacheRetriever = tool( //TODO -> handle errors in flow
         {question, answerId},
         config: LangGraphRunnableConfig): Promise<string> => {
 
-        const retriever = await  createRetriever([], 'cached-answer', answerId);
+        const retriever = await createRetriever([], 'cached-answer', answerId);
         const cachedAnswer = await retriever.invoke(question, config);
 
         return JSON.stringify(cachedAnswer[0].pageContent);

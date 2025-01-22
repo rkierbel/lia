@@ -24,6 +24,7 @@ app.listen(PORT, () => {
 
 
 /*
+TODO -> Settle the CORS issues for good
 TODO -> handle legal-pro vs citizen ?
 TODO -> handle language inference if changes mid-chat ?
 TODO -> handle double-texting

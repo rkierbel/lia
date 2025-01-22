@@ -2,7 +2,7 @@ import {END, MemorySaver, START, StateGraph} from '@langchain/langgraph';
 import {OverallStateAnnotation} from './state.js';
 import {pointOfContact} from './nodes/point-of-contact.js';
 import {legalResearcher} from './nodes/legal-researcher.js';
-import {qualifier} from './nodes/legal-classifier.js';
+import {qualifier} from './nodes/legal-qualifier.js';
 import {jurist} from './nodes/legal-communicator.js';
 import {validationNode} from './nodes/validation-node.js';
 import {feedbackHandler} from './nodes/feedback-handler.js';
