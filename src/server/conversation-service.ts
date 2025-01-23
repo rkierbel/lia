@@ -59,16 +59,35 @@ export class ConversationService {
         const state: typeof OverallStateAnnotation.State =
             await workflow.getState(config).then((s: StateSnapshot) => s.values);
 
-        return await workflow.stream(new Command({
-            resume: "resuming after interrupt",
-            update: {
-                question: reqBody.message,
-                interruptReason: "",
-                messages: messagesStateReducer(state.messages, [reqBody.message as string])
-            }
-        }), {
-            ...config,
-            streamMode: "messages"
-        });
+        if (state.interruptReason === "checkCachedQuestions") {
+
+            return await workflow.stream(new Command({
+                resume: "resuming after cache check interrupt",
+                update: {
+                    selectedCacheQuestion: {
+                        content: reqBody?.selectedCacheQuestion?.content,
+                        answerId: reqBody?.selectedCacheQuestion?.answerId
+                    },
+                    hasCheckedSemanticCache: true,
+                    interruptReason: "",
+                    messages: messagesStateReducer(state.messages, [reqBody.message as string])
+                }
+            }), {
+                ...config,
+                streamMode: "messages"
+            })
+        } else {
+            return await workflow.stream(new Command({
+                resume: "resuming after validation interrupt",
+                update: {
+                    question: reqBody.message,
+                    interruptReason: "",
+                    messages: messagesStateReducer(state.messages, [reqBody.message as string])
+                }
+            }), {
+                ...config,
+                streamMode: "messages"
+            });
+        }
     }
 }

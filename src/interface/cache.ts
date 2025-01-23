@@ -1,0 +1,1 @@
+export interface CachedQuestion  { content: string, answerId: string }

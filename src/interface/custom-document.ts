@@ -31,11 +31,6 @@ export interface CachedQuestionDocument extends Document {
     }
 }
 
-export interface CachedQuestionDto {
-    content: string,
-    answerId: string
-}
-
 export interface CachedAnswerDocument extends Document {
     metadata: {
         sourceType: string

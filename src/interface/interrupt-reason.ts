@@ -1,1 +1,1 @@
-export type InterruptReason = "invalidQuestion" | "waitNewQuestion" | "processingError" | "checkSemanticCache" | "endGraph" | "";
+export type InterruptReason = "invalidQuestion" | "waitNewQuestion" | "processingError" | "checkCachedQuestions" | "endGraph" | "";

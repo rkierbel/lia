@@ -15,9 +15,18 @@ export const corsOptions = {
         'Accept',
         'Accept-Encoding',
         'Accept-Language',
-        'Authorization'
+        'Connection',
+        'Content-Length',
+        'Host',
+        'Priority',
+        'Referer',
+        'Sec-Fetch-Dest',
+        'Sec-Fetch-Mode',
+        'Sec-Fetch-Site',
+        'User-Agent'
     ],
     credentials: false,
+    exposedHeaders: ['Content-Type', 'Transfer-Encoding']
 };
 
 export const configureServer = () => {

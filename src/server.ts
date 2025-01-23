@@ -12,7 +12,6 @@ const conversationController = new ConversationController();
 app.options('/api/conversation', cors(corsOptions));
 app.post(
     '/api/conversation',
-    cors(corsOptions),
     validate(conversationValidationRules),
     (req: Request, res: Response, next: NextFunction): Promise<void> => conversationController.handleConversation(req, res, next)
 );
@@ -24,9 +23,15 @@ app.listen(PORT, () => {
 
 
 /*
+TODO -> handle choice of cached question or continue search without using cache results
+TODO -> interrupt for semantic caching check if feature enabled and no check yet performed.
+TODO -> user has chosen a cached question -> get the answer, go to point of contact
+TODO -> user has not chosen a cached question -> retrieve sources, go to jurist
+TODO -> rework prompts specifically jurist
+TODO -> preparatory works chunked by article
 TODO -> Settle the CORS issues for good
-TODO -> handle legal-pro vs citizen ?
-TODO -> handle language inference if changes mid-chat ?
+TODO -> handle profiling: legal-pro vs citizen ?
+TODO -> handle language changes
 TODO -> handle double-texting
 TODO -> handle network errors, handle end conversation,
 TODO -> cache question & answer after jurist in parallel of answering

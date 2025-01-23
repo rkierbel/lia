@@ -2,10 +2,10 @@ import {ChatOpenAI} from '@langchain/openai';
 import {JinaEmbeddings} from "@langchain/community/embeddings/jina";
 import {QdrantVectorStore} from "@langchain/qdrant";
 
-export function writingChatModel() {
+export function juristChatModel() {
     return new ChatOpenAI({
         model: "deepseek-chat",
-        temperature: 1.3,
+        temperature: 1.1,
         apiKey: process.env.DEEP_SEEK_V3,
         maxTokens: 1024
     }, {
@@ -13,10 +13,23 @@ export function writingChatModel() {
     });
 }
 
+
+export function writingChatModel() {
+    return new ChatOpenAI({
+        model: "deepseek-chat",
+        temperature: 0.94,
+        apiKey: process.env.DEEP_SEEK_V3,
+        maxTokens: 1024
+    }, {
+        baseURL: 'https://api.deepseek.com',
+    });
+}
+
+
 export function deterministicChatModel() {
     return new ChatOpenAI({
         model: "deepseek-chat",
-        temperature: 0.8,
+        temperature: 0.35,
         apiKey: process.env.DEEP_SEEK_V3,
         maxTokens: 512
     }, {
