@@ -1,4 +1,4 @@
-import {vectorStore} from "../graph/utils/ai-tool-factory.js";
+import {vectorStore} from "../graph/utils/ai-tools.js";
 import {v4 as uuidv4} from 'uuid';
 
 export const cacheQuestionAnswer = async function (question: string, answer: string)  {
@@ -10,14 +10,15 @@ export const cacheQuestionAnswer = async function (question: string, answer: str
         id: answerId,
         pageContent: answer,
         metadata: {
-            sourceType: 'cached-answer',
+            sourceType: 'cached-answer'
         }
     }]);
     await store.addDocuments([{
         id: uuidv4(),
         pageContent: question,
         metadata: {
-            answerId: answerId
+            answerId: answerId,
+            sourceType: 'cached-question'
         }
     }]);
 }

@@ -1,7 +1,7 @@
 import {LegalResearcherAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {extractContent} from '../utils/message-to-string.js';
-import {juristChatModel} from "../utils/ai-tool-factory.js";
+import {juristChatModel} from "../utils/ai-tools.js";
 import {cacheQuestionAnswer} from "../../qdrant/qdrant-adapter.js";
 
 
@@ -9,9 +9,9 @@ const model = juristChatModel();
 
 export const jurist =
     async (state: typeof LegalResearcherAnnotation.State, config: LangGraphRunnableConfig) => {
-        console.log("[jurist] called, received the following question: ", state.pointOfLaw);
         const {pointOfLaw, docs, messages} = state;
-        console.log(`[jurist] received sources: ${docs}`);
+        console.log(`[jurist] received the following question: ${pointOfLaw} and sources: ${docs}`);
+
         const response = await model.invoke([
             {
                 role: "system",

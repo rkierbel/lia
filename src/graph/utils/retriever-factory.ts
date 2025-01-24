@@ -4,7 +4,7 @@ import {LangGraphRunnableConfig} from "@langchain/langgraph";
 import {Document} from "@langchain/core/documents";
 import {z} from "zod";
 import {CustomFilter} from "../../interface/custom-filter.js";
-import {vectorStore} from "./ai-tool-factory.js";
+import {embeddingsModel, vectorStore} from "./ai-tools.js";
 
 export const legalSourcesRetriever = tool(
     async (
@@ -14,7 +14,7 @@ export const legalSourcesRetriever = tool(
         if (sources[0] === 'unknown') {
             throw new Error('Cannot retrieve documents for unknown source');
         }
-        console.log("[LegalResearcher] - called legalSourcesRetriever");
+        console.log(`[LegalSourceRetriever] - called for sources ${sources}`);
         const retriever = await createRetriever(legalSearchFilter(sources, 'law'));
         return await retriever.invoke(question, config);
     },
@@ -28,7 +28,34 @@ export const legalSourcesRetriever = tool(
     }
 );
 
-export const cacheRetriever = tool( //TODO -> handle errors in flow
+export const cachedQuestionRetriever = tool( //TODO -> handle errors in flow
+    async (
+        {sourceType, question},
+        config: LangGraphRunnableConfig): Promise<string> => {
+
+        console.log(`[CachedQuestionRetriever] - called for source type ${sourceType} in thread ${config?.configurable?.threadId}`);
+        const store = await vectorStore();
+        const embeddedQuestion = await embeddingsModel().embedQuery(question);
+        const searchResult = await store.similaritySearchVectorWithScore(
+            embeddedQuestion, 10, cacheSearchFilter(sourceType));
+
+        console.log(`[CachedQuestionRetriever] - found cached questions: ${searchResult}`);
+        return searchResult
+            .filter(([, score]) => score > 0.92)
+            .toSorted(
+                ([, score1], [, score2]): number => score2 - score1
+            )[0][0].metadata.answerId;
+    }, {
+        name: 'belgian_law_cache_search',
+        description: 'Retrieved cached answer by id',
+        schema: z.object({
+            sourceType: SourceTypeSchema.describe('search for either cached answers or questions'),
+            question: z.string().describe('question to use for semantic search with cosine similarity score'),
+        })
+    }
+);
+
+export const cachedAnswerRetriever = tool(
     async (
         {sourceType, cachedQuestion, answerId},
         config: LangGraphRunnableConfig): Promise<string> => {
@@ -57,7 +84,6 @@ const createRetriever = async (filter: CustomFilter) => {
 }
 
 const legalSearchFilter = function (sources: LegalSource[] = [], sourceType: LegalSourceType) {
-
     return {
         must: [
             {

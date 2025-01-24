@@ -8,6 +8,8 @@ const errorHandler = (
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     next: NextFunction
 ) => {
+    const headers = res.getHeaders();
+    res.set(headers);
     console.error('Error details:', {
         type: error.constructor.name,
         message: error.message,

@@ -1,6 +1,6 @@
 import {PointOfContactAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
-import {writingChatModel} from '../utils/ai-tool-factory.js';
+import {writingChatModel} from '../utils/ai-tools.js';
 import {legalSourceInference, questionSpecifier, questionValidator} from './validation-tools.js';
 import {BaseMessage, isHumanMessage} from '@langchain/core/messages';
 import {InterruptReason} from '../../interface/interrupt-reason.js';

@@ -2,7 +2,7 @@ import {MarkdownTextSplitter} from './markdown-text-splitter.js';
 import {v4 as uuid} from 'uuid';
 import {QdrantVectorStore} from '@langchain/qdrant';
 import {CustomDocument, LegalSource} from '../interface/custom-document.js';
-import {embeddingsModel, vectorStore} from "../graph/utils/ai-tool-factory";
+import {embeddingsModel, vectorStore} from "../graph/utils/ai-tools";
 
 export class KnowledgeBase {
 
@@ -32,7 +32,7 @@ export class KnowledgeBase {
             docs,
             embeddingsModel(),
             {
-                url: process.env.DB_URL,
+                url: process.env.VECTOR_DB_URL,
                 collectionName: 'belgian_law',
                 collectionConfig: {
                     vectors: {

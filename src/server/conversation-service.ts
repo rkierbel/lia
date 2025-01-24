@@ -40,8 +40,6 @@ export class ConversationService {
         return await workflow.stream({
             messages: [],
             userLang: (reqBody?.userLang as UserLang),
-            cachedQuestions: [],
-            hasCheckedSemanticCache: false
         }, {
             ...config,
             streamMode: "messages"
@@ -59,35 +57,17 @@ export class ConversationService {
         const state: typeof OverallStateAnnotation.State =
             await workflow.getState(config).then((s: StateSnapshot) => s.values);
 
-        if (state.interruptReason === "checkCachedQuestions") {
+        return await workflow.stream(new Command({
+            resume: "resuming after validation interrupt",
+            update: {
+                question: reqBody.message,
+                interruptReason: "",
+                messages: messagesStateReducer(state.messages, [reqBody.message as string])
+            }
+        }), {
+            ...config,
+            streamMode: "messages"
+        });
 
-            return await workflow.stream(new Command({
-                resume: "resuming after cache check interrupt",
-                update: {
-                    selectedCacheQuestion: {
-                        content: reqBody?.selectedCacheQuestion?.content,
-                        answerId: reqBody?.selectedCacheQuestion?.answerId
-                    },
-                    hasCheckedSemanticCache: true,
-                    interruptReason: "",
-                    messages: messagesStateReducer(state.messages, [reqBody.message as string])
-                }
-            }), {
-                ...config,
-                streamMode: "messages"
-            })
-        } else {
-            return await workflow.stream(new Command({
-                resume: "resuming after validation interrupt",
-                update: {
-                    question: reqBody.message,
-                    interruptReason: "",
-                    messages: messagesStateReducer(state.messages, [reqBody.message as string])
-                }
-            }), {
-                ...config,
-                streamMode: "messages"
-            });
-        }
     }
 }

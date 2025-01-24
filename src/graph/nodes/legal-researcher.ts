@@ -2,10 +2,8 @@ import {QualifierAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {LegalSourceType,} from '../../interface/custom-document.js';
 import {Document} from '@langchain/core/documents';
-import {InterruptReason} from "../../interface/interrupt-reason.js";
 import {BaseMessage} from "@langchain/core/messages";
-import {cacheRetriever, legalSourcesRetriever} from "../utils/retriever-factory.js";
-import {CachedQuestion} from "../../interface/cache.js";
+import {cachedAnswerRetriever, cachedQuestionRetriever, legalSourcesRetriever} from "../utils/retriever-factory.js";
 
 
 type LegalResearcherTempState = {
@@ -19,10 +17,9 @@ type LegalResearcherTempState = {
 export const legalResearcher =
     async (state: typeof QualifierAnnotation.State, config: LangGraphRunnableConfig) => {
         try {
-            const {sources, pointOfLaw, cacheSearchApproved} = state;
+            const {sources, pointOfLaw} = state;
 
-            if (process.env.SEMANTIC_CACHE_ENABLED === 'true' &&
-                (cacheSearchApproved || hasSelectedCacheQuestion(state.selectedCachedQuestion))) {
+            if (process.env.SEMANTIC_CACHE_ENABLED === 'true') {
                 console.log("[LegalResearcher] checking semantic cache for similar questions");
                 return await handleSemanticCacheRetrieval(state, config);
             } else {
@@ -60,24 +57,12 @@ async function handleSemanticCacheRetrieval(
     config: LangGraphRunnableConfig
 ): Promise<Command | void> {
 
-    const {pointOfLaw, selectedCachedQuestion, messages} = state;
-    const {answerId, content} = selectedCachedQuestion;
-
-    const hasSelectedCachedQuestion = content !== undefined && answerId !== undefined;
-
-    if (state.hasCheckedSemanticCache && hasSelectedCachedQuestion) {
-        const findCachedAnswerState: LegalResearcherTempState = {
-            sourceType: 'cached-answer', pointOfLaw, messages, config, answerId
-        };
-        return findCorrespondingCachedAnswer(findCachedAnswerState);
-
-    } else if (!state.hasCheckedSemanticCache) {
-        const findSimilarQuestionsState: LegalResearcherTempState = {
-            sourceType: 'cached-question', pointOfLaw, messages, config
-        };
-        return findSimilarCachedQuestions(findSimilarQuestionsState);
-
-    } else {
+    const {pointOfLaw, messages} = state;
+    const findSimilarQuestionsState: LegalResearcherTempState = {
+        sourceType: 'cached-question', pointOfLaw, messages, config
+    };
+    const answerId = await findMostSimilarCachedQuestion(findSimilarQuestionsState);
+    if (!answerId) {
         console.log("[LegalResearcher] no cached data search performed");
         return new Command({
             update: {
@@ -88,13 +73,18 @@ async function handleSemanticCacheRetrieval(
             goto: 'jurist'
         });
     }
+
+    const findCachedAnswerState: LegalResearcherTempState = {
+        sourceType: 'cached-answer', pointOfLaw, messages, config, answerId
+    };
+    return findCorrespondingCachedAnswer(findCachedAnswerState);
 }
 
 const findCorrespondingCachedAnswer = async function (
     findCachedAnswerState: LegalResearcherTempState) {
 
     const {sourceType, pointOfLaw, messages, config, answerId} = findCachedAnswerState;
-    const cachedAnswer: string = await cacheRetriever.invoke({
+    const cachedAnswer: string = await cachedAnswerRetriever.invoke({
         sourceType,
         cachedQuestion: pointOfLaw,
         id: answerId
@@ -103,49 +93,22 @@ const findCorrespondingCachedAnswer = async function (
     console.log(`[LegalResearcher] found cached answer: ${cachedAnswer}`);
     return new Command({
         update: {
-            cacheSearchApproved: false,
             answer: cachedAnswer,
             messages: messagesStateReducer(messages, cachedAnswer),
-            cachedQuestions: [],
             pointOfLaw: {},
             sources: [],
         },
         goto: 'pointOfContact'
-    })
-}
-
-const findSimilarCachedQuestions = async function (
-    findCachedAnswerState: LegalResearcherTempState) {
-
-    const {sourceType, pointOfLaw, messages, config} = findCachedAnswerState;
-
-    const cachedQuestionsDocs: Document[] = await cacheRetriever.invoke({
-        sourceType,
-        cachedQuestion: pointOfLaw
-    }, config);
-    const cachedQuestions: CachedQuestion[] = cachedQuestionsDocs.map(q => {
-            return {
-                content: q.pageContent,
-                answerId: q.metadata.answerId
-            }
-        }
-    );
-
-    console.log(`[LegalResearcher] found similar cached questions: ${cachedQuestions}`);
-    return new Command({
-        update: {
-            cachedQuestions: cachedQuestions,
-            cacheSearchApproved: false,
-            messages: messagesStateReducer(messages, JSON.stringify(cachedQuestions)),
-            interruptReason: 'checkCachedQuestions' as InterruptReason,
-            hasCheckedSemanticCache: true
-        },
-        goto: "feedbackHandler"
     });
 }
 
-const hasSelectedCacheQuestion = function(selectedCacheQuestion: Partial<CachedQuestion>) {
-     const {answerId, content} = selectedCacheQuestion;
-     return content !== undefined && answerId !== undefined;
+const findMostSimilarCachedQuestion = async function (
+    findCachedAnswerState: LegalResearcherTempState): Promise<string> {
+
+    const {sourceType, pointOfLaw, config} = findCachedAnswerState;
+    return await cachedQuestionRetriever.invoke({
+        sourceType,
+        question: pointOfLaw
+    }, config);
 }
 

@@ -48,7 +48,7 @@ export function embeddingsModel() {
 
 export async function vectorStore() {
     return await QdrantVectorStore.fromExistingCollection(embeddingsModel(), {
-        url: 'http://localhost:6333',
+        url: process.env.VECTOR_DB_URL,
         collectionName: 'belgian_law'
     });
 }

@@ -2,7 +2,6 @@ import {Annotation, MessagesAnnotation} from "@langchain/langgraph";
 import {LegalSource} from "../interface/custom-document.js";
 import {UserLang} from "../interface/user-lang.js";
 import {InterruptReason} from '../interface/interrupt-reason.js';
-import {CachedQuestion} from "../interface/cache.js";
 
 export const PointOfContactAnnotation = Annotation.Root({
     ...MessagesAnnotation.spec,
@@ -17,10 +16,6 @@ export const QualifierAnnotation = Annotation.Root({
     ...MessagesAnnotation.spec,
     pointOfLaw: Annotation<string>,
     sources: Annotation<LegalSource[]>,
-    cacheSearchApproved: Annotation<boolean>,
-    hasCheckedSemanticCache: Annotation<boolean>,
-    cachedQuestions: Annotation<CachedQuestion[]>,
-    selectedCachedQuestion: Annotation<{ content?: string, answerId?: string }>,
     interruptReason: Annotation<InterruptReason>
 });
 
