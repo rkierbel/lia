@@ -16,7 +16,9 @@ export const legalSourcesRetriever = tool(
             throw new Error('Cannot retrieve documents for unknown source');
         }
         console.log(`[LegalSourceRetriever] - called for sources ${sources}`);
-        const retriever = await createRetriever(legalSearchFilter(sources, 'law'));
+        const retriever = await createRetriever(
+            legalSearchFilter(sources)
+        );
         return await retriever.invoke(question, config);
     },
     {
@@ -84,7 +86,7 @@ const createRetriever = async (filter: CustomFilter) => {
     return vs.asRetriever({searchType: 'similarity'}, filter);
 }
 
-const legalSearchFilter = function (sources: LegalSource[] = [], sourceType: LegalSourceType) {
+const legalSearchFilter = function (sources: LegalSource[] = []) {
     return {
         must: [
             {
@@ -92,8 +94,7 @@ const legalSearchFilter = function (sources: LegalSource[] = [], sourceType: Leg
                 match: {
                     any: sources
                 }
-            },
-            {key: 'metadata.sourceType', match: {value: sourceType}}
+            }
         ]
     };
 }

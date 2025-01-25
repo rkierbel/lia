@@ -27,7 +27,8 @@ export const jurist =
                  Do not repeat yourself.
                  Define technical terms used to answer the question. 
                  Circular definitions are forbidden.
-                 Use clear and complete references to legal articles used to formulate specific points of your answer.
+                 If some docs you use are contents of legal articles, use clear and complete references to legal articles used to formulate specific points of your answer.
+                 If some docs you use are preparatory work for a Belgian piece of legislation, indicate that the information stems from the preparatory works for the given piece of legislaation.
                  Output:
                  First, write your answer in a maximum of 330 words.
                  Second, list the legal technical terms used associated with their clear and technically correct definitions.

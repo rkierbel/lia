@@ -6,34 +6,45 @@ import pdfplumber
 def extract_french_text(pdf_path):
     with pdfplumber.open(pdf_path) as pdf:
         return "\n".join([
-            page.crop((0, 0, page.width/2, page.height))  # Left 50%
+            page.crop((0, 0, page.width/2, page.height))
             .extract_text()
-            .replace('\n', ' ')  # Flatten all newlines first
+            .replace('\n', ' ')
             for page in pdf.pages
         ])
 
 def fix_hyphenation(text):
-    return re.sub(r'-\s+(\w)', r'\1', text)  # Handle both hyphens and line breaks
+    return re.sub(r'-\s+(\w)', r'\1', text)
 
 def chunk_text(text, max_length=2000):
     chunks = []
     current_chunk = []
     current_length = 0
 
-    # Split on sentence endings followed by space and capital
-    for part in re.split(r'(?<=[.!?]) (?=[A-ZÀ-Ÿ])', text):
+    parts = re.split(r'(?<=[.!?]) (?=[A-ZÀ-Ÿ])', text)
+
+    for part in parts:
         clean_part = part.strip()
         if not clean_part:
             continue
 
         part_length = len(clean_part)
+
         if current_length + part_length > max_length:
             chunks.append(" ".join(current_chunk))
-            current_chunk = []
-            current_length = 0
+            # Prepare next chunk with the last sentence of the current chunk
+            if current_chunk:
+                last_part = current_chunk[-1]
+                current_chunk = [last_part]
+                current_length = len(last_part)
+            else:
+                current_chunk = []
+                current_length = 0
 
-        current_chunk.append(clean_part)
-        current_length += part_length
+            current_chunk.append(clean_part)
+            current_length += part_length
+        else:
+            current_chunk.append(clean_part)
+            current_length += part_length
 
     if current_chunk:
         chunks.append(" ".join(current_chunk))

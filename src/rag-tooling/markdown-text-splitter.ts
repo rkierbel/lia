@@ -14,7 +14,7 @@ export class MarkdownTextSplitter {
 
         return markdown.split('####').map(str => {
             return {
-                content:str
+                content:['(prep work BE civil code)', str.replaceAll('\r\n', '').trim()].join(' ')
             }
         })
 
