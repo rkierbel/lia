@@ -23,7 +23,7 @@ app.listen(PORT, () => {
 
 
 /*
-TODO -> preparatory works chunked by article - use azure doc intel
+TODO -> refine the way references are provided for prepwork - adapt points to set the sourceType to perpwork
 TODO -> Settle the CORS issues for good
 TODO -> handle profiling: legal-pro vs citizen ?
 TODO -> handle language changes

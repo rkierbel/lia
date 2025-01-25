@@ -1,8 +1,9 @@
 import {MarkdownTextSplitter} from './markdown-text-splitter.js';
 import {v4 as uuid} from 'uuid';
 import {QdrantVectorStore} from '@langchain/qdrant';
-import {CustomDocument, LegalSource} from '../interface/custom-document.js';
-import {embeddingsModel, vectorStore} from "../graph/utils/ai-tools";
+import {CustomDocument} from '../interface/custom-document.js';
+import {embeddingsModel, vectorStore} from "../graph/utils/ai-tools.js";
+import {LegalSource} from "../interface/legal-source-name.js";
 
 export class KnowledgeBase {
 

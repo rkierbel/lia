@@ -1,10 +1,11 @@
 import {tool} from "@langchain/core/tools";
-import {LegalSource, LegalSourceSchema, LegalSourceType, SourceTypeSchema} from "../../interface/custom-document.js";
 import {LangGraphRunnableConfig} from "@langchain/langgraph";
 import {Document} from "@langchain/core/documents";
 import {z} from "zod";
 import {CustomFilter} from "../../interface/custom-filter.js";
 import {embeddingsModel, vectorStore} from "./ai-tools.js";
+import {LegalSourceType, SourceTypeSchema} from "../../interface/legal-source-type.js";
+import {LegalSource, LegalSourceSchema} from "../../interface/legal-source-name.js";
 
 export const legalSourcesRetriever = tool(
     async (

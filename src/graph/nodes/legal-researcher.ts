@@ -1,9 +1,9 @@
 import {QualifierAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
-import {LegalSourceType,} from '../../interface/custom-document.js';
 import {Document} from '@langchain/core/documents';
 import {BaseMessage} from "@langchain/core/messages";
 import {cachedAnswerRetriever, cachedQuestionRetriever, legalSourcesRetriever} from "../utils/retriever-factory.js";
+import {LegalSourceType} from "../../interface/legal-source-type";
 
 
 type LegalResearcherTempState = {

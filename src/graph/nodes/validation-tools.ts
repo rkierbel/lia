@@ -1,9 +1,9 @@
 import {tool} from '@langchain/core/tools';
 import {z} from 'zod';
-import {LegalSource, LegalSourceSchema} from '../../interface/custom-document.js';
 import {extractContent} from '../utils/message-to-string.js';
 import {deterministicChatModel, writingChatModel} from '../utils/ai-tools.js';
 import {LangGraphRunnableConfig} from '@langchain/langgraph';
+import {LegalSource, LegalSourceSchema} from "../../interface/legal-source-name.js";
 
 const creativeValidator = writingChatModel();
 const deterministicValidator = deterministicChatModel();
@@ -46,7 +46,7 @@ const SYSTEM_PROMPTS = {
     sourceInference: `
     Task: Match the input question to pre-defined legal sources.
     Sources list (exact names):
-    brussels-housing-code, belgian-civil-code-general-provisions, belgian-civil-code-inheritance-donations-wills, belgian-civil-code-patrimonial-relations-and-couples, belgian-civil-code-property, belgian-civil-code-evidence, belgian-civil-code-obligations, belgian-civil-code-extra-contractual-liability, belgian-penal-code.
+    brussels-housing-code, belgian-civil-code-general-provisions, belgian-civil-code-inheritance-donations-wills, belgian-civil-code-patrimonial-relations-and-couples, belgian-civil-code-property, belgian-civil-code-evidence, belgian-civil-code-obligations, belgian-civil-code-extra-contractual-liability, prepwork-belgian-civil-code-extra-contractual-liability, belgian-penal-code.
     Rules:
         Relevance = question directly/indirectly/explicitly/implicitly addresses the source’s core subject remotely or closely, its regulated legal/societal/philosophical concepts (e.g., inheritance, liability, family, crime, persons, etc), or references its provisions.
         Exclusion = return unknown if no source aligns confidently, the question is too broad/vague, or terminology is irrelevant to sources.

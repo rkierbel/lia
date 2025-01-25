@@ -1,7 +1,7 @@
 import {Annotation, MessagesAnnotation} from "@langchain/langgraph";
-import {LegalSource} from "../interface/custom-document.js";
 import {UserLang} from "../interface/user-lang.js";
 import {InterruptReason} from '../interface/interrupt-reason.js';
+import {LegalSource} from "../interface/legal-source-name";
 
 export const PointOfContactAnnotation = Annotation.Root({
     ...MessagesAnnotation.spec,
