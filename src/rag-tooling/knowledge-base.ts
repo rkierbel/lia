@@ -14,21 +14,7 @@ export class KnowledgeBase {
         this.textSplitter = new MarkdownTextSplitter();
     }
 
-    public async addLegalDocs(sourcePath: string,
-                              sourceName: LegalSource,
-                              sourceType: string,
-                              sourceEntity: string) {
-        const vs = await vectorStore();
-        const docs = await this.chunksToDocs(sourcePath, sourceName, sourceType, sourceEntity);
-
-        await vs.addDocuments(docs);
-    }
-
-    public async setUpKnowledgeBase(sourcePath: string,
-                                    sourceName: LegalSource,
-                                    sourceType: string,
-                                    sourceEntity: string) {
-        const docs = await this.chunksToDocs(sourcePath, sourceName, sourceType, sourceEntity);
+    public async setUpKnowledgeBase(docs: CustomDocument[]) {
         await QdrantVectorStore.fromDocuments(
             docs,
             embeddingsModel(),
@@ -59,23 +45,42 @@ export class KnowledgeBase {
             });
     }
 
-    public async chunksToDocs(sourcePath: string,
-                              sourceName: LegalSource,
-                              sourceType: string,
-                              sourceEntity: string) {
-        const chunks = await this.textSplitter.splitMarkdownByHeaders(sourcePath);
+    public async addPrepWorkDocs(sourcePath: string,
+                                 sourceName: LegalSource,
+                                 sourceEntity: string) {
+        const vs = await vectorStore();
+        const chunks = await this.textSplitter.splitMarkdownOnLvl4Headers(sourcePath);
         const docs: CustomDocument[] = chunks.map(c => {
             return {
                 id: uuid(),
                 pageContent: c.content,
                 metadata: {
                     sourceName,
-                    sourceType,
+                    sourceType: 'preparatory-work',
+                    sourceEntity
+                }
+            }
+        });
+        await vs.addDocuments(docs);
+    }
+
+    public async addLawDocs(sourcePath: string,
+                            sourceName: LegalSource,
+                            sourceEntity: string) {
+        const vs = await vectorStore();
+        const chunks = await this.textSplitter.splitMarkdownByArticleHeaders(sourcePath);
+        const docs: CustomDocument[] = chunks.map(c => {
+            return {
+                id: uuid(),
+                pageContent: c.content,
+                metadata: {
+                    sourceName,
+                    sourceType: 'law',
                     elementRef: [sourceName, c.id].join('-'),
                     sourceEntity
                 }
             }
         });
-        return docs;
+        await vs.addDocuments(docs);
     }
 }

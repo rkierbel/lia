@@ -5,7 +5,7 @@ export interface CustomDocument extends Document {
     metadata: {
         sourceName: LegalSource,
         sourceType: string,
-        elementRef: string
+        elementRef?: string
     }
 }
 

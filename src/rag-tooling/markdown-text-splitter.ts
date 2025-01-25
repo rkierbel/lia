@@ -6,8 +6,22 @@ export class MarkdownTextSplitter {
     constructor() {
     }
 
+    public async splitMarkdownOnLvl4Headers(markdownFilePath: string): Promise<Chunk[]> {
+        const markdown = await fs.readFile(markdownFilePath, {
+            encoding: 'utf-8',
+            flag: 'r'
+        });
+
+        return markdown.split('####').map(str => {
+            return {
+                content:str
+            }
+        })
+
+    }
+
     // Splits a Markdown document into chunks based on # headers
-    public async splitMarkdownByHeaders(markdownFilePath: string): Promise<Chunk[]> {
+    public async splitMarkdownByArticleHeaders(markdownFilePath: string): Promise<Chunk[]> {
         const markdown = await fs.readFile(markdownFilePath, {
             encoding: 'utf-8',
             flag: 'r'
