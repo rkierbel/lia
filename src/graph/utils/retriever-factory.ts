@@ -83,7 +83,11 @@ const createRetriever = async (filter: CustomFilter) => {
     const vs = await vectorStore();
     console.log(`[LegalResearcher - Retriever] - creating retriever with filter ${JSON.stringify(filter)}`);
 
-    return vs.asRetriever({searchType: 'similarity'}, filter);
+    return vs.asRetriever({
+        k: 10,
+        filter,
+        searchType: 'similarity'
+    });
 }
 
 const legalSearchFilter = function (sources: LegalSource[] = []) {

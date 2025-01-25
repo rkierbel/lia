@@ -6,12 +6,12 @@ import {NextFunction} from "express";
 import errorHandler from "./server/middleware/error-handler.js";
 import cors from "cors";
 
-const { app, PORT } = configureServer();
+const {app, PORT} = configureServer();
 const conversationController = new ConversationController();
 
+app.options('/api/conversation', cors(corsOptions));
 app.post(
     '/api/conversation',
-    cors(corsOptions),
     validate(conversationValidationRules),
     (req: Request, res: Response, next: NextFunction): Promise<void> => conversationController.handleConversation(req, res, next)
 );

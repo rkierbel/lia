@@ -5,7 +5,7 @@ import {QdrantVectorStore} from "@langchain/qdrant";
 export function juristChatModel() {
     return new ChatOpenAI({
         model: "deepseek-chat",
-        temperature: 1.1,
+        temperature: 1.3,
         apiKey: process.env.DEEP_SEEK_V3,
         maxTokens: 1024
     }, {
