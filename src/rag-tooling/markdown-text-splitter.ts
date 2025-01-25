@@ -1,12 +1,14 @@
 import * as fs from 'node:fs/promises';
 import {Chunk} from '../interface/chunk.js';
+import {ChunkContextPrefix} from "../interface/chunk-context-prefix.js";
 
 export class MarkdownTextSplitter {
 
     constructor() {
     }
 
-    public async splitMarkdownOnLvl4Headers(markdownFilePath: string): Promise<Chunk[]> {
+    public async splitMarkdownOnLvl4Headers(markdownFilePath: string,
+                                            chunkPrefix: ChunkContextPrefix): Promise<Chunk[]> {
         const markdown = await fs.readFile(markdownFilePath, {
             encoding: 'utf-8',
             flag: 'r'
@@ -14,7 +16,7 @@ export class MarkdownTextSplitter {
 
         return markdown.split('####').map(str => {
             return {
-                content:['(prep work BE civil code)', str.replaceAll('\r\n', '').trim()].join(' ')
+                content:[chunkPrefix, str.replaceAll('\r\n', '').trim()].join(' ')
             }
         })
 

@@ -4,6 +4,7 @@ import {QdrantVectorStore} from '@langchain/qdrant';
 import {CustomDocument} from '../interface/custom-document.js';
 import {embeddingsModel, vectorStore} from "../graph/utils/ai-tools.js";
 import {LegalSource} from "../interface/legal-source-name.js";
+import {ChunkContextPrefix} from "../interface/chunk-context-prefix.js";
 
 export class KnowledgeBase {
 
@@ -47,9 +48,10 @@ export class KnowledgeBase {
 
     public async addPrepWorkDocs(sourcePath: string,
                                  sourceName: LegalSource,
-                                 sourceEntity: string) {
+                                 sourceEntity: string,
+                                 chunkPrefix: ChunkContextPrefix) {
         const vs = await vectorStore();
-        const chunks = await this.textSplitter.splitMarkdownOnLvl4Headers(sourcePath);
+        const chunks = await this.textSplitter.splitMarkdownOnLvl4Headers(sourcePath, chunkPrefix);
         const docs: CustomDocument[] = chunks.map(c => {
             return {
                 id: uuid(),
