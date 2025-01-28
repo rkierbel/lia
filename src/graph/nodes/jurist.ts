@@ -12,6 +12,36 @@ export const jurist =
         const {pointOfLaw, docs, messages} = state;
         console.log(`[jurist] received the following question: ${pointOfLaw} and sources: ${docs}`);
 
+        const lawSummary = await model.invoke([
+            {
+                role: "system",
+                content: `
+                Summarize articles given to you as input.
+                Output rules: keep the article reference to which you append keywords. 
+                Provide a summary of the essence of the legal notions and concepts covered by the input articles.
+                `
+            },
+            {
+                role: "human",
+                content: `Summarize the following legal articles (if no articles, just output 'no articles'): 
+                ${docs.law}.`
+            }
+        ]);
+
+        const prepworkSummary = await model.invoke([
+            {
+                role: "system",
+                content: `
+                Summarize the concepts, notions and most importantly intentions, covered and expressed in the input legal preparatory works.
+                `
+            },
+            {
+                role: "human",
+                content: `Summarize the following legal preparatory work (if no content, just output 'no preparatory work'): 
+                ${docs.prepwork}.`
+            },
+            lawSummary
+        ])
         const response = await model.invoke([
             {
                 role: "system",
@@ -40,7 +70,8 @@ export const jurist =
             },
             {
                 role: "human",
-                content: `Using the following documents:${docs}; Answer the following legal question: ${pointOfLaw}.`
+                content: `Using the following context:${lawSummary.content} and ${prepworkSummary.content}; 
+                to answer the following legal question: ${pointOfLaw}.`
             }
         ], config);
 
@@ -56,7 +87,7 @@ export const jurist =
                 messages: messagesStateReducer(messages, [response]),
                 pointOfLaw: {},
                 sourceName: "",
-                docs: ""
+                docs: {}
             },
             goto: 'pointOfContact'
         });

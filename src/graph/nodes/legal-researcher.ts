@@ -1,9 +1,8 @@
 import {QualifierAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
-import {Document} from '@langchain/core/documents';
 import {BaseMessage} from "@langchain/core/messages";
 import {cachedAnswerRetriever, cachedQuestionRetriever, legalSourcesRetriever} from "../utils/retriever-factory.js";
-import {LegalSourceType} from "../../interface/legal-source-type";
+import {LegalSourceType} from "../../interface/legal-source-type.js";
 
 
 type LegalResearcherTempState = {
@@ -24,17 +23,20 @@ export const legalResearcher =
                 return await handleSemanticCacheRetrieval(state, config);
             } else {
 
-                const docs: Document[] = await legalSourcesRetriever.invoke({
+                const [law, prepwork] = await legalSourcesRetriever.invoke({
                     sources,
                     question: pointOfLaw
                 }, config);
 
-                if (docs) console.log('[LegalResearcher] - successfully retrieved legal sources!', docs);
+                console.log(
+                    `[LegalResearcher] - successfully retrieved legal sources! 
+                    Law: ${law} ; 
+                    Prep work: ${prepwork}`
+                );
 
                 return new Command({
                     update: {
-                        docs: docs.map(d => d.pageContent).join("; "),
-                        messages: messagesStateReducer(state.messages, JSON.stringify(docs.map(d => d.pageContent)))
+                        docs: {law, prepwork},
                     },
                     goto: 'jurist'
                 });
@@ -67,7 +69,7 @@ async function handleSemanticCacheRetrieval(
         return new Command({
             update: {
                 cacheSearchApproved: false,
-                messages: messagesStateReducer(messages, JSON.stringify({"cacheSearchResult":"none"})),
+                messages: messagesStateReducer(messages, JSON.stringify({"cacheSearchResult": "none"})),
                 cachedQuestions: [],
             },
             goto: 'jurist'

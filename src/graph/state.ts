@@ -2,6 +2,7 @@ import {Annotation, MessagesAnnotation} from "@langchain/langgraph";
 import {UserLang} from "../interface/user-lang.js";
 import {InterruptReason} from '../interface/interrupt-reason.js';
 import {LegalSource} from "../interface/legal-source-name";
+import {LegalSearchResult} from "../interface/legal-search-result";
 
 export const PointOfContactAnnotation = Annotation.Root({
     ...MessagesAnnotation.spec,
@@ -21,7 +22,7 @@ export const QualifierAnnotation = Annotation.Root({
 
 export const LegalResearcherAnnotation = Annotation.Root({
     ...QualifierAnnotation.spec,
-    docs: Annotation<string>,
+    docs: Annotation<LegalSearchResult>,
 });
 
 export const OverallStateAnnotation = Annotation.Root({

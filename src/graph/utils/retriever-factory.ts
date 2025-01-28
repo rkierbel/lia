@@ -1,6 +1,5 @@
 import {tool} from "@langchain/core/tools";
 import {LangGraphRunnableConfig} from "@langchain/langgraph";
-import {Document} from "@langchain/core/documents";
 import {z} from "zod";
 import {CustomFilter} from "../../interface/custom-filter.js";
 import {embeddingsModel, vectorStore} from "./ai-tools.js";
@@ -11,15 +10,22 @@ export const legalSourcesRetriever = tool(
     async (
         {question, sources}: { question: string, sources: LegalSource[] },
         config: LangGraphRunnableConfig
-    ): Promise<Document[]> => {
+    ): Promise<{ law: string, prepwork: string }> => {
         if (sources[0] === 'unknown') {
             throw new Error('Cannot retrieve documents for unknown source');
         }
         console.log(`[LegalSourceRetriever] - called for sources ${sources}`);
-        const retriever = await createRetriever(
-            legalSearchFilter(sources)
+        const [lawRetriever, prepWorkRetriever] = await Promise.all(
+            [
+                createRetriever(lawSearchFilter(sources.filter(s => !s.includes('prepwork')))),
+                createRetriever(prepWorkSearchFilter(sources.filter(s => s.includes('prepwork'))))
+            ]
         );
-        return await retriever.invoke(question, config);
+        const [law, prepwork] = await Promise.all([
+            lawRetriever?.invoke(question, config).then(l => l.map(d => d.pageContent).join("; ")),
+            prepWorkRetriever?.invoke(question, config).then(p => p.map(d => d.pageContent).join("; "))]
+        )
+        return {law, prepwork};
     },
     {
         name: 'belgian_law_search',
@@ -90,7 +96,26 @@ const createRetriever = async (filter: CustomFilter) => {
     });
 }
 
-const legalSearchFilter = function (sources: LegalSource[] = []) {
+const lawSearchFilter = function (sources: LegalSource[] = []) {
+    return {
+        must: [
+            {
+                key: 'metadata.sourceName',
+                match: {
+                    any: sources // if sources is empty, will not match anything
+                }
+            },
+            {
+                key: 'metadata.sourceType',
+                match: {
+                    value: 'law'
+                }
+            }
+        ]
+    };
+}
+
+const prepWorkSearchFilter = function (sources: LegalSource[] = []) {
     return {
         must: [
             {
@@ -98,10 +123,17 @@ const legalSearchFilter = function (sources: LegalSource[] = []) {
                 match: {
                     any: sources
                 }
+            },
+            {
+                key: 'metadata.sourceType',
+                match: {
+                    value: 'preparatory-work'
+                }
             }
         ]
     };
 }
+
 
 const cacheSearchFilter = function (sourceType: LegalSourceType, answerId: string = '') {
     if (sourceType === 'cached-answer')
