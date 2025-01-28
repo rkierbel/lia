@@ -6,7 +6,7 @@ export function juristChatModel() {
     return new ChatOpenAI({
         model: "deepseek-chat",
         temperature: 1.3,
-        apiKey: process.env.DEEP_SEEK_V3,
+        apiKey: process.env.DEEPSEEK,
         maxTokens: 1024
     }, {
         baseURL: 'https://api.deepseek.com',
@@ -18,7 +18,7 @@ export function writingChatModel() {
     return new ChatOpenAI({
         model: "deepseek-chat",
         temperature: 0.94,
-        apiKey: process.env.DEEP_SEEK_V3,
+        apiKey: process.env.DEEPSEEK,
         maxTokens: 1024
     }, {
         baseURL: 'https://api.deepseek.com',
@@ -30,7 +30,7 @@ export function deterministicChatModel() {
     return new ChatOpenAI({
         model: "deepseek-chat",
         temperature: 0.35,
-        apiKey: process.env.DEEP_SEEK_V3,
+        apiKey: process.env.DEEPSEEK,
         maxTokens: 512
     }, {
         baseURL: 'https://api.deepseek.com',
