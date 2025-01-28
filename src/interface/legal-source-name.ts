@@ -11,6 +11,9 @@ export const LegalSourceSchema = z.enum([
     "belgian-civil-code-obligations",
     "belgian-civil-code-extra-contractual-liability",
     "belgian-penal-code",
-    "prepwork-belgian-civil-code-extra-contractual-liability"]);
+    "prepwork-belgian-civil-code-extra-contractual-liability",
+    "prepwork-belgian-civil-code-patrimonial-relations-couples-inheritance-donations-wills",
+    "prepwork-belgian-civil-code-property",
+    "prepwork-belgian-civil-code-obligations"]);
 
 export type LegalSource = z.infer<typeof LegalSourceSchema>;
