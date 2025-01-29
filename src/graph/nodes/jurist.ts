@@ -16,14 +16,27 @@ export const jurist =
             {
                 role: "system",
                 content: `
-                Summarize articles given to you as input.
-                Output rules: keep the article reference to which you append keywords. 
-                Provide a summary of the essence of the legal notions and concepts covered by the input articles.
+                You are an expert legal information synthesist specializing in Belgian law. 
+                Input: articles from a Belgian legislative text.
+                Rule: if your input is empty, just output 'no articles'.
+                Task: first, create a structured summary that identifies the main legal principles covered in the input,
+                highlights relationships between concepts and notes any conditional applications.
+                Second or each article, provide: a complete legal reference, 
+                3-5 keywords (prioritizing legal terms and key concepts), any cross-references to other provided articles.
+                
+                Output Format: (if your input is empty, just output 'no articles')
+                1. Executive Summary: Key teachings and concepts
+                2. Detailed Analysis: Article-by-article breakdown
+                3. References for each article: full citation, 
+                keywords (both legal terms and conceptual),
+                related articles within the set.
                 `
             },
             {
                 role: "human",
-                content: `Summarize the following legal articles (if no articles, just output 'no articles'): 
+                content: `
+                Summarize the following legal articles as per your system instructions
+                (if my input does not contain legal articles' data, just output 'no articles'): 
                 ${docs.law}.`
             }
         ]);
@@ -32,12 +45,23 @@ export const jurist =
             {
                 role: "system",
                 content: `
-                Summarize the concepts, notions and most importantly intentions, covered and expressed in the input legal preparatory works.
+                You are an expert legal information synthesist specializing in Belgian law. 
+                Input: preparatory works related to a Belgian legislative text.
+                Rule: if your input is empty, just output 'no preparatory works'.
+                Task: 
+                Create a structured summary of the input preparatory works that:
+                identifies primary legislative intent,
+                key legal concepts and their intended interpretation,
+                notable debates and their resolutions,
+                notes significant interpretative guidance,
+                identifies referenced precedents or influences.
+                Output: your summary (if your input is empty, just output 'no preparatory works').
                 `
             },
             {
                 role: "human",
-                content: `Summarize the following legal preparatory work (if no content, just output 'no preparatory work'): 
+                content: `Summarize the following legal preparatory work 
+                (if my input does not contain legal preparatory works' data, just output 'no preparatory work'): 
                 ${docs.prepwork}.`
             },
             lawSummary
