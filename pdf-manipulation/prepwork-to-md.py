@@ -5,17 +5,26 @@ import pdfplumber
 
 def extract_french_text(pdf_path):
     with pdfplumber.open(pdf_path) as pdf:
-        return "\n".join([
-            page.crop((0, 0, page.width/2, page.height))
-            .extract_text()
-            .replace('\n', ' ')
-            for page in pdf.pages
-        ])
+        french_text = []
+        for page in pdf.pages:
+            # Crop settings: left half of the page, excluding headers (top 7%) and footers (8%)
+            left = 0
+            top = page.height * 0.07  # Adjust this value to target the header area
+            right = page.width / 2
+            bottom = page.height * 0.92  # Adjust this value to target the footer area
+
+            cropped_page = page.crop((left, top, right, bottom))
+            text = cropped_page.extract_text()
+
+            if text:  # Ensure there's text to avoid adding empty strings
+                french_text.append(text.replace('\n', ' '))
+
+        return "\n".join(french_text)
 
 def fix_hyphenation(text):
     return re.sub(r'-\s+(\w)', r'\1', text)
 
-def chunk_text(text, max_length=2000):
+def chunk_text(text, max_length=1500):
     chunks = []
     current_chunk = []
     current_length = 0
