@@ -4,6 +4,7 @@ import {ConversationReq} from '../interface/conversation-req.js';
 import {setResponseHeaders} from './server-config.js';
 import {handleStream} from './stream-handler.js';
 import {ConversationError} from "../interface/app-error.js";
+import {LegalSourceSchema} from "../interface/legal-source-name.js";
 
 export class ConversationController {
 
@@ -17,6 +18,7 @@ export class ConversationController {
     async handleConversation(req: Request, res: Response, next: NextFunction): Promise<void> {
         setResponseHeaders(res); // TODO -> not here
         console.log('Incoming request body:', req.body);
+        console.log(typeof LegalSourceSchema);
         const reqBody = req.body as ConversationReq;
 
         try {

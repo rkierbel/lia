@@ -1,6 +1,6 @@
 import {z} from "zod";
 
-export const LegalSourceSchema = z.enum([
+export const sources = [
     "unknown",
     "brussels-housing-code",
     "belgian-civil-code-general-provisions",
@@ -14,6 +14,9 @@ export const LegalSourceSchema = z.enum([
     "prepwork-belgian-civil-code-extra-contractual-liability",
     "prepwork-belgian-civil-code-patrimonial-relations-couples-inheritance-donations-wills",
     "prepwork-belgian-civil-code-property",
-    "prepwork-belgian-civil-code-obligations"]);
+    "prepwork-belgian-civil-code-obligations"
+] as const;
+
+export const LegalSourceSchema = z.enum(sources);
 
 export type LegalSource = z.infer<typeof LegalSourceSchema>;

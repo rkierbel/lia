@@ -1,11 +1,11 @@
 import {PointOfContactAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
-import {writingChatModel} from '../utils/ai-tools.js';
 import {legalSourceInference, questionSpecifier, questionValidator} from './validation-tools.js';
 import {BaseMessage, isHumanMessage} from '@langchain/core/messages';
 import {InterruptReason} from '../../interface/interrupt-reason.js';
+import {dataAnalysisOpenAiChatModel} from "../utils/ai-tools.js";
 
-const model = writingChatModel();
+const llm = dataAnalysisOpenAiChatModel();
 type ValidationTempState = {
     question?: string,
     messages: BaseMessage[],
@@ -28,7 +28,7 @@ export const validationNode =
 
             if (validationResult !== "yes") {
                 console.log("[ValidationNode] validation failure - not a question related to law");
-                const llmResponse = await model.invoke([
+                const llmResponse = await llm.invoke([
                     {
                         role: "system",
                         content: `
@@ -55,7 +55,7 @@ export const validationNode =
 
             if (sources[0] === "unknown") {
                 console.log("[ValidationNode] validation failure - unknown sources");
-                const llmResponse = await model.invoke([
+                const llmResponse = await llm.invoke([
                     {
                         role: "system",
                         content: `
@@ -80,7 +80,7 @@ export const validationNode =
 
             // If all validations pass, confirm to user and proceed to qualifier
             console.log("[ValidationNode] - question validated!");
-            const confirmationResponse = await model.invoke([
+            const confirmationResponse = await llm.invoke([
                 {
                     role: "system",
                     content: `
@@ -104,7 +104,7 @@ export const validationNode =
         } catch (error) {
             console.error("[ValidationNode] Processing error:", error);
 
-            const llmResponse = await model.invoke([
+            const llmResponse = await llm.invoke([
                 {
                     role: "system",
                     content: `

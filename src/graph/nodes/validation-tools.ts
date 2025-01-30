@@ -1,12 +1,12 @@
 import {tool} from '@langchain/core/tools';
 import {z} from 'zod';
 import {extractContent} from '../utils/message-to-string.js';
-import {deterministicChatModel, writingChatModel} from '../utils/ai-tools.js';
 import {LangGraphRunnableConfig} from '@langchain/langgraph';
-import {LegalSource, LegalSourceSchema} from "../../interface/legal-source-name.js";
+import {LegalSource, LegalSourceSchema, sources} from "../../interface/legal-source-name.js";
+import {deterministicOpenAiChatModel, juristOpenAiChatModel} from "../utils/ai-tools.js";
 
-const creativeValidator = writingChatModel();
-const deterministicValidator = deterministicChatModel();
+const analyticalValidator = juristOpenAiChatModel();
+const deterministicValidator = deterministicOpenAiChatModel();
 
 const SYSTEM_PROMPTS = {
     specification: `
@@ -32,36 +32,36 @@ const SYSTEM_PROMPTS = {
 
     validation: `
     Task: validate if a user’s input is a legal question within housing, civil, or criminal law, including philosophical/societal concepts implying a legal principle.
-    Process:
-        Is it a question? Explicit (“Can I sue my landlord?”) or implicit (“My spouse hid assets”). Non-questions: output no.
-        Does it relate remotely or closely to housing, civil, or criminal law?
-            Close relation: mentions legal domains/subfields (e.g., evictions, contracts, inheritance, assault);
-            Remote relation: raises concepts tied to legal rights, obligations, liability, property, consent, or societal debates (e.g., “Is it ethical to withhold rent?” has housing law implications).
+    Process: first, assess if you are asked a question. Explicit or implicit. Non-questions: output no.
+    Second, determine if it relate remotely or closely to housing, civil, or criminal law?
+    Close relation to law: the question mentions legal domains/subfields.
+    Remote relation to law: the question raises concepts loosely to legal notions, concepts, rights, obligations, liability, property, consent, or societal debates.
     Rule: Output contains only yes or no.
     Output:
-        yes, if the question (explicit/implicit) could require legal analysis of the specified domains, even via abstract principles.
-        no, if non-question or unrelated to the domains (e.g., tax, corporate law).
+    yes, if the question (explicit/implicit) could require legal analysis of the specified domains, even via broad or abstract principles.
+    no, if non-question or question is unrelated to the domains covered by the app.
     `,
 
     sourceInference: `
-    Task: Match the input question to pre-defined legal sources.
-    Sources list (exact names):
-    brussels-housing-code, belgian-civil-code-general-provisions, belgian-civil-code-inheritance-donations-wills, belgian-civil-code-patrimonial-relations-and-couples, belgian-civil-code-property, belgian-civil-code-evidence, belgian-civil-code-obligations, belgian-civil-code-extra-contractual-liability, prepwork-belgian-civil-code-extra-contractual-liability, belgian-penal-code.
+    Task: Match the input question to pre-defined legal sources (including preparatory works when applicable).
+    Sources list (exact names): ${sources}.
     Rules:
-        Relevance = question directly/indirectly/explicitly/implicitly addresses the source’s core subject remotely or closely, its regulated legal/societal/philosophical concepts (e.g., inheritance, liability, family, crime, persons, etc), or references its provisions.
-        Exclusion = return unknown if no source aligns confidently, the question is too broad/vague, or terminology is irrelevant to sources.
+    A source is relevant if the question directly/indirectly/explicitly/implicitly relates to the source’s name.
+    Upon selecting a given source name, always include in your final list its related prepwork prefixed source name, if it exists.
+    Example: you select belgian-civil-code-extra-contractual-liability. 
+    Then, you MUST also include in your list prepwork-belgian-civil-code-extra-contractual-liability, 
+    because it exists in the list of curated source names.
+    Return unknown if no source aligns confidently, the question is too broad/vague, or the terminology is grossly irrelevant to sources.
     Output:
-        Comma-separated source names (e.g., belgian-civil-code-property,belgian-penal-code) or unknown.
-        There should be no other characters that the ones mentioned above: no deviations in source names, spacing, line breaks, or formatting.
-    Examples:
-        Valid: belgian-civil-code-obligations
-        Valid: brussels-housing-code,belgian-civil-code-evidence
-        Invalid: civil-code (incorrect name), unknown (space).`
+    Comma-separated source names or unknown.
+    There should be no other characters that the ones mentioned above.
+    Do not deviate in source names, spacing, line breaks, or formatting.
+    `
 };
 
 export const questionSpecifier = tool(
     async ({question, humanMessages}, config: LangGraphRunnableConfig) => {
-        const response = await creativeValidator.invoke([
+        const response = await analyticalValidator.invoke([
             {role: "system", content: SYSTEM_PROMPTS.specification},
             {
                 role: "human",
@@ -90,7 +90,7 @@ export const questionSpecifier = tool(
 
 export const questionValidator = tool(
     async ({question}, config: LangGraphRunnableConfig) => {
-        const response = await creativeValidator.invoke([
+        const response = await analyticalValidator.invoke([
             {role: "system", content: SYSTEM_PROMPTS.validation},
             {
                 role: "human",

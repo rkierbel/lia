@@ -1,9 +1,9 @@
 import {PointOfContactAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
-import {writingChatModel} from '../utils/ai-tools.js';
 import {InterruptReason} from '../../interface/interrupt-reason.js';
+import {dataAnalysisOpenAiChatModel} from "../utils/ai-tools.js";
 
-const creativeModel = writingChatModel();
+const llm = dataAnalysisOpenAiChatModel();
 
 export const pointOfContact =
     async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
@@ -23,7 +23,7 @@ export const pointOfContact =
 async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotation.State,
                                            config?: LangGraphRunnableConfig) {
     console.log("[PointOfContact] - answer provided by jurist: ", state.answer);
-    const response = await creativeModel.invoke([
+    const response = await llm.invoke([
         {
             role: "system",
             content: `
@@ -56,7 +56,7 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
 async function welcomeUser(state: typeof PointOfContactAnnotation.State,
                            config: LangGraphRunnableConfig) {
     console.log("[PointOfContact] - initial contact - welcome prompt");
-    const response = await creativeModel.invoke([
+    const response = await llm.invoke([
         {
             role: "system",
             content: `

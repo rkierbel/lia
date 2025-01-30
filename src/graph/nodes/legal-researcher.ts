@@ -16,14 +16,15 @@ type LegalResearcherTempState = {
 export const legalResearcher =
     async (state: typeof QualifierAnnotation.State, config: LangGraphRunnableConfig) => {
         try {
-            const {sources, pointOfLaw} = state;
+            const {sources, pointOfLaw, messages} = state;
 
             if (process.env.SEMANTIC_CACHE_ENABLED === 'true') {
                 console.log("[LegalResearcher] checking semantic cache for similar questions");
                 return await handleSemanticCacheRetrieval(state, config);
             } else {
-
-                const [law, prepwork] = await legalSourcesRetriever.invoke({
+                const {
+                    law, prepwork
+                } = await legalSourcesRetriever.invoke({
                     sources,
                     question: pointOfLaw
                 }, config);
@@ -37,6 +38,7 @@ export const legalResearcher =
                 return new Command({
                     update: {
                         docs: {law, prepwork},
+                        messages
                     },
                     goto: 'jurist'
                 });

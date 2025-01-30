@@ -96,7 +96,7 @@ const createRetriever = async (filter: CustomFilter) => {
     });
 }
 
-const lawSearchFilter = function (sources: LegalSource[] = []) {
+const lawSearchFilter = function (sources: LegalSource[]) {
     return {
         must: [
             {
@@ -115,7 +115,7 @@ const lawSearchFilter = function (sources: LegalSource[] = []) {
     };
 }
 
-const prepWorkSearchFilter = function (sources: LegalSource[] = []) {
+const prepWorkSearchFilter = function (sources: LegalSource[]) {
     return {
         must: [
             {
