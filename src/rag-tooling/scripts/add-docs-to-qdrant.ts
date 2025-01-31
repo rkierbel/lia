@@ -1,5 +1,5 @@
-import {KnowledgeBase} from "./knowledge-base";
-import {LegalSource} from "../interface/legal-source-name";
+import {KnowledgeBase} from "../knowledge-base";
+import {LegalSource} from "../../interface/legal-source-name";
 
 const sources = [
     ["../../public/legal-documents/law/prepwork_belgian_civil_code_extracontractual_liability.md", "prepwork-belgian-civil-code-extra-contractual-liability", "be-federal"]
