@@ -31,8 +31,8 @@ export const legalResearcher =
 
                 console.log(
                     `[LegalResearcher] - successfully retrieved legal sources! 
-                    Law: ${law} ; 
-                    Prep work: ${prepwork}`
+                    Law: ${law.length} ; 
+                    Prep work: ${prepwork.length}`
                 );
 
                 return new Command({

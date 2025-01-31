@@ -17,14 +17,16 @@ app.post(
 );
 app.use(errorHandler);
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
+});
+
+server.on('error', (error) => {
+    console.error('Server startup error:', error);
 });
 
 
 /*
-TOOD -> implement front end retry mechanism
-TODO -> Settle the CORS issues for good
 TODO -> handle profiling: legal-pro vs citizen ?
 TODO -> handle language changes
 TODO -> handle double-texting
