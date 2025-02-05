@@ -18,7 +18,7 @@ export const jurist =
             {
                 role: "system",
                 content: `
-                You are an expert legal information synthesist specializing in Belgian law. 
+                You are an expert at summarizing legal information, specializing in Belgian law. 
                 Input: articles from a Belgian legislative text.
                 Rule: if your input is empty, just output 'no articles'.
                 Task: first, create a summary that identifies the main legal principles covered in the input,

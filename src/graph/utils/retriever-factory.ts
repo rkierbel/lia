@@ -5,26 +5,29 @@ import {CustomFilter} from "../../interface/custom-filter.js";
 import {embeddingsModel, vectorStore} from "./ai-tools.js";
 import {LegalSourceType, SourceTypeSchema} from "../../interface/legal-source-type.js";
 import {LegalSource, LegalSourceSchema} from "../../interface/legal-source-name.js";
+import {LegalSearchResult} from "../../interface/legal-search-result.js";
 
 export const legalSourcesRetriever = tool(
     async (
         {question, sources}: { question: string, sources: LegalSource[] },
         config: LangGraphRunnableConfig
-    ): Promise<{ law: string, prepwork: string }> => {
+    ): Promise<LegalSearchResult> => {
         if (sources[0] === 'unknown') {
             throw new Error('Cannot retrieve documents for unknown source');
         }
+
         console.log(`[LegalSourceRetriever] - called for sources ${sources}`);
-        const [lawRetriever, prepWorkRetriever] = await Promise.all(
-            [
-                createRetriever(lawSearchFilter(sources.filter(s => !s.includes('prepwork')))),
-                createRetriever(prepWorkSearchFilter(sources.filter(s => s.includes('prepwork'))))
-            ]
-        );
+        const isPrepWork = (s: string) => s.includes('prepwork');
+
+        const [lawRetriever, prepWorkRetriever] = await Promise.all([
+                createRetriever(lawSearchFilter(sources.filter(s => !isPrepWork(s)))),
+                createRetriever(prepWorkSearchFilter(sources.filter(s => isPrepWork(s))))
+            ]);
         const [law, prepwork] = await Promise.all([
             lawRetriever?.invoke(question, config).then(l => l.map(d => d.pageContent).join("; ")),
-            prepWorkRetriever?.invoke(question, config).then(p => p.map(d => d.pageContent).join("; "))]
-        )
+            prepWorkRetriever?.invoke(question, config).then(p => p.map(d => d.pageContent).join("; "))
+            ]);
+
         return {law, prepwork};
     },
     {
