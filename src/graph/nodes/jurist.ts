@@ -2,11 +2,11 @@ import {LegalResearcherAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {extractContent} from '../utils/message-to-string.js';
 import {cacheQuestionAnswer} from "../../qdrant/qdrant-adapter.js";
-import {juristOpenAiChatModel, dataAnalysisOpenAiChatModel} from "../utils/ai-tools.js";
+import {creativeOpenAiChatModel, dataAnalysisOpenAiChatModel} from "../utils/ai-tools.js";
 
 
 const dataAnalysisModel = dataAnalysisOpenAiChatModel();
-const juristModel = juristOpenAiChatModel();
+const juristModel = creativeOpenAiChatModel();
 
 export const jurist =
     async (state: typeof LegalResearcherAnnotation.State, config: LangGraphRunnableConfig) => {

@@ -3,9 +3,9 @@ import {z} from 'zod';
 import {extractContent} from '../utils/message-to-string.js';
 import {LangGraphRunnableConfig} from '@langchain/langgraph';
 import {LegalSource, LegalSourceSchema, sources} from "../../interface/legal-source-name.js";
-import {deterministicOpenAiChatModel, juristOpenAiChatModel} from "../utils/ai-tools.js";
+import {creativeOpenAiChatModel, deterministicOpenAiChatModel} from "../utils/ai-tools.js";
 
-const analyticalValidator = juristOpenAiChatModel();
+const creativeValidator = creativeOpenAiChatModel();
 const deterministicValidator = deterministicOpenAiChatModel();
 
 const SYSTEM_PROMPTS = {
@@ -61,7 +61,7 @@ const SYSTEM_PROMPTS = {
 
 export const questionSpecifier = tool(
     async ({question, humanMessages}, config: LangGraphRunnableConfig) => {
-        const response = await analyticalValidator.invoke([
+        const response = await creativeValidator.invoke([
             {role: "system", content: SYSTEM_PROMPTS.specification},
             {
                 role: "human",
@@ -90,7 +90,7 @@ export const questionSpecifier = tool(
 
 export const questionValidator = tool(
     async ({question}, config: LangGraphRunnableConfig) => {
-        const response = await analyticalValidator.invoke([
+        const response = await creativeValidator.invoke([
             {role: "system", content: SYSTEM_PROMPTS.validation},
             {
                 role: "human",

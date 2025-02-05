@@ -36,10 +36,10 @@ export function deterministicDeepSeekChatModel() {
     });
 }
 
-export function juristOpenAiChatModel() {
+export function creativeOpenAiChatModel() {
     return new ChatOpenAI({
         model: "gpt-4o",
-        temperature: 0.9,
+        temperature: 1,
         apiKey: process.env.OPEN_AI,
         maxTokens: 1024
     });
