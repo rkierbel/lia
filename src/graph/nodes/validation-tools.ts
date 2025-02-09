@@ -13,14 +13,10 @@ const SYSTEM_PROMPTS = {
     Task: refine broad/generic legal questions using message history only if the history provides the missing context.
     Process: 
     Start by assessing the specificity of the input question.
-        Specific: includes actionable details (parties, events, legal concepts).
-        Example: “Can my landlord increase rent during a fixed-term lease?”
-        Broad/Vague: Lacks context or is fragmentary.
-        Examples: “In criminal law?”, “What about property rights?”
-    Use the message history to refine the input question.
-        Revise only if the message history contains: either prior details 
-        (e.g., “My landlord entered without notice” + “In housing law?” → “Can my landlord enter my rental unit without notice?”),
-        or clarifying context (e.g., “I donated money to my nephew” + “Inheritance?” → “Does my donation affect my nephew’s inheritance rights?”).
+    The question can be considered specific enough hif it includes actionable details (parties, events, legal concepts).
+    Use the message history to refine the input question. Revise only if the message history contains: 
+    either prior details (e.g., “My landlord entered without notice” + “In housing law?” → “Can my landlord enter my rental unit without notice?”),
+    or clarifying context (e.g., “I donated money to my nephew” + “Inheritance?” → “Does my donation affect my nephew’s inheritance rights?”).
     Output Rules: return the original question if it’s already specific. 
     Revise only with explicit context from history; never invent facts.
     Examples:
@@ -31,22 +27,24 @@ const SYSTEM_PROMPTS = {
     `,
 
     validation: `
-    Task: validate if a user’s input is a legal question within housing, civil, or criminal law, including philosophical/societal concepts implying a legal principle.
-    Process: first, assess if you are asked a question. Explicit or implicit. Non-questions: output no.
-    Second, determine if it relate remotely or closely to housing, civil, or criminal law?
-    Close relation to law: the question mentions legal domains/subfields.
-    Remote relation to law: the question raises concepts loosely to legal notions, concepts, rights, obligations, liability, property, consent, or societal debates.
-    Rule: Output contains only yes or no.
+    Task: validate if a user’s input is a legal question within housing, civil, or criminal law, while considering all 3 fields of law in their broadest sense.
+    A question is valid if it only mentions philosophical/societal concepts implying a legal principle.
+    Process: first, assess if your input is a question. The question can be explicit or implicit. If your input is a non-questions: output no.
+    Second, determine if your input relates remotely or closely to housing, civil, or criminal law
+    (including philosophical/societal concepts remotely related to these legal domains).
+    Close relation to law: the question mentions legal domains or legal subfields.
+    Remote relation to law: the question raises concepts loosely or remotely related to legal notions, concepts, rights, obligations, liability, property, consent, or societal or philosophical debates.
     Output:
     yes, if the question (explicit/implicit) could require legal analysis of the specified domains, even via broad or abstract principles.
     no, if non-question or question is unrelated to the domains covered by the app.
+    Rule: Output contains only yes or no.
     `,
 
     sourceInference: `
     Task: Match the input question to pre-defined legal sources (including preparatory works when applicable).
     Sources list (exact names): ${sources}.
     Rules:
-    A source is relevant if the question directly/indirectly/explicitly/implicitly relates to the source’s name.
+    A source is relevant if the question directly or indirectly or explicitly or implicitly relates to the source’s name.
     Upon selecting a given source name, always include in your final list its related prepwork prefixed source name, if it exists.
     Example: you select belgian-civil-code-extra-contractual-liability. 
     Then, you MUST also include in your list prepwork-belgian-civil-code-extra-contractual-liability, 

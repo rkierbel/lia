@@ -1,5 +1,8 @@
 import {z} from "zod";
 
+/**
+ * Used by the validation tool: SYSTEM_PROMPTS.sourceInference
+ */
 export const sources = [
     "unknown",
     "brussels-housing-code",
