@@ -1,9 +1,9 @@
 import {PointOfContactAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {InterruptReason} from '../../interface/interrupt-reason.js';
-import {AiToolProvider, analyticsModel} from "../utils/ai-tools.js";
+import {aiModelManager, toolProvider} from "../utils/ai-model-manager.js";
 
-const llm = analyticsModel(AiToolProvider.DEEPSEEK);
+const llm = aiModelManager.analyticsModel(toolProvider);
 
 export const pointOfContact =
     async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
@@ -37,7 +37,10 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
             Final Interaction: after the answer, ask if the user would like to ask another legal question or end this conversation."
             `
         },
-        {role: "human", content: `Communicate this legal answer: ${state.answer}; while following your system instructions. Do it in the following language: ${state.userLang}`}
+        {
+            role: "human",
+            content: `Communicate this legal answer: ${state.answer}; while following your system instructions. Do it in the following language: ${state.userLang}`
+        }
     ], config);
 
     console.log("[PointOfContact] - communicates response to user: ", response);

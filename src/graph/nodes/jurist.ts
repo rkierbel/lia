@@ -2,22 +2,22 @@ import {LegalResearcherAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {extractContent} from '../utils/message-to-string.js';
 import {cacheQuestionAnswer} from "../../qdrant/qdrant-adapter.js";
-import {AiToolProvider, analyticsModel, creativeModel} from "../utils/ai-tools.js";
+import {aiModelManager, toolProvider} from "../utils/ai-model-manager.js";
 
 
-const dataAnalysisModel = analyticsModel(AiToolProvider.DEEPSEEK);
-const juristModel = creativeModel(AiToolProvider.DEEPSEEK);
+const dataAnalysisModel = aiModelManager.analyticsModel(toolProvider);
+const juristModel = aiModelManager.creativeModel(toolProvider);
 
 export const jurist =
     async (state: typeof LegalResearcherAnnotation.State, config: LangGraphRunnableConfig) => {
         const {pointOfLaw, docs, messages} = state;
         console.log(`[jurist] received the following question: ${pointOfLaw} 
-        and sources: ${docs?.law} ; ${docs?.prepwork}`);
+        and sources: - law: ${docs?.law?.length} ; - prepwork: ${docs?.prepwork?.length}`);
 
         const lawSummary = await dataAnalysisModel.invoke([
-            {
-                role: "system",
-                content: `
+                {
+                    role: "system",
+                    content: `
                 You are an expert at summarizing legal information, specializing in Belgian law. 
                 Your input: articles from a Belgian legislative text.
                 Rule: if your input is empty, just output 'no articles'.
@@ -27,21 +27,23 @@ export const jurist =
                 Output: (if your input is empty, just output 'no articles')
                 your detailed summary, followed by references for each article along with their related keywords.
                 `
-            },
-            {
-                role: "human",
-                content: `
+                },
+                {
+                    role: "human",
+                    content: `
                 Summarize the following legal articles as per your system instructions
                 (if my input does not contain legal articles' data, just output 'no articles'): 
                 ${docs.law}.`
-            }
-        ]);
+                }
+            ], config);
+
+        console.log(`Output legal articles summaries: ${lawSummary.content}`);
 
         const prepworkSummary = await dataAnalysisModel.invoke([
-            {
-                role: "system",
-                content: `
-                You are an expert legal information synthesist specializing in Belgian law. 
+                {
+                    role: "system",
+                    content: `
+                You are an expert at summarizing legal information specializing in Belgian law. 
                 Your input: preparatory works related to a Belgian legislative text.
                 Rule: if your input is empty, just output 'no preparatory works'.
                 Your task: generate a detailed summary of the input preparatory works that
@@ -52,17 +54,17 @@ export const jurist =
                 finally, identifies referenced precedents or influences.
                 Output: your summary (if your input is empty, just output 'no preparatory works').
                 `
-            },
-            {
-                role: "human",
-                content: `Summarize the following legal preparatory work 
+                },
+                {
+                    role: "human",
+                    content: `Summarize the following legal preparatory work 
                 (if my input does not contain legal preparatory works' data, just output 'no preparatory work'): 
                 ${docs.prepwork}.`
-            },
-            lawSummary
-        ])
+                },
+                lawSummary
+            ], config);
 
-        console.log(`Output summaries:\nlaw: ${lawSummary.content};\nprep work: ${prepworkSummary.content}`);
+        console.log(`Output preparatory work summary: ${prepworkSummary.content}`);
 
         const juristResponse = await juristModel.invoke([
             {
@@ -71,12 +73,12 @@ export const jurist =
                 You are an expert jurist answering a legal question using a predefined set of curated input sources.
                 Your input: you will receive a legal question, a detailed summary of legal articles related to this question
                 and a detailed summary of preparatory works related to these articles.
-                Your task: answer the question using only the your input.
+                Your task: answer the input question in an explanatory way using only your input.
                 Rules: first rule, your answer is easily understandable by any human, concise yet precise.
                 Second rule, do not use any other content or sources than those your received as your input to answer the legal question.
                 Third rule, do not search the web to answer the question.
                 Final rule, do not repeat yourself.
-                Output: first, write your answer in a maximum of 330 words.
+                Output: first, write your answer in a maximum of 400 words.
                 Second, list the legal technical terms used associated with their clear and technically correct definitions.
                 Circular definitions are forbidden.
                 Third, list the references (only of legal articles) that you used, including the legal source they belong to.

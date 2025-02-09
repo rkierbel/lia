@@ -3,9 +3,9 @@ import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain
 import {legalSourceInference, questionSpecifier, questionValidator} from './validation-tools.js';
 import {BaseMessage, isHumanMessage} from '@langchain/core/messages';
 import {InterruptReason} from '../../interface/interrupt-reason.js';
-import {AiToolProvider, analyticsModel} from "../utils/ai-tools.js";
+import {aiModelManager, toolProvider} from "../utils/ai-model-manager.js";
 
-const llm = analyticsModel(AiToolProvider.DEEPSEEK);
+const llm = aiModelManager.analyticsModel(toolProvider);
 type ValidationTempState = {
     question?: string,
     messages: BaseMessage[],
@@ -67,7 +67,10 @@ export const validationNode =
                         Encourage the user to rephrase or clarify their question.
                         `
                     },
-                    {role: "human", content: `Tell me in my own language (${state.userLang}), why my question is not valid as per your system prompt: ${questionSpecified}`}
+                    {
+                        role: "human",
+                        content: `Tell me in my own language (${state.userLang}), why my question is not valid as per your system prompt: ${questionSpecified}`
+                    }
                 ], config);
 
                 return toFeedbackHandler({
@@ -90,7 +93,10 @@ export const validationNode =
                     Keep your output simple and to the point.
                     `
                 }
-            ], {...config, tags: ['breakAfter']});
+            ], {
+                ...config,
+                tags: ['breakAfter']
+            });
             console.log(confirmationResponse);
             return new Command({
                 update: {

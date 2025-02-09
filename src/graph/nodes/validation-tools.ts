@@ -3,10 +3,10 @@ import {z} from 'zod';
 import {extractContent} from '../utils/message-to-string.js';
 import {LangGraphRunnableConfig} from '@langchain/langgraph';
 import {LegalSource, LegalSourceSchema, sources} from "../../interface/legal-source-name.js";
-import {AiToolProvider, creativeModel, deterministicModel} from "../utils/ai-tools.js";
+import {aiModelManager, toolProvider} from "../utils/ai-model-manager.js";
 
-const creativeValidator = creativeModel(AiToolProvider.DEEPSEEK);
-const deterministicValidator = deterministicModel(AiToolProvider.DEEPSEEK);
+const creativeValidator = aiModelManager.creativeModel(toolProvider);
+const deterministicValidator = aiModelManager.deterministicModel(toolProvider);
 
 const SYSTEM_PROMPTS = {
     specification: `

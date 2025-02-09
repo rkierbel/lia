@@ -2,7 +2,7 @@ import {MarkdownTextSplitter} from './markdown-text-splitter.js';
 import {v4 as uuid} from 'uuid';
 import {QdrantVectorStore} from '@langchain/qdrant';
 import {CustomDocument} from '../interface/custom-document.js';
-import {embeddingsModel, vectorStore} from "../graph/utils/ai-tools.js";
+import {aiModelManager} from "../graph/utils/ai-model-manager.js";
 import {LegalSource} from "../interface/legal-source-name.js";
 import {ChunkContextPrefix} from "../interface/chunk-context-prefix.js";
 
@@ -18,7 +18,7 @@ export class KnowledgeBase {
     public async setUpKnowledgeBase(docs: CustomDocument[]) {
         await QdrantVectorStore.fromDocuments(
             docs,
-            embeddingsModel(),
+            aiModelManager.embeddingsModel(),
             {
                 url: process.env.VECTOR_DB_URL,
                 collectionName: 'belgian_law',
@@ -50,7 +50,7 @@ export class KnowledgeBase {
                                  sourceName: LegalSource,
                                  sourceEntity: string,
                                  chunkPrefix: ChunkContextPrefix) {
-        const vs = await vectorStore();
+        const vs = await aiModelManager.vectorStore();
         const chunks = await this.textSplitter.splitMarkdownOnLvl4Headers(sourcePath, chunkPrefix);
         const docs: CustomDocument[] = chunks.map(c => {
             return {
@@ -69,7 +69,7 @@ export class KnowledgeBase {
     public async addLawDocs(sourcePath: string,
                             sourceName: LegalSource,
                             sourceEntity: string) {
-        const vs = await vectorStore();
+        const vs = await aiModelManager.vectorStore();
         const chunks = await this.textSplitter.splitMarkdownByArticleHeaders(sourcePath);
         const docs: CustomDocument[] = chunks.map(c => {
             return {
