@@ -2,11 +2,11 @@ import {LegalResearcherAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {extractContent} from '../utils/message-to-string.js';
 import {cacheQuestionAnswer} from "../../qdrant/qdrant-adapter.js";
-import {creativeOpenAiChatModel, dataAnalysisOpenAiChatModel} from "../utils/ai-tools.js";
+import {AiToolProvider, analyticsModel, creativeModel} from "../utils/ai-tools.js";
 
 
-const dataAnalysisModel = dataAnalysisOpenAiChatModel();
-const juristModel = creativeOpenAiChatModel();
+const dataAnalysisModel = analyticsModel(AiToolProvider.DEEPSEEK);
+const juristModel = creativeModel(AiToolProvider.DEEPSEEK);
 
 export const jurist =
     async (state: typeof LegalResearcherAnnotation.State, config: LangGraphRunnableConfig) => {
@@ -19,14 +19,13 @@ export const jurist =
                 role: "system",
                 content: `
                 You are an expert at summarizing legal information, specializing in Belgian law. 
-                Input: articles from a Belgian legislative text.
+                Your input: articles from a Belgian legislative text.
                 Rule: if your input is empty, just output 'no articles'.
-                Task: first, create a summary that identifies the main legal principles covered in the input,
+                Your task: first, generate a detailed summary that identifies the main legal principles covered in the input,
                 highlights relationships between concepts and notes any conditional applications.
-                Second, for each article, provide a complete legal reference and 
-                3 to 5 keywords (prioritizing legal terms and key concepts).
+                Second, for each article, provide a complete legal reference and 3 to 5 keywords (prioritizing legal terms and key concepts).
                 Output: (if your input is empty, just output 'no articles')
-                your summary, followed by references for each article along with their related keywords.
+                your detailed summary, followed by references for each article along with their related keywords.
                 `
             },
             {
@@ -43,14 +42,14 @@ export const jurist =
                 role: "system",
                 content: `
                 You are an expert legal information synthesist specializing in Belgian law. 
-                Input: preparatory works related to a Belgian legislative text.
+                Your input: preparatory works related to a Belgian legislative text.
                 Rule: if your input is empty, just output 'no preparatory works'.
-                Task: create a summary of the input preparatory works that:
-                identifies primary legislative intent,
-                highlights key legal concepts and their intended interpretation,
-                singles out the most notable debates and their resolutions,
-                notes significant interpretative guidance,
-                identifies referenced precedents or influences.
+                Your task: generate a detailed summary of the input preparatory works that
+                first, identifies primary legislative intent;
+                second, highlights key legal concepts and their intended interpretation;
+                third, singles out the most notable debates and their resolutions;
+                fourth, notes significant interpretative guidance;
+                finally, identifies referenced precedents or influences.
                 Output: your summary (if your input is empty, just output 'no preparatory works').
                 `
             },
@@ -70,13 +69,13 @@ export const jurist =
                 role: "system",
                 content: `
                 You are an expert jurist answering a legal question using a predefined set of curated input sources.
-                Input: you will receive a legal question, a summary of legal articles related to this question
-                and a summary of preparatory works related to these articles.
-                Task: answer the question using only the input sources.
-                Rules: your answer is easily understandable by any human, concise yet precise.
-                Do not use any other content or sources than those your received as input to answer the legal question.
-                Do not search the web to answer the question.
-                Do not repeat yourself.
+                Your input: you will receive a legal question, a detailed summary of legal articles related to this question
+                and a detailed summary of preparatory works related to these articles.
+                Your task: answer the question using only the your input.
+                Rules: first rule, your answer is easily understandable by any human, concise yet precise.
+                Second rule, do not use any other content or sources than those your received as your input to answer the legal question.
+                Third rule, do not search the web to answer the question.
+                Final rule, do not repeat yourself.
                 Output: first, write your answer in a maximum of 330 words.
                 Second, list the legal technical terms used associated with their clear and technically correct definitions.
                 Circular definitions are forbidden.
@@ -87,7 +86,7 @@ export const jurist =
             {
                 role: "human",
                 content: `
-                Answer following legal question: ${pointOfLaw}.
+                Answer the following legal question: ${pointOfLaw}.
                 Use only the following legal articles' summary:${lawSummary.content} ;
                 and the following preparatory works' summary: ${prepworkSummary.content}.
                 `

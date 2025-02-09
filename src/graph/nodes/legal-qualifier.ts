@@ -1,9 +1,9 @@
 import {PointOfContactAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {extractContent} from '../utils/message-to-string.js';
-import {dataAnalysisOpenAiChatModel} from '../utils/ai-tools.js';
+import {AiToolProvider, analyticsModel} from '../utils/ai-tools.js';
 
-const llm = dataAnalysisOpenAiChatModel();
+const llm = analyticsModel(AiToolProvider.DEEPSEEK);
 
 export const qualifier =
     async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {

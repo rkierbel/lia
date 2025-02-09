@@ -3,9 +3,9 @@ import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain
 import {legalSourceInference, questionSpecifier, questionValidator} from './validation-tools.js';
 import {BaseMessage, isHumanMessage} from '@langchain/core/messages';
 import {InterruptReason} from '../../interface/interrupt-reason.js';
-import {dataAnalysisOpenAiChatModel} from "../utils/ai-tools.js";
+import {AiToolProvider, analyticsModel} from "../utils/ai-tools.js";
 
-const llm = dataAnalysisOpenAiChatModel();
+const llm = analyticsModel(AiToolProvider.DEEPSEEK);
 type ValidationTempState = {
     question?: string,
     messages: BaseMessage[],
