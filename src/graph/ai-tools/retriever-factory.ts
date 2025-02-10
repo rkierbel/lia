@@ -2,7 +2,7 @@ import {tool} from "@langchain/core/tools";
 import {LangGraphRunnableConfig} from "@langchain/langgraph";
 import {z} from "zod";
 import {CustomFilter} from "../../interface/custom-filter.js";
-import {aiModelManager} from "./ai-model-manager.js";
+import {aiTools} from "./ai-tools-manager.js";
 import {LegalSourceType, SourceTypeSchema} from "../../interface/legal-source-type.js";
 import {LegalSource, LegalSourceSchema} from "../../interface/legal-source-name.js";
 import {LegalSearchResult} from "../../interface/legal-search-result.js";
@@ -46,8 +46,8 @@ export const cachedQuestionRetriever = tool( //TODO -> handle errors in flow
         config: LangGraphRunnableConfig): Promise<string> => {
 
         console.log(`[CachedQuestionRetriever] - called for source type ${sourceType} in thread ${config?.configurable?.threadId}`);
-        const store = await aiModelManager.vectorStore();
-        const embeddedQuestion = await aiModelManager.embeddingsModel().embedQuery(question);
+        const store = await aiTools.vectorStore();
+        const embeddedQuestion = await aiTools.embeddingsModel().embedQuery(question);
         const searchResult = await store.similaritySearchVectorWithScore(
             embeddedQuestion, 10, cacheSearchFilter(sourceType));
 
@@ -89,7 +89,7 @@ export const cachedAnswerRetriever = tool(
 );
 
 const createRetriever = async (filter: CustomFilter) => {
-    const vs = await aiModelManager.vectorStore();
+    const vs = await aiTools.vectorStore();
     console.log(`[LegalResearcher - Retriever] - creating retriever with filter ${JSON.stringify(filter)}`);
 
     return vs.asRetriever({

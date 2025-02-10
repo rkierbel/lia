@@ -3,10 +3,10 @@ import {z} from 'zod';
 import {extractContent} from '../utils/message-to-string.js';
 import {LangGraphRunnableConfig} from '@langchain/langgraph';
 import {LegalSource, LegalSourceSchema, sources} from "../../interface/legal-source-name.js";
-import {aiModelManager, toolProvider} from "../utils/ai-model-manager.js";
+import {aiTools, ModelPurpose} from "../ai-tools/ai-tools-manager.js";
 
-const creativeValidator = aiModelManager.creativeModel(toolProvider);
-const deterministicValidator = aiModelManager.deterministicModel(toolProvider);
+const creativeValidator = aiTools.createModel(ModelPurpose.CREATIVE);
+const deterministicValidator = aiTools.createModel(ModelPurpose.DETERMINISTIC);
 
 const SYSTEM_PROMPTS = {
     specification: `
@@ -62,7 +62,7 @@ export const questionSpecifier = tool(
         const response = await creativeValidator.invoke([
             {role: "system", content: SYSTEM_PROMPTS.specification},
             {
-                role: "human",
+                role: "user",
                 content: `
                 Analyze this message history "${humanMessages.join(' ')}" and my interrogation: ${question}. 
                 If my interrogation is specific enough, output my interrogation as is, without altering it. 
@@ -91,7 +91,7 @@ export const questionValidator = tool(
         const response = await creativeValidator.invoke([
             {role: "system", content: SYSTEM_PROMPTS.validation},
             {
-                role: "human",
+                role: "user",
                 content: `Verify the validity of this question according to your system instructions: ${question}`
             }
         ], {...config, tags: ['noStream']});
@@ -112,7 +112,7 @@ export const legalSourceInference = tool(
         const response = await deterministicValidator.invoke([
             {role: "system", content: SYSTEM_PROMPTS.sourceInference},
             {
-                role: "human",
+                role: "user",
                 content: `Based on your system instructions, identify which legal sources from the predefined list the question relates to, remotely or closely: ${question}`
             }
         ], {...config, tags: ['noStream']});

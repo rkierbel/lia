@@ -1,16 +1,16 @@
 import {PointOfContactAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {extractContent} from '../utils/message-to-string.js';
-import {aiModelManager, toolProvider} from '../utils/ai-model-manager.js';
+import {aiTools, ModelPurpose} from '../ai-tools/ai-tools-manager.js';
 
-const llm = aiModelManager.analyticsModel(toolProvider);
+const analyticsModel = aiTools.createModel(ModelPurpose.ANALYTICS);
 
 export const qualifier =
     async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
         console.log("[qualifier] called");
         const {question, userLang, sources, messages} = state;
 
-        const response = await llm.invoke([
+        const response = await analyticsModel.invoke([
             {
                 role: "system",
                 content: `

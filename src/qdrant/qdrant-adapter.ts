@@ -1,8 +1,8 @@
-import {aiModelManager} from "../graph/utils/ai-model-manager.js";
 import {v4 as uuidv4} from 'uuid';
+import {aiTools} from "../graph/ai-tools/ai-tools-manager.js";
 
 export const cacheQuestionAnswer = async function (question: string, answer: string) {
-    const store = await aiModelManager.vectorStore();
+    const store = await aiTools.vectorStore();
     const answerId = uuidv4();
     console.log("[jurist] caching: ", question);
 

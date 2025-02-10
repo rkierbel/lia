@@ -20,6 +20,12 @@ export const sources = [
     "prepwork-belgian-civil-code-obligations"
 ] as const;
 
+export const codes = [
+    "brussels-housing-code",
+    "belgian-civil-code",
+    "belgian-penal-code"
+]
+
 export const LegalSourceSchema = z.enum(sources);
 
 export type LegalSource = z.infer<typeof LegalSourceSchema>;

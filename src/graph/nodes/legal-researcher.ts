@@ -1,7 +1,7 @@
 import {QualifierAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {BaseMessage} from "@langchain/core/messages";
-import {cachedAnswerRetriever, cachedQuestionRetriever, legalSourcesRetriever} from "../utils/retriever-factory.js";
+import {cachedAnswerRetriever, cachedQuestionRetriever, legalSourcesRetriever} from "../ai-tools/retriever-factory.js";
 import {LegalSourceType} from "../../interface/legal-source-type.js";
 
 

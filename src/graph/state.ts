@@ -22,7 +22,7 @@ export const QualifierAnnotation = Annotation.Root({
 
 export const LegalResearcherAnnotation = Annotation.Root({
     ...QualifierAnnotation.spec,
-    docs: Annotation<LegalSearchResult>,
+    docs: Annotation<LegalSearchResult>
 });
 
 export const OverallStateAnnotation = Annotation.Root({

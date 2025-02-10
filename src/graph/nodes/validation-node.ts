@@ -3,9 +3,10 @@ import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain
 import {legalSourceInference, questionSpecifier, questionValidator} from './validation-tools.js';
 import {BaseMessage, isHumanMessage} from '@langchain/core/messages';
 import {InterruptReason} from '../../interface/interrupt-reason.js';
-import {aiModelManager, toolProvider} from "../utils/ai-model-manager.js";
+import {aiTools, ModelPurpose} from "../ai-tools/ai-tools-manager.js";
 
-const llm = aiModelManager.analyticsModel(toolProvider);
+const analyticsModel = aiTools.createModel(ModelPurpose.ANALYTICS);
+
 type ValidationTempState = {
     question?: string,
     messages: BaseMessage[],
@@ -28,7 +29,7 @@ export const validationNode =
 
             if (validationResult !== "yes") {
                 console.log("[ValidationNode] validation failure - not a question related to law");
-                const llmResponse = await llm.invoke([
+                const llmResponse = await analyticsModel.invoke([
                     {
                         role: "system",
                         content: `
@@ -55,7 +56,7 @@ export const validationNode =
 
             if (sources[0] === "unknown") {
                 console.log("[ValidationNode] validation failure - unknown sources");
-                const llmResponse = await llm.invoke([
+                const llmResponse = await analyticsModel.invoke([
                     {
                         role: "system",
                         content: `
@@ -83,7 +84,7 @@ export const validationNode =
 
             // If all validations pass, confirm to user and proceed to qualifier
             console.log("[ValidationNode] - question validated!");
-            const confirmationResponse = await llm.invoke([
+            const confirmationResponse = await analyticsModel.invoke([
                 {
                     role: "system",
                     content: `
@@ -92,6 +93,10 @@ export const validationNode =
                     Acknowledge that you understand the user's question; indicate that you will now analyze it and that you will provide an answer backed by trusted legal sources.
                     Keep your output simple and to the point.
                     `
+                },
+                {
+                    role: "human",
+                    content: "Acknowledge that you understand my question; indicate that you will now analyze it and that you will provide an answer backed by trusted legal sources."
                 }
             ], {
                 ...config,
@@ -110,7 +115,7 @@ export const validationNode =
         } catch (error) {
             console.error("[ValidationNode] Processing error:", error);
 
-            const llmResponse = await llm.invoke([
+            const llmResponse = await analyticsModel.invoke([
                 {
                     role: "system",
                     content: `
