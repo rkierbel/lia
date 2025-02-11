@@ -23,7 +23,8 @@ export const qualifier =
             },
             {
                 role: "human",
-                content: `Generate a reformulated legal question followed by relevant legal keywords. Original human question: ${question}`
+                content: `Generate a reformulated legal question followed by relevant legal keywords, following your system prompt's instructions. 
+                My original question was: ${question}`
             }
         ], config);
         console.log("[qualifier] responded");

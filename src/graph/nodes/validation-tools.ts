@@ -117,6 +117,7 @@ export const legalSourceInference = tool(
             }
         ], {...config, tags: ['noStream']});
         const sourcesAsString = extractContent(response).toLowerCase().trim();
+
         try {
             if (sourcesAsString === 'unknown')
                 return [LegalSourceSchema.parse(sourcesAsString).trim()];

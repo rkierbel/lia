@@ -42,7 +42,7 @@ export const validationNode =
                     },
                     {
                         role: "human",
-                        content: `Tell me in my own language (${state.userLang}), why my question is not valid as per your system prompt: ${questionSpecified}`
+                        content: `Tell me in my own language (${state.userLang}) why my question is not valid, following the instructions of your system prompt: ${questionSpecified}`
                     }
                 ], config);
 
@@ -70,7 +70,7 @@ export const validationNode =
                     },
                     {
                         role: "human",
-                        content: `Tell me in my own language (${state.userLang}), why my question is not valid as per your system prompt: ${questionSpecified}`
+                        content: `Tell me in my own language (${state.userLang}) why my question is not valid, following the instructions of your system prompt: ${questionSpecified}`
                     }
                 ], config);
 
@@ -88,10 +88,10 @@ export const validationNode =
                 {
                     role: "system",
                     content: `
-                    You are a kind legal assistant conversing with a user in Belgium.
+                    You are a helpful legal assistant conversing with a user in Belgium.
                     Your output must use one language only: ${state.userLang}.
                     Acknowledge that you understand the user's question; indicate that you will now analyze it and that you will provide an answer backed by trusted legal sources.
-                    Keep your output simple and to the point.
+                    Keep your output simple and to the point. No need to greet the user.
                     `
                 },
                 {
@@ -102,7 +102,7 @@ export const validationNode =
                 ...config,
                 tags: ['breakAfter']
             });
-            console.log(confirmationResponse);
+
             return new Command({
                 update: {
                     messages: messagesStateReducer(state.messages, [confirmationResponse]),
@@ -126,7 +126,7 @@ export const validationNode =
                     Maintain a calm and professional tone.
                     `
                 },
-                {role: "human", content: "Error occurred"}
+                {role: "human", content: "Explain that an error occurred and invite me to ask another question."}
             ], config);
 
             return toFeedbackHandler({

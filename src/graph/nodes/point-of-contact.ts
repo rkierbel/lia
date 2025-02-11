@@ -7,7 +7,7 @@ const analyticsModel = aiTools.createModel(ModelPurpose.ANALYTICS);
 
 export const pointOfContact =
     async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
-        console.log("[PointOfContact] called with thread: ", config?.configurable?.thread_id);
+        console.log("[PointOfContact] called with thread id: ", config?.configurable?.thread_id);
 
         const {messages, answer} = state;
 
@@ -22,7 +22,8 @@ export const pointOfContact =
 
 async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotation.State,
                                            config?: LangGraphRunnableConfig) {
-    console.log("[PointOfContact] - answer provided by jurist: ", state.answer);
+    console.log(`[PointOfContact] - answer provided by jurist: ${state.answer}`);
+
     const response = await analyticsModel.invoke([
         {
             role: "system",
@@ -39,11 +40,11 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
         },
         {
             role: "human",
-            content: `Communicate this legal answer: ${state.answer}; while following your system instructions. Do it in the following language: ${state.userLang}`
+            content: `Communicate this legal answer: ${state.answer}; following your system instructions. Do it in the following language: ${state.userLang}`
         }
     ], config);
 
-    console.log("[PointOfContact] - communicates response to user: ", response);
+    console.log(`[PointOfContact] - communicates legal response: ${response.content}`);
 
     return new Command({
         update: {
@@ -59,6 +60,7 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
 async function welcomeUser(state: typeof PointOfContactAnnotation.State,
                            config: LangGraphRunnableConfig) {
     console.log("[PointOfContact] - initial contact - welcome prompt");
+
     const response = await analyticsModel.invoke([
         {
             role: "system",
@@ -75,7 +77,9 @@ async function welcomeUser(state: typeof PointOfContactAnnotation.State,
         },
         {role: "human", content: `Start the conversation in ${state.userLang}`}
     ], config);
-    console.log(response);
+
+    console.log(`[PointOfContact] welcomes user: ${response.content}`);
+
     return new Command({
         update: {
             messages: messagesStateReducer(state.messages, [response]),

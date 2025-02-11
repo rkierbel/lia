@@ -11,6 +11,7 @@ const juristModel = aiTools.createModel(ModelPurpose.CREATIVE);
 export const jurist =
     async (state: typeof LegalResearcherAnnotation.State, config: LangGraphRunnableConfig) => {
         const {pointOfLaw, docs, messages} = state;
+
         console.log(`[jurist] received the following question: ${pointOfLaw} 
         and sources: - law: ${docs?.law?.length} ; - prepwork: ${docs?.prepwork?.length}`);
 
@@ -39,7 +40,7 @@ export const jurist =
 
         console.log(`Output legal articles summaries: ${lawSummary.content}`);
 
-        const prepworkSummary = await juristModel.invoke([
+        const prepWorkSummary = await juristModel.invoke([
             {
                 role: "system",
                 content: `
@@ -64,7 +65,7 @@ export const jurist =
             lawSummary
         ], config);
 
-        console.log(`Output preparatory work summary: ${prepworkSummary.content}`);
+        console.log(`Output preparatory work summary: ${prepWorkSummary.content}`);
 
         const juristResponse = await juristModel.invoke([
             {
@@ -91,8 +92,7 @@ export const jurist =
                 content: `
                 Answer the following legal question: ${pointOfLaw}.
                 Use only the following legal articles summary:${lawSummary.content} ;
-                and the following preparatory works summary: ${prepworkSummary.content}.
-
+                and the following preparatory works summary: ${prepWorkSummary.content}.
                 `
             }
         ], config);
