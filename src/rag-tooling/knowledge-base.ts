@@ -20,7 +20,7 @@ export class KnowledgeBase {
             docs,
             aiTools.embeddingsModel(),
             {
-                url: process.env.VECTOR_DB_URL,
+                url: process.env.QDRANT_URL,
                 collectionName: 'belgian_law',
                 collectionConfig: {
                     vectors: {

@@ -74,7 +74,7 @@ class AiToolsManager {
         return await QdrantVectorStore.fromExistingCollection(
             this.embeddingsModel(),
             {
-                url: process.env.VECTOR_DB_URL,
+                url: process.env.QDRANT_URL,
                 collectionName: 'belgian_law'
             }
         );
