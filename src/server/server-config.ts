@@ -6,7 +6,11 @@ import dotenv from 'dotenv';
 dotenv.config({path: '../../.env'});
 
 export const corsOptions = {
-    origin: ['http://localhost:4200', 'https://lia-ui-1085566634771.europe-west3.run.app'],
+    origin: [
+        'http://localhost:4200',
+        process.env.LIA_UI as string,
+        process.env.LIA_BACKEND as string
+    ],
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: [
         'Origin',
