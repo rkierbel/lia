@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config({path: '../../.env'});
 
 export const corsOptions = {
-    origin: 'http://localhost:4200',
+    origin: ['http://localhost:4200', 'https://lia-ui-1085566634771.europe-west3.run.app'],
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: [
         'Origin',
@@ -31,7 +31,7 @@ export const corsOptions = {
 
 export const configureServer = () => {
     const app = express();
-    const PORT = process.env.PORT || 3003;
+    const PORT = process.env.HOST_PORT || 3003;
 
     app.use(cors(corsOptions));
     app.use(express.json());
