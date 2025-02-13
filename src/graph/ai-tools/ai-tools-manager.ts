@@ -75,7 +75,8 @@ class AiToolsManager {
             this.embeddingsModel(),
             {
                 url: process.env.QDRANT_URL,
-                collectionName: 'belgian_law'
+                collectionName: 'belgian_law',
+                apiKey: process.env.QDRANT_API_KEY
             }
         );
     }
