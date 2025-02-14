@@ -93,7 +93,7 @@ const createRetriever = async (filter: CustomFilter) => {
     console.log(`[LegalResearcher - Retriever] - creating retriever with filter ${JSON.stringify(filter)}`);
 
     return vs.asRetriever({
-        k: 10,
+        k: 20,
         filter,
         searchType: 'similarity'
     });
