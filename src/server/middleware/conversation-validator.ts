@@ -37,6 +37,7 @@ export const conversationValidationRules: ValidationChain[] = [
 export const validate = (validations: ValidationChain[]) => {
     return async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         console.log("----------------- calling request body validator ------------------");
+        console.log(req);
         try {
             await Promise.all(validations.map(validation => validation.run(req)));
 
