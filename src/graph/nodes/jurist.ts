@@ -32,7 +32,8 @@ export const jurist =
                 Second, list the legal technical terms used associated with their clear and technically correct definitions.
                 Circular definitions are forbidden.
                 Use this limitative list of allowed sources' names: ${codes}. 
-                The output format rules: the output should be appealing to humans, in markdown. If you use titles, keep them short and impactful.
+                The output format rules: the output should be appealing to humans, in markdown. If you use titles, keep them short and impactful. 
+                Limit your answer to 800 words.
                 `
             },
             {

@@ -20,7 +20,7 @@ export const conversationValidationRules: ValidationChain[] = [
             }
             return true;
         }).trim()
-        .withMessage('Message is required for ongoing conversations'),
+        .withMessage('Message is empty or contains an invalid character.'),
 
     body('threadId')
         .optional()
