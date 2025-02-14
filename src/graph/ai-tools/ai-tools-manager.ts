@@ -97,7 +97,7 @@ class AiToolsManager {
                 [AiProvider.GOOGLE]: {
                     model: "gemini-2.0-flash",
                     temperature: 1,
-                    maxTokens: 1200
+                    maxTokens: 1600
                 }
             },
             [ModelPurpose.ANALYTICS]: {
