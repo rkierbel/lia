@@ -9,8 +9,13 @@ export const conversationValidationRules: ValidationChain[] = [
         .if((value: string, {req}) => !req.body.isNew) // only required if not a new conversation
         .notEmpty()
         .custom((value: string) => {
-            const validPattern = /^[a-zA-Z0-9éèàêç\s,.?!;\-':]+$/;
-            if (!validPattern.test(value)) {
+            const normalizedValue = value
+                .replace(/[\u2018\u2019]/g, "\u0027")
+                .replace(/[\u201C\u201D]/g, "\u0022")
+                .trim();
+
+            const validPattern = /^[a-zA-Z0-9éèàêçë\s,.?!;\-\u0027\u0022:]+$/;
+            if (!validPattern.test(normalizedValue)) {
                 throw new Error("Message can only contain letters, numbers, spaces and basic punctuation (,.?!'-;:)");
             }
             return true;
