@@ -27,10 +27,10 @@ export const jurist =
                 Second rule, do not use any other content or sources than those your received as your input to answer the legal question.
                 Third rule, do not search the web to answer the question.
                 Final rule, do not repeat yourself.
-                Your output: first, write your legal answer in a maximum of 400 words.
+                Your output: first, write your legal answer using an explanatory tone and a clear expression. 
+                In the text of your answer, whenever you refer to a legal source as provided in your input, provide a citation indicating said source.
                 Second, list the legal technical terms used associated with their clear and technically correct definitions.
                 Circular definitions are forbidden.
-                Third, list the references (only of legal articles) that you used, including the legal source they belong to.
                 Use this limitative list of allowed sources' names: ${codes}. 
                 The output format rules: the output should be appealing to humans, in markdown. If you use titles, keep them short and impactful.
                 `
