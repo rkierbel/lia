@@ -6,19 +6,27 @@ import {LegalSource, LegalSourceSchema, sources} from "../../interface/legal-sou
 import {aiTools, ModelPurpose} from "../ai-tools/ai-tools-manager.js";
 
 const creativeValidator = aiTools.createModel(ModelPurpose.CREATIVE);
+const analyticsValidator = aiTools.createModel(ModelPurpose.ANALYTICS);
 const deterministicValidator = aiTools.createModel(ModelPurpose.DETERMINISTIC);
 
 const SYSTEM_PROMPTS = {
     specification: `
-    Task: refine broad/generic legal questions using message history only if the history provides the missing context.
-    Process: 
+    Task: refine too broad or too generic questions using message history only if the history provides the missing context.
+    Process rules: 
     Start by assessing the specificity of the input question.
-    The question can be considered specific enough hif it includes actionable details (parties, events, legal concepts).
-    Use the message history to refine the input question. Revise only if the message history contains: 
-    either prior details (e.g., “My landlord entered without notice” + “In housing law?” → “Can my landlord enter my rental unit without notice?”),
-    or clarifying context (e.g., “I donated money to my nephew” + “Inheritance?” → “Does my donation affect my nephew’s inheritance rights?”).
-    Output Rules: return the original question if it’s already specific. 
-    Revise only with explicit context from history; never invent facts.
+    Consider a question is specific enough if 
+    it relates closely or remotely to a relatively precise legal issue 
+    or if it can be the object of a legal advice 
+    or if it contains actionable details (parties, events, legal or societal or philosophical concepts or principles).
+    If you consider the question is specific enough, output the original question.
+    If you consider that the question is too broad or generic, use the message history to refine the input question. 
+    Revise only if the message history contains: 
+    either prior details that could directly relate to the original question and form a more specific legal issue 
+    (e.g., “My landlord entered without notice” + “In housing law?” → “Can my landlord enter my rental unit without notice?”),
+    or clarifying context 
+    (e.g., “I donated money to my nephew” + “Inheritance?” → “Does my donation affect my nephew’s inheritance rights?”).
+    Output rules: return the original question if it is already specific.
+    Else, return the original question with specifications, revised only with explicit context from history; never invent facts.
     Examples:
     Input (History: “My partner and I split. We own a house.” + Question: “In patrimonial relations?”)
     Output: “How is our jointly owned house divided under patrimonial relations law after separation?”
@@ -59,15 +67,15 @@ const SYSTEM_PROMPTS = {
 
 export const questionSpecifier = tool(
     async ({question, humanMessages}, config: LangGraphRunnableConfig) => {
-        const response = await creativeValidator.invoke([
+        const response = await analyticsValidator.invoke([
             {role: "system", content: SYSTEM_PROMPTS.specification},
             {
                 role: "user",
                 content: `
-                Analyze this message history "${humanMessages.join(' ')}" and my interrogation: ${question}. 
-                If my interrogation is specific enough, output my interrogation as is, without altering it. 
-                Else if my interrogation should be specified using my messages history, output a revised more specific question as per your system instructions.
-                Else, output unknown as per your system instructions.
+                Analyze this message history "${humanMessages.join(' ')}" and my original question: ${question}. 
+                If my original question is specific enough as per your system prompt's instructions, output it as is, without altering it. 
+                Else if my original question should be specified using my messages history, 
+                output a revised more specific question as per your system prompt's instructions.
                 `
             }
         ], {...config, tags: ['noStream']});
