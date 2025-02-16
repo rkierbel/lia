@@ -32,7 +32,6 @@ async function answerAndWaitForNewQuestion(state: typeof PointOfContactAnnotatio
             Input: Legal answer content (structure/language: as provided);
             Output Rules:
             Your only target language of expression: ${state.userLang}.
-            Never use: ---, ***, ___ or ###;
             Always preserve the original answer's structure exactly.
             Translate only if the original answer is in a different language than ${state.userLang} (e.g., fr to nl).
             Final Interaction: after the answer, ask if the user would like to ask another legal question or end this conversation."
