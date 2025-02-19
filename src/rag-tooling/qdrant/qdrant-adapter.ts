@@ -1,5 +1,5 @@
 import {v4 as uuidv4} from 'uuid';
-import {aiTools} from "../graph/ai-tools/ai-tools-manager.js";
+import {aiTools} from "../../graph/ai-tools/ai-tools-manager.js";
 
 export const cacheQuestionAnswer = async function (question: string, answer: string) {
     const store = await aiTools.vectorStore();

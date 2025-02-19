@@ -1,7 +1,7 @@
 import {LegalResearcherAnnotation} from '../state.js';
 import {Command, LangGraphRunnableConfig, messagesStateReducer} from '@langchain/langgraph';
 import {extractContent} from '../utils/message-to-string.js';
-import {cacheQuestionAnswer} from "../../qdrant/qdrant-adapter.js";
+import {cacheQuestionAnswer} from "../../rag-tooling/qdrant/qdrant-adapter.js";
 import {aiTools, ModelPurpose} from "../ai-tools/ai-tools-manager.js";
 import {codes} from "../../interface/legal-source-name.js";
 
