@@ -1,8 +1,8 @@
 import {NextFunction, Request, Response} from 'express';
-import {ValidationError} from '../../interface/app-error.js';
-import { body } from 'express-validator/lib/middlewares/validation-chain-builders.js';
-import { ValidationChain } from 'express-validator/lib/chain/validation-chain.js';
-import { validationResult } from 'express-validator/lib/validation-result.js';
+import {ConversationValidationError} from '../../interface/app-error.js';
+import {body} from 'express-validator/lib/middlewares/validation-chain-builders.js';
+import {ValidationChain} from 'express-validator/lib/chain/validation-chain.js';
+import {validationResult} from 'express-validator/lib/validation-result.js';
 
 export const conversationValidationRules: ValidationChain[] = [
     body('message')
@@ -15,12 +15,10 @@ export const conversationValidationRules: ValidationChain[] = [
                 .trim();
 
             const validPattern = /^[a-zA-Z0-9éèàêçë\s,.?!;\-\u0027\u0022:]+$/;
-            if (!validPattern.test(normalizedValue)) {
-                throw new Error("Message can only contain letters, numbers, spaces and basic punctuation (,.?!'-;:)");
-            }
-            return true;
-        }).trim()
-        .withMessage('Message is empty or contains an invalid character.'),
+            return validPattern.test(normalizedValue);
+        })
+        .trim()
+        .withMessage('Message can only contain letters, numbers, spaces and basic punctuation (,.?!\'-;:)'),
 
     body('threadId')
         .optional()
@@ -43,16 +41,15 @@ export const validate = (validations: ValidationChain[]) => {
     return async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         console.log("----------------- calling request body validator ------------------");
         console.log("Req body: ", JSON.stringify(req?.body));
-        try {
-            await Promise.all(validations.map(validation => validation.run(req)));
 
-            const errors = validationResult(req);
-            if (!errors.isEmpty()) {
-                return next(new ValidationError(errors.array().map(e => JSON.stringify(e))));
-            }
-            next();
-        } catch (error) {
-            next(error);
+        await Promise.all(validations.map(validation => validation.run(req)));
+
+        const result = validationResult(req).array({onlyFirstError: true});
+
+        if (result.length > 0) {
+            throw new ConversationValidationError(result[0].msg);
         }
+
+        next();
     };
 };

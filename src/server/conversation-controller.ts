@@ -1,7 +1,6 @@
 import {NextFunction, Request, Response} from 'express';
 import {ConversationService} from './conversation-service.js';
 import {ConversationReq} from '../interface/conversation-req.js';
-import {setResponseHeaders} from './server-config.js';
 import {handleStream} from './stream-handler.js';
 import {ConversationError} from "../interface/app-error.js";
 
@@ -15,7 +14,7 @@ export class ConversationController {
 
     // validation performed at this point, request safe to use
     async handleConversation(req: Request, res: Response, next: NextFunction): Promise<void> {
-        setResponseHeaders(res);
+        res.setHeader('Transfer-Encoding', 'chunked');
         console.log('[ConversationController] request received: ', req.body);
         const reqBody = req.body as ConversationReq;
 

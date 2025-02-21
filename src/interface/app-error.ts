@@ -2,7 +2,7 @@ export type KnownError = 'AppError' | 'ValidationError' | 'ConversationError';
 
 export class AppError extends Error {
     constructor(
-        public statusCode: number,
+        public status: number,
         public override message: string,
         public type: KnownError = 'AppError'
     ) {
@@ -12,15 +12,14 @@ export class AppError extends Error {
     }
 }
 
-export class ValidationError extends AppError {
-    constructor(public errors: string[]) {
-        super(400, 'Validation Error', 'ValidationError');
-        this.errors = errors;
+export class ConversationValidationError extends AppError {
+    constructor(public override message: string) {
+        super(400, message, 'ValidationError');
     }
 }
 
 export class ConversationError extends AppError {
-    constructor(message: string) {
+    constructor(public override message: string) {
         super(500, message, 'ConversationError');
     }
 }

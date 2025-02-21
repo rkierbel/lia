@@ -29,8 +29,7 @@ export const corsOptions = {
         'Sec-Fetch-Site',
         'User-Agent'
     ],
-    credentials: false,
-    exposedHeaders: ['Content-Type', 'Transfer-Encoding']
+    credentials: false
 };
 
 export const configureServer = () => {
@@ -42,9 +41,4 @@ export const configureServer = () => {
     app.use(morgan('dev'));
 
     return { app, PORT };
-};
-
-export const setResponseHeaders = (res: express.Response) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Transfer-Encoding', 'chunked');
 };

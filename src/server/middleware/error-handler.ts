@@ -1,35 +1,23 @@
-import {NextFunction, Request, Response} from 'express';
-import {ConversationError, ValidationError} from '../../interface/app-error.js';
+import {ConversationError, ConversationValidationError} from '../../interface/app-error.js';
+import {ErrorRequestHandler, NextFunction} from "express";
 
-const errorHandler = (
+const errorHandler: ErrorRequestHandler = (
     error: Error,
-    req: Request,
-    res: Response,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    next: NextFunction
+    req,
+    res,
+    next: NextFunction,
 ) => {
-    const headers = res.getHeaders();
-    res.set(headers);
-    console.error('Error details:', {
-        type: error.constructor.name,
-        message: error.message,
-        stack: error.stack,
-        timestamp: new Date().toISOString()
-    });
 
-    if (error instanceof ValidationError) {
-        // Only send status code to client
-        console.error('Validation error details:', error.errors);
-        res.status(error.statusCode).end();
-    } else if (error instanceof ConversationError) {
-        // Only send status code to client
-        console.error('Conversation error:', error.message);
-        res.status(error.statusCode).end();
+    console.error('Executing error middleware for error: ', error);
+
+    res.setHeader('Content-Type', 'application/json');
+
+    // Handle known errors
+    if (error instanceof ConversationValidationError || error instanceof ConversationError) {
+        res.status(400).end();
     } else {
-        console.error('Unexpected error:', error);
         res.status(500).end();
     }
-
 };
 
 export default errorHandler;

@@ -8,11 +8,19 @@ import errorHandler from "./server/middleware/error-handler.js";
 const {app, PORT} = configureServer();
 const conversationController = new ConversationController();
 
+
 app.post(
     '/api/conversation',
     validate(conversationValidationRules),
-    (req: Request, res: Response, next: NextFunction): Promise<void> => conversationController.handleConversation(req, res, next)
+    async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            await conversationController.handleConversation(req, res, next);
+        } catch (error) {
+            next(error);
+        }
+    }
 );
+
 app.use(errorHandler);
 
 const server = app.listen(PORT, () => {

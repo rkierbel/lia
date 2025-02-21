@@ -20,7 +20,7 @@ services:
       - lia-network
     dns_search: .
 
-  lia-backend:
+  backend:
     build: .
     container_name: lia-backend
     ports:
