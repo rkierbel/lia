@@ -6,7 +6,7 @@ import {aiTools} from "./ai-tools-manager.js";
 import {LegalSourceType, SourceTypeSchema} from "../../interface/legal-source-type.js";
 import {LegalSource, LegalSourceSchema} from "../../interface/legal-source-name.js";
 import {LegalSearchResult} from "../../interface/legal-search-result.js";
-import {AppError} from "../../interface/app-error";
+import {AppError} from "../../interface/app-error.js";
 
 export const legalSourcesRetriever = tool(
     async (
