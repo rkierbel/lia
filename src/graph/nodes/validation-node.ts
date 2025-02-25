@@ -16,7 +16,7 @@ type ValidationTempState = {
 
 export const validationNode =
     async (state: typeof PointOfContactAnnotation.State, config: LangGraphRunnableConfig) => {
-        console.log("ValidationNode] called");
+        console.log("[ValidationNode] called");
         try {
             const questionSpecified: string = await questionSpecifier.invoke({
                 question: state.question,
@@ -27,45 +27,24 @@ export const validationNode =
                 legalSourceInference.invoke({question: questionSpecified}, config)
             ]);
 
-            if (validationResult !== "yes") {
-                console.log("[ValidationNode] validation failure - not a question related to law");
+            if (validationResult !== "yes" || sources[0] === "unknown") {
+                const failureReason = validationResult !== "yes"
+                    ? "is not related to law"
+                    : "refers to unknown sources";
+
+                console.log(`[ValidationNode] validation failure, question ${failureReason}`);
+
                 const llmResponse = await analyticsModel.invoke([
                     {
                         role: "system",
                         content: `
                         You are a helpful legal assistant guiding a human user in Belgium.
                         Your output must use one language only: ${state.userLang}.
-                        The human user has asked a question that is not about law or not within the areas we can help with.
+                        The human user has asked a question that ${failureReason}.
                         Kindly explain the areas of law we can assist with: housing law, civil law including family law, and criminal law.
-                        Encourage the user to rephrase their question or ask a question about a known law area.
-                        `
-                    },
-                    {
-                        role: "human",
-                        content: `Tell me in my own language (${state.userLang}) why my question is not valid, following the instructions of your system prompt: ${questionSpecified}`
-                    }
-                ], config);
-
-                return toFeedbackHandler({
-                    question: questionSpecified,
-                    messages: messagesStateReducer(state.messages, [llmResponse]),
-                    userLang: state.userLang,
-                    interruptReason: "invalidQuestion" as InterruptReason
-                });
-            }
-
-            if (sources[0] === "unknown") {
-                console.log("[ValidationNode] validation failure - unknown sources");
-                const llmResponse = await analyticsModel.invoke([
-                    {
-                        role: "system",
-                        content: `
-                        You are a helpful legal assistant replying to a user in Belgium.
-                        Your output must use one language only: ${state.userLang}.
-                        The user's question does not clearly relate to a legal source supported by our application.
                         Provide clear guidance on the types of legal questions you can help with:
                         housing law, civil law (Persons, Obligations, Property, Inheritance, Donations, Wills, Liability, Contracts, Couples, Patrimonial relations, Family), or criminal law.
-                        Encourage the user to rephrase or clarify their question.
+                        Encourage the user to rephrase their question or ask a question about a known law area.
                         `
                     },
                     {
