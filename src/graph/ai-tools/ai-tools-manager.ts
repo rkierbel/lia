@@ -112,7 +112,7 @@ class AiToolsManager {
                     maxTokens: 1024
                 },
                 [AiProvider.GOOGLE]: {
-                    model: "gemini-1.5-flash",
+                    model: "gemini-2.0-flash",
                     temperature: 0.7,
                     maxTokens: 2400
                 }
@@ -129,7 +129,7 @@ class AiToolsManager {
                     maxTokens: 512
                 },
                 [AiProvider.GOOGLE]: {
-                    model: "gemini-1.5-flash",
+                    model: "gemini-2.0-flash",
                     temperature: 0.3,
                     maxTokens: 512
                 }
